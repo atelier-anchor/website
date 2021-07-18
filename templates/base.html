@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="{{ config.base_url | safe }}/style.css">
+  <title>atelierAnchor</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <a href="{{ config.base_url | safe }}"><span>LOGO</span></a>
+      <ul>
+        <li><a href="{{ config.base_url | safe }}/works/"><h2>Works</h2></a></li>
+        <li><a href="{{ config.base_url | safe }}/dash/"><h2>dash</h2></a></li>
+        <li><a href="{{ config.base_url | safe }}/typefaces/"><h2>Typefaces</h2></a></li>
+      </ul>
+      <ul>
+        <li><a href="{{ config.base_url | safe }}/about/"><h2>About</h2></a></li>
+        <li><h2>Contact</h2></li>
+      </ul>
+      <address>
+        <a href="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</a><br />
+        15A, Lane 141<br />
+        Xing&rsquo;an Road<br />
+        Huangpu District<br />
+        Shanghai, China<br />
+      </address>
+    </nav>
+  </header>
+  <section class="section">
+    <div class="container">
+      {% block content %} {% endblock %}
+    </div>
+  </section>
+</body>
+
+</html>

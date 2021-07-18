@@ -1,0 +1,13 @@
+base_url = "https://atelier-anchor.com"
+
+title = "atelierAnchor"
+description = "atelierAnchor is a design studio based in Shanghai with an edge on crafts and technology."
+
+compile_sass = true
+# minify_html = true
+build_search_index = false
+
+[markdown]
+highlight_code = false
+
+[extra]
