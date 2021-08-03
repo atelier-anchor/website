@@ -3,37 +3,44 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="{{ config.base_url | safe }}/style.css">
   <title>atelierAnchor</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="{{ config.base_url | safe }}"><span>LOGO</span></a>
-      <ul>
-        <li><a href="{{ config.base_url | safe }}/works/"><h2>Works</h2></a></li>
-        <li><a href="{{ config.base_url | safe }}/dash/"><h2>dash</h2></a></li>
-        <li><a href="{{ config.base_url | safe }}/typefaces/"><h2>Typefaces</h2></a></li>
-      </ul>
-      <ul>
-        <li><a href="{{ config.base_url | safe }}/about/"><h2>About</h2></a></li>
-        <li><h2>Contact</h2></li>
-      </ul>
-      <address>
-        <a href="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</a><br />
-        15A, Lane 141<br />
-        Xing&rsquo;an Road<br />
-        Huangpu District<br />
-        Shanghai, China<br />
-      </address>
-    </nav>
-  </header>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
+  <main class="mt-auto">
+    <div class="row">
+      <div class="col-3">
+        <nav id="sidebar" class="sticky-top" style="top: 20px;">
+          <h1 id="logo">
+            <a href="{{ config.base_url | safe }}">
+              <img src="{{ config.base_url | safe }}/assets/logo.svg" alt="atelier-anchor-logo">
+            </a>
+          </h1>
+          <h2><a href="{{ config.base_url | safe }}/dash/">dash</a></h2>
+          <h2><a href="{{ config.base_url | safe }}/works/">works</a></h2>
+          <h2><a href="{{ config.base_url | safe }}/typefaces/">typefaces</a></h2>
+          <h2><a href="{{ config.base_url | safe }}/about/">about</a></h2>
+        </nav>
+      </div>
+      <article id="content" class="col-9">
+        {% block content %}
+        {% endblock %}
+      </article>
     </div>
-  </section>
+  </main>
+  <footer class="fixed-bottom">
+    <h2>contact</h2>
+    <address>
+      <a href="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</a><br />
+      15A, Lane 141<br />
+      Xing&rsquo;an Road<br />
+      Huangpu District<br />
+      Shanghai, China<br />
+    </address>
+  </footer>
+  <script src="{{ config.base_url | safe }}/script.js"></script>
 </body>
 
 </html>

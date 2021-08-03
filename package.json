@@ -1,0 +1,8 @@
+{
+  "name": "atelier-anchor.com",
+  "version": "0.1.0",
+  "author": "Xiangdong Zeng",
+  "dependencies": {
+    "bootstrap": "^5.0.2"
+  }
+}
