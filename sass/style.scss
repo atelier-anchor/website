@@ -84,12 +84,12 @@ a {
   }
 }
 
-#post-content {
-  #post-title {
+.post-content {
+  .post-title {
     margin: 0;
   }
 
-  #post-info {
+  .post-info {
     list-style: none;
     padding-left: 0;
   }
@@ -99,7 +99,7 @@ a {
   }
 }
 
-#image-list {
+.image-list {
   text-align: center;
 
   img {

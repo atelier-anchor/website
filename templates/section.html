@@ -1,12 +1,20 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  {{ section.title }}
-</h1>
-<ul>
-  {% for page in section.pages %}
-  <li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
-  {% endfor %}
-</ul>
+{% for page in section.pages %}
+  <div class="row">
+    <div class="col-4 post-content">
+      <h2 class="post-title">
+        <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      </h2>
+      {% include "post-meta.html" %}
+    </div>
+    <div class="col-8 image-list">
+      {%- if page.extra.images -%}
+        {% set image = page.extra.images | first %}
+        <img src="{{ page.path }}{{ image }}" alt="{{ image }}">
+      {%- endif -%}
+    </div>
+  </div>
+{% endfor %}
 {% endblock content %}

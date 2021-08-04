@@ -2,27 +2,14 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-4" id="post-content">
+  <div class="col-4 post-content">
     <div class="sticky-top">
-      <h2 id="post-title">{{ page.title }}</h2>
-      {%- if page.extra.type -%}
-        <p id="post-type">{{ page.extra.type }}</p>
-      {%- endif -%}
-      <ul id="post-info">
-        {%- if page.extra.client -%}
-          <li>CL: {{ page.extra.client }}</li>
-        {%- endif -%}
-        {%- if page.extra["art-director"] -%}
-          <li>AD: {{ page.extra["art-director"] }}</li>
-        {%- endif -%}
-        {%- if page.extra.designer -%}
-          <li>D: {{ page.extra.designer }}</li>
-        {%- endif -%}
-      </ul>
+      <h2 class="post-title">{{ page.title }}</h2>
+      {% include "post-meta.html" %}
       {{ page.content | safe }}
     </div>
   </div>
-  <div class="col-8" id="image-list">
+  <div class="col-8 image-list">
     {%- if page.extra.images -%}
       {% for image in page.extra.images %}
         <img src="{{ image }}" alt="{{ image }}">
