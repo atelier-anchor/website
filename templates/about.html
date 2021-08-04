@@ -1,5 +1,48 @@
 {% extends "base.html" %}
 
 {% block content %}
-{{ page.content | safe }}
+<div class="row">
+  <div class="col-4 post-content">
+    <h2 class="post-title">Introduction</h2>
+  </div>
+  <div class="col-8">
+    {% for introduction in page.extra.introduction %}
+      <p>{{ introduction }}</p>
+    {% endfor %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 post-content">
+    <h2 class="post-title">People</h2>
+  </div>
+  <div class="col-8">
+    {% for person in page.extra.people %}
+      <div class="about-people">
+        <div class="avatar"><img src="{{ person.image }}" alt="{{ person.name }}"></div>
+        <ul class="profile">
+          <li>{{ person.name }}</li>
+          {% for title in person.title %}
+            <li>{{ title }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 post-content">
+    <h2 class="post-title">Awards</h2>
+  </div>
+  <div class="col-8">
+    <div style="height: 160px;">[Placeholder]</div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-4 post-content">
+    <h2 class="post-title">Exhibitions</h2>
+  </div>
+  <div class="col-8">
+    <div style="height: 160px;">[Placeholder]</div>
+  </div>
+</div>
 {% endblock content %}

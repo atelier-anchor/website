@@ -1,4 +1,4 @@
-+++
-title = "Homepage"
-template = "index.html"
-+++
+---
+title: Homepage
+template: index.html
+---
