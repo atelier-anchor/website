@@ -1,5 +1,5 @@
-+++
-title = "Works"
-template = "section.html"
-page_template = "page.html"
-+++
+---
+title: Works
+template: section.html
+page_template: page.html
+---

@@ -71,3 +71,39 @@ a {
     width: 200px;
   }
 }
+
+.sticky-top {
+  position: sticky;
+  top: 40px;
+}
+
+@media screen and (min-height: 600px) {
+  .fixed-bottom {
+    position: sticky;
+    bottom: 40px;
+  }
+}
+
+#post-content {
+  #post-title {
+    margin: 0;
+  }
+
+  #post-info {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  p, ul {
+    margin-bottom: 40px;
+  }
+}
+
+#image-list {
+  text-align: center;
+
+  img {
+    width: 75%;
+    margin-bottom: 40px;
+  }
+}
