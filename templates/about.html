@@ -5,7 +5,7 @@
   <div class="col-4 post-content">
     <h2 class="post-title">Introduction</h2>
   </div>
-  <div class="col-8">
+  <div class="col">
     {% for introduction in page.extra.introduction %}
       <p>{{ introduction }}</p>
     {% endfor %}
@@ -15,10 +15,10 @@
   <div class="col-4 post-content">
     <h2 class="post-title">People</h2>
   </div>
-  <div class="col-8">
+  <div class="col">
     {% for person in page.extra.people %}
       <div class="about-people">
-        <div class="avatar"><img src="{{ person.image }}" alt="{{ person.name }}"></div>
+        <div class="avatar"><img src="{{ page.permalink | safe }}{{ person.image }}" alt="{{ person.name }}"></div>
         <ul class="profile">
           <li>{{ person.name }}</li>
           {% for title in person.title %}
@@ -33,7 +33,7 @@
   <div class="col-4 post-content">
     <h2 class="post-title">Awards</h2>
   </div>
-  <div class="col-8">
+  <div class="col">
     <div style="height: 160px;">[Placeholder]</div>
   </div>
 </div>
@@ -41,7 +41,7 @@
   <div class="col-4 post-content">
     <h2 class="post-title">Exhibitions</h2>
   </div>
-  <div class="col-8">
+  <div class="col">
     <div style="height: 160px;">[Placeholder]</div>
   </div>
 </div>

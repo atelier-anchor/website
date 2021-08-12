@@ -1,44 +1,29 @@
-// Custom.scss
-// Option B: Include parts of Bootstrap
-
-// @import "../node_modules/bootstrap/scss/bootstrap";
-
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
-
 $primary: #ffdd00 !default;
 
-// 3. Include remainder of required Bootstrap stylesheets
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/mixins";
+$spacing-unit:    20px !default;
+$spacing-unit-lg: 40px !default;
 
-// 4. Include any optional Bootstrap components as you like
-// @import "../node_modules/bootstrap/scss/root";
-@import "../node_modules/bootstrap/scss/reboot";
-// @import "../node_modules/bootstrap/scss/type";
-// @import "../node_modules/bootstrap/scss/images";
-@import "../node_modules/bootstrap/scss/containers";
-@import "../node_modules/bootstrap/scss/grid";
-// @import "../node_modules/bootstrap/scss/helpers";
-// @import "../node_modules/bootstrap/scss/helpers/position";
-
-// 5. Add additional custom code here
+@import '../node_modules/bootstrap/scss/functions',
+        '../node_modules/bootstrap/scss/variables',
+        '../node_modules/bootstrap/scss/mixins',
+        '../node_modules/bootstrap/scss/reboot',
+        '../node_modules/bootstrap/scss/containers',
+        '../node_modules/bootstrap/scss/grid';
 
 @font-face {
   font-family: 'Neue Machina';
-  font-display: swap;
   font-weight: 600;
-  src: url('assets/NeueMachina-Bold.woff2') format('woff2');;
+  src: url('assets/NeueMachina-Bold.woff2') format('woff2');
 }
 
 body {
   font-family: 'Neue Machina', sans-serif;
   font-weight: 600;
   line-height: 1.2;
-  // hyphens: auto;
-  margin: 40px;
+
+  margin: 0 $spacing-unit $spacing-unit;
+  @include media-breakpoint-up(sm) { margin: $spacing-unit; }
+  @include media-breakpoint-up(md) { margin: $spacing-unit-lg; }
 }
 
 h2 {
@@ -49,35 +34,62 @@ a {
   color: inherit;
   text-decoration: none;
 
-  &:hover {
+  &:hover, &:focus, &:active {
     color: inherit;
-    text-decoration: line-through $primary;
+    text-decoration-line: line-through;
+    text-decoration-color: $primary;
+    text-decoration-thickness: .1em;
+  }
+}
+
+#wrapper {
+  min-width: 240px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#sidebar-wrapper {
+  min-width: 220px;
+
+  @include media-breakpoint-down(sm) {
+    width: 100%;
+    top: 0px;
+    position: sticky;
+    background-color: #fff;
   }
 }
 
 #sidebar {
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 0;
   }
 
   #logo {
-    margin-bottom: 60px;
+    margin-bottom: $spacing-unit * 2;
+    @include media-breakpoint-up(sm) { margin-bottom: $spacing-unit-lg * 1.5; }
 
     img {
-      width: 200px;
+      width: 120px;
+      @include media-breakpoint-up(sm) { width: 180px; }
     }
+  }
+
+  #sidebar-headings {
+    display: none;
+    @include media-breakpoint-up(sm) { display: block; }
   }
 }
 
 .sticky-top {
   position: sticky;
-  top: 40px;
+  top: $spacing-unit;
+  @include media-breakpoint-up(md) { top: $spacing-unit-lg; }
 }
 
 footer {
   h2 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   address {
@@ -85,19 +97,28 @@ footer {
   }
 }
 
-@media screen and (min-height: 600px) {
-  .fixed-bottom {
-    position: fixed;
-    bottom: 40px;
+.fixed-bottom {
+  @media (min-height: 600px) {
+    @include media-breakpoint-up(sm) { position: fixed; }
+    bottom: $spacing-unit;
+    @include media-breakpoint-up(md) { bottom: $spacing-unit-lg; }
   }
 }
 
 #content {
+  flex: auto;
+  @include media-breakpoint-up(sm) { flex: 1 0 0%; }
+
   p, ul, img {
-    margin-bottom: 40px;
+    margin-bottom: $spacing-unit;
+    @include media-breakpoint-up(md) { margin-bottom: $spacing-unit-lg; }
   }
 
   .post-content {
+    display: none;
+    @include media-breakpoint-up(md) { display: block; }
+    width: 40%;
+
     .post-title {
       margin: 0;
     }
@@ -109,10 +130,11 @@ footer {
   }
 
   .image-list {
-    text-align: center;
+    @include media-breakpoint-up(sm) { text-align: right; }
 
     img {
-      width: 75%;
+      width: 100%;
+      @include media-breakpoint-up(sm) { width: 90%; }
     }
   }
 }

@@ -2,17 +2,17 @@
 
 {% block content %}
 <div class="row">
-  <div class="col-4 post-content">
+  <div class="col-6 post-content">
     <div class="sticky-top">
       <h2 class="post-title">{{ page.title }}</h2>
       {% include "post-meta.html" %}
       {{ page.content | safe }}
     </div>
   </div>
-  <div class="col-8 image-list">
+  <div class="col image-list">
     {%- if page.extra.images -%}
       {% for image in page.extra.images %}
-        <img src="{{ image }}" alt="{{ image }}">
+        <img src="{{ page.permalink | safe }}{{ image }}" alt="{{ image }}">
       {% endfor %}
     {%- endif -%}
   </div>
