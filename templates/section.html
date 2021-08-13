@@ -8,7 +8,7 @@
         <div class="post-meta">
         <!-- <div class="post-meta sticky-top"> -->
           <h2 class="post-title">
-            <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+            <a href="{{ page.path | safe }}">{{ page.title }}</a>
           </h2>
           {% include "post-meta.html" %}
         </div>
@@ -16,7 +16,9 @@
       <div class="col image-list">
         {% if page.extra.images %}
           {% set image = page.extra.images | first %}
-          <a href="{{ page.permalink | safe }}"><img src="{{ page.permalink | safe }}{{ image }}" alt="{{ image }}"></a>
+          <a href="{{ page.path | safe }}">
+            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+          </a>
         {% endif %}
       </div>
     </div>

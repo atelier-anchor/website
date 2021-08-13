@@ -12,7 +12,7 @@
   <div class="col image-list">
     {% if page.extra.images %}
       {% for image in page.extra.images %}
-        <img src="{{ page.permalink | safe }}{{ image }}" alt="{{ image }}">
+        <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
       {% endfor %}
     {% endif %}
   </div>

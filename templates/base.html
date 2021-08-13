@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="{{ config.base_url | safe }}/style.css">
+  <link rel="stylesheet" href="/style.css">
   <title>atelierAnchor</title>
 </head>
 
@@ -16,8 +16,8 @@
           <nav id="sidebar" class="sticky-top">
             <div id="header">
               <h1 id="logo">
-                <a href="{{ config.base_url | safe }}">
-                  <img src="{{ config.base_url | safe }}/assets/logo.svg" alt="atelier-anchor-logo">
+                <a href="/">
+                  <img src="/assets/logo.svg" alt="atelier-anchor-logo">
                 </a>
               </h1>
               {% include "nav-button.html" %}
@@ -26,7 +26,7 @@
               {% set sections = ["works", "typefaces", "dash", "about"] %}
               {% for section in sections %}
                 <h2 class="{% if current_url is containing(section) %}active{% endif %}">
-                  <a href="{{ config.base_url | safe }}/{{ section }}/">{{ section }}</a>
+                  <a href="/{{ section }}/">{{ section }}</a>
                 </h2>
               {% endfor %}
             </div>
@@ -49,7 +49,7 @@
       </address>
     </footer>
   </div>
-  <!-- <script src="{{ config.base_url | safe }}/script.js"></script> -->
+  <!-- <script src="/script.js"></script> -->
 </body>
 
 </html>

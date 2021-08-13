@@ -23,7 +23,9 @@
     <div class="col about-people">
       {% for person in page.extra.people %}
         <div class="about-person">
-          <div class="avatar"><img src="{{ page.permalink | safe }}{{ person.image }}" alt="{{ person.name }}"></div>
+          <div class="avatar">
+            <img src="{{ page.path | safe }}{{ person.image }}" alt="{{ person.name }}">
+          </div>
           <ul class="profile">
             <li>{{ person.name }}</li>
             {% for title in person.title %}
