@@ -11,3 +11,12 @@ build_search_index = false
 highlight_code = false
 
 [extra]
+[extra.author_aliases]
+client = "CL"
+creative_director = "CD"
+art_director = "AD"
+type_director = "TD"
+designer = "D"
+publisher = "P"
+translator = "T"
+editor = "E"

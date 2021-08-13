@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="row">
+<div class="row flex-column-reverse">
   <div class="col-6 post-content">
     <div class="sticky-top">
       <h2 class="post-title">{{ page.title }}</h2>
@@ -10,11 +10,11 @@
     </div>
   </div>
   <div class="col image-list">
-    {%- if page.extra.images -%}
+    {% if page.extra.images %}
       {% for image in page.extra.images %}
         <img src="{{ page.permalink | safe }}{{ image }}" alt="{{ image }}">
       {% endfor %}
-    {%- endif -%}
+    {% endif %}
   </div>
 </div>
 {% endblock content %}

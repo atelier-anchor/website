@@ -3,27 +3,42 @@ $primary: #ffdd00 !default;
 $spacing-unit:    20px !default;
 $spacing-unit-lg: 40px !default;
 
-@import '../node_modules/bootstrap/scss/functions',
-        '../node_modules/bootstrap/scss/variables',
-        '../node_modules/bootstrap/scss/mixins',
-        '../node_modules/bootstrap/scss/reboot',
-        '../node_modules/bootstrap/scss/containers',
-        '../node_modules/bootstrap/scss/grid';
+@import "../node_modules/bootstrap/scss/functions",
+        "../node_modules/bootstrap/scss/variables",
+        "../node_modules/bootstrap/scss/mixins",
+        "../node_modules/bootstrap/scss/navbar",
+        "../node_modules/bootstrap/scss/reboot",
+        "../node_modules/bootstrap/scss/containers",
+        "../node_modules/bootstrap/scss/grid";
 
 @font-face {
-  font-family: 'Neue Machina';
+  font-family: "Neue Machina";
   font-weight: 600;
-  src: url('assets/NeueMachina-Bold.woff2') format('woff2');
+  src: url("assets/NeueMachina-Bold.woff2") format("woff2");
 }
 
 body {
-  font-family: 'Neue Machina', sans-serif;
+  font-family: "Neue Machina", sans-serif;
   font-weight: 600;
+  // font-feature-settings: "liga" 0;
+  hyphens: auto;
+  -webkit-hyphens: auto;
   line-height: 1.2;
 
   margin: 0 $spacing-unit $spacing-unit;
   @include media-breakpoint-up(sm) { margin: $spacing-unit; }
   @include media-breakpoint-up(md) { margin: $spacing-unit-lg; }
+}
+
+main {
+  // TODO: 100vh - (footerHeight + margin * 2)
+  min-height: calc(100vh - 181px);
+  @include media-breakpoint-up(md) { min-height: calc(100vh - 221px); }
+}
+
+h1, h2, h3 {
+  hyphens: none;
+  -webkit-hyphens: none;
 }
 
 h2 {
@@ -42,8 +57,12 @@ a {
   }
 }
 
+img {
+  width: 100%;
+}
+
 #wrapper {
-  min-width: 240px;
+  min-width: 260px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -60,24 +79,41 @@ a {
 }
 
 #sidebar {
-  h2 {
-    font-size: 2rem;
-    margin: 0;
-  }
-
-  #logo {
+  #header {
     margin-bottom: $spacing-unit * 2;
+    display: flex;
+    justify-content: space-between;
     @include media-breakpoint-up(sm) { margin-bottom: $spacing-unit-lg * 1.5; }
 
     img {
       width: 120px;
       @include media-breakpoint-up(sm) { width: 180px; }
     }
+
+    #toggle-nav {
+      @include media-breakpoint-up(sm) { display: none; }
+      padding: 0;
+      border: none;
+      background: none;
+
+      svg {
+        fill: $primary;
+      }
+    }
   }
 
   #sidebar-headings {
     display: none;
     @include media-breakpoint-up(sm) { display: block; }
+
+    h2 {
+      font-size: 2rem;
+      margin: 0;
+
+      &.active {
+        color: $primary;
+      }
+    }
   }
 }
 
@@ -105,19 +141,38 @@ footer {
   }
 }
 
-#content {
-  flex: auto;
-  @include media-breakpoint-up(sm) { flex: 1 0 0%; }
+.row {
+  --bs-gutter-x: 2rem;
+}
 
+.col {
+  @include media-breakpoint-down(sm) { flex: auto; }
+}
+
+.flex-column-reverse {
+  @include media-breakpoint-down(md) { flex-direction: column-reverse; }
+}
+
+#content {
   p, ul, img {
     margin-bottom: $spacing-unit;
     @include media-breakpoint-up(md) { margin-bottom: $spacing-unit-lg; }
   }
 
+  .col {
+    @include media-breakpoint-down(md) { flex: auto; }
+  }
+
   .post-content {
-    display: none;
-    @include media-breakpoint-up(md) { display: block; }
-    width: 40%;
+    width: auto;
+    @include media-breakpoint-up(md) { width: 40%; }
+
+    .sticky-top {
+      @include media-breakpoint-down(md) {
+        position: static;
+        top: auto;
+      }
+    }
 
     .post-title {
       margin: 0;
@@ -129,28 +184,52 @@ footer {
     }
   }
 
-  .image-list {
-    @include media-breakpoint-up(sm) { text-align: right; }
-
-    img {
-      width: 100%;
-      @include media-breakpoint-up(sm) { width: 90%; }
-    }
-  }
-}
-
-.about-people {
-  .avatar {
-    width: 120px;
-    display: inline-block;
-
-    img {
-      width: 100%;
-    }
+  .section-post-titles {
+    @include media-breakpoint-down(md) { display: none; }
+    // TODO: vertical center
+    // display: none;
+    // @include media-breakpoint-up(md) { display: block; }
+    // @include media-breakpoint-up(md) {
+    //   display: flex;
+    //   align-items: center;
+    // }
   }
 
-  .profile {
-    list-style: none;
-    display: inline-block;
+  .about-post-titles {
+    @include media-breakpoint-down(md) {
+      display: block;
+      width: auto;
+      margin-bottom: $spacing-unit;
+    }
+  }
+
+  .about-person {
+    .avatar {
+      width: 80px;
+      display: inline-block;
+    }
+
+    .profile {
+      list-style: none;
+      display: inline-block;
+      vertical-align: middle;
+      padding-left: 1.5rem;
+    }
+  }
+
+  .sticky-top, .image-list {
+    >:last-child {
+      @include media-breakpoint-up(sm) { margin-bottom: 0; }
+    }
+  }
+
+  #section >:last-child img {
+    @include media-breakpoint-up(sm) { margin-bottom: 0; }
+  }
+
+  #about .about-people >:last-child {
+    ul, img {
+      @include media-breakpoint-up(sm) { margin-bottom: 0; }
+    }
   }
 }

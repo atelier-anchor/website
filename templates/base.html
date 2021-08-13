@@ -14,16 +14,21 @@
       <div class="row">
         <div id="sidebar-wrapper" class="col-3">
           <nav id="sidebar" class="sticky-top">
-            <h1 id="logo">
-              <a href="{{ config.base_url | safe }}">
-                <img src="{{ config.base_url | safe }}/assets/logo.svg" alt="atelier-anchor-logo">
-              </a>
-            </h1>
+            <div id="header">
+              <h1 id="logo">
+                <a href="{{ config.base_url | safe }}">
+                  <img src="{{ config.base_url | safe }}/assets/logo.svg" alt="atelier-anchor-logo">
+                </a>
+              </h1>
+              {% include "nav-button.html" %}
+            </div>
             <div id="sidebar-headings">
-              <h2><a href="{{ config.base_url | safe }}/works/">works</a></h2>
-              <h2><a href="{{ config.base_url | safe }}/typefaces/">typefaces</a></h2>
-              <h2><a href="{{ config.base_url | safe }}/dash/">dash</a></h2>
-              <h2><a href="{{ config.base_url | safe }}/about/">about</a></h2>
+              {% set sections = ["works", "typefaces", "dash", "about"] %}
+              {% for section in sections %}
+                <h2 class="{% if current_url is containing(section) %}active{% endif %}">
+                  <a href="{{ config.base_url | safe }}/{{ section }}/">{{ section }}</a>
+                </h2>
+              {% endfor %}
             </div>
           </nav>
         </div>

@@ -6,10 +6,10 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen
   images:
+    - 资源 18.jpg
     - 资源 15.jpg
     - 资源 16.jpg
     - 资源 17.jpg
-    - 资源 18.jpg
     - 资源 19.jpg
 ---
 
