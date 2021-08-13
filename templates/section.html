@@ -17,7 +17,9 @@
         {% if page.extra.images %}
           {% set image = page.extra.images | first %}
           <a href="{{ page.path | safe }}">
-            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+            <figure>
+              <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+            </figure>
           </a>
         {% endif %}
       </div>

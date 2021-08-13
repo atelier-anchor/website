@@ -21,8 +21,8 @@ body {
   font-family: "Neue Machina", sans-serif;
   font-weight: 600;
   // font-feature-settings: "liga" 0;
-  hyphens: auto;
   -webkit-hyphens: auto;
+  hyphens: auto;
   line-height: 1.2;
 
   margin: 0 $spacing-unit $spacing-unit;
@@ -37,8 +37,8 @@ main {
 }
 
 h1, h2, h3 {
-  hyphens: none;
   -webkit-hyphens: none;
+  hyphens: none;
 }
 
 h2 {
@@ -57,6 +57,10 @@ a {
   }
 }
 
+figure {
+  overflow: hidden;
+}
+
 img {
   width: 100%;
 }
@@ -69,6 +73,7 @@ img {
 
 #sidebar-wrapper {
   min-width: 220px;
+  z-index: 1;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -80,21 +85,25 @@ img {
 
 #sidebar {
   #header {
-    margin-bottom: $spacing-unit * 2;
     display: flex;
     justify-content: space-between;
-    @include media-breakpoint-up(sm) { margin-bottom: $spacing-unit-lg * 1.5; }
+    margin: $spacing-unit auto;
+    @include media-breakpoint-up(sm) { margin: auto auto $spacing-unit-lg * 1.5; }
 
     img {
       width: 120px;
       @include media-breakpoint-up(sm) { width: 180px; }
     }
 
-    #toggle-nav {
+    .toggle-nav {
       @include media-breakpoint-up(sm) { display: none; }
       padding: 0;
       border: none;
       background: none;
+
+      &:not(.show) {
+        display: none;
+      }
 
       svg {
         fill: $primary;
@@ -103,8 +112,21 @@ img {
   }
 
   #sidebar-headings {
-    display: none;
-    @include media-breakpoint-up(sm) { display: block; }
+    &:not(.show) {
+      @include media-breakpoint-down(sm) {
+        display: none;
+      }
+    }
+
+    &.show {
+      @include media-breakpoint-down(sm) {
+        position: absolute;
+        width: 100%;
+        left: 0;
+        padding: 0 20px 20px;
+        background-color: #fff;
+      }
+    }
 
     h2 {
       font-size: 2rem;
@@ -118,9 +140,11 @@ img {
 }
 
 .sticky-top {
-  position: sticky;
   top: $spacing-unit;
-  @include media-breakpoint-up(md) { top: $spacing-unit-lg; }
+  @include media-breakpoint-up(md) {
+    position: sticky;
+    top: $spacing-unit-lg;
+  }
 }
 
 footer {
@@ -184,36 +208,52 @@ footer {
     }
   }
 
-  .section-post-titles {
-    @include media-breakpoint-down(md) { display: none; }
-    // TODO: vertical center
-    // display: none;
-    // @include media-breakpoint-up(md) { display: block; }
-    // @include media-breakpoint-up(md) {
-    //   display: flex;
-    //   align-items: center;
-    // }
-  }
+  #section {
+    a {
+      img {
+        transition: .8s ease-in-out;
+      }
 
-  .about-post-titles {
-    @include media-breakpoint-down(md) {
-      display: block;
-      width: auto;
-      margin-bottom: $spacing-unit;
+      &:hover, &:focus, &:active {
+        img {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    .section-post-titles {
+      // @include media-breakpoint-down(md) { display: none; }
+      // TODO: vertical center
+      display: none;
+      @include media-breakpoint-up(md) { display: block; }
+      @include media-breakpoint-up(md) {
+        display: flex;
+        align-items: center;
+      }
     }
   }
 
-  .about-person {
-    .avatar {
-      width: 80px;
-      display: inline-block;
+  #about {
+    .about-post-titles {
+      @include media-breakpoint-down(md) {
+        display: block;
+        width: auto;
+        margin-bottom: $spacing-unit;
+      }
     }
 
-    .profile {
-      list-style: none;
-      display: inline-block;
-      vertical-align: middle;
-      padding-left: 1.5rem;
+    .about-person {
+      .avatar {
+        width: 80px;
+        display: inline-block;
+      }
+
+      .profile {
+        list-style: none;
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 1.5rem;
+      }
     }
   }
 
