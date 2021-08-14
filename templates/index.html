@@ -1,7 +1,26 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  atelierAnchor
-</h1>
+{% set index = get_section(path="_index.md") %}
+{% set image_pages = [] %}
+{% for subsection_path in index.subsections %}
+  {% set subsection = get_section(path=subsection_path) %}
+  {% for page in subsection.pages %}
+    {% if page.extra %}
+      {% if page.extra.images %}
+        {% set_global image_pages = image_pages | concat(with=page) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+<div id="carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    {% for page in image_pages %}
+      {% set image = page.extra.images | first %}
+      <div class="carousel-item">
+        <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}" class="d-block w-100">
+      </div>
+    {% endfor %}
+  </div>
+</div>
 {% endblock content %}
