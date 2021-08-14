@@ -22,6 +22,13 @@
 
 :root {
   --primary-color: #ffdd00;
+  --fg-color: #{$dark};
+  --bg-color: #{$white};
+  @include color-scheme(dark) {
+    --fg-color: #{$light};
+    --bg-color: #{$black};
+  }
+
   --spacing-unit: 20px;
   @include media-breakpoint-up(md) { --spacing-unit: 40px; }
 }
@@ -33,6 +40,8 @@ body {
   -webkit-hyphens: auto;
   hyphens: auto;
   line-height: 1.2;
+  color: var(--fg-color);
+  background-color: var(--bg-color);
 
   margin: var(--spacing-unit);
   @include media-breakpoint-down(sm) { margin-top: 0; }
@@ -72,6 +81,7 @@ figure {
 
 img {
   width: 100%;
+  @include color-scheme(dark) { background-color: $gray-100; }
 }
 
 #wrapper {
@@ -88,7 +98,7 @@ img {
     width: 100%;
     top: 0px;
     position: sticky;
-    background-color: #fff;
+    background-color: var(--bg-color);
   }
 }
 
@@ -99,9 +109,12 @@ img {
     margin-bottom: var(--spacing-unit);
     @include media-breakpoint-down(sm) { margin-top: var(--spacing-unit); }
 
-    img {
-      width: 120px;
-      @include media-breakpoint-up(sm) { width: 180px; }
+    #logo {
+      svg {
+        fill: var(--fg-color);
+        width: 120px;
+        @include media-breakpoint-up(sm) { width: 180px; }
+      }
     }
 
     .toggle-nav {
@@ -138,7 +151,7 @@ img {
         width: 100%;
         left: 0;
         padding: 0 20px 20px;
-        background-color: #fff;
+        background-color: var(--bg-color);
       }
     }
 
