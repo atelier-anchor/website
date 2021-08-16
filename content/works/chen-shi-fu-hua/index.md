@@ -6,6 +6,6 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen
   images:
-    - 资源 1.jpg
-    - 资源 2.jpg
+    - chen-shi-fu-hua-1.jpg
+    - chen-shi-fu-hua-2.jpg
 ---

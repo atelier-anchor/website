@@ -6,10 +6,10 @@ extra:
   art-director: Willie Liu
   designer: Willie Liu
   images:
-    - 资源 11.jpg
-    - 资源 12.jpg
-    - 资源 13.jpg
-    - 资源 14.jpg
+    - freds-inside-1.jpg
+    - freds-inside-2.jpg
+    - freds-inside-3.jpg
+    - freds-inside-5.jpg
 ---
 
 为展览制作的 AR 插图。只有通过特定的 AR 应用程序才能观察到加湿器和蓝牙音箱中辛勤工作的生物。

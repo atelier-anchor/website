@@ -6,9 +6,9 @@ extra:
   art-director: Willie Liu
   designer: Willie Liu
   images:
-    - 资源 10.jpg
-    - 资源 6.jpg
-    - 资源 7.jpg
-    - 资源 8.jpg
-    - 资源 9.jpg
+    - psa-1.jpg
+    - psa-2.jpg
+    - psa-3.jpg
+    - psa-4.jpg
+    - psa-5.jpg
 ---

@@ -6,11 +6,11 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen
   images:
-    - 资源 18.jpg
-    - 资源 15.jpg
-    - 资源 16.jpg
-    - 资源 17.jpg
-    - 资源 19.jpg
+    - amtibful-1.jpg
+    - amtibful-2.jpg
+    - amtibful-3.jpg
+    - amtibful-4.jpg
+    - amtibful-5.jpg
 ---
 
 Ambitful 是一家来自中国的摄影灯品牌。我们从光线出发，将其作为一个核心概念为他们创作了一款全新的字体标识。

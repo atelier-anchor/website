@@ -7,35 +7,35 @@ extra:
     - atelierAnchor is a design studio based in Shanghai with an edge on crafts and technology. We aim to provide stunning ideas and reliable execution for our clients in the ever-changing creative scenes. Our extensive experience in graphic design, typeface development and motion graphics has sharpened our sensitivity to state-of-the-art technologies in the creative industry. We advocate an interdisciplinary and cross-cultural approach to design, and devote ourselves to building a diverse, forward-looking community with experimental thoughts and a keen interest in new technologies.
   people:
     - name: Setsuna Chen
-      image: 资源 40.png
+      image: setsuna-chen.png
       title:
         - Co-founder
         - Art Director
     - name: Willie Liu
-      image: 资源 39.png
+      image: willie-liu.png
       title:
         - Co-founder
         - Type Director
     - name: Chen Li
-      image: 资源 38.png
+      image: chen-li.png
       title:
         - Graphic Designer
         - Editor
     - name: Money Su
-      image: 资源 36.png
+      image: money-su.png
       title:
         - Graphic Designer
         - Editor
     - name: Leove Li
-      image: 资源 37.png
+      image: leove-li.png
       title:
         - Motion Designer
     - name: Stone Zeng
-      image: 资源 41.png
+      image: stone-zeng.png
       title:
         - Technician
     - name: Shachō
-      image: 资源 35.png
+      image: shacho.png
       title:
         - CEO
 ---

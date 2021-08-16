@@ -6,7 +6,7 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen, Leove Li
   images:
-    - 资源 5.jpg
-    - 资源 3.jpg
-    - 资源 4.jpg
+    - g3-1.jpg
+    - g3-2.jpg
+    - g3-3.jpg
 ---
