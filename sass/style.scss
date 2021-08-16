@@ -28,7 +28,6 @@
     --fg-color: #{$light};
     --bg-color: #{$black};
   }
-
   --spacing-unit: 20px;
   @include media-breakpoint-up(md) { --spacing-unit: 40px; }
 }
@@ -42,9 +41,13 @@ body {
   line-height: 1.2;
   color: var(--fg-color);
   background-color: var(--bg-color);
-
   margin: var(--spacing-unit);
   @include media-breakpoint-down(sm) { margin-top: 0; }
+
+  ::selection {
+    @include color-scheme(dark) { color: var(--bg-color); }
+    background-color: var(--primary-color);
+  }
 }
 
 main {
@@ -237,7 +240,7 @@ img {
   #section {
     a {
       img {
-        transition: .8s ease-in-out;
+        transition: .4s ease;
       }
 
       &:hover, &:focus, &:active {
