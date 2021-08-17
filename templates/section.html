@@ -4,16 +4,16 @@
 <div id="section">
   {% for page in section.pages %}
     <div class="row flex-column-reverse">
-      <div class="col-6 post-content section-post-titles">
+      <div class="post-content section-post-titles col-6">
         <div class="post-meta">
         <!-- <div class="post-meta sticky-top"> -->
-          <h2 class="post-title">
+          <h2 class="post-title m-0">
             <a href="{{ page.path | safe }}">{{ page.title }}</a>
           </h2>
           {% include "post-meta.html" %}
         </div>
       </div>
-      <div class="col image-list">
+      <div class="image-list col">
         {% if page.extra.images %}
           {% set image = page.extra.images | first %}
           <a href="{{ page.path | safe }}">

@@ -13,12 +13,17 @@
     {% endif %}
   {% endfor %}
 {% endfor %}
-<div id="carousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+<div id="carousel">
   <div class="carousel-inner">
     {% for page in image_pages %}
       {% set image = page.extra.images | first %}
-      <div class="carousel-item">
-        <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}" class="d-block w-100">
+      <div class="carousel-item d-flex">
+        <a href="{{ page.path | safe }}">
+          <figure>
+            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+          </figure>
+          <!-- <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}"> -->
+        </a>
       </div>
     {% endfor %}
   </div>

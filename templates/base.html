@@ -29,14 +29,14 @@
             <div id="sidebar-headings">
               {% set sections = ["works", "typefaces", "dash", "about"] %}
               {% for section in sections %}
-                <h2 class="{% if current_url is containing(section) %}active{% endif %}">
+                <h2 class="m-0{% if current_url is containing(section) %} active{% endif %}">
                   <a href="/{{ section }}/">{{ section }}</a>
                 </h2>
               {% endfor %}
             </div>
           </nav>
         </div>
-        <article id="content" class="col">
+        <article id="content" class="col d-flex">
           {% block content %}
           {% endblock %}
         </article>
@@ -44,7 +44,7 @@
     </main>
     <footer id="footer" class="fixed-bottom">
       <h2>contact</h2>
-      <address>
+      <address class="m-0">
         <a href="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</a><br />
         15A, Lane 141<br />
         Xing&rsquo;an Road<br />

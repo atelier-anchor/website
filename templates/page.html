@@ -2,14 +2,14 @@
 
 {% block content %}
 <div class="row flex-column-reverse">
-  <div class="col-6 post-content">
+  <div class="post-content col-6 ">
     <div class="sticky-top">
-      <h2 class="post-title">{{ page.title }}</h2>
+      <h2 class="post-title m-0">{{ page.title }}</h2>
       {% include "post-meta.html" %}
       {{ page.content | safe }}
     </div>
   </div>
-  <div class="col image-list">
+  <div class="image-list col">
     {% if page.extra.images %}
       {% for image in page.extra.images %}
         <figure>
