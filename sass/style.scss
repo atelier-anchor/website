@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: "Neue Machina";
-  font-weight: 600;
+  font-weight: 700;
   font-style: normal;
   src: url("assets/NeueMachina-Bold.woff2") format("woff2");
 }
@@ -87,7 +87,7 @@
 
 body {
   font-family: "Neue Machina", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
   // font-feature-settings: "liga" 0;
   -webkit-hyphens: auto;
   hyphens: auto;
@@ -139,7 +139,9 @@ figure {
 }
 
 img {
-  width: 100%;
+  // Make svg behaves like jpg or gif. 
+  width: 2000px;
+  max-width: 100%;
   @include color-scheme(dark) { background-color: $gray-100; }
 }
 
