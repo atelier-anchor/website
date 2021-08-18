@@ -48,7 +48,7 @@
 }
 
 .row {
-  --bs-gutter-x: 2rem;
+  --bs-gutter-x: var(--spacing-unit);
 }
 
 .col {
@@ -157,6 +157,7 @@ video {
 
 #sidebar-wrapper {
   min-width: 220px;
+  max-width: 240px;
   z-index: 1;
 
   @include media-breakpoint-down(sm) {
