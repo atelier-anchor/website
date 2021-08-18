@@ -278,6 +278,10 @@ img {
     }
 
     a {
+      &, figure {
+        height: inherit
+      }
+
       @include hover-img-scale();
     }
 
