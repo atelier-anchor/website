@@ -21,7 +21,7 @@
       {% for video in page.extra.videos %}
         <!-- {{ page.path | safe }}{{ video }} -->
         <figure>
-          <video controls>
+          <video controls preload="metadata">
             <source src="{{ page.path | safe }}{{ video }}" type="video/webm">
           </video>
         </figure>
