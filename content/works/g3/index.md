@@ -10,8 +10,8 @@ extra:
     - g3-2.jpg
     - g3-3.jpg
   videos:
-    - g3-4.webm#t=30
-    - g3-5.webm#t=26
+    - g3-4.webm#t=0.01
+    - g3-5.webm#t=0.01
 ---
 
 Glyphs is a well-received font editor. We have provided design of prints event for its third version. We have gathered Glyphs users in the fields of type design, graphic design, motion graphic design, UX design, etc.

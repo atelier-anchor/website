@@ -162,6 +162,7 @@ video {
 
   @include media-breakpoint-down(sm) {
     width: 100%;
+    max-width: none;
     top: 0px;
     position: sticky;
     background-color: var(--bg-color);
@@ -306,9 +307,16 @@ video {
       @include hover-img-scale();
     }
 
-    img {
-      object-fit: cover;
-      min-height: 100%;
+    figure {
+      display: flex;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        object-fit: cover;
+        min-height: 100%;
+      }
     }
   }
 
