@@ -235,7 +235,7 @@ img {
 }
 
 #content {
-  p, ul, figure {
+  p, ul {
     margin-bottom: var(--spacing-unit);
   }
 
@@ -252,10 +252,24 @@ img {
         position: static;
         top: auto;
       }
+
+      >:last-child {
+        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
     }
 
     .post-info {
       @include list-unstyled();
+    }
+  }
+
+  .image-list {
+    figure {
+      margin-bottom: var(--spacing-unit);
+
+      &:last-child {
+        @include media-breakpoint-up(md) { margin-bottom: 0; }
+      }
     }
   }
 
@@ -296,6 +310,18 @@ img {
       @include hover-img-scale();
     }
 
+    figure {
+      margin-bottom: 0;
+    }
+
+    .section-post {
+      margin-bottom: var(--spacing-unit);
+
+      &:last-child {
+        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+    }
+
     .section-post-titles {
       // @include media-breakpoint-down(md) { display: none; }
       // TODO: vertical center
@@ -304,6 +330,10 @@ img {
       @include media-breakpoint-up(md) {
         display: flex;
         align-items: center;
+      }
+
+      .post-meta >:last-child {
+        @include media-breakpoint-up(sm) { margin-bottom: 0; }
       }
     }
   }
@@ -317,39 +347,29 @@ img {
       }
     }
 
+    .about-people >:last-child {
+      ul, img {
+        margin-bottom: 0;
+      }
+    }
+
     .about-person {
+      margin-bottom: var(--spacing-unit);
+
+      &:last-child {
+        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+
       .avatar {
         width: 80px;
         display: inline-block;
-
-        img {
-          margin-bottom: var(--spacing-unit);
-        }
       }
 
       .profile {
         @include list-unstyled();
         display: inline-block;
         vertical-align: middle;
-        margin-left: var(--spacing-unit);
-      }
-    }
-  }
-
-  @include media-breakpoint-up(sm) {
-    .sticky-top, .image-list {
-      >:last-child {
-        margin-bottom: 0;
-      }
-    }
-
-    #section >:last-child figure {
-      margin-bottom: 0;
-    }
-
-    #about .about-people >:last-child {
-      ul, img {
-        margin-bottom: 0;
+        margin: 0 0 0 1rem;
       }
     }
   }
