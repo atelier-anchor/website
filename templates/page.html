@@ -17,6 +17,16 @@
         </figure>
       {% endfor %}
     {% endif %}
+    {% if page.extra.videos %}
+      {% for video in page.extra.videos %}
+        <!-- {{ page.path | safe }}{{ video }} -->
+        <figure>
+          <video controls>
+            <source src="{{ page.path | safe }}{{ video }}" type="video/webm">
+          </video>
+        </figure>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 {% endblock content %}

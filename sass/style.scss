@@ -145,6 +145,10 @@ img {
   @include color-scheme(dark) { background-color: $gray-100; }
 }
 
+video {
+  width: 100%;
+}
+
 #wrapper {
   min-width: 260px;
   max-width: 1920px;
