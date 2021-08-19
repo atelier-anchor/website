@@ -1,5 +1,6 @@
 ---
 title: Out of Mountain
+date: 2021-03-01
 extra:
   type: Book Design
   client: Guiyang WOW

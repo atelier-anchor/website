@@ -1,5 +1,6 @@
 ---
 title: PSA Model
+date: 2019-10-01
 extra:
   type: Product Design
   client: PSA
@@ -13,6 +14,6 @@ extra:
     - psa-5.jpg
 ---
 
-可以由消费者自己组装的微型上海当代艺术博物馆模型。由激光切割的胶合板和亚克力板制成。
+上海当代艺术博物馆的拼插模型，由激光切割工艺制造，材质为椴木层板和亚克力板，充分还原建筑的造型特征。模型采用零部件彼此穿插咬合的设计，拼装过程简单安全，无需胶水。
 
 A miniature PSA model that could be assembled by the consumers themselves. Made of laser-cut plywood and acrylic plates.

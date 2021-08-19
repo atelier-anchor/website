@@ -1,5 +1,6 @@
 ---
 title: Amtibful
+date: 2021-04-01
 extra:
   type: Visual Identity
   client: Amtibful

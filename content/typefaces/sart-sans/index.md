@@ -1,5 +1,6 @@
 ---
 title: Sart Sans
+date: 2019-05-01
 extra:
   type: Type Design
   type-director: Willie Liu

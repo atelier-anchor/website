@@ -1,5 +1,6 @@
 ---
 title: tbh Typeface
+date: 2020-01-01
 extra:
   type: Custom Typeface
   client: tbh

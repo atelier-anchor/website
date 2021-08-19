@@ -1,5 +1,6 @@
 ---
 title: Arcade Game Typography
+date: 2021-02-01
 extra:
   type: Translation
   designer: Telos

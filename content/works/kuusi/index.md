@@ -1,5 +1,6 @@
 ---
 title: Kuusi Sans Scented Candle
+date: 2020-12-01
 extra:
   type: Graphic Design
   client: 3type

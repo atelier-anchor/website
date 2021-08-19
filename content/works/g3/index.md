@@ -1,5 +1,6 @@
 ---
 title: Glyphs 3 Event
+date: 2020-11-01
 extra:
   type: Motion Design, Graphic Design
   client: Glyphs

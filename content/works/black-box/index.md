@@ -1,5 +1,6 @@
 ---
 title: Dinkie Bitmap Black Box
+date: 2020-09-01
 extra:
   type: Graphic Design
   client: 3type

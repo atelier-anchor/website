@@ -1,5 +1,4 @@
 ---
-title: About
 template: about.html
 extra:
   introduction:
