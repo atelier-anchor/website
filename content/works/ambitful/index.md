@@ -1,17 +1,17 @@
 ---
-title: Amtibful
+title: Ambitful
 date: 2021-04-01
 extra:
   type: Visual Identity
-  client: Amtibful
+  client: Ambitful
   art-director: Setsuna Chen
   designer: Setsuna Chen
   images:
-    - amtibful-1.jpg
-    - amtibful-2.jpg
-    - amtibful-3.jpg
-    - amtibful-4.jpg
-    - amtibful-5.jpg
+    - ambitful-1.jpg
+    - ambitful-2.jpg
+    - ambitful-3.jpg
+    - ambitful-4.jpg
+    - ambitful-5.jpg
 ---
 
 Ambitful 是一家来自中国的摄影灯品牌。我们从光线出发，将其作为一个核心概念为他们创作了一款全新的字体标识。
