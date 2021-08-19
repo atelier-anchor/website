@@ -13,6 +13,6 @@ extra:
     - psa-5.jpg
 ---
 
-A miniature PSA model that could be assembled by the consumers themselves. Made of laser-cut plywood and acrylic plates.
-
 可以由消费者自己组装的微型上海当代艺术博物馆模型。由激光切割的胶合板和亚克力板制成。
+
+A miniature PSA model that could be assembled by the consumers themselves. Made of laser-cut plywood and acrylic plates.
