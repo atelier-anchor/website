@@ -2,33 +2,33 @@
 
 {% block content %}
 <div id="about">
-  <div class="row">
+  <div class="about-post row">
     <div class="post-content about-post-titles col-6">
       <div class="sticky-top">
-        <h2 class="post-title m-0">Introduction</h2>
+        <h2 class="post-title m-0">Mission</h2>
       </div>
     </div>
     <div class="col">
-      {% for introduction in page.extra.introduction %}
-        <p>{{ introduction }}</p>
+      {% for mission in page.extra.mission %}
+        <p>{{ mission }}</p>
       {% endfor %}
     </div>
   </div>
-  <div class="row">
+  <div class="about-post row">
     <div class="post-content about-post-titles col-6">
       <div class="sticky-top">
-        <h2 class="post-title m-0">People</h2>
+        <h2 class="post-title m-0">Team</h2>
       </div>
     </div>
-    <div class="col about-people">
-      {% for person in page.extra.people %}
-        <div class="about-person">
+    <div class="col about-team">
+      {% for member in page.extra.team %}
+        <div class="about-member d-flex">
           <div class="avatar">
-            <img src="{{ page.path | safe }}{{ person.image }}" alt="{{ person.name }}">
+            <img src="{{ page.path | safe }}{{ member.image }}" alt="{{ member.name }}">
           </div>
           <ul class="profile">
-            <li>{{ person.name }}</li>
-            {% for title in person.title %}
+            <li>{{ member.name }}</li>
+            {% for title in member.title %}
               <li>{{ title }}</li>
             {% endfor %}
           </ul>

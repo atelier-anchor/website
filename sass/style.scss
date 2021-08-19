@@ -179,6 +179,8 @@ video {
     }
 
     #logo {
+      margin-bottom: 0;
+
       svg {
         fill: var(--fg-color);
         width: 120px;
@@ -219,7 +221,7 @@ video {
         position: absolute;
         width: 100%;
         left: 0;
-        padding: 0 20px 20px;
+        padding: 0 calc(var(--spacing-unit) * .5) var(--spacing-unit);
         background-color: var(--bg-color);
       }
     }
@@ -354,21 +356,34 @@ video {
   }
 
   #about {
-    .about-post-titles {
-      @include media-breakpoint-down(md) {
-        display: block;
-        width: auto;
-        margin-bottom: var(--spacing-unit);
+    .about-post {
+      margin-bottom: var(--spacing-unit);
+
+      &:last-child {
+        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+
+      .about-post-titles {
+        @include media-breakpoint-down(md) {
+          display: block;
+          width: auto;
+          margin-bottom: var(--spacing-unit);
+        }
+      }
+
+      .col >:last-child {
+        margin-bottom: 0;
       }
     }
 
-    .about-people >:last-child {
+    .about-team >:last-child {
       ul, img {
         margin-bottom: 0;
       }
     }
 
-    .about-person {
+    .about-member {
+      align-items: center;
       margin-bottom: var(--spacing-unit);
 
       &:last-child {
@@ -376,15 +391,18 @@ video {
       }
 
       .avatar {
+        clip-path: circle(40px at center);
         width: 80px;
         display: inline-block;
       }
 
       .profile {
         @include list-unstyled();
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 0 0 1rem;
+        margin: 0 0 0 #{"max(1rem, 5%)"};
+
+        :first-child {
+          margin-bottom: 6px;
+        }
       }
     }
   }
