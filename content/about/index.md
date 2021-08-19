@@ -31,7 +31,7 @@ extra:
         - Graphic Designer
         - Editor
     - name: Leove Li
-      image: leove-li.jpg
+      image: leove-li.png
       title:
         - Motion Designer
     - name: Xiangdong Zeng
@@ -42,4 +42,8 @@ extra:
       image: lynn-lai.jpg
       title:
         - Book Designer
+    - name: Shachō
+      image: shacho.png
+      title:
+        - CEO
 ---
