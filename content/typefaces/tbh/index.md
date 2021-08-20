@@ -8,11 +8,11 @@ extra:
   type-director: Setsuna Chen
   designer: Zhengzhong Pan, Setsuna Chen
   images:
-    - tbh-1.gif
+    - tbh-1.svg
     - tbh-2.svg
     - tbh-3.svg
     - tbh-4.svg
-    - tbh-5.svg
+    - tbh-5.gif
     - tbh-6.jpg
 ---
 

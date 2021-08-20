@@ -31,7 +31,7 @@ extra:
         - Graphic Designer
         - Editor
     - name: Leove Li
-      image: leove-li.png
+      image: leove-li.jpg
       title:
         - Motion Designer
     - name: Xiangdong Zeng
