@@ -19,10 +19,9 @@
     {% endif %}
     {% if page.extra.videos %}
       {% for video in page.extra.videos %}
-        <!-- {{ page.path | safe }}{{ video }} -->
         <figure>
-          <video controls preload="metadata">
-            <source src="{{ page.path | safe }}{{ video }}" type="video/webm">
+          <video controls {% if video.poster %} poster="{{ page.path | safe }}{{ video.poster }}"{% endif %}>
+            <source src="{{ page.path | safe }}{{ video.source }}" type="video/webm">
           </video>
         </figure>
       {% endfor %}

@@ -11,8 +11,10 @@ extra:
     - g3-2.jpg
     - g3-3.jpg
   videos:
-    - g3-4.webm#t=0.01
-    - g3-5.webm#t=0.01
+    - source: g3-4.webm
+      poster: g3-4-poster.png
+    - source: g3-5.webm
+      poster: g3-5-poster.png
 ---
 
 Glyphs 是一款广受好评的字体编辑器。我们为它第三个版本更新的发布会提供了设计支持。为此，我们聚集了 Glyphs 在字体设计、平面设计、动态图形设计、UX 设计等领域的用户。
