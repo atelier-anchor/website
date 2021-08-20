@@ -15,13 +15,8 @@ function updateNavButtons() {
     const sidebar = document.querySelector("#sidebar-headings");
 
     toggleButton.onclick = () => {
-        if (sidebar.classList.contains("show")) {
-            sidebar.classList.remove("show");
-            toggleButton.classList.remove("close");
-        } else {
-            sidebar.classList.add("show");
-            toggleButton.classList.add("close");
-        }
+        sidebar.classList.toggle("show");
+        toggleButton.classList.toggle("close");
     }
 }
 

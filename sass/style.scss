@@ -327,6 +327,8 @@ video {
   }
 
   #section {
+    @include media-breakpoint-down(sm) { margin-bottom: var(--spacing-unit); }
+
     a {
       @include hover-img-scale();
     }
@@ -340,6 +342,10 @@ video {
 
       &:last-child {
         @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+
+      .image-list {
+        margin-bottom: 0;
       }
     }
 
@@ -361,7 +367,8 @@ video {
 
   #about {
     .about-post {
-      margin-bottom: var(--spacing-unit);
+      margin-bottom: 40px;
+      @include media-breakpoint-up(md) { margin-bottom: 60px; }
 
       &:last-child {
         @include media-breakpoint-up(sm) { margin-bottom: 0; }
@@ -373,6 +380,10 @@ video {
           width: auto;
           margin-bottom: var(--spacing-unit);
         }
+      }
+
+      .col >:last-child {
+        margin-bottom: 0;
       }
     }
 
