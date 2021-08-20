@@ -318,6 +318,7 @@ video {
       img {
         object-fit: cover;
         min-height: 100%;
+        min-height: #{"min(80vw, 100%)"};
       }
     }
   }
@@ -398,6 +399,7 @@ video {
 
       .profile {
         @include list-unstyled();
+        margin: 0 0 0 1rem;
         margin: 0 0 0 #{"max(1rem, 5%)"};
 
         :first-child {

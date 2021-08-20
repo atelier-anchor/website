@@ -1,17 +1,14 @@
 {% extends "base.html" %}
 
 {% block content %}
-{% set index = get_section(path="_index.md") %}
 {% set image_pages = [] %}
-{% for subsection_path in index.subsections %}
-  {% set subsection = get_section(path=subsection_path) %}
-  {% for page in subsection.pages %}
-    {% if page.extra %}
-      {% if page.extra.images %}
-        {% set_global image_pages = image_pages | concat(with=page) %}
-      {% endif %}
+{% set subsection = get_section(path="works/_index.md") %}
+{% for page in subsection.pages %}
+  {% if page.extra %}
+    {% if page.extra.images %}
+      {% set_global image_pages = image_pages | concat(with=page) %}
     {% endif %}
-  {% endfor %}
+  {% endif %}
 {% endfor %}
 <div id="carousel">
   <div class="carousel-inner">
