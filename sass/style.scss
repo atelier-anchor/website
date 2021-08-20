@@ -172,7 +172,7 @@ video {
 #sidebar {
   #header {
     justify-content: space-between;
-    margin-bottom: var(--spacing-unit);
+    margin-bottom: 40px;
     @include media-breakpoint-down(sm) {
       display: flex;
       margin-top: var(--spacing-unit);
@@ -221,7 +221,7 @@ video {
         position: absolute;
         width: 100%;
         left: 0;
-        padding: 0 calc(var(--spacing-unit) * .5) var(--spacing-unit);
+        padding: 0 calc(var(--spacing-unit) * .5) calc(var(--spacing-unit) * 2);
         background-color: var(--bg-color);
       }
     }
@@ -256,6 +256,7 @@ video {
   .post-content {
     width: auto;
     @include media-breakpoint-up(md) { width: 40%; }
+    @include media-breakpoint-down(sm) { margin-bottom: var(--spacing-unit); }
 
     .sticky-top {
       @include media-breakpoint-down(md) {
@@ -274,6 +275,8 @@ video {
   }
 
   .image-list {
+    @include media-breakpoint-down(md) { margin-bottom: var(--spacing-unit); }
+
     figure {
       margin-bottom: var(--spacing-unit);
 
@@ -370,10 +373,6 @@ video {
           width: auto;
           margin-bottom: var(--spacing-unit);
         }
-      }
-
-      .col >:last-child {
-        margin-bottom: 0;
       }
     }
 
