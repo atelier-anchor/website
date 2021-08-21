@@ -75,6 +75,7 @@
 .sticky-top {
   top: var(--spacing-unit);
   @include media-breakpoint-up(sm) {
+    position: -webkit-sticky;
     position: sticky;
   }
 }
@@ -90,6 +91,7 @@ body {
   font-family: "Neue Machina", sans-serif;
   font-weight: 700;
   // font-feature-settings: "liga" 0;
+  -ms-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto;
   line-height: 1.2;
@@ -114,6 +116,7 @@ main {
 }
 
 h1, h2, h3 {
+  -ms-hyphens: none;
   -webkit-hyphens: none;
   hyphens: none;
 }
@@ -165,6 +168,7 @@ video {
     width: 100%;
     max-width: none;
     top: 0px;
+    position: -webkit-sticky;
     position: sticky;
     background-color: var(--bg-color);
   }
