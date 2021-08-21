@@ -2,9 +2,9 @@
   <p class="post-type">{{ page.extra.type }}</p>
 {% endif %}
 <ul class="post-info">
-  {% for author, alias in config.extra.author_aliases %}
-    {% if page.extra[author] %}
-      <li>{{ alias }}: {{ page.extra[author] }}</li>
+  {% for entry in config.extra.author_aliases %}
+    {% if page.extra[entry.name] %}
+      <li>{{ entry.alias }}: {{ page.extra[entry.name] }}</li>
     {% endif %}
   {% endfor %}
 </ul>
