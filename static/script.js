@@ -12,10 +12,7 @@ function calcFooterHeight() {
 
 function updateNavButtons() {
     const toggleButton = document.querySelector("#toggle-sidebar");
-    const sidebar = document.querySelector("#sidebar-headings");
-
     toggleButton.onclick = () => {
-        sidebar.classList.toggle("show");
         toggleButton.classList.toggle("close");
     }
 }
