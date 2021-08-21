@@ -333,6 +333,7 @@ video {
         object-fit: cover;
         min-height: 100%;
         min-height: #{"min(80vw, 100%)"};
+        max-width: #{"min(140vh, 100%)"};
       }
     }
   }
