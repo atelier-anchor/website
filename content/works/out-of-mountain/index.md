@@ -5,7 +5,7 @@ extra:
   type: Book Design
   client: Guiyang WOW
   art-director: Setsuna Chen
-  designer: Setsuna Chen, Willie Liu
+  designer: Setsuna Chen, Zhiqian Li
   images:
     - out-of-mountain-1.jpg
     - out-of-mountain-2.jpg
