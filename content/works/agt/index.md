@@ -3,10 +3,10 @@ title: Arcade Game Typography
 date: 2021-02-01
 extra:
   type: Translation
-  designer: Telos
-  publisher: Telos
   translator: Willie Liu
   editor: Xiyao Du
+  designer: Telos
+  publisher: Telos
   images:
     - agt-1.jpg
     - agt-2.gif

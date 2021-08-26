@@ -13,14 +13,14 @@ smart_punctuation = true
 
 [extra]
 author_aliases = [
-    { name = "client",             alias = "CL" },
-    { name = "creative-director",  alias = "CD" },
-    { name = "art-director",       alias = "AD" },
-    { name = "type-director",      alias = "TD" },
-    { name = "editorial-director", alias = "ED" },
-    { name = "translator",         alias = "T"  },
-    { name = "editor",             alias = "E"  },
-    { name = "designer",           alias = "D"  },
-    { name = "publisher",          alias = "P"  },
-    { name = "author",             alias = "A"  },
+    { name = "client",            alias = "CL" },
+    { name = "author",            alias = "A"  },
+    { name = "translator",        alias = "T"  },
+    { name = "editor",            alias = "E"  },
+    { name = "editorial-design",  alias = "ED" },
+    { name = "creative-director", alias = "CD" },
+    { name = "art-director",      alias = "AD" },
+    { name = "type-director",     alias = "TD" },
+    { name = "designer",          alias = "D"  },
+    { name = "publisher",         alias = "P"  },
 ]
