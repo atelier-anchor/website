@@ -29,12 +29,12 @@ extra:
       image: setsuna-chen.jpg
       title:
         - Co-founder
-        - Art Director
+        - Graphic Designer
     - name: Willie Liu
       image: willie-liu.jpg
       title:
         - Co-founder
-        - Type Director
+        - Type Designer
     - name: Xiyao Du
       image: xiyao-du.jpg
       title:
