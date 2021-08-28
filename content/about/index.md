@@ -58,10 +58,6 @@ extra:
       image: xiangdong-zeng.jpg
       title:
         - Technician
-    - name: Lynn Lai
-      image: lynn-lai.jpg
-      title:
-        - Book Designer
     - name: Shachō
       image: shacho.png
       title:
