@@ -1,4 +1,5 @@
 ---
+title: about
 template: about.html
 extra:
   mission:
