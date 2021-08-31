@@ -50,10 +50,6 @@ extra:
       title:
         - Graphic Designer
         - Editor
-    - name: Leove Li
-      image: leove-li.jpg
-      title:
-        - Motion Designer
     - name: Xiangdong Zeng
       image: xiangdong-zeng.jpg
       title:
