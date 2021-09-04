@@ -1,10 +1,10 @@
-{% if page.extra.type %}
+{%- if page.extra.type -%}
   <p class="post-type">{{ page.extra.type }}</p>
-{% endif %}
+{%- endif -%}
 <ul class="post-info">
-  {% for entry in config.extra.author_aliases %}
-    {% if page.extra[entry.name] %}
+  {%- for entry in config.extra.author_aliases -%}
+    {%- if page.extra[entry.name] -%}
       <li>{{ entry.alias }}: {{ page.extra[entry.name] }}</li>
-    {% endif %}
-  {% endfor %}
+    {%- endif -%}
+  {%- endfor -%}
 </ul>

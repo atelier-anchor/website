@@ -1,29 +1,28 @@
-{% extends "base.html" %}
+{%- extends "base.html" -%}
 
-{% block content %}
+{%- block content -%}
 <div id="section">
-  {% for page in section.pages %}
+  {%- for page in section.pages -%}
     <div class="section-post row flex-column-reverse">
       <div class="post-content section-post-titles col-6">
         <div class="post-meta">
-        <!-- <div class="post-meta sticky-top"> -->
           <h2 class="post-title m-0">
             <a href="{{ page.path | safe }}">{{ page.title }}</a>
           </h2>
-          {% include "post-meta.html" %}
+          {%- include "post-meta.html" -%}
         </div>
       </div>
       <div class="image-list col">
-        {% if page.extra.images %}
-          {% set image = page.extra.images | first %}
+        {%- if page.extra.images -%}
+          {%- set image = page.extra.images | first -%}
           <a href="{{ page.path | safe }}">
             <figure>
               <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
             </figure>
           </a>
-        {% endif %}
+        {%- endif -%}
       </div>
     </div>
-  {% endfor %}
+  {%- endfor -%}
 </div>
-{% endblock content %}
+{%- endblock content -%}

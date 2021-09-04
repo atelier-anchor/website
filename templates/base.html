@@ -8,7 +8,15 @@
   <meta name="description" content="{{ config.description }}">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
-  <title>{% if page.title %}{{ page.title }} - {% else %}{% if section.title %}{{ section.title }} - {% endif %}{% endif %}{{ config.title }}</title>
+  <title>
+    {%- set separator = " - " -%}
+    {%- if page.title -%}
+      {{ page.title }}{{ separator }}
+    {%- elif section.title -%}
+      {{ section.title }}{{ separator }}
+    {%- endif -%}
+    {{- config.title -}}
+  </title>
   <!-- Build time: {{ now() }} -->
 </head>
 
@@ -21,7 +29,7 @@
             <div id="header">
               <h1 id="logo">
                 <a href="/">
-                  {% include "logo.html" %}
+                  {%- include "logo.html" -%}
                 </a>
               </h1>
               <button id="toggle-sidebar" class="toggle-nav" data-bs-toggle="collapse" data-bs-target="#sidebar-headings">
@@ -29,18 +37,18 @@
               </button>
             </div>
             <div id="sidebar-headings" class="collapse">
-              {% set sections = ["works", "typefaces", "dash", "about"] %}
-              {% for section in sections %}
+              {%- set sections = ["works", "typefaces", "dash", "about"] -%}
+              {%- for section in sections -%}
                 <h2 class="m-0{% if current_url is containing(section) %} active{% endif %}">
                   <a href="/{{ section }}/">{{ section }}</a>
                 </h2>
-              {% endfor %}
+              {%- endfor -%}
             </div>
           </aside>
         </div>
         <article id="content" class="col d-flex">
-          {% block content %}
-          {% endblock %}
+          {%- block content -%}
+          {%- endblock -%}
         </article>
       </div>
     </main>

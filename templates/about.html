@@ -1,6 +1,6 @@
-{% extends "base.html" %}
+{%- extends "base.html" -%}
 
-{% block content %}
+{%- block content -%}
 <div id="about">
   <div class="about-post row">
     <div class="post-content about-post-titles col-6">
@@ -9,9 +9,9 @@
       </div>
     </div>
     <div class="col">
-      {% for mission in page.extra.mission %}
+      {%- for mission in page.extra.mission -%}
         <p>{{ mission }}</p>
-      {% endfor %}
+      {%- endfor -%}
     </div>
   </div>
   <div class="about-post row">
@@ -21,14 +21,14 @@
       </div>
     </div>
     <div class="col">
-      {% for services in page.extra.services %}
+      {%- for services in page.extra.services -%}
         <p>{{ services.summary }}</p>
         <ul>
-          {% for item in services.items %}
+          {%- for item in services.items -%}
             <li>{{ item }}</li>
-          {% endfor %}
+          {%- endfor -%}
         </ul>
-      {% endfor %}
+      {%- endfor -%}
     </div>
   </div>
   <div class="about-post row">
@@ -38,20 +38,20 @@
       </div>
     </div>
     <div class="col about-team">
-      {% for member in page.extra.team %}
+      {%- for member in page.extra.team -%}
         <div class="about-member d-flex">
           <div class="avatar">
             <img src="{{ page.path | safe }}{{ member.image }}" alt="{{ member.name }}">
           </div>
           <ul class="profile">
             <li>{{ member.name }}</li>
-            {% for title in member.title %}
+            {%- for title in member.title -%}
               <li>{{ title }}</li>
-            {% endfor %}
+            {%- endfor -%}
           </ul>
         </div>
-      {% endfor %}
+      {%- endfor -%}
     </div>
   </div>
 </div>
-{% endblock content %}
+{%- endblock content -%}

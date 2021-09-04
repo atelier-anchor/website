@@ -1,31 +1,31 @@
-{% extends "base.html" %}
+{%- extends "base.html" -%}
 
-{% block content %}
+{%- block content -%}
 <div class="row flex-column-reverse">
   <div class="post-content col-6 ">
     <div class="sticky-top">
       <h2 class="post-title m-0">{{ page.title }}</h2>
-      {% include "post-meta.html" %}
-      {{ page.content | safe }}
+      {%- include "post-meta.html" -%}
+      {{- page.content | safe -}}
     </div>
   </div>
   <div class="image-list col">
-    {% if page.extra.images %}
-      {% for image in page.extra.images %}
+    {%- if page.extra.images -%}
+      {%- for image in page.extra.images -%}
         <figure>
           <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
         </figure>
-      {% endfor %}
-    {% endif %}
-    {% if page.extra.videos %}
-      {% for video in page.extra.videos %}
+      {%- endfor -%}
+    {%- endif -%}
+    {%- if page.extra.videos -%}
+      {%- for video in page.extra.videos -%}
         <figure>
           <video controls {% if video.poster %} poster="{{ page.path | safe }}{{ video.poster }}"{% endif %}>
             <source src="{{ page.path | safe }}{{ video.source }}" type="video/webm">
           </video>
         </figure>
-      {% endfor %}
-    {% endif %}
+      {%- endfor -%}
+    {%- endif -%}
   </div>
 </div>
-{% endblock content %}
+{%- endblock content -%}

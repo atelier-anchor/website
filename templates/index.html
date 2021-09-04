@@ -1,19 +1,17 @@
-{% extends "base.html" %}
+{%- extends "base.html" -%}
 
-{% block content %}
-{% set image_pages = [] %}
-{% set subsection = get_section(path="works/_index.md") %}
-{% for page in subsection.pages %}
-  {% if page.extra %}
-    {% if page.extra.images %}
-      {% set_global image_pages = image_pages | concat(with=page) %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
+{%- block content -%}
+{%- set image_pages = [] -%}
+{%- set subsection = get_section(path="works/_index.md") -%}
+{%- for page in subsection.pages -%}
+  {%- if page.extra and page.extra.images -%}
+    {%- set_global image_pages = image_pages | concat(with=page) -%}
+  {%- endif -%}
+{%- endfor -%}
 <div id="carousel">
   <div class="carousel-inner">
-    {% for page in image_pages %}
-      {% set image = page.extra.images | first %}
+    {%- for page in image_pages -%}
+      {%- set image = page.extra.images | first -%}
       <div class="carousel-item d-flex">
         <a href="{{ page.path | safe }}">
           <figure>
@@ -21,7 +19,7 @@
           </figure>
         </a>
       </div>
-    {% endfor %}
+    {%- endfor -%}
   </div>
 </div>
-{% endblock content %}
+{%- endblock content -%}
