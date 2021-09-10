@@ -15,7 +15,11 @@
       <div class="carousel-item d-flex">
         <a href="{{ page.path | safe }}">
           <figure>
-            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+            {%- if image.url -%}
+              <img src="{{ image.url }}" alt="{{ image.name }}">
+            {%- else -%}
+              <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+            {%- endif -%}
           </figure>
         </a>
       </div>

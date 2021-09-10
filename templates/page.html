@@ -13,7 +13,11 @@
     {%- if page.extra.images -%}
       {%- for image in page.extra.images -%}
         <figure>
-          <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+          {%- if image.url -%}
+            <img src="{{ image.url }}" alt="{{ image.name }}">
+          {%- else -%}
+            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+          {%- endif -%}
         </figure>
       {%- endfor -%}
     {%- endif -%}

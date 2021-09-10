@@ -7,11 +7,16 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen, Zhiqian Li
   images:
-    - out-of-mountain-1.jpg
-    - out-of-mountain-2.jpg
-    - out-of-mountain-3.jpg
-    - out-of-mountain-4.jpg
-    - out-of-mountain-5.jpg
+    - name: out-of-mountain-1
+      url: https://i.loli.net/2021/09/11/IfRGHceaXOjQPC6.jpg
+    - name: out-of-mountain-2
+      url: https://i.loli.net/2021/09/11/l5yuNpMd4teonfs.jpg
+    - name: out-of-mountain-4
+      url: https://i.loli.net/2021/09/11/p3kWHSXym1I8sB9.jpg
+    - name: out-of-mountain-3
+      url: https://i.loli.net/2021/09/11/O2GNuwbFeRqxrkS.jpg
+    - name: out-of-mountain-5
+      url: https://i.loli.net/2021/09/11/HfYxO2u3PhFDdbn.jpg
 ---
 
 我们从杂志的立意中提取了贵州人这种取自于“山地”的坚韧，挑选了近代贵阳的城市风貌之一的传统招牌字体——行楷。在全书的视觉概念上，将地图本身作为一个设计的概念进行延展。它即是一本真正意义上的地图，也是一本看起来不太像地图的书。山地之上耸立的建筑，地图之中包裹的文字。它将成为这座城市的昨日、今日、明日，直至未来。
