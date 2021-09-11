@@ -7,11 +7,16 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen, Denise Dou
   images:
-    - kuusi-1.jpg
-    - kuusi-2.jpg
-    - kuusi-3.jpg
-    - kuusi-4.jpg
-    - kuusi-5.jpg
+    - name: kuusi-1
+      url: https://i.loli.net/2021/09/11/vf1YPNicJW63dj4.jpg
+    - name: kuusi-2
+      url: https://i.loli.net/2021/09/11/ET6iFtjbN1Rzy78.jpg
+    - name: kuusi-3
+      url: https://i.loli.net/2021/09/11/DRxI5aMnhCfd1UN.jpg
+    - name: kuusi-4
+      url: https://i.loli.net/2021/09/11/4o3LwZCcJeS2aRB.jpg
+    - name: kuusi-5
+      url: https://i.loli.net/2021/09/11/sMIokEhBA6wJQ8N.jpg
 ---
 
 这款字体是由来自芬兰的字体设计师窦颖秋创作的。为了它的发布，我们以“冬日的优雅”为概念制作了一个礼盒。使用香薰蜡烛作为概念的载体，将字体的创作起点和精神以实物的形式传递。

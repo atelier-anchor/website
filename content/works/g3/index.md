@@ -7,15 +7,19 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen, Leove Li
   images:
-    - g3-1.jpg
-    - g3-2.jpg
-    - g3-3.jpg
-    - g3-4.jpg
+    - name: g3-1
+      url: https://i.loli.net/2021/09/11/cSeFwMg24APf9Cl.jpg
+    - name: g3-2
+      url: https://i.loli.net/2021/09/11/d3sJoicmXv1jDhF.jpg
+    - name: g3-3
+      url: https://i.loli.net/2021/09/11/Eqpjt1wcfTuSKJo.jpg
+    - name: g3-4
+      url: https://i.loli.net/2021/09/11/g2d4Mes6IkjBPZn.jpg
   videos:
     - source: g3-5.webm
-      poster: g3-5-poster.png
+      poster: https://i.loli.net/2021/09/11/LkPs9BjtSleUamv.png
     - source: g3-6.webm
-      poster: g3-6-poster.png
+      poster: https://i.loli.net/2021/09/11/8RfXVdLjpWtIPN2.png
 ---
 
 Glyphs 是一款广受好评的字体编辑器。我们为它第三个版本更新的发布会提供了设计支持。为此，我们聚集了 Glyphs 在字体设计、平面设计、动态图形设计、UX 设计等领域的用户。

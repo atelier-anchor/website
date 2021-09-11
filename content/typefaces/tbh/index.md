@@ -12,8 +12,10 @@ extra:
     - tbh-2.svg
     - tbh-3.svg
     - tbh-4.svg
-    - tbh-5.gif
-    - tbh-6.jpg
+    - name: tbh-5
+      url: https://i.loli.net/2021/09/11/GFLgr1SP8W5ROHd.gif
+    - name: tbh-6
+      url: https://i.loli.net/2021/09/11/A2fj1spZXxiCr9L.jpg
 ---
 
 tbh 是一家来自上海的年轻家居品牌，Studio Bibliography 以“童趣”为核心概念创作了这款字体，并委托我们将其开发成了一款具有两轴可变的品牌可变字体，同时将该风格迁移到了中文标识的设计中。

@@ -41,7 +41,7 @@
       {%- for member in page.extra.team -%}
         <div class="about-member d-flex">
           <div class="avatar">
-            <img src="{{ page.path | safe }}{{ member.image }}" alt="{{ member.name }}">
+            <img src="{{ member.avatar }}" alt="{{ member.name }}">
           </div>
           <ul class="profile">
             <li>{{ member.name }}</li>

@@ -27,36 +27,36 @@ extra:
       - Motion Graphics
   team:
     - name: Setsuna Chen
-      image: setsuna-chen.jpg
+      avatar: https://i.loli.net/2021/09/11/gS7q92JDa3Zk1w5.jpg
       title:
         - Co-founder
         - Graphic Designer
     - name: Willie Liu
-      image: willie-liu.jpg
+      avatar: https://i.loli.net/2021/09/11/q2dnRBEzpVtkmYa.jpg
       title:
         - Co-founder
         - Type Designer
     - name: Xiyao Du
-      image: xiyao-du.jpg
+      avatar: https://i.loli.net/2021/09/11/2AhGFDSwTvWi3eM.jpg
       title:
         - Co-founder
         - Academic Director
     - name: Chen Li
-      image: chen-li.jpg
+      avatar: https://i.loli.net/2021/09/11/OgGEkB3Cp7h8KNS.jpg
       title:
         - Graphic Designer
         - Editor
     - name: Money Su
-      image: money-su.jpg
+      avatar: https://i.loli.net/2021/09/11/T8g2wOmNYbBUGpK.jpg
       title:
         - Graphic Designer
         - Editor
     - name: Xiangdong Zeng
-      image: xiangdong-zeng.jpg
+      avatar: https://i.loli.net/2021/09/11/kj8XHicO6NJLVfe.jpg
       title:
         - Technician
     - name: Shachō
-      image: shacho.png
+      avatar: https://i.loli.net/2021/09/11/otN4awsfW6UbjxH.png
       title:
         - CEO
 ---

@@ -7,6 +7,8 @@ extra:
   art-director: Setsuna Chen
   designer: Setsuna Chen
   images:
-    - chen-shi-fu-hua-1.jpg
-    - chen-shi-fu-hua-2.jpg
+    - name: chen-shi-fu-hua-1
+      url: https://i.loli.net/2021/09/11/f6EbhB2IRNMFKLl.jpg
+    - name: chen-shi-fu-hua-2
+      url: https://i.loli.net/2021/09/11/3iRqI2LxYapVvrw.jpg
 ---
