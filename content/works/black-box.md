@@ -4,8 +4,8 @@ date: 2020-09-01
 extra:
   type: Graphic Design
   client: 3type
-  art-director: Setsuna Chen
-  designer: Setsuna Chen, Willie Liu
+  art-director: Nagisa Chen
+  designer: Nagisa Chen, Willie Liu
   images:
     - name: black-box-1
       url: https://i.loli.net/2021/09/11/sdNpg4AmCOhXwWj.jpg

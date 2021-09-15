@@ -4,8 +4,8 @@ date: 2021-03-01
 extra:
   type: Book Design
   client: Guiyang WOW
-  art-director: Setsuna Chen
-  designer: Setsuna Chen, Zhiqian Li
+  art-director: Nagisa Chen
+  designer: Nagisa Chen, Zhiqian Li
   images:
     - name: out-of-mountain-1
       url: https://i.loli.net/2021/09/11/AzFrMTE2IJse8Rb.jpg

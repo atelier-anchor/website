@@ -6,8 +6,8 @@ extra:
   author: Yanjun Zhang, Heshan Huang, Money Su, Chen Li
   editor: Chen Li, Money Su
   editorial-design: Money Su
-  art-director: Setsuna Chen
-  designer: Setsuna Chen, Chen Li
+  art-director: Nagisa Chen
+  designer: Nagisa Chen, Chen Li
   images:
     - dash-0-1.svg
 ---

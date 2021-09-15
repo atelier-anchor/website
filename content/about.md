@@ -26,8 +26,8 @@ extra:
       - Poster, Brochure & Book Design
       - Motion Graphics
   team:
-    - name: Setsuna Chen
-      avatar: https://i.loli.net/2021/09/11/gS7q92JDa3Zk1w5.jpg
+    - name: Nagisa Chen
+      avatar: https://i.loli.net/2021/09/15/vTGrt3JXzCFIpbY.jpg
       title:
         - Co-founder
         - Graphic Designer

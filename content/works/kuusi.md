@@ -4,8 +4,8 @@ date: 2020-12-01
 extra:
   type: Graphic Design
   client: 3type
-  art-director: Setsuna Chen
-  designer: Setsuna Chen, Denise Dou
+  art-director: Nagisa Chen
+  designer: Nagisa Chen, Denise Dou
   images:
     - name: kuusi-1
       url: https://i.loli.net/2021/09/11/vf1YPNicJW63dj4.jpg

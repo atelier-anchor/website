@@ -4,8 +4,8 @@ date: 2021-04-01
 extra:
   type: Visual Identity
   client: Ambitful
-  art-director: Setsuna Chen
-  designer: Setsuna Chen
+  art-director: Nagisa Chen
+  designer: Nagisa Chen
   images:
     - name: ambitful-1
       url: https://i.loli.net/2021/09/11/OIP2C8VUd4c3jBq.jpg

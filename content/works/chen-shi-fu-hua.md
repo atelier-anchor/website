@@ -4,8 +4,8 @@ date: 2020-10-01
 extra:
   type: Graphic Design
   client: Guiyang WOW
-  art-director: Setsuna Chen
-  designer: Setsuna Chen
+  art-director: Nagisa Chen
+  designer: Nagisa Chen
   images:
     - name: chen-shi-fu-hua-1
       url: https://i.loli.net/2021/09/11/f6EbhB2IRNMFKLl.jpg

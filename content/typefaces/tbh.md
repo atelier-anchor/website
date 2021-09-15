@@ -5,8 +5,8 @@ extra:
   type: Custom Typeface
   client: tbh
   creative-director: Zhengzhong Pan @Studio Bibliography
-  type-director: Setsuna Chen
-  designer: Zhengzhong Pan, Setsuna Chen
+  type-director: Nagisa Chen
+  designer: Zhengzhong Pan, Nagisa Chen
   images:
     - tbh-1.svg
     - tbh-2.svg
