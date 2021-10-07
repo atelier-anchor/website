@@ -21,22 +21,20 @@
 </head>
 
 <body>
-  <div id="wrapper">
+  <div class="wrapper">
     <main class="mt-auto">
       <div class="row">
-        <div id="sidebar-wrapper" class="col-3">
-          <aside id="sidebar" class="sticky-top">
-            <div id="header">
-              <h1 id="logo">
-                <a href="/">
-                  {%- include "logo.html" -%}
-                </a>
+        <div class="sidebar-wrapper" class="col-3">
+          <aside class="sidebar sticky-top">
+            <div class="header">
+              <h1 class="logo">
+                <a href="/">{%- include "logo.html" -%}</a>
               </h1>
               <button id="toggle-sidebar" class="toggle-nav" data-bs-toggle="collapse" data-bs-target="#sidebar-headings">
                 <span class="anicon">A</span>
               </button>
             </div>
-            <div id="sidebar-headings" class="collapse">
+            <div id="sidebar-headings" class="sidebar-headings collapse">
               {%- set sections = ["works", "typefaces", "dash", "about"] -%}
               {%- for section in sections -%}
                 <h2 class="m-0{% if current_url is containing(section) %} active{% endif %}">
@@ -46,13 +44,13 @@
             </div>
           </aside>
         </div>
-        <article id="content" class="col d-flex">
+        <article class="content col d-flex">
           {%- block content -%}
           {%- endblock -%}
         </article>
       </div>
     </main>
-    <footer id="footer" class="fixed-bottom">
+    <footer class="footer fixed-bottom">
       <h2>contact</h2>
       <address class="m-0">
         15A, Lane 141<br>

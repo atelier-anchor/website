@@ -8,7 +8,7 @@
     {%- set_global image_pages = image_pages | concat(with=page) -%}
   {%- endif -%}
 {%- endfor -%}
-<div id="carousel">
+<div class="carousel">
   <div class="carousel-inner">
     {%- for page in image_pages -%}
       {%- set image = page.extra.images | first -%}

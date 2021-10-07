@@ -6,7 +6,7 @@
 })();
 
 function calcFooterHeight() {
-    const footerHeight = document.querySelector("footer").clientHeight + "px";
+    const footerHeight = document.querySelector(".footer").clientHeight + "px";
     document.documentElement.style.setProperty("--footer-height", footerHeight);
 }
 
