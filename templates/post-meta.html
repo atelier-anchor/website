@@ -4,7 +4,11 @@
 <ul class="post-info">
   {%- for entry in config.extra.author_aliases -%}
     {%- if page.extra[entry.name] -%}
-      <li>{{ entry.alias }}: {{ page.extra[entry.name] }}</li>
+      {%- set entry_title = entry.name | replace(from="-", to=" ") | capitalize -%}
+      <li>
+        <span title="{{ entry_title }}">{{ entry.alias }}</span>:
+        {{ page.extra[entry.name] -}}
+      </li>
     {%- endif -%}
   {%- endfor -%}
 </ul>
