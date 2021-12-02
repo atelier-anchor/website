@@ -154,7 +154,7 @@ video {
 .sidebar-wrapper {
   min-width: 220px;
   max-width: 240px;
-  z-index: 2;
+  z-index: 1;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -243,6 +243,8 @@ video {
 
 .footer {
   position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
   z-index: 1;
   @include media-breakpoint-up(sm) {
     margin-top: calc(-1 * var(--footer-height));
@@ -376,9 +378,10 @@ video {
 
   .about {
     .about-post {
-      &:not(:last-child) {
-        margin-bottom: 40px;
-        @include media-breakpoint-up(md) { margin-bottom: 60px; }
+      margin-bottom: calc(20px + var(--spacing-unit));
+
+      &:last-child {
+        @include media-breakpoint-up(md) { margin-bottom: 0; }
       }
 
       .about-post-titles {

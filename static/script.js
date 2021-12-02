@@ -3,6 +3,21 @@
     updateNavButtons();
     updateCarousel();
     updateTypography();
+
+    new Pjax({
+        selectors: [
+            "title",
+            "#toggle-sidebar",
+            "#sidebar-headings",
+            "#article",
+        ],
+        cacheBust: false,
+    });
+    document.addEventListener("pjax:complete", function () {
+        updateNavButtons();
+        updateCarousel();
+        updateTypography();
+    });
 })();
 
 function calcFooterHeight() {
