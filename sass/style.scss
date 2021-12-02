@@ -129,6 +129,7 @@ a {
 }
 
 figure {
+  margin: 0;
   overflow: hidden;
 }
 
@@ -157,7 +158,7 @@ video {
   @include media-breakpoint-down(sm) {
     width: 100%;
     max-width: none;
-    top: 0px;
+    top: 0;
     position: -webkit-sticky;
     position: sticky;
     background-color: var(--bg-color);
@@ -290,21 +291,21 @@ video {
   .image-list {
     @include media-breakpoint-down(md) { margin-bottom: var(--spacing-unit); }
 
-    figure {
+    figure:not(:last-child) {
       margin-bottom: var(--spacing-unit);
-
-      &:last-child {
-        @include media-breakpoint-up(md) { margin-bottom: 0; }
-      }
     }
   }
 
   .carousel {
     .carousel-item {
-      height: calc(100vh - var(--footer-height) - var(--spacing-unit) - 100px);
-      @include media-breakpoint-up(sm) { height: calc(100vh - var(--spacing-unit) * 2); }
-      min-height: 320px;
-      align-items: center;
+      @include media-breakpoint-down(sm) {
+        height: calc(100vh - var(--footer-height) - var(--spacing-unit) * 3 - 100px);
+        min-height: 320px;
+        margin-bottom: var(--spacing-unit);
+      }
+      @include media-breakpoint-up(sm) {
+        height: calc(100vh - var(--spacing-unit) * 2);
+      }
       overflow: hidden;
       transition: opacity 2s ease;
 
@@ -318,18 +319,20 @@ video {
     }
 
     a {
-      &, figure {
-        height: inherit
-      }
-
+      height: inherit;
       @include hover-img-scale();
     }
 
     figure {
       display: flex;
-      position: relative;
       align-items: center;
       justify-content: center;
+      height: inherit;
+      @include media-breakpoint-down(sm) { min-height: 320px; }
+      @include media-breakpoint-up(sm) {
+        position: fixed;
+        margin-right: var(--spacing-unit);
+      }
 
       img {
         object-fit: cover;
@@ -347,15 +350,9 @@ video {
       @include hover-img-scale();
     }
 
-    figure {
-      margin-bottom: 0;
-    }
-
     .section-post {
-      margin-bottom: var(--spacing-unit);
-
-      &:last-child {
-        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      &:not(:last-child) {
+        margin-bottom: var(--spacing-unit);
       }
 
       .image-list {
@@ -378,11 +375,9 @@ video {
 
   .about {
     .about-post {
-      margin-bottom: 40px;
-      @include media-breakpoint-up(md) { margin-bottom: 60px; }
-
-      &:last-child {
-        @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      &:not(:last-child) {
+        margin-bottom: 40px;
+        @include media-breakpoint-up(md) { margin-bottom: 60px; }
       }
 
       .about-post-titles {
@@ -398,19 +393,9 @@ video {
       }
     }
 
-    .about-team >:last-child {
-      ul, img {
-        margin-bottom: 0;
-      }
-    }
-
     .about-member {
       align-items: center;
       margin-bottom: var(--spacing-unit);
-
-      &:last-child {
-        @include media-breakpoint-up(sm) { margin-bottom: 0; }
-      }
 
       .avatar {
         clip-path: circle(40px at center);
