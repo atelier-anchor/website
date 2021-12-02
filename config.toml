@@ -12,6 +12,14 @@ highlight_code = false
 smart_punctuation = true
 
 [extra]
+address = [
+    "15A, Lane 141",
+    "Xing'an Road",
+    "Huangpu District",
+    "Shanghai, China",
+    "[hi@atelier-anchor.com](mailto:hi@atelier-anchor.com)",
+    "[twitter](https://twitter.com/atelier_anchor) [instagram](https://www.instagram.com/atelier_anchor)",
+]
 author_aliases = [
     { name = "client",            alias = "CL" },
     { name = "author",            alias = "A"  },
