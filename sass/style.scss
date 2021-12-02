@@ -76,13 +76,6 @@
   }
 }
 
-.fixed-bottom {
-  @media (min-height: 600px) {
-    @include media-breakpoint-up(sm) { position: fixed; }
-    bottom: var(--spacing-unit);
-  }
-}
-
 body {
   font-family: "Neue Machina", sans-serif;
   font-weight: 700;
@@ -159,7 +152,7 @@ video {
 .sidebar-wrapper {
   min-width: 220px;
   max-width: 240px;
-  z-index: 1;
+  z-index: 2;
 
   @include media-breakpoint-down(sm) {
     width: 100%;
@@ -240,10 +233,22 @@ video {
       }
     }
   }
+
+  .sidebar-placeholder {
+    @include media-breakpoint-up(sm) { height: var(--footer-height); }
+  }
 }
 
 .footer {
+  position: relative;
   z-index: 1;
+  @include media-breakpoint-up(sm) {
+    margin-top: calc(-1 * var(--footer-height));
+    @media (min-height: 600px) {
+      position: fixed;
+      bottom: var(--spacing-unit);
+    }
+  }
 
   h2 {
     font-size: 2rem;
