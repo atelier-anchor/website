@@ -3,8 +3,7 @@
         "../node_modules/bootstrap/scss/mixins",
         "../node_modules/bootstrap/scss/reboot",
         "../node_modules/bootstrap/scss/containers",
-        "../node_modules/bootstrap/scss/grid",
-        "../node_modules/bootstrap/scss/transitions";
+        "../node_modules/bootstrap/scss/grid";
 
 @font-face {
   font-family: "Neue Machina";
@@ -206,25 +205,26 @@ video {
     }
   }
 
-  .sidebar-headings {
+  .sidebar-nav {
     @include media-breakpoint-down(sm) {
       position: absolute;
       width: 100%;
       left: 0;
+      max-height: 200px;
       padding: 0 calc(var(--spacing-unit) * .5);
       background-color: var(--bg-color);
-    }
+      overflow: hidden;
+      transition: max-height .4s ease-in-out;
 
-    @include media-breakpoint-up(sm) {
-      display: block;
-    }
-
-    &.collapsing {
-      transition: height .4s ease-in-out;
+      &:not(.show) {
+        max-height: 0;
+      }
     }
 
     :last-child {
-      @include media-breakpoint-down(sm) { margin-bottom: calc(var(--spacing-unit)); }
+      @include media-breakpoint-down(sm) {
+        margin-bottom: calc(var(--spacing-unit));
+      }
     }
 
     h2 {
@@ -237,7 +237,9 @@ video {
   }
 
   .sidebar-placeholder {
-    @include media-breakpoint-up(sm) { height: var(--footer-height); }
+    @include media-breakpoint-up(sm) {
+      height: var(--footer-height);
+    }
   }
 }
 

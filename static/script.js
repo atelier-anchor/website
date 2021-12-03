@@ -8,7 +8,7 @@
         selectors: [
             "title",
             "#toggle-sidebar",
-            "#sidebar-headings",
+            "#sidebar-nav",
             "#article",
         ],
         cacheBust: false,
@@ -21,14 +21,16 @@
 })();
 
 function calcFooterHeight() {
-    const footerHeight = document.querySelector(".footer").clientHeight + "px";
+    const footerHeight = document.querySelector("#footer").clientHeight + "px";
     document.documentElement.style.setProperty("--footer-height", footerHeight);
 }
 
 function updateNavButtons() {
     const toggleButton = document.querySelector("#toggle-sidebar");
+    const nav = document.querySelector("#sidebar-nav");
     toggleButton.onclick = () => {
         toggleButton.classList.toggle("close");
+        nav.classList.toggle("show");
     }
 }
 
