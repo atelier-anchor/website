@@ -1,7 +1,7 @@
 base_url = "https://atelier-anchor.com"
 
 title = "atelierAnchor"
-description = "atelierAnchor is a design studio based in Shanghai with an edge on crafts and technology."
+description = "graphic & typeface design studio in shanghai. we make typeface as A narrative."
 
 compile_sass = true
 # minify_html = true
@@ -12,6 +12,7 @@ highlight_code = false
 smart_punctuation = true
 
 [extra]
+generator = "Zola 0.14.1"
 address = [
     "15A, Lane 141",
     "Xing'an Road",

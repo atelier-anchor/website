@@ -4,8 +4,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="copyright" content="&copy; {{ now() | date(format='%Y') }} atelierAnchor">
   <meta name="description" content="{{ config.description }}">
+  <meta name="copyright" content="&copy; {{ now() | date(format='%Y') }} atelierAnchor">
+  <meta name="generator" content="{{ config.extra.generator }}">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="{{ config.base_url }}">
+  <meta name="og:title" content="{{ config.title }}">
+  <meta name="og:description" content="{{ config.description }}">
+  <meta name="build-time" content="{{ now() }}">
   <link rel="stylesheet" href="/style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <title>
@@ -17,7 +23,6 @@
     {%- endif -%}
     {{- config.title -}}
   </title>
-  <!-- Build time: {{ now() }} -->
 </head>
 
 <body>
@@ -28,9 +33,9 @@
           <aside class="sidebar sticky-top">
             <div class="header">
               <h1 class="logo">
-                <a href="/">{%- include "logo.html" -%}</a>
+                <a href="/" aria-label="{{ config.title }}">{%- include "logo.html" -%}</a>
               </h1>
-              <button id="toggle-sidebar" class="toggle-nav">
+              <button id="toggle-sidebar" class="toggle-nav" aria-label="Toggle navigation">
                 <span class="anicon">A</span>
               </button>
             </div>

@@ -15,7 +15,7 @@
       <div class="image-list col">
         {%- if page.extra.images -%}
           {%- set image = page.extra.images | first -%}
-          <a href="{{ page.path | safe }}">
+          <a href="{{ page.path | safe }}" aria-label="{{ page.title }}">
             <figure>
               {%- if image.url -%}
                 <img src="{{ image.url }}" alt="{{ image.name }}">
