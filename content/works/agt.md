@@ -9,7 +9,7 @@ extra:
   publisher: Telos
   images:
     - name: agt-1
-      url: https://i.loli.net/2021/09/11/YZa5hu2pSvkzsmB.jpg
+      url: https://i.loli.net/2021/12/03/WryodxGRB5ZSivq.jpg
     - name: agt-2
       url: https://i.loli.net/2021/09/11/Xopx9bE7NkPLZsO.gif
     - name: agt-3
