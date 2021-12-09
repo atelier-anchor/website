@@ -1,0 +1,40 @@
+{%- macro animate(name, from="", to="", dur, begin, id="") -%}
+  <animate
+    {% if id %}
+      id="{{ id }}"
+    {% endif %}
+    attributeName="{{ name }}"
+    {% if from %}
+      from="{{ from }}"
+    {% endif %}
+    {% if to %}
+      to="{{ to }}"
+    {% endif %}
+    dur="{{ dur }}s"
+    begin="{{ begin }}"
+    fill="freeze"
+  />
+{%- endmacro -%}
+
+{%- macro animateTransform(type, from="", to="", keySplines="", additive="", dur, begin) -%}
+  <animateTransform
+    attributeName="transform"
+    type="{{ type }}"
+    {% if from %}
+      from="{{ from }}"
+    {% endif %}
+    {% if to %}
+      to="{{ to }}"
+    {% endif %}
+    dur="{{ dur }}s"
+    begin="{{ begin }}"
+    {% if keySplines %}
+      calcMode="spline"
+      keySplines="{{ keySplines }}"
+    {% endif %}
+    {% if additive %}
+      additive="{{ additive }}"
+    {% endif %}
+    fill="freeze"
+  />
+{%- endmacro -%}

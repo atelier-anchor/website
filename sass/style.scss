@@ -12,13 +12,6 @@
   src: url("assets/NeueMachina-Bold.woff2") format("woff2");
 }
 
-@font-face {
-  font-family: "Anicons Regular";
-  font-weight: normal;
-  font-style: normal;
-  src: url("assets/AniconsGX.woff2") format("woff2");
-}
-
 @mixin hover-img-scale {
   img {
     transition: .4s ease;
@@ -167,6 +160,7 @@ video {
 
 .sidebar {
   .header {
+    align-items: center;
     justify-content: space-between;
     margin-bottom: calc(var(--spacing-unit));
     @include media-breakpoint-down(sm) {
@@ -184,24 +178,13 @@ video {
       }
     }
 
-    .toggle-nav {
+    .nav-toggle {
       @include media-breakpoint-up(sm) { display: none; }
       padding: 0;
       border: none;
       background: none;
-
-      .anicon {
-        font: 36px "Anicons Regular", sans-serif;
-        font-variation-settings: "TIME" 1;
-        transition: font-variation-settings .4s ease;
-        color: var(--primary-color);
-        -webkit-user-select: none;
-        user-select: none;
-      }
-
-      &.close .anicon {
-        font-variation-settings: "TIME" 100;
-      }
+      height: -moz-fit-content;
+      height: fit-content;
     }
   }
 
