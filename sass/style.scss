@@ -3,14 +3,8 @@
         "../node_modules/bootstrap/scss/mixins",
         "../node_modules/bootstrap/scss/reboot",
         "../node_modules/bootstrap/scss/containers",
-        "../node_modules/bootstrap/scss/grid";
-
-@font-face {
-  font-family: "Neue Machina";
-  font-weight: 700;
-  font-style: normal;
-  src: url("assets/NeueMachina-Bold.woff2") format("woff2");
-}
+        "../node_modules/bootstrap/scss/grid",
+        "fonts";
 
 @mixin hover-img-scale {
   img {
