@@ -21,15 +21,20 @@
 })();
 
 function calcFooterHeight() {
-    const footerHeight = document.querySelector("#footer").clientHeight + "px";
-    document.documentElement.style.setProperty("--footer-height", footerHeight);
+    const footer = document.querySelector("#footer");
+    if (footer) {
+        const footerHeight = footer.clientHeight + "px";
+        document.documentElement.style.setProperty("--footer-height", footerHeight);
+    }
 }
 
 function updateNavButtons() {
     const toggle = document.querySelector("#nav-toggle");
     const nav = document.querySelector("#sidebar-nav");
-    toggle.onclick = () => {
-        nav.classList.toggle("show");
+    if (toggle) {
+        toggle.onclick = () => {
+            nav.classList.toggle("show");
+        }
     }
 }
 

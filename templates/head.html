@@ -1,0 +1,27 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ config.description }}">
+  <meta name="copyright" content="&copy; {{ now() | date(format='%Y') }} atelierAnchor">
+  <meta name="generator" content="{{ config.extra.generator }}">
+  <meta name="og:type" content="website">
+  <meta name="og:url" content="{{ config.base_url }}">
+  <meta name="og:title" content="{{ config.title }}">
+  <meta name="og:description" content="{{ config.description }}">
+  <meta name="build-time" content="{{ now() }}">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <script defer src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script>
+  <script defer src="/script.js"></script>
+  <title>
+    {%- set separator = " - " -%}
+    {%- if page.title -%}
+      {{ page.title }}{{ separator }}
+    {%- elif section.title -%}
+      {{ section.title }}{{ separator }}
+    {%- elif not current_url -%}
+      {{ "404" ~ separator }}
+    {%- endif -%}
+    {{- config.title -}}
+  </title>
+</head>

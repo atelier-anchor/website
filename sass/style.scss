@@ -99,6 +99,10 @@ h1, h2, h3 {
   hyphens: none;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
 h2 {
   font-size: 1.5rem;
 }
@@ -397,5 +401,26 @@ video {
         }
       }
     }
+  }
+}
+
+.error-page {
+  position: absolute;
+  top: var(--spacing-unit);
+  bottom: var(--spacing-unit);
+  left: var(--spacing-unit);
+  right: var(--spacing-unit);
+  min-height: 320px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  .error-page-text {
+    text-align: center;
+  }
+
+  .error-page-logo svg {
+    fill: var(--fg-color);
+    width: 120px;
   }
 }
