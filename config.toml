@@ -12,7 +12,7 @@ highlight_code = false
 smart_punctuation = true
 
 [extra]
-generator = "Zola 0.14.1"
+generator = "Zola 0.15.1"
 address = [
     "15A, Lane 141",
     "Xing'an Road",
