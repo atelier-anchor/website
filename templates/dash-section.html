@@ -21,10 +21,7 @@
       </ul>
       -->
       <p>{{ get_dash.pixel_version.summary }}</p>
-      <div class="dash-subscription-form">
-        <input type="email" placeholder="{{ get_dash.pixel_version.email_label }}" class="">
-        <input type="submit" value="{{ get_dash.pixel_version.submit_label }}" class="">
-      </div>
+      {% include "dash-subscription.html" %}
     </div>
   </div>
 

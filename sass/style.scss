@@ -47,6 +47,10 @@
   margin-top: auto;
 }
 
+.d-none {
+  display: none;
+}
+
 .d-flex {
   display: flex;
 }
@@ -361,7 +365,6 @@ video {
     }
 
     .dash-subscription-form {
-      display: flex;
       margin-bottom: var(--spacing-unit);
 
       input {
@@ -374,9 +377,7 @@ video {
           border-bottom: 2px solid var(--primary-color);
           padding-top: 4px;
           padding-bottom: 0;
-          margin-right: 20px;
           width: 100%;
-          max-width: 320px;
         }
 
         &[type="submit"] {
@@ -390,6 +391,12 @@ video {
             text-decoration-thickness: .1em;
           }
         }
+      }
+
+      .mc-field-group {
+        margin-right: 20px;
+        width: 100%;
+        max-width: 320px;
       }
     }
   }
