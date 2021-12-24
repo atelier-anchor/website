@@ -4,6 +4,7 @@
         "../node_modules/bootstrap/scss/reboot",
         "../node_modules/bootstrap/scss/containers",
         "../node_modules/bootstrap/scss/grid",
+        "cursor",
         "fonts";
 
 @mixin hover-img-scale {
@@ -72,8 +73,8 @@ body {
   line-height: 1.2;
   color: var(--fg-color);
   background-color: var(--bg-color);
-  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsSAAALEgHS3X78AAAA6klEQVRIie2W4Q2DIBCFHyzShknsBnaCMlLdwE5QN9BFasok1xxgYxVMDdBffYm/xO94B3enICJENYoaAD8VgMNimQEwAOigqIshwgFGwcA2AI2Jg2koGpbvZQB+BdDvgMOv7f23Gw5Gwbu+7ACHdIMivXbgoqfCYRkzJ86By3mfAT7Xic9kctBmhr+Zgh72Gt4LBGCdpb/npVRLX0SlVHGKNko5XetC+wcIBDAF+Ub6lltKtpKjvTyDuqkXPXe2529koOg4HbJOYwVlmS6Am0RNRngzTbcfDhxYJzrRCe/8I93Fh37Z3xYAL0n+XRYaXFUkAAAAAElFTkSuQmCC) 12 12, auto;
-  cursor: -webkit-image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsSAAALEgHS3X78AAAA6klEQVRIie2W4Q2DIBCFHyzShknsBnaCMlLdwE5QN9BFasok1xxgYxVMDdBffYm/xO94B3enICJENYoaAD8VgMNimQEwAOigqIshwgFGwcA2AI2Jg2koGpbvZQB+BdDvgMOv7f23Gw5Gwbu+7ACHdIMivXbgoqfCYRkzJ86By3mfAT7Xic9kctBmhr+Zgh72Gt4LBGCdpb/npVRLX0SlVHGKNko5XetC+wcIBDAF+Ub6lltKtpKjvTyDuqkXPXe2529koOg4HbJOYwVlmS6Am0RNRngzTbcfDhxYJzrRCe/8I93Fh37Z3xYAL0n+XRYaXFUkAAAAAElFTkSuQmCC) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB9klEQVRoge2a4ZGCMBCFX2jgroNzqMAO9Co4rwItwRIsQTvQCpQKTju4Bo6RDqSC3JANqEgwiQoJ+s3wSyHvsRtIdmGcc9xMzIYA8qMH4ENxyQTAHsBWHCHf3jq0vQESPQEwAvBmOX4KYANgaWvG3AAJnwEY2AxYw05c19CIvoGYZakxB/B1V9mXRACmCPle5896BmI2EmG2TxVTUpGeId9cOy/QEJ/d9XWD4iHHWsuxa6mPQMyyuz5uSLSKFUI+Uf2ojoAb4iE0kJZKqg1Q6FwQnzNWpdNlCtGEXTenzYjv8sQ+N0CPyt+GJ6wJ2dOpf/qILafQ3GHxkNrOUukYAXrD/rQkzJTP/I19GoGZF9KJQisZoLt/77XNIxlIzUUElC8KhxGaaQ7E7OD45K0iRcjfAxkK38RDaI7ZMJC7KF/phoGeA0Js6TH+hzvs6tvj+obmZeCxvAy0TScMJA7osCUJZK3SV/aBLLT6ytZ7Ax1YThNXa5AOIjTnBpSVL4dZHg3QDn/nkfhdx6oSKKIQtaXIgOi0i1NeSkxl+c5VUqkR1Qao5uhyiWVSbj1dLuao+rtoUpUmi6qWk7pD406DA3VdGvVymk5YPVKVJpYtJhQm2kynRZ14PEebFcXE7jf0nohkF0ZrffZEnxqU8fZjjyra+twGwD/9NcahENWgWwAAAABJRU5ErkJggg==) 2x) 12 12, auto;
+  cursor: $cursor-1x 12 12, auto;
+  cursor: -webkit-image-set($cursor-1x 1x, $cursor-2x 2x) 12 12, auto;
   min-height: 100vh;
   padding: var(--spacing-unit);
   @include media-breakpoint-down(sm) { padding-top: 0; }
