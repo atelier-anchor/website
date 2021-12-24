@@ -5,9 +5,10 @@
 
 <body>
   <div class="error-page wrapper d-flex">
-    <div class="error-page-text">
+    <div class="error-page-text d-flex">
       <h1>404</h1>
       <h2>page not found</h2>
+      <h2 class="error-page-go-back"><a href="javascript:;" onclick="window.history.back()">&leftarrow; go back</a></h2>
     </div>
     <div class="error-page-logo">
       <a href="/" aria-label="{{ config.title }}">{% include "svg/logo.html" %}</a>

@@ -448,14 +448,24 @@ video {
   min-height: 320px;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
 
   .error-page-text {
+    height: 100%;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .error-page-logo svg {
-    fill: var(--fg-color);
-    width: 120px;
+  .error-page-go-back {
+    margin-top: 1em;
+  }
+
+  .error-page-logo {
+    margin-bottom: var(--spacing-unit);
+
+    svg {
+      fill: var(--fg-color);
+      width: 120px;
+    }
   }
 }
