@@ -4,7 +4,7 @@ date: 2021-03-01
 extra:
   type: Book Design
   client: Guiyang WOW
-  art-director: Nagisa Chen
+  art_director: Nagisa Chen
   designer: Nagisa Chen, Zhiqian Li
   images:
     - name: out-of-mountain-1

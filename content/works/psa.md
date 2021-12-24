@@ -4,7 +4,7 @@ date: 2019-10-01
 extra:
   type: Product Design
   client: PSA
-  art-director: Willie Liu
+  art_director: Willie Liu
   designer: Willie Liu
   images:
     - name: psa-1

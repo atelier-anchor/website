@@ -4,7 +4,7 @@ date: 2020-10-01
 extra:
   type: Graphic Design
   client: Guiyang WOW
-  art-director: Nagisa Chen
+  art_director: Nagisa Chen
   designer: Nagisa Chen
   images:
     - name: chen-shi-fu-hua-1

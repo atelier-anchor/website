@@ -4,8 +4,8 @@ date: 2020-01-01
 extra:
   type: Custom Typeface
   client: tbh
-  creative-director: Zhengzhong Pan @Studio Bibliography
-  type-director: Nagisa Chen
+  creative_director: Zhengzhong Pan @Studio Bibliography
+  type_director: Nagisa Chen
   designer: Zhengzhong Pan, Nagisa Chen
   images:
     - tbh-1.svg

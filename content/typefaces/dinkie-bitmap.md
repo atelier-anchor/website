@@ -3,7 +3,7 @@ title: Dinkie Bitmap
 date: 2020-09-01
 extra:
   type: Type Design
-  type-director: Willie Liu
+  type_director: Willie Liu
   designer: Willie Liu
   images:
     - dinkie-bitmap-1.svg

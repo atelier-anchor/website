@@ -28,35 +28,35 @@ extra:
   team:
     - name: Nagisa Chen
       avatar: https://i.loli.net/2021/09/15/vTGrt3JXzCFIpbY.jpg
-      title:
+      job_title:
         - Co-founder
         - Graphic Designer
     - name: Willie Liu
       avatar: https://i.loli.net/2021/09/11/q2dnRBEzpVtkmYa.jpg
-      title:
+      job_title:
         - Co-founder
         - Type Designer
     - name: Xiyao Du
       avatar: https://i.loli.net/2021/09/11/2AhGFDSwTvWi3eM.jpg
-      title:
+      job_title:
         - Co-founder
         - Academic Director
     - name: Chen Li
       avatar: https://i.loli.net/2021/09/11/OgGEkB3Cp7h8KNS.jpg
-      title:
+      job_title:
         - Graphic Designer
         - Editor
     - name: Money Su
       avatar: https://i.loli.net/2021/09/11/T8g2wOmNYbBUGpK.jpg
-      title:
+      job_title:
         - Graphic Designer
         - Editor
     - name: Xiangdong Zeng
       avatar: https://i.loli.net/2021/09/11/kj8XHicO6NJLVfe.jpg
-      title:
+      job_title:
         - Technician
     - name: Shachō
       avatar: https://i.loli.net/2021/09/11/otN4awsfW6UbjxH.png
-      title:
+      job_title:
         - CEO
 ---

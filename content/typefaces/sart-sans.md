@@ -3,7 +3,7 @@ title: Sart Sans
 date: 2019-05-01
 extra:
   type: Type Design
-  type-director: Willie Liu
+  type_director: Willie Liu
   designer: Willie Liu
   images:
     - sart-sans-1.svg

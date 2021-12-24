@@ -4,7 +4,7 @@ date: 2020-12-01
 extra:
   type: Graphic Design
   client: 3type
-  art-director: Nagisa Chen
+  art_director: Nagisa Chen
   designer: Nagisa Chen, Denise Dou
   images:
     - name: kuusi-1
