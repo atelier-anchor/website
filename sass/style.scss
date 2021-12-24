@@ -348,14 +348,48 @@ video {
     }
 
     .section-post-titles {
-      display: none;
-      @include media-breakpoint-up(md) {
-        display: flex;
-        align-items: center;
-      }
+      align-items: center;
 
       .post-meta >:last-child {
         @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+    }
+
+    .section-post-titles, .get-dash-titles {
+      display: none;
+      @include media-breakpoint-up(md) { display: flex; }
+    }
+
+    .dash-subscription-form {
+      display: flex;
+      margin-bottom: var(--spacing-unit);
+
+      input {
+        color: var(--fg-color);
+        background: none;
+        border: none;
+        border-radius: 0;
+
+        &[type="email"] {
+          border-bottom: 2px solid var(--primary-color);
+          padding-top: 4px;
+          padding-bottom: 0;
+          margin-right: 20px;
+          width: 100%;
+          max-width: 320px;
+        }
+
+        &[type="submit"] {
+          padding-top: 4px;
+          padding-bottom: 2px;
+
+          &:hover, &:focus, &:active {
+            color: inherit;
+            text-decoration-line: line-through;
+            text-decoration-color: var(--primary-color);
+            text-decoration-thickness: .1em;
+          }
+        }
       }
     }
   }
