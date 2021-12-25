@@ -378,6 +378,11 @@ video {
           padding-top: 4px;
           padding-bottom: 0;
           width: 100%;
+
+          &:invalid:not(:focus):not(:placeholder-shown) ~ .invalid-feedback {
+            margin-top: .5em;
+            max-height: 40px;
+          }
         }
 
         &[type="submit"] {
@@ -397,6 +402,15 @@ video {
         margin-right: 20px;
         width: 100%;
         max-width: 320px;
+      }
+
+      .invalid-feedback {
+        font-size: 12px;
+        color: #f20;
+        padding-inline: 2px;
+        max-height: 0;
+        transition: .2s;
+        overflow: hidden;
       }
     }
   }
