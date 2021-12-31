@@ -63,6 +63,14 @@
   }
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
+.url {
+  hyphens: none;
+}
+
 body {
   font-family: "Neue Machina", sans-serif;
   font-weight: 700;

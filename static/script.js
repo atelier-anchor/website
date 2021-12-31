@@ -68,6 +68,9 @@ function updateCarousel() {
 
 function updateTypography() {
     document.querySelectorAll("p").forEach((e) => {
-        e.innerText = e.innerText.replace(/([\u4e00-\u9fff][^\u4e00-\u9fff]+)$/g, "\u{2060}$1");
+        e.innerHTML = e.innerHTML.replace(/([\u4e00-\u9fff]{2}[^\u4e00-\u9fff]+)$/g, "<span class='nowrap'>$1</span>");
+    });
+    document.querySelectorAll(".post-content a").forEach((e) => {
+        e.classList.add("url");
     });
 }
