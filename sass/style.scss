@@ -425,7 +425,12 @@ video {
   justify-content: space-around;
 
   .error-page-text {
+    font-size: 1.25rem;
     text-align: center;
+
+    p {
+      margin-bottom: .5rem;
+    }
   }
 
   .error-page-logo svg {
