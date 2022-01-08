@@ -7,13 +7,6 @@
         "cursor",
         "fonts";
 
-@font-face {
-  font-family: "Anicons Regular";
-  font-weight: normal;
-  font-style: normal;
-  src: url("assets/AniconsGX.woff2") format("woff2");
-}
-
 @mixin hover-img-scale {
   img {
     transition: .4s ease;
@@ -198,12 +191,14 @@ video {
       background: none;
 
       .anicon {
-        font: 36px "Anicons Regular", sans-serif;
+        font: 36px "Anicons Subset", sans-serif;
         font-variation-settings: "TIME" 1;
         transition: font-variation-settings .4s ease;
         color: var(--primary-color);
-        -webkit-user-select: none;
-        user-select: none;
+
+        &::before {
+          content: "A";
+        }
       }
 
       &.close .anicon {
