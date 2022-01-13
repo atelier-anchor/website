@@ -293,6 +293,10 @@ video {
     .post-info {
       @include list-unstyled();
     }
+
+    .download-link {
+      color: var(--primary-color);
+    }
   }
 
   .image-list {
