@@ -460,7 +460,7 @@ video {
   }
 }
 
-.error-page {
+.error-page, .thank-you-page {
   position: absolute;
   top: var(--spacing-unit);
   bottom: var(--spacing-unit);
@@ -470,18 +470,18 @@ video {
   flex-direction: column;
   align-items: center;
 
-  .error-page-text {
+  &-text {
     height: 100%;
     text-align: center;
     flex-direction: column;
     justify-content: center;
   }
 
-  .error-page-go-back {
+  &-go-back {
     margin-top: 1em;
   }
 
-  .error-page-logo {
+  &-logo {
     margin-bottom: var(--spacing-unit);
 
     svg {
