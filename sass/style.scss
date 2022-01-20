@@ -47,6 +47,10 @@
   margin-top: auto;
 }
 
+.d-none {
+  display: none;
+}
+
 .d-flex {
   display: flex;
 }
@@ -372,14 +376,65 @@ video {
     }
 
     .section-post-titles {
-      display: none;
-      @include media-breakpoint-up(md) {
-        display: flex;
-        align-items: center;
-      }
+      align-items: center;
 
       .post-meta >:last-child {
         @include media-breakpoint-up(sm) { margin-bottom: 0; }
+      }
+    }
+
+    .section-post-titles, .get-dash-titles {
+      display: none;
+      @include media-breakpoint-up(md) { display: flex; }
+    }
+
+    .dash-subscription-form {
+      margin-bottom: var(--spacing-unit);
+
+      input {
+        color: var(--fg-color);
+        background: none;
+        border: none;
+        border-radius: 0;
+
+        &[type="email"] {
+          border-bottom: 2px solid var(--primary-color);
+          padding-top: 4px;
+          padding-bottom: 0;
+          width: 100%;
+
+          &:invalid:not(:focus):not(:placeholder-shown) ~ .invalid-feedback {
+            margin-top: .5em;
+            max-height: 40px;
+          }
+        }
+
+        &[type="submit"] {
+          padding-top: 4px;
+          padding-bottom: 2px;
+
+          &:hover, &:focus, &:active {
+            color: inherit;
+            text-decoration-line: line-through;
+            text-decoration-color: var(--primary-color);
+            text-decoration-thickness: .1em;
+          }
+        }
+      }
+
+      .mc-field-group {
+        margin-right: 20px;
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .invalid-feedback {
+        font-size: 12px;
+        color: #f20;
+        padding-inline: 2px;
+        max-height: 0;
+        transition: .2s;
+        overflow: hidden;
       }
     }
   }
@@ -429,7 +484,7 @@ video {
   }
 }
 
-.error-page {
+.error-page, .thank-you-page {
   position: absolute;
   top: var(--spacing-unit);
   bottom: var(--spacing-unit);
@@ -440,17 +495,26 @@ video {
   align-items: center;
   justify-content: space-around;
 
-  .error-page-text {
+  &-text {
     font-size: 1.25rem;
     text-align: center;
+    margin-top: 10vh;
 
     p {
       margin-bottom: .5rem;
     }
   }
 
-  .error-page-logo svg {
-    fill: var(--fg-color);
-    width: 120px;
+  &-go-back, &-continue {
+    margin-top: 1em;
+  }
+
+  &-logo {
+    margin-bottom: var(--spacing-unit);
+
+    svg {
+      fill: var(--fg-color);
+      width: 120px;
+    }
   }
 }

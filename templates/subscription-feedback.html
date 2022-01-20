@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{%- include "head.html" -%}
+
+<body>
+  <div class="thank-you-page wrapper d-flex">
+    <div class="thank-you-page-text">
+      <h2>{{ page.extra.text_zh }}</h2>
+      <h2>{{ page.extra.text_en }}</h2>
+      <p class="thank-you-page-continue"><a href="/">continue &rightarrow;</a></p>
+    </div>
+    <div class="thank-you-page-logo">
+      <a href="/" aria-label="{{ config.title }}">{% include "logo.html" %}</a>
+    </div>
+  </div>
+</body>
+
+</html>
