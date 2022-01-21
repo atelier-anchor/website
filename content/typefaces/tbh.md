@@ -8,10 +8,14 @@ extra:
   type_director: Nagisa Chen
   designer: Zhengzhong Pan, Nagisa Chen
   images:
-    - tbh-1.svg
-    - tbh-2.svg
-    - tbh-3.svg
-    - tbh-4.svg
+    - light: tbh-1.light.svg
+      dark: tbh-1.dark.svg
+    - light: tbh-2.light.svg
+      dark: tbh-2.dark.svg
+    - light: tbh-3.light.svg
+      dark: tbh-3.dark.svg
+    - light: tbh-4.light.svg
+      dark: tbh-4.dark.svg
     - name: tbh-5
       url: https://i.loli.net/2021/09/11/GFLgr1SP8W5ROHd.gif
     - name: tbh-6

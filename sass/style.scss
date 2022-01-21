@@ -141,7 +141,10 @@ img {
   // Make svg behaves like jpg or gif. 
   width: 2000px;
   max-width: 100%;
-  @include color-scheme(dark) { background-color: $gray-100; }
+
+  &:not(.no-bg) {
+    @include color-scheme(dark) { background-color: $gray-100; }
+  }
 }
 
 video {
@@ -414,11 +417,11 @@ input {
         }
 
         &[type="submit"] {
+          color: var(--primary-color);
           padding-top: 4px;
           padding-bottom: 2px;
 
           &:hover, &:focus, &:active {
-            color: inherit;
             text-decoration-line: line-through;
             text-decoration-color: var(--primary-color);
             text-decoration-thickness: .1em;

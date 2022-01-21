@@ -12,13 +12,7 @@
   <div class="image-list col">
     {%- if page.extra.images -%}
       {%- for image in page.extra.images -%}
-        <figure>
-          {%- if image.url -%}
-            <img src="{{ image.url }}" alt="{{ image.name }}">
-          {%- else -%}
-            <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
-          {%- endif -%}
-        </figure>
+        {%- include "figure.html" -%}
       {%- endfor -%}
     {%- endif -%}
     {%- if page.extra.videos -%}

@@ -38,13 +38,7 @@
       <div class="image-list col">
         {%- set image = page.extra.images | first -%}
         <a href="{{ page.path | safe }}" aria-label="{{ page.title }}">
-          <figure>
-            {%- if image.url -%}
-              <img src="{{ image.url }}" alt="{{ image.name }}">
-            {%- else -%}
-              <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
-            {%- endif -%}
-          </figure>
+          {%- include "figure.html" -%}
         </a>
       </div>
     </div>
