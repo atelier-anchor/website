@@ -148,6 +148,10 @@ video {
   width: 100%;
 }
 
+input {
+  font: inherit;
+}
+
 .wrapper {
   min-width: 260px;
   max-width: 1920px;
