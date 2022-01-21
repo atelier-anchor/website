@@ -3,11 +3,12 @@ title: "dash #0"
 date: 2021-09-01
 extra:
   type: Self-Publishing
-  author: Willie Liu, Money Su, Yanjun Zhang, Zihao Tan
   chief_editor: Xiyao Du
+  author: Heshan Huang, Chen Li, Willie Liu, Money Su, Zihao Tan, Yanjun Zhang
   editor: Chen Li, Money Su
-  art_director: Nagisa Chen
-  designer: Nagisa Chen, Chen Li
+  designer: Nagisa Chen, Chen Li, Willie Liu
   images:
     - dash-0-1.svg
 ---
+
+coming soon...

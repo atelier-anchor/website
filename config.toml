@@ -23,9 +23,9 @@ address = [
 ]
 author_aliases = [
     { name = "client",            alias = "CL" },
+    { name = "chief_editor",      alias = "CE" },
     { name = "author",            alias = "A"  },
     { name = "translator",        alias = "T"  },
-    { name = "chief_editor",      alias = "CE" },
     { name = "editor",            alias = "E"  },
     { name = "creative_director", alias = "CD" },
     { name = "art_director",      alias = "AD" },
