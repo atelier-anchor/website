@@ -2,6 +2,7 @@
 
 *.gif   binary
 *.jpg   binary
+*.pdf   binary
 *.png   binary
 *.webm  binary
 *.woff2 binary
