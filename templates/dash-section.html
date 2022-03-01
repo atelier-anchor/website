@@ -12,16 +12,18 @@
     </div>
     <div class="col">
       {{- section.content | safe -}}
-      <!--
-      <p>{{ get_dash.printed_version.summary }}</p>
+      <h3>{{ get_dash.printed_version.summary }}</h3>
       <ul>
         {%- for store in get_dash.printed_version.stores -%}
-          <li>{{- store -}}</li>
+          <!-- <li>{{- store -}}</li> -->
+          <li><a href="{{ store.url }}" target="_blank">{{ store.name }}</a></li>
         {%- endfor -%}
       </ul>
-      -->
-      <p>{{ get_dash.digital_version.summary }}</p>
+      <h3>{{ get_dash.digital_version.summary }}</h3>
       {%- include "dash-subscription.html" -%}
+      <p class="dash-subscription-notice">
+        {{- get_dash.digital_version.notice | markdown(inline=true) | safe -}}
+      </p>
     </div>
   </div>
 

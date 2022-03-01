@@ -120,16 +120,12 @@ h2 {
   font-size: 1.5rem;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+h3 {
+  font-size: 1rem;
+}
 
-  &:hover, &:focus, &:active {
-    color: inherit;
-    text-decoration-line: line-through;
-    text-decoration-color: var(--primary-color);
-    text-decoration-thickness: .1em;
-  }
+ul {
+  padding-left: 1rem;
 }
 
 figure {
@@ -153,6 +149,18 @@ video {
 
 input {
   font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover, &:focus, &:active {
+    color: inherit;
+    text-decoration-line: line-through;
+    text-decoration-color: var(--primary-color);
+    text-decoration-thickness: .1em;
+  }
 }
 
 .wrapper {
@@ -277,7 +285,7 @@ input {
 .content {
   @include media-breakpoint-down(sm) { margin-top: var(--spacing-unit); }
 
-  p, ul {
+  h3, p, ul, form {
     margin-bottom: var(--spacing-unit);
   }
 
@@ -396,7 +404,7 @@ input {
     }
 
     .dash-subscription-form {
-      margin-bottom: var(--spacing-unit);
+      padding-bottom: calc(var(--spacing-unit) / 4);
 
       input {
         color: var(--fg-color);
@@ -442,6 +450,16 @@ input {
         max-height: 0;
         transition: .2s;
         overflow: hidden;
+      }
+    }
+
+    .dash-subscription-notice {
+      font-size: .75rem;
+      opacity: .54;
+
+      &::before {
+        content: "*";
+        margin-right: 2px;
       }
     }
   }

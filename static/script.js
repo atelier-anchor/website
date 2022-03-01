@@ -69,7 +69,7 @@ function updateTypography() {
     document.querySelectorAll("p").forEach((e) => {
         e.innerHTML = e.innerHTML.replace(/([\u4e00-\u9fff]{2}[^a-zA-Z0-9\u4e00-\u9fff]+)$/g, "<span class='nowrap'>$1</span>");
     });
-    document.querySelectorAll(".post-content a").forEach((e) => {
+    document.querySelectorAll(".post-content a, .dash-subscription-notice a").forEach((e) => {
         e.classList.add("url");
     });
 }
