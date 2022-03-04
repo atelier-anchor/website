@@ -14,18 +14,20 @@
 <div class="carousel">
   <div class="carousel-inner">
     {%- for page in image_pages -%}
-      {%- set image = page.extra.images | first -%}
-      <div class="carousel-item d-flex">
-        <a href="{{ page.path | safe }}">
-          <figure>
-            {%- if image.url -%}
-              <img src="{{ image.url }}" alt="{{ image.name }}">
-            {%- else -%}
-              <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
-            {%- endif -%}
-          </figure>
-        </a>
-      </div>
+      {%- if not page.extra.carousel_exclude -%}
+        {%- set image = page.extra.images | first -%}
+        <div class="carousel-item d-flex">
+          <a href="{{ page.path | safe }}">
+            <figure>
+              {%- if image.url -%}
+                <img src="{{ image.url }}" alt="{{ image.name }}">
+              {%- else -%}
+                <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+              {%- endif -%}
+            </figure>
+          </a>
+        </div>
+      {%- endif -%}
     {%- endfor -%}
   </div>
 </div>

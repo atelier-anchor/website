@@ -3,6 +3,7 @@ title: This is Us
 date: 2021-10-01
 extra:
   type: Visual identity
+  carousel_exclude: true
   client: Dangxia Channel
   art_director: Willie Liu
   designer: Willie Liu, Money Su, Leove Li
