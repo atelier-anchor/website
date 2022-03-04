@@ -61,7 +61,7 @@ function updateCarousel() {
             carouselIndex = carouselIndex === carouselNum - 1 ? 0 : carouselIndex + 1;
             activate(carouselIndex);
         }
-        setInterval(showNext, 8000);
+        setInterval(showNext, 6000);
     }
 }
 
