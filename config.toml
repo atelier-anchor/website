@@ -23,6 +23,7 @@ address = [
 ]
 author_aliases = [
     { name = "client",            alias = "CL" },
+    { name = "lead_agency",       alias = "LA" },
     { name = "chief_editor",      alias = "CE" },
     { name = "author",            alias = "A"  },
     { name = "translator",        alias = "T"  },
