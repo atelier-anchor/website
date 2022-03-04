@@ -5,8 +5,8 @@ extra:
   type: Visual Identity
   client: Double Win
   lead_agency: LxU
-  type_director: Willie Liu, Nagisa Chen
-  designer: Nagisa Chen
+  type_director: Willie Liu
+  designer: Willie Liu, Nagisa Chen
   images:
     - name: double-win-1
       url: https://s2.loli.net/2022/03/04/NILaRqCATx9Hdm6.jpg
