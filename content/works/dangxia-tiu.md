@@ -24,6 +24,4 @@ extra:
 
 "This is Us", produced by Dangxia Channel, is a series show focusing on professional choices of the younger generation in China. atelierAnchor designs for the program its new title logo, visual identity, animation storyboard, typographic guidelines, as well as its post-production motion graphics.
 
-### 观看系列节目 / Watch the series at:
-
-[This is Us (Season 4)](https://space.bilibili.com/32360194/channel/collectiondetail?sid=172)
+➡ [观看系列节目 / Watch the series](https://space.bilibili.com/32360194/channel/collectiondetail?sid=172)

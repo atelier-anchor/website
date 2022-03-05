@@ -26,4 +26,4 @@ Dinkie Bitmap is a pixel typeface that explores the limit of Chinese legibility.
 
 If you would like to know our commercial licensing options for Dinkie Bitmap or purchase a license, please write to [dinkie<wbr>bit<wbr>map@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:licensing@atelier-anchor.com) stating your intended use of the font. We will get back to you as soon as possible.
 
-<a href="/downloads/DinkieBitmap_Demo_v1_100.zip" class="download-link" download>试用版下载<br/>Trial version download</a>
+➡ [试用版下载 / Trial version download](/downloads/DinkieBitmap_Demo_v1_100.zip)
