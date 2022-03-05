@@ -2,7 +2,7 @@
 title: tbh Typeface
 date: 2020-01-01
 extra:
-  type: Custom Typeface
+  type: Custom typeface
   client: tbh
   creative_director: Zhengzhong Pan @Studio Bibliography
   type_director: Nagisa Chen

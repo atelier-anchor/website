@@ -2,7 +2,7 @@
 title: Kuusi Sans Scented Candle
 date: 2020-12-01
 extra:
-  type: Graphic Design
+  type: Graphic design
   client: 3type
   art_director: Nagisa Chen
   designer: Nagisa Chen, Denise Dou

@@ -2,7 +2,7 @@
 title: Dinkie Bitmap Black Box
 date: 2020-09-01
 extra:
-  type: Graphic Design
+  type: Product design
   client: 3type
   art_director: Nagisa Chen
   designer: Nagisa Chen, Willie Liu

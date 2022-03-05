@@ -3,7 +3,7 @@ title: 尘世浮华
 date: 2020-10-01
 draft: true
 extra:
-  type: Graphic Design
+  type: Graphic design
   client: Guiyang WOW
   art_director: Nagisa Chen
   designer: Nagisa Chen

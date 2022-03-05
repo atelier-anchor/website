@@ -2,7 +2,7 @@
 title: Receipt Poster
 date: 2021-06-01
 extra:
-  type: Graphic Design
+  type: Graphic design
   art_director: Nagisa Chen
   designer: Willie Liu, Nagisa Chen
   images:

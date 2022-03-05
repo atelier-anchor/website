@@ -2,7 +2,7 @@
 title: PSA Model
 date: 2019-10-01
 extra:
-  type: Product Design
+  type: Product design
   client: PSA
   art_director: Willie Liu
   designer: Willie Liu

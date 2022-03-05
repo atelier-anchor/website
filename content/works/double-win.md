@@ -2,7 +2,7 @@
 title: Double Win
 date: 2021-07-01
 extra:
-  type: Visual Identity
+  type: Visual identity
   client: Double Win
   lead_agency: LxU
   type_director: Willie Liu

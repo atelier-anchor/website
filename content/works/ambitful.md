@@ -2,7 +2,7 @@
 title: Ambitful
 date: 2021-04-01
 extra:
-  type: Visual Identity
+  type: Visual identity
   client: Ambitful
   art_director: Nagisa Chen
   designer: Nagisa Chen

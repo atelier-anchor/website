@@ -2,7 +2,7 @@
 title: Freds Inside
 date: 2018-04-01
 extra:
-  type: Motion Graphic
+  type: Motion graphic
   client: Candybook
   art_director: Willie Liu
   designer: Willie Liu

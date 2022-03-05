@@ -2,7 +2,7 @@
 title: Virtual Immuniztion Project
 date: 2021-08-01
 extra:
-  type: Graphic Design
+  type: Graphic design, motion graphic
   client: Sicheng Wang
   designer: Nagisa Chen
   images:
