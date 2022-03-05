@@ -18,7 +18,7 @@
     {%- if page.extra.videos -%}
       {%- for video in page.extra.videos -%}
         <figure>
-          <video controls {% if video.poster %} poster="{{ video.poster }}"{% endif %}>
+          <video controls {% if video.poster %}poster="{{ video.poster | safe }}"{% endif %}>
             <source src="{{ page.path | safe }}{{ video.source }}" type="video/webm">
           </video>
         </figure>

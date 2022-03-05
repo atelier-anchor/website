@@ -20,7 +20,7 @@
           <a href="{{ page.path | safe }}">
             <figure>
               {%- if image.url -%}
-                <img src="{{ image.url }}" alt="{{ image.name }}">
+                <img src="{{ image.url | safe }}" alt="{{ image.name }}">
               {%- else -%}
                 <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
               {%- endif -%}
