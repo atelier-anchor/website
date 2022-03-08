@@ -7,7 +7,7 @@ extra:
   designer: Nagisa Chen
   images:
     - name: virtual-immuniztion-project-1
-      url: https://s2.loli.net/2022/03/04/FWcGEhO9tTvDYjb.jpg
+      url: https://s2.loli.net/2022/03/09/VYw8RDlXfAi9PKT.jpg
     - name: virtual-immuniztion-project-2
       url: https://s2.loli.net/2022/03/04/cbMqXIrEQS4Wvul.jpg
   videos:
