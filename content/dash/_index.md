@@ -10,7 +10,17 @@ extra:
       summary: "纸质版购买 / Printed Version available in:"
       stores:
         - name: Text&Image 梯书店
-          url: https://m.tb.cn/h.fNUZ8G5?tk=2XHe24lSFcM
+          url: https://shop1849115620.v.weidian.com/item.html?&itemID=4506155711
+        - name: 香蕉鱼书店
+        - name: 群岛 Books
+        - name: postpostspace
+        - name: 無早 nomorning
+        - name: 有个计划 LittlePlan
+        - name: 一爿旧店
+        - name: 半层书店
+        - name: 乐开书店
+        - name: 附近书店
+        - name: 三克岛图书馆
     digital_version:
       summary: "电子版订阅 / Digital version subscription:"
       email_label: email address
