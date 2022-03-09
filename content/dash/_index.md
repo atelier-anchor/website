@@ -7,20 +7,26 @@ extra:
   get_dash:
     title: get dash
     printed_version:
-      summary: "纸质版购买 / Printed Version available in:"
+      summary: "纸质版购买 / Printed version available in:"
       stores:
-        - name: Text&Image 梯书店
-          url: https://shop1849115620.v.weidian.com/item.html?&itemID=4506155711
-        - name: 香蕉鱼书店
-        - name: 群岛 Books
+        - name: art book in China ↗
+          url: https://j.youzan.com/K74_iB
+        - name: Text&Image 梯书店 ↗
+          url: https://m.tb.cn/h.fNUZ8G5?tk=2XHe24lSFcM
+        - name: 群岛 BOOKS ↗
+          url: https://k.youshop10.com/iMHppbus
+        - name: 一爿旧店 ↗
+          url: https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.67ae1debq7pauG&ft=t&id=669754813056
+        - name: 有个计划 LittlePlan ↗
+          url: https://k.youshop10.com/8c2OfXQT
         - name: postpostspace
-        - name: 無早 nomorning
-        - name: 有个计划 LittlePlan
-        - name: 一爿旧店
         - name: 半层书店
-        - name: 乐开书店
         - name: 附近书店
-        - name: 三克岛图书馆
+        - name: 乐开书店
+        - name: 摸摸艺术书
+        - name: 三克岛図書館
+        - name: 無早 nomorning
+        - name: 香蕉鱼书店
     digital_version:
       summary: "电子版订阅 / Digital version subscription:"
       email_label: email address

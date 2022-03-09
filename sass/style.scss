@@ -163,6 +163,10 @@ a {
   }
 }
 
+svg {
+  fill: currentColor;
+}
+
 .wrapper {
   min-width: 260px;
   max-width: 1920px;
@@ -195,12 +199,8 @@ a {
 
     .logo {
       margin-bottom: 0;
-
-      svg {
-        fill: var(--fg-color);
-        width: 120px;
-        @include media-breakpoint-up(sm) { width: 180px; }
-      }
+      width: 120px;
+      @include media-breakpoint-up(sm) { width: 180px; }
     }
 
     .toggle-nav {
@@ -532,10 +532,6 @@ a {
 
   &-logo {
     margin-bottom: var(--spacing-unit);
-
-    svg {
-      fill: var(--fg-color);
-      width: 120px;
-    }
+    width: 120px;
   }
 }
