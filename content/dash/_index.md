@@ -11,20 +11,25 @@ extra:
       stores:
         - name: art book in China ↗
           url: https://j.youzan.com/K74_iB
+        - name: postpostspace ↗
+          url: https://k.youshop10.com/ClQ6KyGh
         - name: Text&Image 梯书店 ↗
           url: https://m.tb.cn/h.fNUZ8G5?tk=2XHe24lSFcM
+        - name: 半层书店 ↗
+          url: https://k.youshop10.com/d-0fYNcv
         - name: 摸摸艺术书 ↗
           url: https://k.youshop10.com/47fxD233
         - name: 群岛 BOOKS ↗
           url: https://k.youshop10.com/iMHppbus
         - name: 香蕉鱼书店 ↗
           url: https://m.tb.cn/h.fNsZL9E?tk=6Gh62UQAqFL
+        - name: 野狗商店 ↗
+          url: https://k.youshop10.com/loehnj7O
         - name: 一爿旧店 ↗
-          url: https://item.taobao.com/item.htm?spm=a2oq0.12575281.0.0.67ae1debq7pauG&ft=t&id=669754813056
+          url: https://m.tb.cn/h.fnv1L81?tk=3Pft2Up46Coi
         - name: 有个计划 LittlePlan ↗
           url: https://k.youshop10.com/8c2OfXQT
-        - name: postpostspace
-        - name: 半层书店
+        - name: Combo 书店
         - name: 附近书店
         - name: 乐开书店
         - name: 三克岛図書館
