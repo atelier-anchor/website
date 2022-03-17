@@ -11,6 +11,8 @@ extra:
       stores:
         - name: art book in China ↗
           url: https://j.youzan.com/K74_iB
+        - name: Combo 书店 ↗
+          url: https://k.youshop10.com/d8uszPSI
         - name: postpostspace ↗
           url: https://k.youshop10.com/ClQ6KyGh
         - name: Text&Image 梯书店 ↗
@@ -29,7 +31,6 @@ extra:
           url: https://m.tb.cn/h.fnv1L81?tk=3Pft2Up46Coi
         - name: 有个计划 LittlePlan ↗
           url: https://k.youshop10.com/8c2OfXQT
-        - name: Combo 书店
         - name: 附近书店
         - name: 乐开书店
         - name: 三克岛図書館
