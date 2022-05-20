@@ -1,0 +1,6 @@
+@font-face {
+  font-family: 'Neue Machina';
+  font-weight: 700;
+  font-style: normal;
+  src: url('@/assets/NeueMachina-Bold.woff2') format('woff2');
+}
