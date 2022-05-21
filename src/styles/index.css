@@ -4,3 +4,7 @@
   font-style: normal;
   src: url('@/assets/NeueMachina-Bold.woff2') format('woff2');
 }
+
+.clip-path-circle {
+  clip-path: circle(50%);
+}
