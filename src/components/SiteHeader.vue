@@ -11,7 +11,7 @@ onMounted(() => window.addEventListener('resize', () => (isNavOpen.value = false
 </script>
 
 <template>
-  <header>
+  <header class="sticky h-fit sm:top-4 lg:top-8">
     <div class="flex justify-between items-center mb-4 sm:mb-8">
       <h1>
         <SiteLogo class="w-32 sm:w-40" />

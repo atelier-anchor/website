@@ -85,8 +85,10 @@ const data = {
 </script>
 
 <template>
-  <section v-for="(item, name) in data">
-    <h2 class="text-2xl mt-8 mb-4 sm:mb-8">{{ name }}</h2>
+  <section v-for="(item, name) in data" class="flex flex-col lg:flex-row gap-4 sm:gap-8">
+    <div class="w-64 flex-shrink-0">
+      <h2 class="text-2xl lg:sticky lg:top-8">{{ name }}</h2>
+    </div>
     <component :is="item.component" :data="item.data" />
   </section>
 </template>

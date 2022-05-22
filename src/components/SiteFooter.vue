@@ -6,22 +6,25 @@ const mail = {
 }
 const socialMedia = [
   {
-    name: 'twitter',
+    name: 'tw',
+    title: 'Twitter',
     href: 'https://twitter.com/atelier_anchor',
   },
   {
-    name: 'instagram',
+    name: 'ins',
+    title: 'Instagram',
     href: 'https://www.instagram.com/atelier_anchor',
   },
   {
-    name: 'weibo',
+    name: 'wb',
+    title: 'Weibo',
     href: 'https://weibo.com/u/7568137725',
   },
 ]
 </script>
 
 <template>
-  <footer>
+  <footer class="sm:fixed sm:bottom-4 lg:bottom-8">
     <h2 class="text-3xl mb-2">contact</h2>
     <address class="not-italic">
       <template v-for="line in address">{{ line }}<br /></template>
@@ -29,7 +32,7 @@ const socialMedia = [
       <br />
       <div class="flex gap-2">
         <template v-for="item in socialMedia">
-          <a :href="item.href" target="_blank">{{ item.name }}</a>
+          <a :href="item.href" :title="item.title" target="_blank">{{ item.name }}</a>
         </template>
       </div>
     </address>

@@ -5,11 +5,13 @@ import SiteFooter from '@/components/SiteFooter.vue'
 </script>
 
 <template>
-  <div class="max-w-12xl mx-auto p-4 md:p-8">
-    <SiteHeader />
-    <main>
-      <RouterView />
-    </main>
-    <SiteFooter />
+  <div class="max-w-screen-2xl mx-auto p-4 lg:p-8">
+    <div class="sm:flex sm:gap-16 lg:gap-24 xl:gap-32">
+      <SiteHeader />
+      <main class="flex flex-col gap-4 mb-8 sm:mb-0">
+        <RouterView />
+      </main>
+      <SiteFooter />
+    </div>
   </div>
 </template>

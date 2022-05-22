@@ -10,6 +10,9 @@ export default defineConfig({
       fontFamily: {
         sans: ['Neue Machina', 'sans-serif'],
       },
+      height: {
+        fit: 'fit-content',
+      },
     },
   },
 })
