@@ -1,21 +1,23 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { onMounted, ref } from 'vue'
 import SiteLogo from '@/components/SiteLogo.vue'
+import SiteNav from '@/components/SiteNav.vue'
+import SiteNavBarHamburger from '@/components/SiteNavBarHamburger.vue'
 
-const navLinks = ['works', 'typefaces', 'dash', 'about']
+const isNavOpen = ref(false)
+const toggleNav = () => (isNavOpen.value = !isNavOpen.value)
+
+onMounted(() => window.addEventListener('resize', () => (isNavOpen.value = false)))
 </script>
 
 <template>
   <header>
-    <h1 class="mb-4 sm:mb-8">
-      <RouterLink to="/"><SiteLogo class="w-32 sm:w-40" /></RouterLink>
-    </h1>
-    <ul>
-      <li v-for="link in navLinks">
-        <h2 class="text-3xl mb-2">
-          <RouterLink :to="link">{{ link }}</RouterLink>
-        </h2>
-      </li>
-    </ul>
+    <div class="flex justify-between items-center mb-4 sm:mb-8">
+      <h1>
+        <SiteLogo class="w-32 sm:w-40" />
+      </h1>
+      <SiteNavBarHamburger :active="isNavOpen" @click="toggleNav" />
+    </div>
+    <SiteNav :isNavOpen="isNavOpen" />
   </header>
 </template>

@@ -5,6 +5,13 @@
   src: url('@/assets/NeueMachina-Bold.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'Anicons Subset';
+  font-weight: normal;
+  font-style: normal;
+  src: url('@/assets/AniconsGX.subset.woff2') format('woff2');
+}
+
 body {
   @apply font-bold leading-tight hyphens-auto min-h-screen text-dark-400 bg-white dark:(text-light-300 bg-black);
   cursor: url('@/assets/cursor.png') 12 12, auto;
