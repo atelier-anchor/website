@@ -1,0 +1,33 @@
+<script setup lang="ts">
+defineProps<{
+  data: {
+    printed: {
+      summary: string
+      stores: {
+        name: string
+        url?: string
+      }[]
+    }
+    digital: {
+      summary: string
+      emailLabel: string
+      submitLabel: string
+      notice: string
+    }
+  }
+}>()
+</script>
+
+<template>
+  <div>
+    <h3 class="mb-4 sm:mb-8">{{ data.printed.summary }}</h3>
+    <ul class="list-disc pl-4 mb-4 sm:mb-8">
+      <li v-for="store in data.printed.stores">
+        <a v-if="store.url" :href="store.url">{{ store.name }} ↗</a>
+        <template v-else>{{ store.name }}</template>
+      </li>
+    </ul>
+    <h3 class="mb-4 sm:mb-8">{{ data.digital.summary }}</h3>
+    <p>TODO</p>
+  </div>
+</template>

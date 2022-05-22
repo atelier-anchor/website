@@ -14,9 +14,7 @@ defineProps<{
       <ul>
         <li v-for="link in navLinks">
           <h2 class="text-3xl mb-2">
-            <!-- TODO: -->
-            <RouterLink :to="link" v-if="link === 'about'">{{ link }}</RouterLink>
-            <a v-else>{{ link }}</a>
+            <RouterLink :to="{ name: link }">{{ link }}</RouterLink>
           </h2>
         </li>
       </ul>
