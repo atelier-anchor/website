@@ -7,11 +7,14 @@
   ],
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": [
+      "ES2017"
+    ],
     "paths": {
       "@/*": [
         "./src/*"
       ]
-    }
+    },
   },
   "references": [
     {

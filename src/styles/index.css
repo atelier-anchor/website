@@ -27,6 +27,10 @@ a:hover {
   @apply line-through decoration-primary decoration-0.1em;
 }
 
+img {
+  @apply w-screen;
+}
+
 .clip-path-circle {
   clip-path: circle(50%);
 }
