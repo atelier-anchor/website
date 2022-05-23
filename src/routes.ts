@@ -1,4 +1,11 @@
-export default [
+import type { RouteRecordRaw } from 'vue-router'
+import { works, typefaces } from '@/data'
+import NotFound from '@/views/NotFound.vue'
+
+const isValidPost = (section: string, id: string) =>
+  (section === 'works' && id in works) || (section === 'typefaces' && id in typefaces)
+
+const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
@@ -24,4 +31,21 @@ export default [
     name: 'about',
     component: () => import('@/views/AboutView.vue'),
   },
+  {
+    path: '/:section/:id',
+    name: 'post',
+    component: () => import('@/views/PostView.vue'),
+    beforeEnter: (to) => {
+      if (!isValidPost(to.params.section as string, to.params.id as string)) {
+        return { name: 'not-found' }
+      }
+    },
+  },
+  {
+    path: '/:path(.*)*',
+    name: 'not-found',
+    component: NotFound,
+  },
 ]
+
+export default routes
