@@ -18,7 +18,7 @@ const data = computed(() =>
   <section v-for="(item, id) in data" class="flex flex-col items-center gap-4 sm:gap-8 lg:flex-row">
     <div class="w-64 flex-shrink-0">
       <h2 class="text-2xl lg:sticky lg:top-8">
-        <RouterLink :to="{ name: 'post', params: { section: route.name as string, id } }">
+        <RouterLink :to="`${route.path}/${id}`">
           {{ item.name }}
         </RouterLink>
       </h2>
