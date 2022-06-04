@@ -12,7 +12,7 @@ onMounted(() => window.addEventListener('resize', () => (isNavOpen.value = false
 
 <template>
   <header class="sticky h-fit sm:top-4 lg:top-8">
-    <div class="flex justify-between items-center mb-4 sm:mb-8">
+    <div class="mb-4 flex items-center justify-between sm:mb-8">
       <h1>
         <SiteLogo class="w-32 sm:w-40" />
       </h1>

@@ -13,7 +13,7 @@ const work = computed(
 
 <template>
   <div class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
-    <div class="lg:sticky top-8 h-fit flex flex-col gap-8 lg:max-w-lg">
+    <div class="top-8 flex h-fit flex-col gap-8 lg:sticky lg:max-w-lg">
       <PostMeta :work="work" />
       <p v-for="p in work.description">
         {{ p }}

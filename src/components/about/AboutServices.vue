@@ -11,7 +11,7 @@ defineProps<{
   <div>
     <template v-for="service in data">
       <p class="mb-4 sm:mb-8">{{ service.summary }}</p>
-      <ul class="list-disc pl-4 mb-4 sm:mb-8">
+      <ul class="mb-4 list-disc pl-4 sm:mb-8">
         <li v-for="item in service.items">{{ item }}</li>
       </ul>
     </template>

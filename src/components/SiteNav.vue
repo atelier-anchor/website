@@ -13,7 +13,7 @@ defineProps<{
     <nav class="max-h-48 overflow-hidden sm:!block" v-show="isNavOpen">
       <ul>
         <li v-for="link in navLinks">
-          <h2 class="text-3xl mb-2">
+          <h2 class="mb-2 text-3xl">
             <RouterLink :to="{ name: link }">{{ link }}</RouterLink>
           </h2>
         </li>

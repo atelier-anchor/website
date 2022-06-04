@@ -48,8 +48,8 @@ const data = {
 
 <template>
   <section v-for="(item, name) in data" class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
-    <div class="flex-shrink-0 w-64">
-      <h2 class="text-2xl lg:top-8 lg:sticky">{{ name }}</h2>
+    <div class="w-64 flex-shrink-0">
+      <h2 class="text-2xl lg:sticky lg:top-8">{{ name }}</h2>
     </div>
     <component :is="item.component" :data="item.data" />
   </section>

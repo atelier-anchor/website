@@ -25,7 +25,7 @@ const socialMedia = [
 
 <template>
   <footer class="sm:fixed sm:bottom-4 lg:bottom-8">
-    <h2 class="text-3xl mb-2">contact</h2>
+    <h2 class="mb-2 text-3xl">contact</h2>
     <address class="not-italic">
       <template v-for="line in address">{{ line }}<br /></template>
       <a :href="mail.href" target="_blank">{{ mail.name }}</a>
