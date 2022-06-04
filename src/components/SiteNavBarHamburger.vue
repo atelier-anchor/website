@@ -6,19 +6,14 @@ defineProps<{
 
 <template>
   <button
-    class="NavBarHamburger text-4xl text-primary duration-300 sm:hidden"
+    class="NavBarHamburger font-anicons text-4xl text-primary duration-300 before:content-['A'] sm:hidden"
     :class="{ active }"
   ></button>
 </template>
 
 <style scoped>
 .NavBarHamburger {
-  font-family: 'Anicons Subset', sans-serif;
   font-variation-settings: 'TIME' 1;
-}
-
-.NavBarHamburger::before {
-  content: 'A';
 }
 
 .NavBarHamburger.active {

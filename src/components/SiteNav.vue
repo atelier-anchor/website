@@ -10,7 +10,7 @@ defineProps<{
 
 <template>
   <Transition>
-    <nav class="max-h-48 overflow-hidden !sm:block" v-show="isNavOpen">
+    <nav class="max-h-48 overflow-hidden sm:!block" v-show="isNavOpen">
       <ul>
         <li v-for="link in navLinks">
           <h2 class="text-3xl mb-2">

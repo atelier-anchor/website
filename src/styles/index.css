@@ -1,44 +1,50 @@
-@font-face {
-  font-family: 'Neue Machina';
-  font-weight: 700;
-  font-style: normal;
-  src: url('@/assets/NeueMachina-Bold.woff2') format('woff2');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Neue Machina';
+    font-weight: 700;
+    font-style: normal;
+    src: url('@/assets/NeueMachina-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Anicons Subset';
+    font-weight: normal;
+    font-style: normal;
+    src: url('@/assets/AniconsGX.subset.woff2') format('woff2');
+    font-display: block;
+  }
+
+  body {
+    @apply min-h-screen bg-white font-bold leading-tight text-neutral-900 dark:bg-black dark:text-neutral-100;
+    hyphens: auto;
+    cursor: url('@/assets/cursor.png') 12 12, auto;
+    cursor: -webkit-image-set(url('@/assets/cursor.png') 1x, url('@/assets/cursor@2x.png') 2x) 12 12,
+      auto;
+  }
+
+  body ::selection {
+    @apply bg-primary dark:text-black;
+  }
+
+  a:hover {
+    @apply line-through decoration-primary decoration-[0.1em];
+  }
+
+  img {
+    @apply w-screen;
+  }
+
+  abbr[title] {
+    @apply no-underline;
+  }
 }
 
-@font-face {
-  font-family: 'Anicons Subset';
-  font-weight: normal;
-  font-style: normal;
-  src: url('@/assets/AniconsGX.subset.woff2') format('woff2');
-}
-
-body {
-  @apply font-bold leading-tight hyphens-auto min-h-screen text-dark-400 bg-white dark:(text-light-300 bg-black);
-  cursor: url('@/assets/cursor.png') 12 12, auto;
-  cursor: -webkit-image-set(url('@/assets/cursor.png') 1x, url('@/assets/cursor@2x.png') 2x) 12 12,
-    auto;
-}
-
-body ::selection {
-  @apply bg-primary dark:text-black;
-}
-
-a:hover {
-  @apply line-through decoration-primary decoration-0.1em;
-}
-
-img {
-  @apply w-screen;
-}
-
-abbr[title] {
-  @apply no-underline;
-}
-
-.clip-path-circle {
-  clip-path: circle(50%);
-}
-
-.after\:content-\[\'\:\'\]::after {
-  content: ':';
+@layer utilities {
+  .clip-path-circle {
+    clip-path: circle(50%);
+  }
 }
