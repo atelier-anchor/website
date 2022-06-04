@@ -14,12 +14,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/works',
     name: 'works',
-    component: () => import('@/views/WorksView.vue'),
+    component: () => import('@/views/SectionView.vue'),
   },
   {
     path: '/typefaces',
     name: 'typefaces',
-    component: () => import('@/views/WorksView.vue'),
+    component: () => import('@/views/SectionView.vue'),
   },
   {
     path: '/dash',
