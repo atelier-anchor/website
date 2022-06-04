@@ -31,6 +31,14 @@ img {
   @apply w-screen;
 }
 
+abbr[title] {
+  @apply no-underline;
+}
+
 .clip-path-circle {
   clip-path: circle(50%);
+}
+
+.after\:content-\[\'\:\'\]::after {
+  content: ':';
 }

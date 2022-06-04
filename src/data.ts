@@ -1,4 +1,4 @@
-interface Credits {
+export interface Credits {
   client?: string
   lead_agency?: string
   chief_editor?: string
@@ -12,19 +12,19 @@ interface Credits {
   publisher?: string
 }
 
-interface Image {
+export interface Image {
   name: string
   type?: 'jpg' | 'png' | 'gif' | 'svg'
   dark?: boolean
   url?: string
 }
 
-interface Video {
+export interface Video {
   source: string
   poster: string
 }
 
-interface Work {
+export interface Work {
   name: string
   date: string
   type: string

@@ -1,12 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-
-interface Image {
-  name: string
-  type?: 'jpg' | 'png' | 'gif' | 'svg'
-  dark?: boolean
-  url?: string
-}
+import type { Image } from '@/data'
 
 const path = (suffix: string) => `${props.dir}/${props.image.name}${suffix}.${props.image.type}`
 const src = computed(() => ({

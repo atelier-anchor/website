@@ -3,6 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
 import BaseImage from '@/components/BaseImage.vue'
+import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
 const work = computed(
@@ -13,13 +14,7 @@ const work = computed(
 <template>
   <div class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
     <div class="lg:sticky top-8 h-fit flex flex-col gap-8 lg:max-w-lg">
-      <div>
-        <h2 class="text-2xl">{{ work.name }}</h2>
-        <p>{{ work.type }}</p>
-      </div>
-      <ul>
-        <li v-for="(name, title) in work.credits">{{ title }}: {{ name }}</li>
-      </ul>
+      <PostMeta :work="work" />
       <p v-for="p in work.description">
         {{ p }}
       </p>
