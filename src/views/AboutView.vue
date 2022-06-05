@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import ColumnContainer from '@/components/ColumnContainer.vue'
 import BaseBlock from '@/components/BaseBlock.vue'
 import AboutServices from '@/components/about/AboutServices.vue'
 import AboutTeam from '@/components/about/AboutTeam.vue'
@@ -92,10 +93,12 @@ const data = {
 </script>
 
 <template>
-  <section v-for="(item, name) in data" class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
-    <div class="w-64 flex-shrink-0">
+  <ColumnContainer v-for="(item, name) in data" is="section">
+    <template #left>
       <h2 class="text-2xl lg:sticky lg:top-8">{{ name }}</h2>
-    </div>
-    <component :is="item.component" :data="item.data" />
-  </section>
+    </template>
+    <template #right>
+      <component :is="item.component" :data="item.data" />
+    </template>
+  </ColumnContainer>
 </template>

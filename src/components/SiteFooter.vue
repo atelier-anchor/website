@@ -29,12 +29,11 @@ const socialMedia = [
     <address class="not-italic">
       <template v-for="line in address">{{ line }}<br /></template>
       <a :href="mail.href" target="_blank">{{ mail.name }}</a>
-      <br />
-      <div class="flex gap-2">
-        <template v-for="item in socialMedia">
+      <ul class="flex gap-2">
+        <li v-for="item in socialMedia">
           <a :href="item.href" :title="item.title" target="_blank">{{ item.name }}</a>
-        </template>
-      </div>
+        </li>
+      </ul>
     </address>
   </footer>
 </template>

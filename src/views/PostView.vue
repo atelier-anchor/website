@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
+import ColumnContainer from '@/components/ColumnContainer.vue'
 import BaseImage from '@/components/BaseImage.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
@@ -12,17 +13,19 @@ const work = computed(
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 sm:gap-8 lg:flex-row">
-    <div class="top-8 flex h-fit flex-col gap-8 lg:sticky lg:max-w-lg">
-      <PostMeta :work="work" />
-      <p v-for="p in work.description">
-        {{ p }}
-      </p>
-    </div>
-    <div class="flex flex-col gap-8">
-      <figure v-for="image in work.images">
+  <ColumnContainer class="flex-col-reverse">
+    <template #left>
+      <article class="top-8 h-fit md:sticky">
+        <PostMeta :work="work" class="mb-4 sm:mb-8" />
+        <p v-for="p in work.description" class="mb-4 last:mb-0">
+          {{ p }}
+        </p>
+      </article>
+    </template>
+    <template #right>
+      <figure v-for="image in work.images" class="mb-4 last:mb-0 sm:mb-8">
         <BaseImage :image="image" :dir="`${route.path}`" />
       </figure>
-    </div>
-  </div>
+    </template>
+  </ColumnContainer>
 </template>

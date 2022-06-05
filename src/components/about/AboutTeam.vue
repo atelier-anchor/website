@@ -9,17 +9,15 @@ defineProps<{
 </script>
 
 <template>
-  <div class="flex flex-col gap-4 sm:gap-8">
-    <div v-for="member in data" class="flex items-center gap-4 sm:gap-8">
-      <div class="clip-path-circle w-20">
-        <img :src="member.avatar" :alt="member.name" />
-      </div>
-      <div>
-        <h3 class="mb-2">{{ member.name }}</h3>
-        <ul>
-          <li v-for="title in member.titles">{{ title }}</li>
-        </ul>
-      </div>
+  <div v-for="member in data" class="mb-4 flex items-center gap-4 last:mb-0 sm:mb-8 sm:gap-8">
+    <div class="clip-path-circle w-20">
+      <img :src="member.avatar" :alt="member.name" />
+    </div>
+    <div>
+      <h3 class="mb-2">{{ member.name }}</h3>
+      <ul>
+        <li v-for="title in member.titles">{{ title }}</li>
+      </ul>
     </div>
   </div>
 </template>

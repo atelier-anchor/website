@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
+import ColumnContainer from '@/components/ColumnContainer.vue'
 import BaseImage from '@/components/BaseImage.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
@@ -16,10 +17,16 @@ const data = computed(() =>
 </script>
 
 <template>
-  <section v-for="(item, id) in data" class="flex flex-col items-center gap-4 sm:gap-8 lg:flex-row">
-    <PostMeta :work="item" :to="`${route.path}/${id}`" />
-    <div>
+  <ColumnContainer
+    v-for="(item, id) in data"
+    is="article"
+    class="mb-4 items-center last:mb-0 sm:mb-8"
+  >
+    <template #left>
+      <PostMeta :work="item" :to="`${route.path}/${id}`" class="hidden md:block" />
+    </template>
+    <template #right>
       <BaseImage :image="item.images[0]" :dir="`${route.path}/${id}`" />
-    </div>
-  </section>
+    </template>
+  </ColumnContainer>
 </template>

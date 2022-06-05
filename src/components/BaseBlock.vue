@@ -5,7 +5,5 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <p v-for="p in data" class="mb-4 sm:mb-8">{{ p }}</p>
-  </div>
+  <p v-for="p in data" class="mb-4 sm:mb-8">{{ p }}</p>
 </template>
