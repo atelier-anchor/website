@@ -34,10 +34,6 @@
     @apply line-through decoration-primary decoration-[0.1em];
   }
 
-  img {
-    @apply w-screen;
-  }
-
   abbr[title] {
     @apply no-underline;
   }

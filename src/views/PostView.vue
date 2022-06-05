@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
-import BaseImage from '@/components/BaseImage.vue'
+import BasePicture from '@/components/BasePicture.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
@@ -24,7 +24,7 @@ const work = computed(
     </template>
     <template #right>
       <figure v-for="image in work.images" class="mb-4 last:mb-0 sm:mb-8">
-        <BaseImage :image="image" :dir="`${route.path}`" />
+        <BasePicture :image="image" :dir="`${route.path}`" />
       </figure>
     </template>
   </ColumnContainer>

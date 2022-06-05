@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
-import BaseImage from '@/components/BaseImage.vue'
+import BasePicture from '@/components/BasePicture.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
@@ -26,7 +26,7 @@ const data = computed(() =>
       <PostMeta :work="item" :to="`${route.path}/${id}`" class="hidden md:block" />
     </template>
     <template #right>
-      <BaseImage :image="item.images[0]" :dir="`${route.path}/${id}`" />
+      <BasePicture :image="item.images[0]" :dir="`${route.path}/${id}`" />
     </template>
   </ColumnContainer>
 </template>

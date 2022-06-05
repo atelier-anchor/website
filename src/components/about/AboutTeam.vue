@@ -1,17 +1,22 @@
 <script setup lang="ts">
+import type { Image } from '@/data'
+import BasePicture from '@/components/BasePicture.vue'
+
+interface Member {
+  name: string
+  avatar: Image
+  titles: string[]
+}
+
 defineProps<{
-  data: {
-    name: string
-    avatar: string
-    titles: string[]
-  }[]
+  data: Member[]
 }>()
 </script>
 
 <template>
   <div v-for="member in data" class="mb-4 flex items-center gap-4 last:mb-0 sm:mb-8 sm:gap-8">
     <div class="clip-path-circle w-20">
-      <img :src="member.avatar" :alt="member.name" />
+      <BasePicture :image="member.avatar" dir="/about" />
     </div>
     <div>
       <h3 class="mb-2">{{ member.name }}</h3>
