@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { typefaces, works } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
-import BasePicture from '@/components/BasePicture.vue'
+import LinkFigure from '@/components/LinkFigure.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
@@ -14,6 +14,8 @@ const data = computed(() =>
     .reverse()
     .reduce((res, [id, item]) => ((res[id] = item), res), {} as typeof works)
 )
+
+const to = (id: string) => `${route.path}/${id}`
 </script>
 
 <template>
@@ -23,10 +25,10 @@ const data = computed(() =>
     class="mb-4 items-center last:mb-0 sm:mb-8"
   >
     <template #left>
-      <PostMeta :work="item" :to="`${route.path}/${id}`" class="hidden md:block" />
+      <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
     </template>
     <template #right>
-      <BasePicture :image="item.images[0]" :dir="`${route.path}/${id}`" />
+      <LinkFigure :image="item.images[0]" :to="to(id)" />
     </template>
   </ColumnContainer>
 </template>

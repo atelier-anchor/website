@@ -20,6 +20,7 @@
 
   body {
     @apply min-h-screen bg-white font-bold leading-tight text-neutral-900 dark:bg-black dark:text-neutral-100;
+    font-feature-settings: 'liga' 0;
     hyphens: auto;
     cursor: url('@/assets/cursor.png') 12 12, auto;
     cursor: -webkit-image-set(url('@/assets/cursor.png') 1x, url('@/assets/cursor@2x.png') 2x) 12 12,
