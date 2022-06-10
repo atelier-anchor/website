@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import SiteNavItem from '@/components/SiteNavItem.vue'
 
 const navLinks = ['works', 'typefaces', 'dash', 'about']
 
@@ -12,10 +12,8 @@ defineProps<{
   <Transition>
     <nav class="max-h-48 overflow-hidden sm:!block" v-show="isNavOpen">
       <ul>
-        <li v-for="link in navLinks">
-          <h2 class="mb-2 text-3xl">
-            <RouterLink :to="{ name: link }">{{ link }}</RouterLink>
-          </h2>
+        <li v-for="link in navLinks" class="mb-2 last:mb-0">
+          <SiteNavItem :link="link" />
         </li>
       </ul>
     </nav>
