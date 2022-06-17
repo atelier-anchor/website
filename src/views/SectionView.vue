@@ -29,8 +29,7 @@ const to = (id: string) => `${route.path}/${id}`
       <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
     </template>
     <template #right>
-      {{ route.path }}
-      <LinkFigure :image="item.images[0]" :to="to(id)" />
+      <LinkFigure :image="item.images[0]" :to="to(id)" width="1920" height="1440" />
     </template>
   </ColumnContainer>
 </template>

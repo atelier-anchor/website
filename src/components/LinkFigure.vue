@@ -1,18 +1,20 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import type { Image } from '@/data'
+import type { Image, Numberish } from '@/data'
 import BasePicture from '@/components/BasePicture.vue'
 
 defineProps<{
   image: Image
   to: string
+  width?: Numberish
+  height?: Numberish
 }>()
 </script>
 
 <template>
   <RouterLink :to="to" class="group">
     <figure class="overflow-hidden">
-      <BasePicture :image="image" :dir="to" />
+      <BasePicture :image="image" :dir="to" :width="width" :height="height" />
     </figure>
   </RouterLink>
 </template>

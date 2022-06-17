@@ -1,3 +1,5 @@
+export type Numberish = number | string
+
 export interface Credits {
   client?: string
   lead_agency?: string

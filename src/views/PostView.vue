@@ -24,7 +24,7 @@ const work = computed(
     </template>
     <template #right>
       <figure v-for="image in work.images" class="mb-4 last:mb-0 sm:mb-8">
-        <BasePicture :image="image" :dir="`${route.path}`" />
+        <BasePicture :image="image" :dir="`${route.path}`" width="1920" height="1440" />
       </figure>
     </template>
   </ColumnContainer>

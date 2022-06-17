@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { Image } from '@/data'
+import type { Image, Numberish } from '@/data'
 
 const imageTypes = {
   webp: 'image/webp',
@@ -12,6 +12,8 @@ const imageTypes = {
 defineProps<{
   image: Image
   dir: string
+  width?: Numberish
+  height?: Numberish
 }>()
 </script>
 
@@ -25,6 +27,8 @@ defineProps<{
       <img
         :src="`${dir}/${image.name}.light.${image.type[0]}`"
         :alt="image.name"
+        :width="width"
+        :height="height"
         :class="{ 'w-screen': image.type[0] === 'svg' }"
       />
     </template>
@@ -38,6 +42,11 @@ defineProps<{
       :srcset="`${dir}/${image.name}.${imageType}`"
       :type="imageTypes[imageType]"
     />
-    <img :src="`${dir}/${image.name}.${image.type.slice(-1)}`" :alt="image.name" />
+    <img
+      :src="`${dir}/${image.name}.${image.type.slice(-1)}`"
+      :alt="image.name"
+      :width="width"
+      :height="height"
+    />
   </picture>
 </template>
