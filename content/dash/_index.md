@@ -23,6 +23,8 @@ extra:
           url: https://k.youshop10.com/47fxD233
         - name: 群岛 BOOKS ↗
           url: https://k.youshop10.com/iMHppbus
+        - name: 無早 nomorning ↗
+          url: https://k.youshop10.com/mXkRJJEL
         - name: 香蕉鱼书店 ↗
           url: https://m.tb.cn/h.fNsZL9E?tk=6Gh62UQAqFL
         - name: 野狗商店 ↗
@@ -34,7 +36,6 @@ extra:
         - name: 附近书店
         - name: 乐开书店
         - name: 三克岛図書館
-        - name: 無早 nomorning
     digital_version:
       summary: "电子版订阅 / Digital version subscription:"
       email_label: email address
