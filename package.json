@@ -1,12 +1,12 @@
 {
   "name": "atelier-anchor.com",
-  "version": "0.2.0",
   "author": "Xiangdong Zeng",
+  "version": "0.2.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite-ssg build",
-    "preview": "vite preview",
-    "typecheck": "vue-tsc --noEmit"
+    "preview": "vite preview"
   },
   "dependencies": {
     "vue": "^3.2.37",
@@ -15,7 +15,6 @@
   "devDependencies": {
     "@types/node": "^18.6.4",
     "@vitejs/plugin-vue": "^3.0.1",
-    "@vue/tsconfig": "^0.1.3",
     "@vueuse/head": "^0.7.9",
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.16",
