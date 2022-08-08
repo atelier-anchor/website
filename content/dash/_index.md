@@ -16,26 +16,33 @@ extra:
         - name: postpostspace ↗
           url: https://k.youshop10.com/ClQ6KyGh
         - name: Text&Image 梯书店 ↗
-          url: https://m.tb.cn/h.fNUZ8G5?tk=2XHe24lSFcM
+          url: https://m.tb.cn/h.fzJtERp
         - name: 半层书店 ↗
           url: https://k.youshop10.com/d-0fYNcv
         - name: 摸摸艺术书 ↗
           url: https://k.youshop10.com/47fxD233
         - name: 群岛 BOOKS ↗
           url: https://k.youshop10.com/iMHppbus
+        - name: 尚文堂 ↗
+          url: https://k.youshop10.com/4m=DZw0T
         - name: 無早 nomorning ↗
           url: https://k.youshop10.com/mXkRJJEL
         - name: 香蕉鱼书店 ↗
-          url: https://m.tb.cn/h.fNsZL9E?tk=6Gh62UQAqFL
+          url: https://m.tb.cn/h.fzJHjbl
         - name: 野狗商店 ↗
           url: https://k.youshop10.com/loehnj7O
         - name: 一爿旧店 ↗
-          url: https://m.tb.cn/h.fnv1L81?tk=3Pft2Up46Coi
+          url: https://m.tb.cn/h.fBthoCn
         - name: 有个计划 LittlePlan ↗
           url: https://k.youshop10.com/8c2OfXQT
+        - name: Protopaper
+        - name: 刺鱼书店
+        - name: 风马 Art Store
         - name: 附近书店
         - name: 乐开书店
         - name: 三克岛図書館
+        - name: 万花筒书店
+        - name: 脏像素 Inky Pixel
     digital_version:
       summary: "电子版订阅 / Digital version subscription:"
       email_label: email address
