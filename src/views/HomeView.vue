@@ -15,14 +15,18 @@ const to = (id: string) => `${router.resolve(id in works ? 'works' : 'dash').pat
 
 const itemIndex = ref<number>(0)
 const updateItemIndex = () => (itemIndex.value = (itemIndex.value + 1) % items.value.length)
-onMounted(() => setInterval(updateItemIndex, 600))
+onMounted(() => setInterval(updateItemIndex, 6000))
 </script>
 
 <template>
-  <div>
+  <div class="relative">
     <Transition v-for="(entry, i) in items">
-      <div v-if="itemIndex === i" class="fixed flex h-full items-center pr-4 lg:pr-8">
-        <LinkFigure :image="entry[1].images[0]" :to="to(entry[0])" />
+      <div v-if="itemIndex === i" class="w-full sm:absolute">
+        <LinkFigure
+          :image="entry[1].images[0]"
+          :to="to(entry[0])"
+          class="sm:h-[calc(100vh-2rem)] lg:h-[calc(100vh-4rem)]"
+        />
       </div>
     </Transition>
   </div>
@@ -31,11 +35,19 @@ onMounted(() => setInterval(updateItemIndex, 600))
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  @apply duration-300;
+  @apply duration-[2s];
 }
 
 .v-enter-from,
 .v-leave-to {
   @apply opacity-0;
+}
+
+:deep(figure) {
+  @apply h-full;
+}
+
+:deep(img) {
+  @apply h-full w-full object-cover;
 }
 </style>

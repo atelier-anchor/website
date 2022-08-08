@@ -28,7 +28,7 @@
   }
 
   body ::selection {
-    @apply bg-primary dark:text-black;
+    @apply bg-primary text-black;
   }
 
   a:hover {

@@ -15,7 +15,7 @@ const work = computed(
 <template>
   <ColumnContainer class="flex-col-reverse">
     <template #left>
-      <article class="top-8 h-fit md:sticky">
+      <article class="h-fit sm:top-4 md:sticky lg:top-8">
         <PostMeta :work="work" class="mb-4 sm:mb-8" />
         <p v-for="p in work.description" class="mb-4 last:mb-0">
           {{ p }}

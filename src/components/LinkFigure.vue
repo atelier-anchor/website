@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink :to="to" class="group">
+  <RouterLink :to="to" class="group block">
     <figure class="overflow-hidden">
       <BasePicture :image="image" :dir="to" :width="width" :height="height" />
     </figure>
