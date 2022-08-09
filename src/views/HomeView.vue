@@ -19,17 +19,11 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 </script>
 
 <template>
-  <div class="relative">
-    <Transition v-for="(entry, i) in items">
-      <div v-if="itemIndex === i" class="w-full sm:absolute">
-        <LinkFigure
-          :image="entry[1].images[0]"
-          :to="to(entry[0])"
-          class="sm:h-[calc(100vh-2rem)] lg:h-[calc(100vh-4rem)]"
-        />
-      </div>
-    </Transition>
-  </div>
+  <Transition v-for="(entry, i) in items">
+    <div v-if="itemIndex === i" class="absolute flex h-full items-center">
+      <LinkFigure :image="entry[1].images[0]" :to="to(entry[0])" />
+    </div>
+  </Transition>
 </template>
 
 <style scoped>
@@ -43,11 +37,7 @@ onMounted(() => setInterval(updateItemIndex, 6000))
   @apply opacity-0;
 }
 
-:deep(figure) {
-  @apply h-full;
-}
-
 :deep(img) {
-  @apply h-full w-full object-cover;
+  @apply h-[50vh] w-full object-cover sm:h-full;
 }
 </style>

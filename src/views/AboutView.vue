@@ -88,7 +88,7 @@ const data = {
 <template>
   <ColumnContainer v-for="(item, name) in data" is="section">
     <template #left>
-      <h2 class="text-2xl lg:sticky lg:top-8">{{ name }}</h2>
+      <h2 class="text-2xl md:sticky md:top-4 lg:top-8">{{ name }}</h2>
     </template>
     <template #right>
       <component :is="item.component" :data="item.data" />
