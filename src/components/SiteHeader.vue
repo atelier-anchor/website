@@ -1,11 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { onMounted, ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
 import SiteLogo from '@/components/SiteLogo.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteNavBarHamburger from '@/components/SiteNavBarHamburger.vue'
 
 const isNavOpen = ref(false)
 const toggleNav = () => (isNavOpen.value = !isNavOpen.value)
+const closeNav = () => (isNavOpen.value = false)
+
+const route = useRoute()
+watch(route, closeNav)
+
+onMounted(() => {
+  const navElem = document.querySelector('nav')
+  document.addEventListener('click', (e) => {
+    if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) closeNav()
+  })
+})
 </script>
 
 <template>

@@ -11,10 +11,10 @@ defineProps<{
 <template>
   <Transition>
     <nav
-      class="absolute max-h-48 w-full overflow-hidden bg-white dark:bg-black sm:relative sm:!block"
       v-show="isNavOpen"
+      class="absolute max-h-48 w-full overflow-hidden bg-white dark:bg-black sm:relative sm:!block"
     >
-      <ul class="my-4">
+      <ul class="my-4 sm:mb-0">
         <li v-for="link in navLinks">
           <SiteNavItem :link="link" />
         </li>

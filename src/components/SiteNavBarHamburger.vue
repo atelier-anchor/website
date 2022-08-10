@@ -6,8 +6,10 @@ defineProps<{
 
 <template>
   <button
-    class="NavBarHamburger font-anicons text-4xl text-primary duration-300 before:content-['A'] sm:hidden"
+    class="NavBarHamburger font-anicons text-4xl font-normal text-primary duration-300 before:content-['A'] sm:hidden"
     :class="{ active }"
+    aria-label="Toggle navigation"
+    :aria-expanded="active"
   ></button>
 </template>
 
