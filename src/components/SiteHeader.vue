@@ -1,18 +1,16 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { ref } from 'vue'
 import SiteLogo from '@/components/SiteLogo.vue'
 import SiteNav from '@/components/SiteNav.vue'
 import SiteNavBarHamburger from '@/components/SiteNavBarHamburger.vue'
 
 const isNavOpen = ref(false)
 const toggleNav = () => (isNavOpen.value = !isNavOpen.value)
-
-onMounted(() => window.addEventListener('resize', () => (isNavOpen.value = false)))
 </script>
 
 <template>
-  <header class="sticky h-fit sm:top-4 lg:top-8">
-    <div class="mb-4 flex items-center justify-between sm:mb-8">
+  <header class="sticky top-0 z-10 h-fit bg-white py-4 dark:bg-black lg:py-8">
+    <div class="flex items-center justify-between">
       <h1>
         <SiteLogo class="w-32 sm:w-40" />
       </h1>

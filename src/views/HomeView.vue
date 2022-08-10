@@ -20,7 +20,7 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 
 <template>
   <Transition v-for="(entry, i) in items">
-    <div v-if="itemIndex === i" class="absolute flex h-full items-center">
+    <div v-if="itemIndex === i" class="absolute top-0 flex h-full items-center py-4 lg:py-8">
       <LinkFigure :image="entry[1].images[0]" :to="to(entry[0])" />
     </div>
   </Transition>
@@ -38,6 +38,6 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 }
 
 :deep(img) {
-  @apply h-[50vh] w-full object-cover sm:h-full;
+  @apply min-h-[max(50vh,200px)] w-full object-cover sm:h-full;
 }
 </style>

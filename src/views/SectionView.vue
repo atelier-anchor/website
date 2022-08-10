@@ -20,16 +20,14 @@ const to = (id: string) => `${route.path}/${id}`
 </script>
 
 <template>
-  <ColumnContainer
-    v-for="(item, id) in items"
-    is="article"
-    class="mb-4 items-center last:mb-0 sm:mb-8"
-  >
-    <template #left>
-      <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
-    </template>
-    <template #right>
-      <LinkFigure :image="item.images[0]" :to="to(id)" width="1920" height="1440" />
-    </template>
-  </ColumnContainer>
+  <div class="flex flex-col gap-4 md:gap-8">
+    <ColumnContainer v-for="(item, id) in items" is="article" class="items-center gap-0">
+      <template #left>
+        <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
+      </template>
+      <template #right>
+        <LinkFigure :image="item.images[0]" :to="to(id)" width="1920" height="1440" />
+      </template>
+    </ColumnContainer>
+  </div>
 </template>
