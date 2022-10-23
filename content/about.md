@@ -41,6 +41,15 @@ extra:
       job_title:
         - Co-founder
         - Academic director
+    - name: oooooohmygosh
+      avatar: https://s2.loli.net/2022/10/23/mavCPjK9cwFxD85.jpg
+      job_title:
+        - Graphic designer
+        - Distribution director
+    - name: Janine Sui
+      avatar: https://s2.loli.net/2022/10/23/EnlMNgARKWO6SeH.jpg
+      job_title:
+        - Graphic designer
     - name: Chen Li
       avatar: https://i.loli.net/2021/09/11/OgGEkB3Cp7h8KNS.jpg
       job_title:
