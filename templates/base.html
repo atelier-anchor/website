@@ -26,11 +26,7 @@
                   {%- set active = "" -%}
                 {%- endif -%}
                 <h2 {{ active }}>
-                  {%- if section == "dash" -%}
-                    <a style="cursor: not-allowed;">{{ section }}</a>
-                  {%- else -%}
-                    <a href="/{{ section }}/">{{ section }}</a>
-                  {%- endif -%}
+                  <a href="/{{ section }}/">{{ section }}</a>
                 </h2>
               {%- endfor -%}
             </nav>
