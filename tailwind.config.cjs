@@ -15,6 +15,9 @@ module.exports = {
       colors: {
         primary: '#fd0',
       },
+      screens: {
+        tall: { raw: '(min-height: 480px)' },
+      },
     },
   },
 }

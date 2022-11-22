@@ -1,9 +1,11 @@
 import type { RouteRecordRaw } from 'vue-router'
-import { works, typefaces } from '@/data'
+import { dash, typefaces, works } from '@/data'
 import NotFound from '@/views/NotFound.vue'
 
 const isValidPost = (section: string, id: string) =>
-  (section === 'works' && id in works) || (section === 'typefaces' && id in typefaces)
+  (section === 'works' && id in works) ||
+  (section === 'typefaces' && id in typefaces) ||
+  (section === 'dash' && id in dash)
 
 const routes: RouteRecordRaw[] = [
   {

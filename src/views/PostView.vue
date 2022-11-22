@@ -1,14 +1,21 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { typefaces, works } from '@/data'
+import { dash, typefaces, works } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
+type WorkType = 'works' | 'typefaces' | 'dash'
+
 const route = useRoute()
 const work = computed(
-  () => (route.params.section === 'works' ? works : typefaces)[route.params.id as string]
+  () =>
+    ({
+      works: works,
+      typefaces: typefaces,
+      dash: dash,
+    }[route.params.section as WorkType][route.params.id as string])
 )
 </script>
 

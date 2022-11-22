@@ -1,7 +1,14 @@
 <script setup lang="ts">
+import { useRoute } from 'vue-router'
+import { dash } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BaseBlock from '@/components/BaseBlock.vue'
+import LinkFigure from '@/components/LinkFigure.vue'
 import DashGet from '@/components/dash/DashGet.vue'
+import PostMeta from '@/components/post/PostMeta.vue'
+
+const route = useRoute()
+const to = (id: string) => `${route.path}/${id}`
 
 const data = {
   'about dash': {
@@ -54,6 +61,14 @@ const data = {
     </template>
     <template #right>
       <component :is="item.component" :data="item.data" />
+    </template>
+  </ColumnContainer>
+  <ColumnContainer v-for="(item, id) in dash" is="article" class="items-center gap-0">
+    <template #left>
+      <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
+    </template>
+    <template #right>
+      <LinkFigure :image="item.images[0]" :to="to(id)" width="1920" height="1440" />
     </template>
   </ColumnContainer>
 </template>

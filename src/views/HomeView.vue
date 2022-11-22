@@ -20,7 +20,10 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 
 <template>
   <Transition v-for="(entry, i) in items">
-    <div v-if="itemIndex === i" class="absolute top-0 flex h-full items-center py-4 lg:py-8">
+    <div
+      v-if="itemIndex === i"
+      class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
+    >
       <LinkFigure :image="entry[1].images[0]" :to="to(entry[0])" />
     </div>
   </Transition>

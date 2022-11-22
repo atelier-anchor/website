@@ -24,16 +24,16 @@ const socialMedia = [
 </script>
 
 <template>
-  <footer class="py-4 sm:absolute sm:bottom-0 lg:py-8">
+  <footer class="py-4 sm:absolute sm:bottom-0 lg:py-8 sm:tall:fixed">
     <h2 class="mb-2 text-3xl">contact</h2>
     <address class="not-italic">
       <template v-for="line in address">{{ line }}<br /></template>
       <a :href="mail.href" target="_blank">{{ mail.name }}</a>
-      <ul class="flex gap-2">
-        <li v-for="item in socialMedia">
-          <a :href="item.href" :title="item.title" target="_blank">{{ item.name }}</a>
-        </li>
-      </ul>
     </address>
+    <ul class="flex gap-2">
+      <li v-for="item in socialMedia">
+        <a :href="item.href" :title="item.title" target="_blank">{{ item.name }}</a>
+      </li>
+    </ul>
   </footer>
 </template>
