@@ -31,8 +31,14 @@
     @apply bg-primary text-black;
   }
 
-  a:hover {
+  a:hover,
+  input[type='submit']:hover {
     @apply line-through decoration-primary decoration-[0.1em];
+  }
+
+  input[type='button'],
+  input[type='submit'] {
+    @apply cursor-pointer;
   }
 
   abbr[title] {
