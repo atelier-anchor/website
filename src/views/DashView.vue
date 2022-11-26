@@ -1,13 +1,8 @@
 <script setup lang="ts">
-import { useRoute } from 'vue-router'
 import { dash } from '@/data'
 import ColumnContainer from '@/components/ColumnContainer.vue'
-import LinkFigure from '@/components/LinkFigure.vue'
 import DashGet from '@/components/dash/DashGet.vue'
-import PostMeta from '@/components/post/PostMeta.vue'
-
-const route = useRoute()
-const to = (id: string) => `${route.path}/${id}`
+import SectionItem from '@/components/section/SectionItem.vue'
 
 const dashAbout = [
   'dash 是关于文字的视觉文化志，不定期更新。每期我们都会择取一个主题，通过独特的编辑思路和设计形式呈现给读者。我们希望能发现司空见惯中的不同寻常，连结跨领域、跨文化的声音，为创作者提供更广泛、更巧妙、更多元的视角。',
@@ -33,12 +28,7 @@ const dashAbout = [
       <DashGet />
     </template>
   </ColumnContainer>
-  <ColumnContainer v-for="(item, id) in dash" is="article" class="items-center gap-0">
-    <template #left>
-      <PostMeta :work="item" :to="to(id)" class="hidden md:block" />
-    </template>
-    <template #right>
-      <LinkFigure :image="item.images[0]" :to="to(id)" width="1920" height="1440" />
-    </template>
-  </ColumnContainer>
+  <section>
+    <SectionItem v-for="(item, id) in dash" :id="id" :item="item" />
+  </section>
 </template>

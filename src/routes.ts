@@ -16,11 +16,13 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/works',
     name: 'works',
+    props: { items: works },
     component: () => import('@/views/SectionView.vue'),
   },
   {
     path: '/typefaces',
     name: 'typefaces',
+    props: { items: typefaces },
     component: () => import('@/views/SectionView.vue'),
   },
   {
