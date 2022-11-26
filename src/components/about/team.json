@@ -1,0 +1,98 @@
+[
+  {
+    "name": "Nagisa Chen",
+    "avatar": {
+      "name": "nagisa-chen",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Co-founder",
+      "Graphic designer"
+    ]
+  },
+  {
+    "name": "Willie Liu",
+    "avatar": {
+      "name": "willie-liu",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Co-founder",
+      "Type designer"
+    ]
+  },
+  {
+    "name": "Xiyao Du",
+    "avatar": {
+      "name": "xiyao-du",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Co-founder",
+      "Academic director"
+    ]
+  },
+  {
+    "name": "Chen Li",
+    "avatar": {
+      "name": "chen-li",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Graphic designer",
+      "Editor"
+    ]
+  },
+  {
+    "name": "Money Su",
+    "avatar": {
+      "name": "money-su",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Graphic designer",
+      "Editor"
+    ]
+  },
+  {
+    "name": "Xiangdong Zeng",
+    "avatar": {
+      "name": "xiangdong-zeng",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "Engineer"
+    ]
+  },
+  {
+    "name": "Shachō 🍗",
+    "avatar": {
+      "name": "shacho",
+      "type": [
+        "webp",
+        "jpg"
+      ]
+    },
+    "titles": [
+      "CEO"
+    ]
+  }
+]
