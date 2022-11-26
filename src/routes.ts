@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router'
 import { dash, typefaces, works } from '@/data'
-import NotFound from '@/views/NotFound.vue'
+import NotFound from '@/components/NotFound.vue'
 
 const isValidPost = (section: string, id: string) =>
   (section === 'works' && id in works) ||
@@ -11,34 +11,34 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    component: () => import('@/views/HomeView.vue'),
+    component: () => import('@/components/home/HomeView.vue'),
   },
   {
     path: '/works',
     name: 'works',
     props: { items: works },
-    component: () => import('@/views/SectionView.vue'),
+    component: () => import('@/components/section/SectionView.vue'),
   },
   {
     path: '/typefaces',
     name: 'typefaces',
     props: { items: typefaces },
-    component: () => import('@/views/SectionView.vue'),
+    component: () => import('@/components/section/SectionView.vue'),
   },
   {
     path: '/dash',
     name: 'dash',
-    component: () => import('@/views/DashView.vue'),
+    component: () => import('@/components/dash/DashView.vue'),
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import('@/views/AboutView.vue'),
+    component: () => import('@/components/about/AboutView.vue'),
   },
   {
     path: '/:section/:id',
     name: 'post',
-    component: () => import('@/views/PostView.vue'),
+    component: () => import('@/components/post/PostView.vue'),
     beforeEnter: (to) => {
       if (!isValidPost(to.params.section as string, to.params.id as string)) {
         return { name: 'not-found' }
