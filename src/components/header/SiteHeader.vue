@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import SiteLogo from '@/components/SiteLogo.vue'
-import SiteNav from '@/components/SiteNav.vue'
-import SiteNavBarHamburger from '@/components/SiteNavBarHamburger.vue'
+import SiteLogo from '@/components/header/SiteLogo.vue'
+import SiteNav from '@/components/header/SiteNav.vue'
+import SiteNavBarHamburger from '@/components/header/SiteNavBarHamburger.vue'
 
 const isNavOpen = ref(false)
 const toggleNav = () => (isNavOpen.value = !isNavOpen.value)

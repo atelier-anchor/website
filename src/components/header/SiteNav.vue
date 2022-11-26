@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SiteNavItem from '@/components/SiteNavItem.vue'
+import SiteNavItem from '@/components/header/SiteNavItem.vue'
 
 const navLinks = ['works', 'typefaces', 'dash', 'about']
 
