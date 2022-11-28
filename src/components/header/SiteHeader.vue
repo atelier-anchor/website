@@ -23,9 +23,7 @@ onMounted(() => {
 <template>
   <header class="sticky top-0 z-10 h-fit bg-white py-4 dark:bg-black lg:py-8">
     <div class="flex items-center justify-between">
-      <h1>
-        <SiteLogo class="w-32 sm:w-40" />
-      </h1>
+      <SiteLogo />
       <SiteNavBarHamburger :active="isNavOpen" @click="toggleNav" />
     </div>
     <SiteNav :isNavOpen="isNavOpen" />
