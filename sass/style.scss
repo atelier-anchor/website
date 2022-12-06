@@ -360,6 +360,13 @@ svg {
         margin-right: var(--spacing-unit);
       }
 
+      picture {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: inherit;
+      }
+
       img {
         object-fit: cover;
         min-height: 100%;

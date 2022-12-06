@@ -15,18 +15,44 @@
   <div class="carousel-inner">
     {%- for page in image_pages -%}
       {%- if not page.extra.carousel_exclude -%}
-        {%- set image = page.extra.images | first -%}
-        <div class="carousel-item d-flex">
-          <a href="{{ page.path | safe }}">
-            <figure>
-              {%- if image.url -%}
-                <img src="{{ image.url | safe }}" alt="{{ image.name }}">
-              {%- else -%}
-                <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
-              {%- endif -%}
-            </figure>
-          </a>
-        </div>
+        {%- set image_name = page.path | split(pat="/") | nth(n=2) -%}
+        {%- if image_name == "agt" -%}
+          <div class="carousel-item d-flex">
+            <a href="https://zhongchou.modian.com/item/122907.html" target="_blank">
+              <figure>
+                <picture>
+                  <source srcset="/typefaces/jinhua/jinhua-1.dark.svg" media="(prefers-color-scheme: dark)">
+                  <img src="/typefaces/jinhua/jinhua-1.light.svg" alt="Jinhua Mincho" class="no-bg">
+                </picture>
+              </figure>
+            </a>
+          </div>
+        {%- else -%}
+          {%- set image = page.extra.images | first -%}
+          <div class="carousel-item d-flex">
+            <a href="{{ page.path | safe }}">
+              <figure>
+                {%- if image.url -%}
+                  <img src="{{ image.url | safe }}" alt="{{ image.name }}">
+                {%- else -%}
+                  <img src="{{ page.path | safe }}{{ image }}" alt="{{ image }}">
+                {%- endif -%}
+              </figure>
+            </a>
+          </div>
+          {%- if image_name in ["double-win", "psa"] -%}
+            <div class="carousel-item d-flex">
+              <a href="https://zhongchou.modian.com/item/122907.html" target="_blank">
+                <figure>
+                  <picture>
+                    <source srcset="/typefaces/jinhua/jinhua-1.dark.svg" media="(prefers-color-scheme: dark)">
+                    <img src="/typefaces/jinhua/jinhua-1.light.svg" alt="Jinhua Mincho" class="no-bg">
+                  </picture>
+                </figure>
+              </a>
+            </div>
+          {%- endif -%}
+        {%- endif -%}
       {%- endif -%}
     {%- endfor -%}
   </div>
