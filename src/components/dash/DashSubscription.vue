@@ -42,7 +42,7 @@ const notice =
     </form>
   </div>
   <p
-    class="text-xs text-neutral-900 !text-opacity-50 before:content-['*_'] dark:text-neutral-100"
+    class="text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
     v-html="notice"
   ></p>
 </template>

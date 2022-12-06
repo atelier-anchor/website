@@ -30,7 +30,7 @@ defineProps<{
 
 <style scoped>
 input[type='email']::placeholder {
-  @apply text-neutral-900 !text-opacity-50 dark:text-neutral-100;
+  @apply text-neutral-900/50 dark:text-neutral-100/50;
 }
 
 input[type='email']:invalid:not(:focus):not(:placeholder-shown) ~ .InvalidFeedback {
