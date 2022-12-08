@@ -50,4 +50,10 @@
   .clip-path-circle {
     clip-path: circle(50%);
   }
+
+  .cjk-punct {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
+      sans-serif;
+    font-feature-settings: 'fwid';
+  }
 }

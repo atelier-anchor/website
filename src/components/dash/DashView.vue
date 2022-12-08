@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { parseMarkdown } from '@/utils'
 import { dash } from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import DashGet from '@/components/dash/DashGet.vue'
@@ -17,7 +18,7 @@ const dashAbout = [
       <h2 class="text-2xl lg:sticky lg:top-8">about dash</h2>
     </template>
     <template #right>
-      <p v-for="p in dashAbout" class="mb-4 sm:mb-8">{{ p }}</p>
+      <p v-for="p in dashAbout" class="mb-4 sm:mb-8" v-html="parseMarkdown(p)"></p>
     </template>
   </ColumnContainer>
   <ColumnContainer is="section">

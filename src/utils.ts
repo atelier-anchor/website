@@ -8,3 +8,16 @@ export const shuffle = <T>(array: T[]) =>
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
+
+export const parseMarkdown = (s: string) =>
+  s
+    // CJK punctuations
+    .replace(/(——|……)/g, '<span class="cjk-punct">$1</span>')
+    // Latin punctuations
+    .replace(/---/g, '—')
+    .replace(/"(.+?)"/g, '“$1”')
+    .replace(/'/g, '’')
+    // Fix CSS classes
+    .replace(/class=“(.+?)”/g, 'class="$1"')
+    // Links
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')

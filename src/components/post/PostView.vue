@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { parseMarkdown } from '@/utils'
 import data from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
@@ -28,9 +29,7 @@ const work = computed(() => {
     <template #left>
       <article class="h-fit sm:top-4 md:sticky lg:top-8">
         <PostMeta v-bind="work" class="mb-4 sm:mb-8" />
-        <p v-for="p in work.description" class="mb-4 last:mb-0">
-          {{ p }}
-        </p>
+        <p v-for="p in work.description" class="mb-4 last:mb-0" v-html="parseMarkdown(p)"></p>
       </article>
     </template>
     <template #right>

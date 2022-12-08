@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { parseMarkdown } from '@/utils'
 import InputEmail from '@/components/dash/InputEmail.vue'
 
 const notice =
@@ -43,6 +44,6 @@ const notice =
   </div>
   <p
     class="text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
-    v-html="notice"
+    v-html="parseMarkdown(notice)"
   ></p>
 </template>
