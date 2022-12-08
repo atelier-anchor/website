@@ -12,16 +12,26 @@ const closeNav = () => (isNavOpen.value = false)
 const route = useRoute()
 watch(route, closeNav)
 
+const footerHeight = ref(0)
 onMounted(() => {
   const navElem = document.querySelector('nav')
   document.addEventListener('click', (e) => {
     if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) closeNav()
   })
+  const footerElem = document.querySelector('footer')
+  if (footerElem) {
+    const pt = parseInt(window.getComputedStyle(footerElem).getPropertyValue('padding-top'))
+    const pb = parseInt(window.getComputedStyle(footerElem).getPropertyValue('padding-bottom'))
+    footerHeight.value = footerElem.offsetHeight - pt - pb
+  }
 })
 </script>
 
 <template>
-  <header class="sticky top-0 z-10 h-fit bg-white py-4 dark:bg-black lg:py-8">
+  <header
+    class="sticky top-0 z-10 h-fit bg-white py-4 dark:bg-black sm:mb-[var(--footer-height)] lg:py-8 tall:mb-0"
+    :style="{ '--footer-height': `${footerHeight}px` }"
+  >
     <div class="flex items-center justify-between">
       <SiteLogo />
       <SiteNavBarHamburger :active="isNavOpen" @click="toggleNav" />
