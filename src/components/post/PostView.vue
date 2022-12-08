@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
+import { useHead } from '@vueuse/head'
 import { parseMarkdown } from '@/utils'
 import data from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
@@ -16,11 +17,15 @@ interface Work {
   // videos?: Video[]
 }
 
-const route = useRoute()
+const { params, path } = useRoute()
 const work = computed(() => {
-  const section = route.params.section as keyof typeof data
-  const id = route.params.id as string
+  const section = params.section as keyof typeof data
+  const id = params.id as string
   return (data[section] as Record<string, Work>)[id]
+})
+
+useHead({
+  title: `${work.value.name} - atelierAnchor`,
 })
 </script>
 
@@ -34,7 +39,7 @@ const work = computed(() => {
     </template>
     <template #right>
       <figure v-for="image in work.images" class="mb-4 last:mb-0 sm:mb-8">
-        <BasePicture :image="image" :dir="`${route.path}`" width="1920" height="1440" />
+        <BasePicture :image="image" :dir="`${path}`" width="1920" height="1440" />
       </figure>
     </template>
   </ColumnContainer>
