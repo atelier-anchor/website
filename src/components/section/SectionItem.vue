@@ -2,15 +2,15 @@
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import LinkFigure from '@/components/LinkFigure.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
-import type { Work } from '@/data'
 
 defineProps<{
   id: string
-  item: Work
+  item: any
 }>()
 </script>
 
 <template>
+  <!-- TODO: gap-0 -->
   <ColumnContainer is="article" class="items-center gap-0">
     <template #left>
       <PostMeta :work="item" :to="`${$route.path}/${id}`" class="hidden md:block" />

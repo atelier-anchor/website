@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import type { Image, Numberish } from '@/data'
+import { computed } from 'vue'
 
-const imageTypes = {
+const types: { [key: string]: string } = {
   webp: 'image/webp',
   jpg: 'image/jpeg',
   png: 'image/png',
@@ -9,44 +9,34 @@ const imageTypes = {
   svg: 'image/svg+xml',
 }
 
-defineProps<{
-  image: Image
+const dark = computed(() => props.image.includes('{light,dark}.'))
+const basename = computed(() => props.image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))
+const exts = computed(() => props.image.replace(/^.+\.\{?(.+?)\}?$/g, '$1').split(','))
+const path = (ext: string) => `${props.dir}/${basename.value}.${ext}`
+
+const props = defineProps<{
+  image: string
   dir: string
-  width?: Numberish
-  height?: Numberish
+  width?: number | string
+  height?: number | string
 }>()
 </script>
 
 <template>
-  <picture v-if="image.dark">
-    <template v-if="image.type.length === 1">
+  <picture v-if="dark">
+    <template v-for="ext in exts.slice(0, -1)">
       <source
-        :srcset="`${dir}/${image.name}.dark.${image.type[0]}`"
+        :srcset="path(`dark.${ext}`)"
+        :type="types[ext]"
         media="(prefers-color-scheme: dark)"
       />
-      <img
-        :src="`${dir}/${image.name}.light.${image.type[0]}`"
-        :alt="image.name"
-        :width="width"
-        :height="height"
-        :class="{ 'w-screen': image.type[0] === 'svg' }"
-      />
+      <source :srcset="path(`light.${ext}`)" :type="types[ext]" />
     </template>
-    <template v-else>
-      <!-- TODO -->
-    </template>
+    <source :srcset="path(`dark.${exts.at(-1)}`)" media="(prefers-color-scheme: dark)" />
+    <img :src="path(`light.${exts.at(-1)}`)" :alt="basename" :width="width" :height="height" />
   </picture>
   <picture v-else>
-    <source
-      v-for="imageType in image.type.slice(0, -1)"
-      :srcset="`${dir}/${image.name}.${imageType}`"
-      :type="imageTypes[imageType]"
-    />
-    <img
-      :src="`${dir}/${image.name}.${image.type.slice(-1)}`"
-      :alt="image.name"
-      :width="width"
-      :height="height"
-    />
+    <source v-for="ext in exts.slice(0, -1)" :srcset="path(ext)" :type="types[ext]" />
+    <img :src="path(exts.at(-1) as string)" :alt="basename" :width="width" :height="height" />
   </picture>
 </template>

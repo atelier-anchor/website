@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { Credits } from '@/data'
-
 const aliases = {
   client: 'CL',
   lead_agency: 'LA',
@@ -19,7 +17,7 @@ const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 const toTitle = (s: string) => capitalize(s.replace('_', ' '))
 
 defineProps<{
-  title: keyof Credits
+  title: keyof typeof aliases
   name: string
 }>()
 </script>

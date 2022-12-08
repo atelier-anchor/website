@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import team from '@/components/about/team.json'
 import BasePicture from '@/components/BasePicture.vue'
-import type { Image } from '@/data'
 </script>
 
 <template>
   <div v-for="member in team" class="mb-4 flex items-center gap-4 last:mb-0 sm:mb-8 sm:gap-8">
     <div class="clip-path-circle w-20">
-      <BasePicture :image="(member.avatar as Image)" dir="/about" width="80" height="80" />
+      <BasePicture :image="member.avatar" dir="/about" width="80" height="80" />
     </div>
     <div>
       <h3 class="mb-2">{{ member.name }}</h3>

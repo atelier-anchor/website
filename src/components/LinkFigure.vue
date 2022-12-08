@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import type { Image, Numberish } from '@/data'
 import BasePicture from '@/components/BasePicture.vue'
 
 defineProps<{
-  image: Image
+  image: string
   to: string
-  width?: Numberish
-  height?: Numberish
+  width?: number | string
+  height?: number | string
 }>()
 </script>
 

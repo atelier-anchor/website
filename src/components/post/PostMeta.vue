@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import type { Work } from '@/data'
 import PostAuthorTitle from '@/components/post/PostAuthorTitle.vue'
+import type { Work } from '@/data'
 
 defineProps<{
   work: Work

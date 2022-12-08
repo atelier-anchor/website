@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { dash } from '@/data'
+import { dash } from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import DashGet from '@/components/dash/DashGet.vue'
 import SectionItem from '@/components/section/SectionItem.vue'

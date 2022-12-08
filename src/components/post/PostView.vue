@@ -1,22 +1,17 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
-import { dash, typefaces, works } from '@/data'
+import data from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
-type WorkType = 'works' | 'typefaces' | 'dash'
-
 const route = useRoute()
-const work = computed(
-  () =>
-    ({
-      works: works,
-      typefaces: typefaces,
-      dash: dash,
-    }[route.params.section as WorkType][route.params.id as string])
-)
+const work = computed(() => {
+  const section = route.params.section as keyof typeof data
+  const id = route.params.id as string
+  return (data[section] as { [key: string]: any })[id]
+})
 </script>
 
 <template>

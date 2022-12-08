@@ -1,5 +1,5 @@
 import type { RouteRecordRaw } from 'vue-router'
-import { dash, typefaces, works } from '@/data'
+import { dash, typefaces, works } from '@/data.json'
 import NotFound from '@/components/NotFound.vue'
 
 const isValidPost = (section: string, id: string) =>

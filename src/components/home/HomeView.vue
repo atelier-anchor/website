@@ -1,30 +1,25 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { dash, works } from '@/data'
 import { flat, shuffle } from '@/utils'
+import { dash, works } from '@/data.json'
 import LinkFigure from '@/components/LinkFigure.vue'
 
-const route = useRoute()
-const router = useRouter()
-
-// const items = computed(() => shuffle(flat([works, dash].map(Object.entries))))
-const items = computed(() => shuffle(Object.entries(works)))
-
-const to = (id: string) => `${router.resolve(id in works ? 'works' : 'dash').path}/${id}`
-
+const items = computed(() => shuffle(flat([works, dash].map(Object.entries))))
 const itemIndex = ref<number>(0)
 const updateItemIndex = () => (itemIndex.value = (itemIndex.value + 1) % items.value.length)
 onMounted(() => setInterval(updateItemIndex, 6000))
 </script>
 
 <template>
-  <Transition v-for="(entry, i) in items">
+  <Transition v-for="([id, item], i) in items">
     <div
-      v-if="itemIndex === i"
+      v-show="itemIndex === i"
       class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
     >
-      <LinkFigure :image="entry[1].images[0]" :to="to(entry[0])" />
+      <LinkFigure
+        :image="item.images[0]"
+        :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
+      />
     </div>
   </Transition>
 </template>
