@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import SectionItem from '@/components/section/SectionItem.vue'
-import type { Work } from '@/data'
 
 const entries = computed(() =>
   Object.entries(props.items)
@@ -10,13 +9,23 @@ const entries = computed(() =>
     .reverse()
 )
 
+interface Work {
+  name: string
+  date: string
+  category: string
+  exclude?: boolean
+  credits: Record<string, string>
+  description: string[]
+  images: string[]
+}
+
 const props = defineProps<{
-  items: Work
+  items: Record<string, Work>
 }>()
 </script>
 
 <template>
   <div class="flex flex-col gap-4 md:gap-8">
-    <SectionItem v-for="[id, item] in entries" :id="id" :item="item" />
+    <SectionItem v-for="[id, item] in entries" :id="id" v-bind="item" />
   </div>
 </template>

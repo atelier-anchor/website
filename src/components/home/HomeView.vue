@@ -4,20 +4,22 @@ import { flat, shuffle } from '@/utils'
 import { dash, works } from '@/data.json'
 import LinkFigure from '@/components/LinkFigure.vue'
 
-const items = computed(() => shuffle(flat([works, dash].map(Object.entries))))
+const items = computed(
+  () => shuffle(flat([works, dash].map(Object.entries))) as [string, { images: string[] }][]
+)
 const itemIndex = ref<number>(0)
 const updateItemIndex = () => (itemIndex.value = (itemIndex.value + 1) % items.value.length)
 onMounted(() => setInterval(updateItemIndex, 6000))
 </script>
 
 <template>
-  <Transition v-for="([id, item], i) in items">
+  <Transition v-for="([id, { images }], i) in items">
     <div
       v-show="itemIndex === i"
       class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
     >
       <LinkFigure
-        :image="item.images[0]"
+        :image="images[0]"
         :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
       />
     </div>

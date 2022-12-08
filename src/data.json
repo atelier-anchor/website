@@ -3,7 +3,7 @@
     "agt": {
       "name": "Arcade Game Typography",
       "date": "2021-02-01",
-      "type": "Translation",
+      "category": "Translation",
       "credits": {
         "translator": "Willie Liu",
         "editor": "Xiyao Du",
@@ -24,7 +24,7 @@
     "ambitful": {
       "name": "Ambitful",
       "date": "2021-04-01",
-      "type": "Visual identity",
+      "category": "Visual identity",
       "credits": {
         "client": "Ambitful",
         "art_director": "Nagisa Chen",
@@ -45,7 +45,7 @@
     "black-box": {
       "name": "Dinkie Bitmap Black Box",
       "date": "2020-09-01",
-      "type": "Product design",
+      "category": "Product design",
       "credits": {
         "client": "3type",
         "art_director": "Nagisa Chen",
@@ -66,7 +66,7 @@
     "chen-shi-fu-hua": {
       "name": "尘世浮华",
       "date": "2020-10-01",
-      "type": "Graphic design",
+      "category": "Graphic design",
       "exclude": true,
       "credits": {
         "client": "Guiyang WOW",
@@ -81,7 +81,7 @@
     "dangxia-tiu": {
       "name": "This is Us",
       "date": "2021-10-01",
-      "type": "Visual identity, motion graphic",
+      "category": "Visual identity, motion graphic",
       "carousel_exclude": true,
       "credits": {
         "client": "Dangxia Channel",
@@ -104,7 +104,7 @@
     "double-win": {
       "name": "Double Win",
       "date": "2021-07-01",
-      "type": "Visual identity",
+      "category": "Visual identity",
       "credits": {
         "client": "Double Win",
         "lead_agency": "LxU",
@@ -134,7 +134,7 @@
     "freds-inside": {
       "name": "Freds Inside",
       "date": "2018-04-01",
-      "type": "Motion graphic",
+      "category": "Motion graphic",
       "credits": {
         "client": "Candybook",
         "art_director": "Willie Liu",
@@ -154,7 +154,7 @@
     "g3": {
       "name": "Glyphs 3 Event",
       "date": "2020-11-01",
-      "type": "Motion design, graphic design",
+      "category": "Motion design, graphic design",
       "credits": {
         "client": "Glyphs",
         "art_director": "Nagisa Chen",
@@ -184,7 +184,7 @@
     "kuusi": {
       "name": "Kuusi Sans Scented Candle",
       "date": "2020-12-01",
-      "type": "Graphic design",
+      "category": "Graphic design",
       "credits": {
         "client": "3type",
         "art_director": "Nagisa Chen",
@@ -205,7 +205,7 @@
     "out-of-mountain": {
       "name": "Out of Mountain",
       "date": "2021-03-01",
-      "type": "Book design",
+      "category": "Book design",
       "credits": {
         "client": "Guiyang WOW",
         "art_director": "Nagisa Chen",
@@ -226,7 +226,7 @@
     "psa": {
       "name": "PSA Model",
       "date": "2019-10-01",
-      "type": "Product design",
+      "category": "Product design",
       "credits": {
         "client": "PSA",
         "art_director": "Willie Liu",
@@ -247,7 +247,7 @@
     "receipt-poster": {
       "name": "Receipt Poster",
       "date": "2021-06-01",
-      "type": "Graphic design",
+      "category": "Graphic design",
       "credits": {
         "art_director": "Nagisa Chen",
         "designer": "Willie Liu, Nagisa Chen"
@@ -262,7 +262,7 @@
     "vip": {
       "name": "Virtual Immunization Project",
       "date": "2021-08-01",
-      "type": "Graphic design, motion graphic",
+      "category": "Graphic design, motion graphic",
       "credits": {
         "client": "Sicheng Wang",
         "designer": "Nagisa Chen"
@@ -283,7 +283,7 @@
     "dinkie-bitmap": {
       "name": "Dinkie Bitmap",
       "date": "2020-09-01",
-      "type": "Type design",
+      "category": "Type design",
       "credits": {
         "type_director": "Willie Liu",
         "designer": "Willie Liu"
@@ -306,7 +306,7 @@
     "sart-sans": {
       "name": "Sart Sans",
       "date": "2019-05-01",
-      "type": "Type design",
+      "category": "Type design",
       "credits": {
         "type_director": "Willie Liu",
         "designer": "Willie Liu"
@@ -326,7 +326,7 @@
     "tbh": {
       "name": "tbh Typeface",
       "date": "2020-01-01",
-      "type": "Custom typeface",
+      "category": "Custom typeface",
       "credits": {
         "client": "tbh",
         "creative_director": "Zhengzhong Pan @Studio Bibliography",
@@ -351,7 +351,7 @@
     "dash-0": {
       "name": "dash #0",
       "date": "2022-03-01",
-      "type": "Self-publishing",
+      "category": "Self-publishing",
       "credits": {
         "chief_editor": "Xiyao Du",
         "author": "Heshan Huang, Chen Li, Willie Liu, Money Su, Zihao Tan, Yanjun Zhang",

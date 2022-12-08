@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import PostAuthorTitle from '@/components/post/PostAuthorTitle.vue'
-import type { Work } from '@/data'
 
 defineProps<{
-  work: Work
+  name: string
+  category: string
+  credits: Record<string, string>
   to?: string
 }>()
 </script>
@@ -14,20 +15,18 @@ defineProps<{
     <div class="mb-4">
       <h2 class="text-2xl">
         <RouterLink v-if="to" :to="to">
-          {{ work.name }}
+          {{ name }}
         </RouterLink>
         <template v-else>
-          {{ work.name }}
+          {{ name }}
         </template>
       </h2>
-      <div>{{ work.type }}</div>
+      <div>{{ category }}</div>
     </div>
     <ul>
-      <PostAuthorTitle
-        v-for="(name, title) in work.credits"
-        :title="title"
-        :name="(name as string)"
-      />
+      <PostAuthorTitle v-for="(author, title) in credits" :title="title">
+        {{ author }}
+      </PostAuthorTitle>
     </ul>
   </div>
 </template>

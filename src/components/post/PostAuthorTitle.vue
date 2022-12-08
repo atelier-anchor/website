@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const aliases = {
+const title_aliases = {
   client: 'CL',
   lead_agency: 'LA',
   chief_editor: 'CE',
@@ -17,16 +17,15 @@ const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 const toTitle = (s: string) => capitalize(s.replace('_', ' '))
 
 defineProps<{
-  title: keyof typeof aliases
-  name: string
+  title: string
 }>()
 </script>
 
 <template>
   <li class="flex">
-    <div class="w-8 flex-shrink-0">
-      <abbr :title="toTitle(title)" class="after:content-[':']">{{ aliases[title] }}</abbr>
-    </div>
-    <div>{{ name }}</div>
+    <abbr :title="toTitle(title)" class="w-8 flex-shrink-0 after:content-[':']">
+      {{ title_aliases[title as keyof typeof title_aliases] }}
+    </abbr>
+    <slot></slot>
   </li>
 </template>
