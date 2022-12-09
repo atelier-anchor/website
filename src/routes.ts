@@ -56,14 +56,14 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
-    path: '/subscription/:name',
-    name: 'subscription-feedback',
+    path: '/subscription/thank-you',
+    name: 'thank-you',
     component: () => import('@/components/SubscriptionFeedback.vue'),
-    beforeEnter: (to) => {
-      if (to.params.name !== 'thank-you' && to.params.name !== 'unsubscription-successful') {
-        return { name: '404' }
-      }
-    },
+  },
+  {
+    path: '/subscription/unsubscription-successful',
+    name: 'unsubscription-successful',
+    component: () => import('@/components/SubscriptionFeedback.vue'),
   },
   {
     path: '/:path(.*)*',
