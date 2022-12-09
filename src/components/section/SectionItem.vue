@@ -13,7 +13,6 @@ defineProps<{
 </script>
 
 <template>
-  <!-- TODO: gap-0 -->
   <ColumnContainer is="article" class="items-center gap-0">
     <template #left>
       <PostMeta v-bind="$props" :to="`${$route.path}/${id}`" class="hidden md:block" />

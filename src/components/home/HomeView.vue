@@ -21,6 +21,8 @@ onMounted(() => setInterval(updateItemIndex, 6000))
       <LinkFigure
         :image="images[0]"
         :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
+        width="1920"
+        height="1440"
       />
     </div>
   </Transition>

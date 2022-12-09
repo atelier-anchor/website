@@ -30,7 +30,7 @@ useHead({
 </script>
 
 <template>
-  <ColumnContainer class="flex-col-reverse">
+  <ColumnContainer class="flex-col-reverse sm:gap-8">
     <template #left>
       <article class="h-fit sm:top-4 md:sticky lg:top-8">
         <PostMeta v-bind="work" class="mb-4 sm:mb-8" />
