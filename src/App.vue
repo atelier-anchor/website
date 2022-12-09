@@ -28,6 +28,7 @@ useHead({
 
 <template>
   <div
+    v-if="$route.name !== '404'"
     class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-[320px] max-w-[1440px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
   >
     <SiteHeader />
@@ -36,4 +37,10 @@ useHead({
     </main>
     <SiteFooter />
   </div>
+  <main
+    v-else
+    class="mx-auto flex min-h-[max(100vh,320px)] min-w-[320px] max-w-[1440px] flex-col items-center justify-around gap-16 p-4 lg:p-8"
+  >
+    <RouterView />
+  </main>
 </template>

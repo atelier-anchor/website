@@ -51,14 +51,15 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/components/post/PostView.vue'),
     beforeEnter: (to) => {
       if (!isValidPost(to.params.section as string, to.params.id as string)) {
-        return { name: 'not-found' }
+        return { name: '404' }
       }
     },
   },
   {
     path: '/:path(.*)*',
-    name: 'not-found',
+    name: '404',
     component: NotFound,
+    beforeEnter: updateHead,
   },
 ]
 

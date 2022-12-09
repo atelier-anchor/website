@@ -33,7 +33,9 @@ onMounted(() => {
     :style="{ '--footer-height': `${footerHeight}px` }"
   >
     <div class="flex items-center justify-between">
-      <SiteLogo />
+      <h1>
+        <SiteLogo />
+      </h1>
       <SiteNavBarHamburger :active="isNavOpen" @click="toggleNav" />
     </div>
     <SiteNav :isNavOpen="isNavOpen" />
