@@ -13,19 +13,21 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 </script>
 
 <template>
-  <Transition v-for="([id, { images }], i) in items">
-    <div
-      v-show="itemIndex === i"
-      class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
-    >
-      <LinkFigure
-        :image="images[0]"
-        :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
-        width="1920"
-        height="1440"
-      />
-    </div>
-  </Transition>
+  <ClientOnly>
+    <Transition v-for="([id, { images }], i) in items">
+      <div
+        v-show="itemIndex === i"
+        class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
+      >
+        <LinkFigure
+          :image="images[0]"
+          :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
+          width="1920"
+          height="1440"
+        />
+      </div>
+    </Transition>
+  </ClientOnly>
 </template>
 
 <style scoped>
