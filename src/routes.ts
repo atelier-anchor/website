@@ -56,6 +56,16 @@ const routes: RouteRecordRaw[] = [
     },
   },
   {
+    path: '/subscription/:name',
+    name: 'subscription-feedback',
+    component: () => import('@/components/SubscriptionFeedback.vue'),
+    beforeEnter: (to) => {
+      if (to.params.name !== 'thank-you' && to.params.name !== 'unsubscription-successful') {
+        return { name: '404' }
+      }
+    },
+  },
+  {
     path: '/:path(.*)*',
     name: '404',
     component: NotFound,

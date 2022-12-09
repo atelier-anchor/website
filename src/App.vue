@@ -28,7 +28,7 @@ useHead({
 
 <template>
   <div
-    v-if="$route.name !== '404'"
+    v-if="$route.name !== '404' && $route.name !== 'subscription-feedback'"
     class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-[320px] max-w-[1440px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
   >
     <SiteHeader />
