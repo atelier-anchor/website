@@ -21,3 +21,12 @@ export const parseMarkdown = (s: string) =>
     .replace(/class=“(.+?)”/g, 'class="$1"')
     // Links
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')
+
+export const types: Record<string, string> = {
+  jpg: 'image/jpeg',
+  png: 'image/png',
+  gif: 'image/gif',
+  svg: 'image/svg+xml',
+  webp: 'image/webp',
+  webm: 'video/webm',
+}

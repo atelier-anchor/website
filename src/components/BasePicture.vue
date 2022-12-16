@@ -1,13 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-
-const types: { [key: string]: string } = {
-  webp: 'image/webp',
-  jpg: 'image/jpeg',
-  png: 'image/png',
-  gif: 'image/gif',
-  svg: 'image/svg+xml',
-}
+import { types } from '@/utils'
 
 const dark = computed(() => props.image.includes('{light,dark}.'))
 const basename = computed(() => props.image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))

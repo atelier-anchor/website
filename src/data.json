@@ -122,8 +122,8 @@
       ],
       "videos": [
         {
-          "source": "double-win-8.webm",
-          "poster": "https://s2.loli.net/2022/03/04/amlJxpwkPDnXK8E.png"
+          "src": "double-win-8.webm",
+          "poster": "double-win-8-poster.webp"
         }
       ],
       "description": [
@@ -168,12 +168,12 @@
       ],
       "videos": [
         {
-          "source": "g3-5.webm",
-          "poster": "https://i.loli.net/2021/09/11/LkPs9BjtSleUamv.png"
+          "src": "g3-5.webm",
+          "poster": "g3-5-poster.webp"
         },
         {
-          "source": "g3-6.webm",
-          "poster": "https://i.loli.net/2021/09/11/8RfXVdLjpWtIPN2.png"
+          "src": "g3-6.webm",
+          "poster": "g3-6-poster.webp"
         }
       ],
       "description": [
@@ -273,8 +273,8 @@
       ],
       "videos": [
         {
-          "source": "vip-3.webm",
-          "poster": "https://s2.loli.net/2022/03/04/cbMqXIrEQS4Wvul.jpg"
+          "src": "vip-3.webm",
+          "poster": "vip-3-poster.webp"
         }
       ]
     }

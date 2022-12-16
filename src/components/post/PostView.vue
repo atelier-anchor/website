@@ -6,15 +6,19 @@ import { parseMarkdown } from '@/utils'
 import data from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
+import BaseVideo from '@/components/BaseVideo.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
+import type { Video } from '@/components/BaseVideo.vue'
 
-interface Work {
+export interface Work {
   name: string
+  date: string
   category: string
+  exclude?: boolean
   credits: Record<string, string>
   description: string[]
   images: string[]
-  // videos?: Video[]
+  videos?: Video[]
 }
 
 const { params, path } = useRoute()
@@ -40,6 +44,9 @@ useHead({
     <template #right>
       <figure v-for="image in work.images">
         <BasePicture :image="image" :dir="`${path}`" width="1920" height="1440" />
+      </figure>
+      <figure v-for="video in work.videos">
+        <BaseVideo :video="video" :dir="`${path}`" width="1920" height="1080" />
       </figure>
     </template>
   </ColumnContainer>

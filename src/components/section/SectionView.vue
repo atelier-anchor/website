@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import SectionItem from '@/components/section/SectionItem.vue'
+import type { Work } from '@/components/post/PostView.vue'
 
 const entries = computed(() =>
   Object.entries(props.items)
@@ -8,16 +9,6 @@ const entries = computed(() =>
     .sort(([, a], [, b]) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0))
     .reverse()
 )
-
-interface Work {
-  name: string
-  date: string
-  category: string
-  exclude?: boolean
-  credits: Record<string, string>
-  description: string[]
-  images: string[]
-}
 
 const props = defineProps<{
   items: Record<string, Work>
