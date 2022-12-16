@@ -13,15 +13,15 @@ const dashAbout = [
 </script>
 
 <template>
-  <ColumnContainer is="section">
+  <ColumnContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl lg:sticky lg:top-8">about dash</h2>
     </template>
     <template #right>
-      <p v-for="p in dashAbout" class="mb-4 sm:mb-8" v-html="parseMarkdown(p)"></p>
+      <p v-for="p in dashAbout" v-html="parseMarkdown(p)"></p>
     </template>
   </ColumnContainer>
-  <ColumnContainer is="section">
+  <ColumnContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl lg:sticky lg:top-8">get dash</h2>
     </template>

@@ -36,22 +36,22 @@ const services = [
 </script>
 
 <template>
-  <ColumnContainer is="section">
+  <ColumnContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl md:sticky md:top-4 lg:top-8">mission</h2>
     </template>
     <template #right>
-      <p v-for="p in mission" class="mb-4 sm:mb-8">{{ p }}</p>
+      <p v-for="p in mission">{{ p }}</p>
     </template>
   </ColumnContainer>
-  <ColumnContainer is="section">
+  <ColumnContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl md:sticky md:top-4 lg:top-8">service</h2>
     </template>
     <template #right>
       <template v-for="service in services">
-        <p class="mb-4 sm:mb-8">{{ service.summary }}</p>
-        <ul class="mb-4 list-disc pl-4 sm:mb-8">
+        <p>{{ service.summary }}</p>
+        <ul class="list-disc pl-4">
           <li v-for="item in service.items">{{ item }}</li>
         </ul>
       </template>

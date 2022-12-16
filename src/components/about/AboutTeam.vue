@@ -4,7 +4,7 @@ import BasePicture from '@/components/BasePicture.vue'
 </script>
 
 <template>
-  <div v-for="member in team" class="mb-4 flex items-center gap-4 last:mb-0 sm:mb-8 sm:gap-8">
+  <div v-for="member in team" class="flex items-center gap-4 sm:gap-8">
     <div class="clip-path-circle w-20">
       <BasePicture :image="member.avatar" dir="/about" width="80" height="80" />
     </div>

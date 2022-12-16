@@ -38,7 +38,7 @@ useHead({
       </article>
     </template>
     <template #right>
-      <figure v-for="image in work.images" class="mb-4 last:mb-0 sm:mb-8">
+      <figure v-for="image in work.images">
         <BasePicture :image="image" :dir="`${path}`" width="1920" height="1440" />
       </figure>
     </template>

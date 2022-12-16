@@ -9,7 +9,7 @@ defineProps<{
     <div class="md:w-1/3 md:min-w-[256px] md:shrink-0">
       <slot name="left"></slot>
     </div>
-    <div>
+    <div class="flex flex-col gap-4 sm:gap-8">
       <slot name="right"></slot>
     </div>
   </component>
