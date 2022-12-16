@@ -18,6 +18,9 @@ module.exports = {
       screens: {
         tall: { raw: '(min-height: 480px)' },
       },
+      transitionDuration: {
+        400: '400ms',
+      },
     },
   },
 }

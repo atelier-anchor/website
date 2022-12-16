@@ -18,6 +18,6 @@ defineProps<{
 
 <style scoped>
 :deep(img) {
-  @apply duration-500 group-hover:scale-105;
+  @apply duration-400 group-hover:scale-105;
 }
 </style>

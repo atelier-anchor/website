@@ -21,7 +21,7 @@ defineProps<{
     />
     <p
       v-if="invalidFeedback"
-      class="InvalidFeedback max-h-0 overflow-hidden text-xs text-red-500 duration-300"
+      class="InvalidFeedback absolute mt-1 max-h-0 overflow-hidden text-xs text-red-500 duration-400"
     >
       {{ invalidFeedback }}
     </p>
@@ -34,6 +34,6 @@ input[type='email']::placeholder {
 }
 
 input[type='email']:invalid:not(:focus):not(:placeholder-shown) ~ .InvalidFeedback {
-  @apply mt-1 max-h-8;
+  @apply max-h-4;
 }
 </style>

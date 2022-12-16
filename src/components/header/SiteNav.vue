@@ -26,7 +26,7 @@ defineProps<{
 <style scoped>
 .v-enter-active,
 .v-leave-active {
-  @apply duration-300;
+  @apply duration-400;
 }
 
 .v-enter-from,
