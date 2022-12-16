@@ -42,6 +42,6 @@ onMounted(() => setInterval(updateItemIndex, 6000))
 }
 
 :deep(img) {
-  @apply min-h-[max(50vh,200px)] w-full object-cover sm:h-full;
+  @apply min-h-[max(50vh,200px)] object-cover sm:h-full;
 }
 </style>

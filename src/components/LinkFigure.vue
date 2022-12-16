@@ -11,10 +11,8 @@ defineProps<{
 </script>
 
 <template>
-  <RouterLink :to="to" class="group block sm:h-full">
-    <figure class="overflow-hidden sm:h-full">
-      <BasePicture :image="image" :dir="to" :width="width" :height="height" />
-    </figure>
+  <RouterLink :to="to" class="group overflow-hidden sm:h-full">
+    <BasePicture :image="image" :dir="to" :width="width" :height="height" />
   </RouterLink>
 </template>
 

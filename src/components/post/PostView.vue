@@ -42,12 +42,20 @@ useHead({
       </article>
     </template>
     <template #right>
-      <figure v-for="image in work.images">
-        <BasePicture :image="image" :dir="`${path}`" width="1920" height="1440" />
-      </figure>
-      <figure v-for="video in work.videos">
-        <BaseVideo :video="video" :dir="`${path}`" width="1920" height="1080" />
-      </figure>
+      <BasePicture
+        v-for="image in work.images"
+        :image="image"
+        :dir="`${path}`"
+        width="1920"
+        height="1440"
+      />
+      <BaseVideo
+        v-for="video in work.videos"
+        :video="video"
+        :dir="`${path}`"
+        width="1920"
+        height="1080"
+      />
     </template>
   </ColumnContainer>
 </template>
