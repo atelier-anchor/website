@@ -1,11 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { types } from '@/utils'
 
 const dark = computed(() => props.image.includes('{light,dark}.'))
 const basename = computed(() => props.image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))
-const exts = computed(() => props.image.replace(/^.+\.\{?(.+?)\}?$/g, '$1').split(','))
-const path = (ext: string) => `${props.dir}/${basename.value}.${ext}`
+const ext = computed(() => props.image.split('.').at(-1))
 
 const props = defineProps<{
   image: string
@@ -16,20 +14,16 @@ const props = defineProps<{
 </script>
 
 <template>
-  <picture v-if="dark">
-    <template v-for="ext in exts.slice(0, -1)">
-      <source
-        :srcset="path(`dark.${ext}`)"
-        :type="types[ext]"
-        media="(prefers-color-scheme: dark)"
+  <picture>
+    <template v-if="dark">
+      <source :srcset="`${dir}/${basename}.dark.${ext}`" media="(prefers-color-scheme: dark)" />
+      <img
+        :src="`${dir}/${basename}.light.${ext}`"
+        :alt="basename"
+        :width="width"
+        :height="height"
       />
-      <source :srcset="path(`light.${ext}`)" :type="types[ext]" />
     </template>
-    <source :srcset="path(`dark.${exts.at(-1)}`)" media="(prefers-color-scheme: dark)" />
-    <img :src="path(`light.${exts.at(-1)}`)" :alt="basename" :width="width" :height="height" />
-  </picture>
-  <picture v-else>
-    <source v-for="ext in exts.slice(0, -1)" :srcset="path(ext)" :type="types[ext]" />
-    <img :src="path(exts.at(-1) as string)" :alt="basename" :width="width" :height="height" />
+    <img v-else :src="`${dir}/${image}`" :alt="basename" :width="width" :height="height" />
   </picture>
 </template>

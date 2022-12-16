@@ -1,24 +1,19 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { types } from '@/utils'
-
 export interface Video {
   src: string
   poster: string
-  width?: number | string
-  height?: number | string
 }
 
-const ext = computed(() => props.video.src.replace(/^.+\.([^\.]+)$/g, '$1'))
-
-const props = defineProps<{
+defineProps<{
   video: Video
   dir: string
+  width?: number | string
+  height?: number | string
 }>()
 </script>
 
 <template>
-  <video controls :poster="`${dir}/${video.poster}`">
-    <source :src="`${dir}/${video.src}`" :type="types[ext]" />
+  <video controls :poster="`${dir}/${video.poster}`" :width="width" :height="height">
+    <source :src="`${dir}/${video.src}`" type="video/webm" />
   </video>
 </template>

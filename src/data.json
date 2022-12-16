@@ -11,10 +11,10 @@
         "publisher": "Telos"
       },
       "images": [
-        "agt-1.{webp,jpg}",
-        "agt-2.{webp,gif}",
-        "agt-3.{webp,jpg}",
-        "agt-4.{webp,jpg}"
+        "agt-1.webp",
+        "agt-2.webp",
+        "agt-3.webp",
+        "agt-4.webp"
       ],
       "description": [
         "《街机游戏字体》中文版。本书聚焦于 1970 年代—2000 年代街机游戏中的 8×8 像素字体，是第一本关于游戏字体的专著。书中包含约 250 套具有代表性的字体，并附有深刻的评论。原版由字体设计师大曲都市以英文撰写，我们将其译为中文，并和出版方共同策划并执行了宣发工作。",
@@ -31,11 +31,11 @@
         "designer": "Nagisa Chen"
       },
       "images": [
-        "ambitful-1.{webp,jpg}",
-        "ambitful-2.{webp,jpg}",
-        "ambitful-3.{webp,jpg}",
-        "ambitful-4.{webp,jpg}",
-        "ambitful-5.{webp,jpg}"
+        "ambitful-1.webp",
+        "ambitful-2.webp",
+        "ambitful-3.webp",
+        "ambitful-4.webp",
+        "ambitful-5.webp"
       ],
       "description": [
         "Ambitful 是一家来自中国的摄影灯品牌。我们从光线出发，将其作为一个核心概念为他们创作了一款全新的字体标识。",
@@ -52,11 +52,11 @@
         "designer": "Nagisa Chen, Willie Liu"
       },
       "images": [
-        "black-box-1.{webp,jpg}",
-        "black-box-2.{webp,jpg}",
-        "black-box-3.{webp,jpg}",
-        "black-box-4.{webp,jpg}",
-        "black-box-5.{webp,jpg}"
+        "black-box-1.webp",
+        "black-box-2.webp",
+        "black-box-3.webp",
+        "black-box-4.webp",
+        "black-box-5.webp"
       ],
       "description": [
         "字体，本质上是基于信息载体的数字产品，在数字时代以虚拟方式出售并不奇怪。为字体准备物理包装是为了获得一种埋在数字浪潮下的真实感。它代表了一种与字体精神一致的复古情结。「像素」和「8×8」，源自「Dinkie Bitmap」的设计尺度，是我们打破数字世界壁垒所需要的一切。",
@@ -74,8 +74,8 @@
         "designer": "Nagisa Chen"
       },
       "images": [
-        "chen-shi-fu-hua-1.{webp,jpg}",
-        "chen-shi-fu-hua-2.{webp,jpg}"
+        "chen-shi-fu-hua-1.webp",
+        "chen-shi-fu-hua-2.webp"
       ]
     },
     "dangxia-tiu": {
@@ -89,11 +89,11 @@
         "designer": "Willie Liu, Money Su, Leove Li"
       },
       "images": [
-        "dangxia-tiu-1.{webp,jpg}",
-        "dangxia-tiu-2.{webp,jpg}",
-        "dangxia-tiu-3.{webp,jpg}",
-        "dangxia-tiu-4.{webp,jpg}",
-        "dangxia-tiu-5.{webp,jpg}"
+        "dangxia-tiu-1.webp",
+        "dangxia-tiu-2.webp",
+        "dangxia-tiu-3.webp",
+        "dangxia-tiu-4.webp",
+        "dangxia-tiu-5.webp"
       ],
       "description": [
         "《This is Us》是当下频道推出的一档聚焦年轻人新职业的季播栏目，第四季聚焦于「两个同岁年轻人不同的职业状貌」，特色包括「职业科普」、「选择反思」和「隔空对话」。我们为这一季《This is Us》设计了全新的片名字标，以此为基础制定了整季节目的视觉风格、动画表现和排版规范，并参与了片中动画部分的制作。",
@@ -112,13 +112,13 @@
         "designer": "Willie Liu, Nagisa Chen"
       },
       "images": [
-        "double-win-1.{webp,jpg}",
-        "double-win-2.{webp,jpg}",
-        "double-win-3.{webp,jpg}",
-        "double-win-4.{webp,jpg}",
-        "double-win-5.{webp,jpg}",
-        "double-win-6.{webp,jpg}",
-        "double-win-7.{webp,jpg}"
+        "double-win-1.webp",
+        "double-win-2.webp",
+        "double-win-3.webp",
+        "double-win-4.webp",
+        "double-win-5.webp",
+        "double-win-6.webp",
+        "double-win-7.webp"
       ],
       "videos": [
         {
@@ -141,10 +141,10 @@
         "designer": "Willie Liu"
       },
       "images": [
-        "freds-inside-1.{webp,gif}",
-        "freds-inside-2.{webp,gif}",
-        "freds-inside-3.{webp,jpg}",
-        "freds-inside-4.{webp,jpg}"
+        "freds-inside-1.webp",
+        "freds-inside-2.webp",
+        "freds-inside-3.webp",
+        "freds-inside-4.webp"
       ],
       "description": [
         "为展览制作的 AR 插画。参观者通过特定的手机应用程序观察两件日常用品——加湿器和蓝牙音箱，会发现其中藏着一群被称作 Fred 的白色生物，不停工作，驱动它们的运转。",
@@ -161,10 +161,10 @@
         "designer": "Nagisa Chen, Leove Li"
       },
       "images": [
-        "g3-1.{webp,jpg}",
-        "g3-2.{webp,jpg}",
-        "g3-3.{webp,jpg}",
-        "g3-4.{webp,jpg}"
+        "g3-1.webp",
+        "g3-2.webp",
+        "g3-3.webp",
+        "g3-4.webp"
       ],
       "videos": [
         {
@@ -191,11 +191,11 @@
         "designer": "Nagisa Chen, Denise Dou"
       },
       "images": [
-        "kuusi-1.{webp,jpg}",
-        "kuusi-2.{webp,jpg}",
-        "kuusi-3.{webp,jpg}",
-        "kuusi-4.{webp,jpg}",
-        "kuusi-5.{webp,jpg}"
+        "kuusi-1.webp",
+        "kuusi-2.webp",
+        "kuusi-3.webp",
+        "kuusi-4.webp",
+        "kuusi-5.webp"
       ],
       "description": [
         "这款字体是由来自芬兰的字体设计师窦颖秋创作的。为了它的发布，我们以「冬日的优雅」为概念制作了一个礼盒。使用香薰蜡烛作为概念的载体，将字体的创作起点和精神以实物的形式传递。",
@@ -212,11 +212,11 @@
         "designer": "Nagisa Chen, Zhiqian Li"
       },
       "images": [
-        "out-of-mountain-1.{webp,jpg}",
-        "out-of-mountain-2.{webp,jpg}",
-        "out-of-mountain-3.{webp,jpg}",
-        "out-of-mountain-4.{webp,jpg}",
-        "out-of-mountain-5.{webp,jpg}"
+        "out-of-mountain-1.webp",
+        "out-of-mountain-2.webp",
+        "out-of-mountain-3.webp",
+        "out-of-mountain-4.webp",
+        "out-of-mountain-5.webp"
       ],
       "description": [
         "我们从杂志的立意中提取了贵州人这种取自于「山地」的坚韧，挑选了近代贵阳的城市风貌之一的传统招牌字体——行楷。在全书的视觉概念上，将地图本身作为一个设计的概念进行延展。它既是一本真正意义上的地图，也是一本看起来不太像地图的书。山地之上耸立的建筑，地图之中包裹的文字。它将成为这座城市的昨日、今日、明日，直至未来。",
@@ -233,11 +233,11 @@
         "designer": "Willie Liu"
       },
       "images": [
-        "psa-1.{webp,jpg}",
-        "psa-2.{webp,jpg}",
-        "psa-3.{webp,jpg}",
-        "psa-4.{webp,jpg}",
-        "psa-5.{webp,jpg}"
+        "psa-1.webp",
+        "psa-2.webp",
+        "psa-3.webp",
+        "psa-4.webp",
+        "psa-5.webp"
       ],
       "description": [
         "上海当代艺术博物馆的拼插模型，由激光切割工艺制造，材质为椴木层板和亚克力板，充分还原建筑的造型特征。模型采用零部件彼此穿插咬合的设计，拼装过程简单安全，无需胶水。",
@@ -253,10 +253,10 @@
         "designer": "Willie Liu, Nagisa Chen"
       },
       "images": [
-        "receipt-poster-1.{webp,jpg}",
-        "receipt-poster-2.{webp,jpg}",
-        "receipt-poster-3.{webp,jpg}",
-        "receipt-poster-4.{webp,jpg}"
+        "receipt-poster-1.webp",
+        "receipt-poster-2.webp",
+        "receipt-poster-3.webp",
+        "receipt-poster-4.webp"
       ]
     },
     "vip": {
@@ -268,8 +268,8 @@
         "designer": "Nagisa Chen"
       },
       "images": [
-        "vip-1.{webp,jpg}",
-        "vip-2.{webp,jpg}"
+        "vip-1.webp",
+        "vip-2.webp"
       ],
       "videos": [
         {
@@ -338,8 +338,8 @@
         "tbh-2.{light,dark}.svg",
         "tbh-3.{light,dark}.svg",
         "tbh-4.{light,dark}.svg",
-        "tbh-5.{webp,gif}",
-        "tbh-6.{webp,jpg}"
+        "tbh-5.webp",
+        "tbh-6.webp"
       ],
       "description": [
         "tbh 是一家来自上海的年轻家居品牌，Studio Bibliography 以「童趣」为核心概念创作了这款字体，并委托我们将其开发成了一款具有两轴可变的品牌可变字体，同时将该风格迁移到了中文标识的设计中。",
@@ -359,17 +359,17 @@
         "designer": "Nagisa Chen, Chen Li, Willie Liu"
       },
       "images": [
-        "dash-0-1.{webp,jpg}",
-        "dash-0-2.{webp,jpg}",
-        "dash-0-3.{webp,jpg}",
-        "dash-0-4.{webp,jpg}",
-        "dash-0-5.{webp,jpg}",
-        "dash-0-6.{webp,jpg}",
-        "dash-0-7.{webp,jpg}",
-        "dash-0-8.{webp,jpg}",
-        "dash-0-9.{webp,jpg}",
-        "dash-0-10.{webp,jpg}",
-        "dash-0-11.{webp,jpg}"
+        "dash-0-1.webp",
+        "dash-0-2.webp",
+        "dash-0-3.webp",
+        "dash-0-4.webp",
+        "dash-0-5.webp",
+        "dash-0-6.webp",
+        "dash-0-7.webp",
+        "dash-0-8.webp",
+        "dash-0-9.webp",
+        "dash-0-10.webp",
+        "dash-0-11.webp"
       ],
       "description": [
         "本期试刊号讨论的主题是城市生活中的文字，街道、店铺、招贴、广告等属于公共空间的文字，我们邀请了四位创作者在不同的空间场域中游移，探索城市公共空间内字体辐射出的多样表达，将文字从书写的工具，转换为被书写的主体；而「逐层」是我们的编辑思路——你会在本期 dash 中发现对文字的图层堆叠，对层层累积视觉印象的解剖，还有对时空、记忆、社会肌理的深度层析。除此之外，本期试刊号还有一本「破折号」别册——对于整本刊物来说，别册就是一个破折号，延续、连接、打断、转折、补充。",
