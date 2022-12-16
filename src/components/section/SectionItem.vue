@@ -18,7 +18,13 @@ defineProps<{
       <PostMeta v-bind="$props" :to="`${$route.path}/${id}`" class="hidden md:block" />
     </template>
     <template #right>
-      <LinkFigure :image="images[0]" :to="`${$route.path}/${id}`" width="1920" height="1440" />
+      <LinkFigure
+        :image="images[0]"
+        :to="`${$route.path}/${id}`"
+        :title="name"
+        width="1920"
+        height="1440"
+      />
     </template>
   </ColumnContainer>
 </template>
