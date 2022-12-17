@@ -1,11 +1,12 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
+import { Credits } from '@/types'
 import PostAuthorTitle from '@/components/post/PostAuthorTitle.vue'
 
 defineProps<{
   name: string
   category: string
-  credits: Record<string, string>
+  credits: Credits
   to?: string
 }>()
 </script>

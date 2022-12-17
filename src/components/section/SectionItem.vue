@@ -1,27 +1,30 @@
 <script setup lang="ts">
+import { Post } from '@/types'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import LinkFigure from '@/components/LinkFigure.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 defineProps<{
-  id: string
-  name: string
-  category: string
-  credits: Record<string, string>
-  images: string[]
+  post: Post
 }>()
 </script>
 
 <template>
   <ColumnContainer is="article" class="items-center gap-0">
     <template #left>
-      <PostMeta v-bind="$props" :to="`${$route.path}/${id}`" class="hidden md:block" />
+      <PostMeta
+        :name="post.name"
+        :category="post.category"
+        :credits="post.credits"
+        :to="`${$route.path}/${post.id}`"
+        class="hidden md:block"
+      />
     </template>
     <template #right>
       <LinkFigure
-        :image="images[0]"
-        :to="`${$route.path}/${id}`"
-        :title="name"
+        :image="post.images[0]"
+        :to="`${$route.path}/${post.id}`"
+        :title="post.name"
         width="1920"
         height="1440"
       />

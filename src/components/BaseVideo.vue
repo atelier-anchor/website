@@ -1,8 +1,5 @@
 <script setup lang="ts">
-export interface Video {
-  src: string
-  poster: string
-}
+import { Video } from '@/types'
 
 defineProps<{
   video: Video

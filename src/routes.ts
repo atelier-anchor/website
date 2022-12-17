@@ -1,7 +1,8 @@
+import { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
 import { useHead } from '@vueuse/head'
+import { Post } from '@/types'
 import data from '@/data.json'
 import NotFound from '@/components/NotFound.vue'
-import type { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
 
 const updateHead = (to: RouteLocationNormalized) => {
   useHead({
@@ -10,7 +11,7 @@ const updateHead = (to: RouteLocationNormalized) => {
 }
 
 const isValidPost = (section: string, id: string) =>
-  section in data && id in data[section as keyof typeof data]
+  section in data && (data as Record<string, Post[]>)[section].find((post) => post.id === id)
 
 const routes: RouteRecordRaw[] = [
   {
@@ -22,14 +23,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/works',
     name: 'works',
-    props: { items: data.works },
     component: () => import('@/components/section/SectionView.vue'),
     beforeEnter: updateHead,
   },
   {
     path: '/typefaces',
     name: 'typefaces',
-    props: { items: data.typefaces },
     component: () => import('@/components/section/SectionView.vue'),
     beforeEnter: updateHead,
   },

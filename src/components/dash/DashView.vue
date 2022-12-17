@@ -30,6 +30,6 @@ const dashAbout = [
     </template>
   </ColumnContainer>
   <section>
-    <SectionItem v-for="(item, id) in dash" :id="id" v-bind="item" />
+    <SectionItem v-for="post in dash" :post="post" />
   </section>
 </template>

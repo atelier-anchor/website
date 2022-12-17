@@ -2,34 +2,24 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
+import { Post } from '@/types'
 import { parseMarkdown } from '@/utils'
 import data from '@/data.json'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
 import BaseVideo from '@/components/BaseVideo.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
-import type { Video } from '@/components/BaseVideo.vue'
 
-export interface Work {
-  name: string
-  date: string
-  category: string
-  exclude?: boolean
-  credits: Record<string, string>
-  description: string[]
-  images: string[]
-  videos?: Video[]
-}
-
-const { params, path } = useRoute()
-const work = computed(() => {
-  const section = params.section as keyof typeof data
-  const id = params.id as string
-  return (data[section] as Record<string, Work>)[id]
-})
+const route = useRoute()
+const post = computed(
+  () =>
+    (data as Record<string, Post[]>)[route.params.section as string].find(
+      ({ id }) => id === route.params.id
+    ) as Post
+)
 
 useHead({
-  title: `${work.value.name} - atelierAnchor`,
+  title: `${post.value.name} - atelierAnchor`,
 })
 </script>
 
@@ -37,22 +27,27 @@ useHead({
   <ColumnContainer class="flex-col-reverse sm:gap-8">
     <template #left>
       <article class="h-fit sm:top-4 md:sticky lg:top-8">
-        <PostMeta v-bind="work" class="mb-4 sm:mb-8" />
-        <p v-for="p in work.description" class="mb-4 last:mb-0" v-html="parseMarkdown(p)"></p>
+        <PostMeta
+          :name="post.name"
+          :category="post.category"
+          :credits="post.credits"
+          class="mb-4 sm:mb-8"
+        />
+        <p v-for="p in post.description" class="mb-4 last:mb-0" v-html="parseMarkdown(p)"></p>
       </article>
     </template>
     <template #right>
       <BasePicture
-        v-for="image in work.images"
+        v-for="image in post.images"
         :image="image"
-        :dir="`${path}`"
+        :dir="$route.path"
         width="1920"
         height="1440"
       />
       <BaseVideo
-        v-for="video in work.videos"
+        v-for="video in post.videos"
         :video="video"
-        :dir="`${path}`"
+        :dir="$route.path"
         width="1920"
         height="1080"
       />

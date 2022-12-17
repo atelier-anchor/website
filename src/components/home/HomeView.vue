@@ -1,30 +1,39 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { Post } from '@/types'
 import { flat, shuffle } from '@/utils'
-import { dash, works } from '@/data.json'
+import data from '@/data.json'
 import LinkFigure from '@/components/LinkFigure.vue'
-import type { Work } from '@/components/post/PostView.vue'
 
-const items = computed(() => shuffle(flat([works, dash].map(Object.entries) as [string, Work][][])))
-const itemIndex = ref<number>(0)
-const updateItemIndex = () => (itemIndex.value = (itemIndex.value + 1) % items.value.length)
-onMounted(() => setInterval(updateItemIndex, 6000))
+const posts = computed(() =>
+  shuffle(flat(Object.values(data) as Post[][]).filter((i) => !i.exclude && !i.carousel_exclude))
+)
+const postIndex = ref<number>(0)
+
+const { resolve } = useRouter()
+const path = (id: string) => {
+  for (const section of ['works', 'typefaces', 'dash']) {
+    if ((data as Record<string, Post[]>)[section].find((i) => i.id === id)) {
+      return `${resolve(section).path}/${id}`
+    }
+  }
+  return ''
+}
+
+onMounted(() =>
+  setInterval(() => (postIndex.value = (postIndex.value + 1) % posts.value.length), 6000)
+)
 </script>
 
 <template>
   <ClientOnly>
-    <Transition v-for="([id, { name, images }], i) in items">
+    <Transition v-for="({ id, name, images }, i) in posts">
       <div
-        v-show="itemIndex === i"
+        v-show="postIndex === i"
         class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
       >
-        <LinkFigure
-          :image="images[0]"
-          :to="`${$router.resolve(id in works ? 'works' : 'dash').path}/${id}`"
-          :title="name"
-          width="1920"
-          height="1440"
-        />
+        <LinkFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
       </div>
     </Transition>
   </ClientOnly>

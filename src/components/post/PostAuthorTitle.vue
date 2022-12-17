@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Credits } from '@/types'
+
 const title_aliases = {
   client: 'CL',
   lead_agency: 'LA',
@@ -17,14 +19,14 @@ const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 const toTitle = (s: string) => capitalize(s.replace('_', ' '))
 
 defineProps<{
-  title: string
+  title: keyof Credits
 }>()
 </script>
 
 <template>
   <li class="flex">
     <abbr :title="toTitle(title)" class="w-8 flex-shrink-0 after:content-[':']">
-      {{ title_aliases[title as keyof typeof title_aliases] }}
+      {{ title_aliases[title] }}
     </abbr>
     <slot></slot>
   </li>
