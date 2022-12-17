@@ -8,6 +8,7 @@ const title = 'atelierAnchor'
 const description = 'graphic & typeface design studio in shanghai. we make typeface as A narrative.'
 const url = 'https://atelier-anchor.com'
 const date = new Date(import.meta.env.VITE_BUILD_DATE)
+const specialPages = ['404', 'thank-you', 'unsubscription-successful']
 
 useHead({
   meta: [
@@ -28,7 +29,7 @@ useHead({
 
 <template>
   <div
-    v-if="!['404','thank-you','unsubscription-successful'].includes($route.name as string)"
+    v-if="!specialPages.includes($route.name as string)"
     class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-[320px] max-w-[1800px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
   >
     <SiteHeader />
