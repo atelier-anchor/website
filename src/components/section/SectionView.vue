@@ -1,13 +1,6 @@
 <script setup lang="ts">
-import { Post } from '@/types'
-import data from '@/data.json'
+import { getPosts } from '@/utils'
 import SectionItem from '@/components/section/SectionItem.vue'
-
-const getPosts = (name: string) =>
-  (data as Record<string, Post[]>)[name]
-    .filter((post) => !post.exclude)
-    .sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0))
-    .reverse()
 </script>
 
 <template>

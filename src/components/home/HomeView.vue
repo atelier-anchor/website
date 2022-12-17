@@ -1,29 +1,23 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
-import { Post } from '@/types'
-import { flat, shuffle } from '@/utils'
-import data from '@/data.json'
+import { getCarouselPosts, getPost } from '@/utils'
 import LinkFigure from '@/components/LinkFigure.vue'
 
-const posts = computed(() =>
-  shuffle(flat(Object.values(data) as Post[][]).filter((i) => !i.exclude && !i.carousel_exclude))
-)
+const posts = getCarouselPosts()
 const postIndex = ref<number>(0)
 
 const { resolve } = useRouter()
 const path = (id: string) => {
   for (const section of ['works', 'typefaces', 'dash']) {
-    if ((data as Record<string, Post[]>)[section].find((i) => i.id === id)) {
+    if (getPost(section, id)) {
       return `${resolve(section).path}/${id}`
     }
   }
   return ''
 }
 
-onMounted(() =>
-  setInterval(() => (postIndex.value = (postIndex.value + 1) % posts.value.length), 6000)
-)
+onMounted(() => setInterval(() => (postIndex.value = (postIndex.value + 1) % posts.length), 6000))
 </script>
 
 <template>

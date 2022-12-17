@@ -2,21 +2,14 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
-import { Post } from '@/types'
-import { parseMarkdown } from '@/utils'
-import data from '@/data.json'
+import { getPost, parseMarkdown } from '@/utils'
 import ColumnContainer from '@/components/ColumnContainer.vue'
 import BasePicture from '@/components/BasePicture.vue'
 import BaseVideo from '@/components/BaseVideo.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
-const post = computed(
-  () =>
-    (data as Record<string, Post[]>)[route.params.section as string].find(
-      ({ id }) => id === route.params.id
-    ) as Post
-)
+const post = computed(() => getPost(route.params.section as string, route.params.id as string))
 
 useHead({
   title: `${post.value.name} - atelierAnchor`,

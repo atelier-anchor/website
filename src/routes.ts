@@ -1,7 +1,6 @@
 import { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
 import { useHead } from '@vueuse/head'
-import { Post } from '@/types'
-import data from '@/data.json'
+import { isValidPost } from '@/utils'
 import NotFound from '@/components/NotFound.vue'
 
 const updateHead = (to: RouteLocationNormalized) => {
@@ -9,9 +8,6 @@ const updateHead = (to: RouteLocationNormalized) => {
     title: to.name === 'home' ? 'atelierAnchor' : `${to.name as string} - atelierAnchor`,
   })
 }
-
-const isValidPost = (section: string, id: string) =>
-  section in data && (data as Record<string, Post[]>)[section].find((post) => post.id === id)
 
 const routes: RouteRecordRaw[] = [
   {

@@ -1,7 +1,7 @@
-export const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
+import _data from '@/data.json'
+import { Post } from '@/types'
 
-export const fromEntries = <T>(entries: [string, T][]) =>
-  entries.reduce((res, [key, value]) => ((res[key] = value), res), {} as Record<string, T>)
+export const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
 
 export const shuffle = <T>(array: T[]) =>
   array
@@ -21,3 +21,20 @@ export const parseMarkdown = (s: string) =>
     .replace(/class=“(.+?)”/g, 'class="$1"')
     // Links
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')
+
+const data = _data as Record<string, Post[]>
+
+export const getCarouselPosts = () =>
+  shuffle(flat(Object.values(data)).filter((post) => !post.exclude && !post.carousel_exclude))
+
+export const getPosts = (section: string) =>
+  data[section]
+    .filter(({ exclude }) => !exclude)
+    .sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0))
+    .reverse()
+
+export const getPost = (section: string, id: string) =>
+  data[section].find((post) => post.id === id) as Post
+
+export const isValidPost = (section: string, id: string) =>
+  section in data && !!getPost(section, id)
