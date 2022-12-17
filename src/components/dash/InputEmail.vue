@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <div>
+  <div class="-mb-1">
     <label :for="id" class="hidden">{{ label }}</label>
     <input
       type="email"
@@ -21,7 +21,7 @@ defineProps<{
     />
     <p
       v-if="invalidFeedback"
-      class="InvalidFeedback absolute mt-1 max-h-0 overflow-hidden text-xs text-red-500 duration-400"
+      class="InvalidFeedback mt-1 max-h-0 overflow-hidden text-xs text-red-500 duration-400"
     >
       {{ invalidFeedback }}
     </p>

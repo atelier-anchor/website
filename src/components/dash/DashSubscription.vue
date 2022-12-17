@@ -15,7 +15,7 @@ const notice =
       name="mc-embedded-subscribe-form"
       target="_self"
     >
-      <div id="mc_embed_signup_scroll" class="flex items-center gap-4">
+      <div id="mc_embed_signup_scroll" class="flex items-start gap-4">
         <InputEmail
           id="mce-EMAIL"
           name="EMAIL"
@@ -37,13 +37,13 @@ const notice =
           id="mc-embedded-subscribe"
           name="subscribe"
           value="subscribe"
-          class="text-primary"
+          class="leading-none text-primary pt-1"
         />
       </div>
     </form>
+    <p
+      class="mt-4 text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
+      v-html="parseMarkdown(notice)"
+    ></p>
   </div>
-  <p
-    class="text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
-    v-html="parseMarkdown(notice)"
-  ></p>
 </template>
