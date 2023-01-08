@@ -341,6 +341,28 @@
       ]
     },
     {
+      "id": "smiley-sans",
+      "name": "Smiley Sans",
+      "date": "2022-11-15",
+      "category": "Type design",
+      "carousel_exclude": true,
+      "credits": {
+        "art_director": "Nagisa Chen",
+        "designer": "oooooohmygosh, Nagisa Chen, Janine Sui, Heda Shi, Jian Li"
+      },
+      "description": [
+        "得意黑是一款在人文观感和几何特征中寻找视觉平衡的现代窄斜体。",
+        "A condensed and oblique Chinese typeface seeking a visual balance between the humanist and the geometric.",
+        "➡ [下载 / Download](https://github.com/atelier-anchor/smiley-sans/releases)"
+      ],
+      "images": [
+        "smiley-sans-1.{light,dark}.svg",
+        "smiley-sans-2.{light,dark}.svg",
+        "smiley-sans-3.{light,dark}.svg",
+        "smiley-sans-4.{light,dark}.svg"
+      ]
+    },
+    {
       "id": "tbh",
       "name": "tbh Typeface",
       "date": "2020-01-01",
