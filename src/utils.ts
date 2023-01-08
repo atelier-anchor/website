@@ -20,7 +20,7 @@ export const parseMarkdown = (s: string) =>
     // Fix CSS classes
     .replace(/class=“(.+?)”/g, 'class="$1"')
     // Links
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank">$1</a>')
+    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
 
 const data = _data as Record<string, Post[]>
 

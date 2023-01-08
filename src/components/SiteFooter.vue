@@ -32,7 +32,9 @@ const socialMedia = [
     </address>
     <ul class="flex gap-2">
       <li v-for="item in socialMedia">
-        <a :href="item.href" :title="item.title" target="_blank">{{ item.name }}</a>
+        <a :href="item.href" :title="item.title" target="_blank" rel="noopener noreferrer">
+          {{ item.name }}
+        </a>
       </li>
     </ul>
   </footer>
