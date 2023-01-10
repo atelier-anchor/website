@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 import { Credits } from '@/types'
-import PostAuthorTitle from '@/components/post/PostAuthorTitle.vue'
+import PostAuthorItem from '@/components/post/PostAuthorItem.vue'
 
 defineProps<{
   name: string
@@ -20,10 +20,8 @@ defineProps<{
       <h1 v-else class="text-2xl">{{ name }}</h1>
       <div>{{ category }}</div>
     </div>
-    <ul>
-      <PostAuthorTitle v-for="(author, title) in credits" :title="title">
-        {{ author }}
-      </PostAuthorTitle>
-    </ul>
+    <dl>
+      <PostAuthorItem v-for="(author, title) in credits" :title="title" :author="author" />
+    </dl>
   </div>
 </template>

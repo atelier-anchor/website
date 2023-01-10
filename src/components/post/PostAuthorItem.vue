@@ -20,14 +20,17 @@ const toTitle = (s: string) => capitalize(s.replace('_', ' '))
 
 defineProps<{
   title: keyof Credits
+  author?: string
 }>()
 </script>
 
 <template>
-  <li class="flex">
-    <abbr :title="toTitle(title)" class="w-8 flex-shrink-0 after:content-[':']">
-      {{ title_aliases[title] }}
-    </abbr>
-    <slot></slot>
-  </li>
+  <div class="flex">
+    <dt class="w-8 flex-shrink-0 after:content-[':']">
+      <abbr :title="toTitle(title)">
+        {{ title_aliases[title] }}
+      </abbr>
+    </dt>
+    <dd>{{ author }}</dd>
+  </div>
 </template>
