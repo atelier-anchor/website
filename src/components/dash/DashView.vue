@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { parseMarkdown } from '@/utils'
 import { dash } from '@/data.json'
-import ColumnContainer from '@/components/ColumnContainer.vue'
+import ColumnContainer from '@/components/shared/ColumnContainer.vue'
 import DashGet from '@/components/dash/DashGet.vue'
 import DashSubscription from '@/components/dash/DashSubscription.vue'
 import SectionItem from '@/components/section/SectionItem.vue'

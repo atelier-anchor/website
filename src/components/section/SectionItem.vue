@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Post } from '@/types'
-import ColumnContainer from '@/components/ColumnContainer.vue'
-import LinkFigure from '@/components/LinkFigure.vue'
+import ColumnContainer from '@/components/shared/ColumnContainer.vue'
+import LinkFigure from '@/components/shared/LinkFigure.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 defineProps<{

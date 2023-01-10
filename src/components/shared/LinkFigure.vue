@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import BasePicture from '@/components/BasePicture.vue'
+import BasePicture from '@/components/shared/BasePicture.vue'
 
 defineProps<{
   image: string

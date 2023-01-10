@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ColumnContainer from '@/components/ColumnContainer.vue'
+import ColumnContainer from '@/components/shared/ColumnContainer.vue'
 import AboutTeam from '@/components/about/AboutTeam.vue'
 
 const mission = [

@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { getCarouselPosts, getPost } from '@/utils'
-import LinkFigure from '@/components/LinkFigure.vue'
+import LinkFigure from '@/components/shared/LinkFigure.vue'
 
 const posts = getCarouselPosts()
 const postIndex = ref<number>(0)

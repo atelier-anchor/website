@@ -1,7 +1,7 @@
 import { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { isValidPost } from '@/utils'
-import NotFound from '@/components/NotFound.vue'
+import NotFound from '@/components/special/NotFound.vue'
 
 const updateHead = (to: RouteLocationNormalized) => {
   useHead({
@@ -59,7 +59,7 @@ const routes: RouteRecordRaw[] = [
         en: 'thank you~',
       },
     },
-    component: () => import('@/components/SubscriptionFeedback.vue'),
+    component: () => import('@/components/special/SubscriptionFeedback.vue'),
   },
   {
     path: '/subscription/unsubscribed-successfully',
@@ -70,7 +70,7 @@ const routes: RouteRecordRaw[] = [
         en: 'unsubscribed successfully',
       },
     },
-    component: () => import('@/components/SubscriptionFeedback.vue'),
+    component: () => import('@/components/special/SubscriptionFeedback.vue'),
   },
   {
     path: '/:path(.*)*',

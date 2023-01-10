@@ -3,9 +3,9 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { getPost, parseMarkdown } from '@/utils'
-import ColumnContainer from '@/components/ColumnContainer.vue'
-import BasePicture from '@/components/BasePicture.vue'
-import BaseVideo from '@/components/BaseVideo.vue'
+import ColumnContainer from '@/components/shared/ColumnContainer.vue'
+import BasePicture from '@/components/shared/BasePicture.vue'
+import BaseVideo from '@/components/shared/BaseVideo.vue'
 import PostMeta from '@/components/post/PostMeta.vue'
 
 const route = useRoute()
