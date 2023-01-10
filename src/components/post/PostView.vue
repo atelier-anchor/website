@@ -24,9 +24,11 @@ useHead({
           :name="post.name"
           :category="post.category"
           :credits="post.credits"
-          class="mb-4 sm:mb-8"
+          :class="post.description ? 'mb-4 sm:mb-8' : null"
         />
-        <p v-for="p in post.description" class="mb-4 last:mb-0" v-html="parseMarkdown(p)"></p>
+        <div class="flex flex-col gap-4">
+          <p v-for="p in post.description" v-html="parseMarkdown(p)"></p>
+        </div>
       </article>
     </template>
     <template #right>

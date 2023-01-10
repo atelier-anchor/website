@@ -24,7 +24,7 @@ const socialMedia = [
 </script>
 
 <template>
-  <footer class="z-10 py-4 sm:absolute sm:bottom-0 lg:py-8 sm:tall:fixed">
+  <footer class="z-10 pt-6 pb-4 sm:absolute sm:bottom-0 lg:py-8 sm:tall:fixed">
     <h2 class="mb-2 text-3xl">contact</h2>
     <address class="not-italic">
       <template v-for="line in address">{{ line }}<br /></template>
