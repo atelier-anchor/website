@@ -53,11 +53,23 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/subscription/thank-you',
     name: 'thank-you',
+    props: {
+      msg: {
+        zh: '感谢订阅',
+        en: 'thank you~',
+      },
+    },
     component: () => import('@/components/SubscriptionFeedback.vue'),
   },
   {
-    path: '/subscription/unsubscription-successful',
-    name: 'unsubscription-successful',
+    path: '/subscription/unsubscribed-successfully',
+    name: 'unsubscribed-successfully',
+    props: {
+      msg: {
+        zh: '退订成功',
+        en: 'unsubscribed successfully',
+      },
+    },
     component: () => import('@/components/SubscriptionFeedback.vue'),
   },
   {

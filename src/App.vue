@@ -8,7 +8,7 @@ const title = 'atelierAnchor'
 const description = 'graphic & typeface design studio in shanghai. we make typeface as A narrative.'
 const url = 'https://atelier-anchor.com'
 const date = new Date(import.meta.env.VITE_BUILD_DATE)
-const specialPages = ['404', 'thank-you', 'unsubscription-successful']
+const specialPages = ['404', 'thank-you', 'unsubscribed-successfully']
 
 useHead({
   meta: [
