@@ -28,12 +28,13 @@ const dashAbout = [
     </template>
     <template #right>
       <h3>纸质版购买 / Printed version available in:</h3>
-      <DashGet />
+      <DashGet class="sm:mb-2" />
       <h3>电子版订阅 / Digital version subscription:</h3>
       <DashSubscription />
     </template>
   </ColumnContainer>
   <section>
+    <h2 class="mb-4 text-2xl md:hidden">previous issues</h2>
     <SectionItem v-for="post in dash" :post="post" />
   </section>
 </template>

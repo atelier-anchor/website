@@ -3,7 +3,7 @@ import { parseMarkdown } from '@/utils'
 import InputEmail from '@/components/dash/InputEmail.vue'
 
 const notice =
-  '由于邮箱过滤机制可能因用户而异，建议不要使用 163、126、yeah 等邮箱。如果您没有收到邮件，请留意垃圾邮件（spam）文件夹或垃圾箱。如果仍然没有收到，可联络 [dash@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:dash@atelier-anchor.com) 解决。'
+  '由于邮箱过滤机制可能因用户而异，建议不要使用 163、126、yeah 等邮箱。如果您没有收到邮件，请留意垃圾邮件 (spam) 文件夹或垃圾箱。如果仍然没有收到，可联络 [dash@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:dash@atelier-anchor.com) 解决。'
 </script>
 
 <template>

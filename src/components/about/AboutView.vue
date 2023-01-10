@@ -51,8 +51,8 @@ const services = [
     <template #right>
       <template v-for="service in services">
         <p>{{ service.summary }}</p>
-        <ul class="list-disc pl-4">
-          <li v-for="item in service.items">{{ item }}</li>
+        <ul class="list-disc last:mb-0 sm:mb-2">
+          <li v-for="item in service.items" class="ml-4">{{ item }}</li>
         </ul>
       </template>
     </template>

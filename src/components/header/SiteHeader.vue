@@ -18,6 +18,7 @@ onMounted(() => {
   document.addEventListener('click', (e) => {
     if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) closeNav()
   })
+  window.addEventListener('resize', (e) => closeNav())
   const footerElem = document.querySelector('footer')
   if (footerElem) {
     const pt = parseInt(window.getComputedStyle(footerElem).getPropertyValue('padding-top'))

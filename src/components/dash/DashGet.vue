@@ -6,8 +6,8 @@ const storeName = (s: { name: string; city?: string }) =>
 </script>
 
 <template>
-  <ul class="list-disc pl-4 lg:columns-2 lg:gap-16">
-    <li v-for="store in stores">
+  <ul class="grid list-disc lg:grid-cols-2">
+    <li v-for="store in stores" class="ml-4">
       <a v-if="store.url" :href="store.url" class="after:content-['↗']">
         {{ storeName(store) }}
       </a>
