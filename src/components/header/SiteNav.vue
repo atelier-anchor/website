@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import SiteNavItem from '@/components/header/SiteNavItem.vue'
-
-const navLinks = ['works', 'typefaces', 'dash', 'about']
+import SiteNavLinks from '@/components/header/SiteNavLinks.vue'
 
 defineProps<{
   isNavOpen: boolean
@@ -14,11 +12,7 @@ defineProps<{
       v-show="isNavOpen"
       class="absolute max-h-48 w-full overflow-hidden bg-white dark:bg-black sm:relative sm:!block"
     >
-      <ul class="my-2 sm:mt-4 sm:mb-0">
-        <li v-for="link in navLinks">
-          <SiteNavItem :link="link" />
-        </li>
-      </ul>
+      <SiteNavLinks />
     </nav>
   </Transition>
 </template>

@@ -6,7 +6,5 @@ import SiteLogo from '@/components/header/SiteLogo.vue'
   <div class="mt-[10vh] text-center">
     <slot></slot>
   </div>
-  <div>
-    <SiteLogo />
-  </div>
+  <SiteLogo />
 </template>

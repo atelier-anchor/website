@@ -14,14 +14,10 @@ defineProps<{
 <template>
   <div>
     <div class="mb-4">
-      <h2 class="text-2xl">
-        <RouterLink v-if="to" :to="to">
-          {{ name }}
-        </RouterLink>
-        <template v-else>
-          {{ name }}
-        </template>
+      <h2 v-if="to" class="text-2xl">
+        <RouterLink :to="to">{{ name }}</RouterLink>
       </h2>
+      <h1 v-else class="text-2xl">{{ name }}</h1>
       <div>{{ category }}</div>
     </div>
     <ul>

@@ -5,7 +5,7 @@ import SpecialPageContainer from '@/components/SpecialPageContainer.vue'
 
 <template>
   <SpecialPageContainer>
-    <h2 class="mb-8 text-2xl">
+    <h1 class="mb-8 text-2xl">
       <template v-if="$route.name === 'thank-you'">
         感谢订阅
         <br class="mb-2" />
@@ -16,7 +16,7 @@ import SpecialPageContainer from '@/components/SpecialPageContainer.vue'
         <br class="mb-2" />
         unsubscription successful
       </template>
-    </h2>
+    </h1>
     <p class="text-xl">
       <RouterLink to="/">continue &rightarrow;</RouterLink>
     </p>
