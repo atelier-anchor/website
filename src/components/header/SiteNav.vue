@@ -2,14 +2,14 @@
 import SiteNavLinks from '@/components/header/SiteNavLinks.vue'
 
 defineProps<{
-  isNavOpen: boolean
+  showNav: boolean
 }>()
 </script>
 
 <template>
   <Transition>
     <nav
-      v-show="isNavOpen"
+      v-show="showNav"
       class="absolute max-h-48 w-full overflow-hidden bg-white dark:bg-black sm:relative sm:!block"
     >
       <SiteNavLinks />

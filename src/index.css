@@ -32,7 +32,8 @@
   }
 
   a:hover,
-  input[type='submit']:hover {
+  input[type='submit']:hover,
+  button.QrCodeToggler:hover {
     @apply line-through decoration-primary decoration-[0.1em];
   }
 

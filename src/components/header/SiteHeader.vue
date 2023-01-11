@@ -5,9 +5,9 @@ import SiteLogo from '@/components/header/SiteLogo.vue'
 import SiteNav from '@/components/header/SiteNav.vue'
 import SiteNavBarHamburger from '@/components/header/SiteNavBarHamburger.vue'
 
-const isNavOpen = ref(false)
-const toggleNav = () => (isNavOpen.value = !isNavOpen.value)
-const closeNav = () => (isNavOpen.value = false)
+const showNav = ref(false)
+const toggleNav = () => (showNav.value = !showNav.value)
+const closeNav = () => (showNav.value = false)
 
 const route = useRoute()
 watch(route, closeNav)
@@ -35,8 +35,8 @@ onMounted(() => {
   >
     <div class="flex items-center justify-between">
       <SiteLogo />
-      <SiteNavBarHamburger :active="isNavOpen" @click="toggleNav" />
+      <SiteNavBarHamburger :active="showNav" @click="toggleNav" />
     </div>
-    <SiteNav :isNavOpen="isNavOpen" />
+    <SiteNav :show-nav="showNav" />
   </header>
 </template>

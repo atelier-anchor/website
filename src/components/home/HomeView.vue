@@ -5,7 +5,7 @@ import { getCarouselPosts, getPost } from '@/utils'
 import LinkFigure from '@/components/shared/LinkFigure.vue'
 
 const posts = getCarouselPosts()
-const postIndex = ref<number>(0)
+const postIndex = ref(0)
 
 const { resolve } = useRouter()
 const path = (id: string) => {
