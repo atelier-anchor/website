@@ -1,29 +1,29 @@
 {
   "name": "atelier-anchor.com",
   "author": "Xiangdong Zeng",
-  "version": "0.2.0",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` vite-ssg build",
     "preview": "vite preview"
   },
-  "dependencies": {
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6"
-  },
   "devDependencies": {
-    "@types/node": "^18.11.12",
+    "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vueuse/head": "^1.0.22",
     "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.19",
-    "prettier": "^2.8.1",
+    "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "tailwindcss": "^3.2.4",
     "typescript": "^4.9.4",
-    "vite": "^4.0.0",
-    "vite-ssg": "^0.22.0",
-    "vue-tsc": "^1.0.12"
+    "vite": "^4.0.4",
+    "vite-ssg": "^0.22.1",
+    "vue": "^3.2.45",
+    "vue-router": "^4.1.6",
+    "vue-tsc": "^1.0.24"
   }
 }
