@@ -6,12 +6,18 @@ import SiteNav from '@/components/header/SiteNav.vue'
 import SiteNavBarHamburger from '@/components/header/SiteNavBarHamburger.vue'
 
 const showNav = ref(false)
-const toggleNav = () => (showNav.value = !showNav.value)
-const closeNav = () => (showNav.value = false)
+const toggleNav = () => {
+  showNav.value = !showNav.value
+}
+const closeNav = () => {
+  showNav.value = false
+}
 onMounted(() => {
   const navElem = document.querySelector('nav')
   document.addEventListener('click', (e) => {
-    if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) closeNav()
+    if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) {
+      closeNav()
+    }
   })
   window.addEventListener('resize', (e) => closeNav())
 })

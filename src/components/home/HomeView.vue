@@ -17,7 +17,11 @@ const path = (id: string) => {
   return ''
 }
 
-onMounted(() => setInterval(() => (postIndex.value = (postIndex.value + 1) % posts.length), 6000))
+onMounted(() =>
+  setInterval(() => {
+    postIndex.value = (postIndex.value + 1) % posts.length
+  }, 6000)
+)
 </script>
 
 <template>

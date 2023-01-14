@@ -5,7 +5,9 @@ import SocialMediaGroup from '@/components/footer/SocialMediaGroup.vue'
 import WeChatQrCode from '@/components/footer/WeChatQrCode.vue'
 
 const showQrCode = ref(false)
-provide('toggleQrCode', () => (showQrCode.value = !showQrCode.value))
+provide('toggleQrCode', () => {
+  showQrCode.value = !showQrCode.value
+})
 
 onMounted(() => {
   document.addEventListener('click', (e) => {
