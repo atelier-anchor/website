@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./index.html', './src/**/*.vue'],
@@ -23,4 +25,11 @@ module.exports = {
       },
     },
   },
+  plugins: [
+    plugin(({ matchUtilities }) => {
+      matchUtilities({
+        vf: (value) => ({ fontVariationSettings: value }),
+      })
+    }),
+  ],
 }
