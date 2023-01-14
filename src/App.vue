@@ -11,6 +11,7 @@ const date = new Date(import.meta.env.VITE_BUILD_DATE)
 const specialPages = ['404', 'thank-you', 'unsubscribed-successfully']
 
 useHead({
+  titleTemplate: (name) => (name ? `${name} - ${title}` : title),
   meta: [
     { name: 'description', content: description },
     { name: 'copyright', content: `© ${date.getFullYear()} ${title}` },

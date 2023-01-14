@@ -30,9 +30,7 @@ const socialMedia = [
       </a>
     </li>
     <li>
-      <button title="WeChat Official Accounts" class="QrCodeToggler" @click="toggleQrCode">
-        wx
-      </button>
+      <button title="WeChat" class="QrCodeToggler" @click="toggleQrCode">wx</button>
     </li>
   </ul>
 </template>

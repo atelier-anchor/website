@@ -12,7 +12,7 @@ const route = useRoute()
 const post = computed(() => getPost(route.params.section as string, route.params.id as string))
 
 useHead({
-  title: `${post.value.name} - atelierAnchor`,
+  title: post.value.name,
 })
 </script>
 

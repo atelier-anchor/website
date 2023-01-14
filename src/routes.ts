@@ -1,44 +1,33 @@
-import { RouteLocationNormalized, RouteRecordRaw } from 'vue-router'
+import { RouteLocationNormalized, RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { isValidPost } from '@/utils'
 import NotFound from '@/components/special/NotFound.vue'
 
-const updateHead = (to: RouteLocationNormalized) => {
-  useHead({
-    title: to.name === 'home' ? 'atelierAnchor' : `${to.name as string} - atelierAnchor`,
-  })
-}
-
-const routes: RouteRecordRaw[] = [
+export const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
     component: () => import('@/components/home/HomeView.vue'),
-    beforeEnter: updateHead,
   },
   {
     path: '/works',
     name: 'works',
     component: () => import('@/components/section/SectionView.vue'),
-    beforeEnter: updateHead,
   },
   {
     path: '/typefaces',
     name: 'typefaces',
     component: () => import('@/components/section/SectionView.vue'),
-    beforeEnter: updateHead,
   },
   {
     path: '/dash',
     name: 'dash',
     component: () => import('@/components/dash/DashView.vue'),
-    beforeEnter: updateHead,
   },
   {
     path: '/about',
     name: 'about',
     component: () => import('@/components/about/AboutView.vue'),
-    beforeEnter: updateHead,
   },
   {
     path: '/:section/:id',
@@ -76,8 +65,23 @@ const routes: RouteRecordRaw[] = [
     path: '/:path(.*)*',
     name: '404',
     component: NotFound,
-    beforeEnter: updateHead,
   },
 ]
 
-export default routes
+export const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
+  if (savedPosition) {
+    return savedPosition
+  } else {
+    return new Promise((resolve) => {
+      setTimeout(() => resolve({ top: 0, behavior: 'smooth' }), 0)
+    })
+  }
+}
+
+export const updateHead = (to: RouteLocationNormalized) => {
+  if (!['home', 'post', 'thank-you', 'unsubscribed-successfully'].includes(to.name as string)) {
+    useHead({
+      title: to.name as string,
+    })
+  }
+}

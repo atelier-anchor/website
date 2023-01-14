@@ -8,17 +8,19 @@ import SiteNavBarHamburger from '@/components/header/SiteNavBarHamburger.vue'
 const showNav = ref(false)
 const toggleNav = () => (showNav.value = !showNav.value)
 const closeNav = () => (showNav.value = false)
-
-const route = useRoute()
-watch(route, closeNav)
-
-const footerHeight = ref(0)
 onMounted(() => {
   const navElem = document.querySelector('nav')
   document.addEventListener('click', (e) => {
     if (navElem && e.clientY > navElem.offsetTop + navElem.offsetHeight) closeNav()
   })
   window.addEventListener('resize', (e) => closeNav())
+})
+
+const route = useRoute()
+watch(route, closeNav)
+
+const footerHeight = ref(0)
+onMounted(() => {
   const footerElem = document.querySelector('footer')
   if (footerElem) {
     const pt = parseInt(window.getComputedStyle(footerElem).getPropertyValue('padding-top'))
