@@ -3,11 +3,12 @@
   "version": "1.0.0",
   "author": "Xiangdong Zeng <xdzeng96@gmail.com>",
   "license": "MIT",
-  "repository": "https://github.com/atelier-anchor/atelier-anchor.github.io",
+  "repository": "https://github.com/atelier-anchor/website",
+  "homepage": "https://atelier-anchor.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` vite-ssg build",
+    "build": "vue-tsc --noEmit && NODE_ENV=production VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` vite-ssg build",
     "preview": "vite preview"
   },
   "devDependencies": {
