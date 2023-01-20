@@ -1,5 +1,7 @@
-.vscode/
-node_modules/
-public/
+.vite-ssg-temp
+.vscode
+dist
+node_modules
 
 .DS_Store
+pnpm-debug.log*
