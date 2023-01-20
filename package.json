@@ -1,9 +1,9 @@
 {
   "name": "atelier-anchor.com",
-  "author": "Xiangdong Zeng",
   "version": "1.0.0",
+  "author": "Xiangdong Zeng <xdzeng96@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "repository": "https://github.com/atelier-anchor/atelier-anchor.github.io",
   "type": "module",
   "scripts": {
     "dev": "vite",
