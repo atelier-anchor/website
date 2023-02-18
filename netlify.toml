@@ -1,10 +1,9 @@
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
-
-[[redirects]]
 from = "/luohei-variable/*"
 to = "https://atelier-anchor.netlify.app/:splat"
 status = 200
-force = false
+
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
