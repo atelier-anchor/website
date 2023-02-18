@@ -1,6 +1,6 @@
 [[redirects]]
 from = "/luohei-variable/*"
-to = "https://atelier-anchor.netlify.app/:splat"
+to = "https://luohei-variable.netlify.app/:splat"
 status = 200
 
 [[redirects]]
