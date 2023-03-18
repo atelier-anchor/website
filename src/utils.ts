@@ -26,11 +26,7 @@ export const parseMarkdown = (s: string) =>
 const data = _data as Record<string, Post[]>
 
 export const getCarouselPosts = () =>
-  shuffle(
-    flat(Object.values(data)).filter(
-      (post) => !post.exclude && !post.carousel_exclude && post.images.length > 0
-    )
-  )
+  shuffle(flat(Object.values(data)).filter((post) => !post.exclude && !post.carousel_exclude))
 
 export const getPosts = (section: string) =>
   data[section]
