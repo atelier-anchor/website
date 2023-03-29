@@ -1,7 +1,7 @@
-const plugin = require('tailwindcss/plugin')
+import plugin from 'tailwindcss/plugin'
+import type { Config } from 'tailwindcss'
 
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: ['./index.html', './src/**/*.vue'],
   theme: {
     fontFamily: {
@@ -17,9 +17,6 @@ module.exports = {
       colors: {
         primary: '#fd0',
       },
-      screens: {
-        tall: { raw: '(min-height: 480px)' },
-      },
       transitionDuration: {
         400: '400ms',
       },
@@ -32,4 +29,4 @@ module.exports = {
       })
     }),
   ],
-}
+} satisfies Config

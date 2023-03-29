@@ -24,7 +24,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <footer class="relative z-10 pt-6 pb-4 sm:absolute sm:bottom-0 lg:py-8 sm:tall:fixed">
+  <footer
+    class="relative z-10 pb-4 pt-6 sm:absolute sm:bottom-0 lg:py-8 sm:[@media(min-height:480px)]:fixed"
+  >
     <div class="transition-opacity" :class="{ 'opacity-0': showQrCode }">
       <h2 class="mb-2 text-3xl">contact</h2>
       <SiteAddress />

@@ -17,23 +17,13 @@ defineProps<{
       :id="id"
       :name="name"
       :placeholder="placeholder"
-      class="w-full border-b-2 border-primary bg-transparent"
+      class="border-primary peer w-full border-b-2 bg-transparent placeholder-neutral-900/50 dark:placeholder-neutral-100/50"
     />
     <p
       v-if="invalidFeedback"
-      class="InvalidFeedback mt-1 max-h-0 overflow-hidden text-xs text-red-500 duration-400"
+      class="duration-400 mt-1 max-h-4 overflow-hidden text-xs text-red-500 peer-placeholder-shown:max-h-0 peer-valid:max-h-0 peer-focus:max-h-0"
     >
       {{ invalidFeedback }}
     </p>
   </div>
 </template>
-
-<style scoped>
-input[type='email']::placeholder {
-  @apply text-neutral-900/50 dark:text-neutral-100/50;
-}
-
-input[type='email']:invalid:not(:focus):not(:placeholder-shown) ~ .InvalidFeedback {
-  @apply max-h-4;
-}
-</style>

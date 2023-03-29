@@ -17,7 +17,7 @@ defineProps<{
         :category="post.category"
         :credits="post.credits"
         :to="`${$route.path}/${post.id}`"
-        class="hidden md:block"
+        class="max-md:hidden"
       />
     </template>
     <template #right>

@@ -38,7 +38,7 @@ onMounted(() => {
 
 <template>
   <header
-    class="sticky top-0 z-10 h-fit bg-white py-4 dark:bg-black sm:mb-[var(--footer-height)] lg:py-8 tall:mb-0"
+    class="sticky top-0 z-20 h-fit bg-white py-4 dark:bg-black sm:mb-[--footer-height] lg:py-8 [@media(min-height:480px)]:mb-0"
     :style="{ '--footer-height': `${footerHeight}px` }"
   >
     <div class="flex items-center justify-between">
