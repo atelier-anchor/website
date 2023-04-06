@@ -1,7 +1,8 @@
+.DS_Store
 .vite-ssg-temp
 .vscode
 dist
 node_modules
-
-.DS_Store
 pnpm-debug.log*
+auto-imports.d.ts
+components.d.ts

@@ -1,9 +1,8 @@
 import data from '@/data/posts.json'
-import { Post } from '@/types'
 
-export const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
+const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
 
-export const shuffle = <T>(array: T[]) =>
+const shuffle = <T>(array: T[]) =>
   array
     .map((value) => ({ value, sort: Math.random() }))
     .sort((a, b) => a.sort - b.sort)

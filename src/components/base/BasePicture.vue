@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-
 const dark = computed(() => props.image.includes('{light,dark}.'))
 const basename = computed(() => props.image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))
 const ext = computed(() => props.image.split('.').at(-1))

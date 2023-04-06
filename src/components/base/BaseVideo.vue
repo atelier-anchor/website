@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Video } from '@/types'
-
 defineProps<{
   video: Video
   dir: string

@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
-import { useHead } from '@vueuse/head'
-import SiteHeader from '@/components/site/SiteHeader.vue'
-import SiteFooter from '@/components/site/SiteFooter.vue'
-
 const title = 'atelierAnchor'
 const description = 'graphic & typeface design studio in shanghai. we make typeface as A narrative.'
 const url = 'https://atelier-anchor.com'

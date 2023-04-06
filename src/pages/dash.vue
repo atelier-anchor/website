@@ -1,10 +1,5 @@
 <script setup lang="ts">
-import { parseMarkdown } from '@/utils'
 import { dash } from '@/data/posts.json'
-import BaseContainer from '@/components/base/BaseContainer.vue'
-import DashPurchase from '@/components/DashPurchase.vue'
-import DashSubscription from '@/components/DashSubscription.vue'
-import SectionItem from '@/components/SectionItem.vue'
 
 const dashAbout = [
   'dash 是关于文字的视觉文化志，不定期更新。每期我们都会择取一个主题，通过独特的编辑思路和设计形式呈现给读者。我们希望能发现司空见惯中的不同寻常，连结跨领域、跨文化的声音，为创作者提供更广泛、更巧妙、更多元的视角。',

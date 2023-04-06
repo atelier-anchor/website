@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue'
-import { useRoute } from 'vue-router'
-import SiteLogo from '@/components/site/SiteLogo.vue'
-import SiteNav from '@/components/site/SiteNav.vue'
-import SiteNavToggler from '@/components/site/SiteNavToggler.vue'
-
 const showNav = ref(false)
 const toggleNav = () => {
   showNav.value = !showNav.value

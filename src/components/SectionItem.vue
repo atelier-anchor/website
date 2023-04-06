@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { Post } from '@/types'
-import BaseContainer from '@/components/base/BaseContainer.vue'
-import BaseFigure from '@/components/base/BaseFigure.vue'
-import PostMeta from '@/components/PostMeta.vue'
-
 defineProps<{
   post: Post
 }>()

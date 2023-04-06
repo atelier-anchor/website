@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { Credits } from '@/types'
-import PostAuthorItem from '@/components/PostAuthorItem.vue'
-
 defineProps<{
   name: string
   category: string

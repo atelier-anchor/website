@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import SpecialPageContainer from '@/components/SpecialPageContainer.vue'
-
 const back = () => window.history.back()
 </script>
 

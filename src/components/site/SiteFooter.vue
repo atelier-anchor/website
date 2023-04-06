@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { onMounted, provide, ref } from 'vue'
-import SiteFooterAddress from '@/components/site/SiteFooterAddress.vue'
-import SiteFooterQrCode from '@/components/site/SiteFooterQrCode.vue'
-import SocialMediaGroup from '@/components/site/SocialMediaGroup.vue'
-
 const showQrCode = ref(false)
 provide('toggleQrCode', () => {
   showQrCode.value = !showQrCode.value

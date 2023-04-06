@@ -1,9 +1,4 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { getCarouselPosts, getPost } from '@/utils'
-import BaseFigure from '@/components/base/BaseFigure.vue'
-
 const posts = getCarouselPosts()
 const postIndex = ref(0)
 

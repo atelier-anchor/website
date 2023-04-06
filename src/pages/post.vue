@@ -1,13 +1,4 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRoute } from 'vue-router'
-import { useHead } from '@vueuse/head'
-import { getPost, parseMarkdown } from '@/utils'
-import BaseContainer from '@/components/base/BaseContainer.vue'
-import BasePicture from '@/components/base/BasePicture.vue'
-import BaseVideo from '@/components/base/BaseVideo.vue'
-import PostMeta from '@/components/PostMeta.vue'
-
 const route = useRoute()
 const post = computed(() => getPost(route.params.section as string, route.params.id as string))
 

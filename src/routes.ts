@@ -1,8 +1,3 @@
-import { RouteLocationNormalized, RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
-import { useHead } from '@vueuse/head'
-import { isValidPost } from '@/utils'
-// import NotFound from '@/pages/NotFound.vue'
-
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',

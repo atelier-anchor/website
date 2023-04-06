@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Credits } from '@/types'
-
 const title_aliases = {
   client: 'CL',
   lead_agency: 'LA',
