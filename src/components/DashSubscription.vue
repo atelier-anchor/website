@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { parseMarkdown } from '@/utils'
-import InputEmail from '@/components/dash/InputEmail.vue'
+import DashEmailInput from '@/components/DashEmailInput.vue'
 
 const notice =
   '由于邮箱过滤机制可能因用户而异，建议不要使用 163、126、yeah 等邮箱。如果您没有收到邮件，请留意垃圾邮件 (spam) 文件夹或垃圾箱。如果仍然没有收到，可联络 [dash@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:dash@atelier-anchor.com) 解决。'
@@ -16,7 +16,7 @@ const notice =
       target="_self"
     >
       <div id="mc_embed_signup_scroll" class="flex items-start gap-4">
-        <InputEmail
+        <DashEmailInput
           id="mce-EMAIL"
           name="EMAIL"
           label="Email Address"

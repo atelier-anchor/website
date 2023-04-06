@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import team from '@/components/about/team.json'
-import BasePicture from '@/components/shared/BasePicture.vue'
+import team from '@/data/team.json'
+import BasePicture from '@/components/base/BasePicture.vue'
 </script>
 
 <template>

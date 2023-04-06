@@ -1,4 +1,4 @@
-import _data from '@/data.json'
+import data from '@/data/posts.json'
 import { Post } from '@/types'
 
 export const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
@@ -23,19 +23,19 @@ export const parseMarkdown = (s: string) =>
     .replace(/\[(.+?@.+?)\]\((.+?@.+?)\)/g, '<a href="$2" style="hyphens: none">$1</a>')
     .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
 
-const data = _data as Record<string, Post[]>
+const posts = data as Record<string, Post[]>
 
 export const getCarouselPosts = () =>
-  shuffle(flat(Object.values(data)).filter((post) => !post.exclude && !post.carousel_exclude))
+  shuffle(flat(Object.values(posts)).filter((post) => !post.exclude && !post.carousel_exclude))
 
 export const getPosts = (section: string) =>
-  data[section]
+  posts[section]
     .filter(({ exclude }) => !exclude)
     .sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0))
     .reverse()
 
 export const getPost = (section: string, id: string) =>
-  data[section].find((post) => post.id === id) as Post
+  posts[section].find((post) => post.id === id) as Post
 
 export const isValidPost = (section: string, id: string) =>
-  section in data && !!getPost(section, id)
+  section in posts && !!getPost(section, id)

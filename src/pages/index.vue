@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { getCarouselPosts, getPost } from '@/utils'
-import LinkFigure from '@/components/shared/LinkFigure.vue'
+import BaseFigure from '@/components/base/BaseFigure.vue'
 
 const posts = getCarouselPosts()
 const postIndex = ref(0)
@@ -31,7 +31,7 @@ onMounted(() =>
         v-show="postIndex === i"
         class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
       >
-        <LinkFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
+        <BaseFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
       </div>
     </Transition>
   </ClientOnly>

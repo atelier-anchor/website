@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { getPosts } from '@/utils'
-import SectionItem from '@/components/section/SectionItem.vue'
+import SectionItem from '@/components/SectionItem.vue'
 </script>
 
 <template>

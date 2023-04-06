@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import SpecialPageContainer from '@/components/special/SpecialPageContainer.vue'
+import SpecialPageContainer from '@/components/SpecialPageContainer.vue'
 
 defineProps<{
   msg: {

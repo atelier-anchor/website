@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import stores from '@/components/dash/stores.json'
+import stores from '@/data/stores.json'
 
 const storeName = (s: { name: string; city?: string }) =>
   s.city ? `${s.name}（${s.city}）` : s.name

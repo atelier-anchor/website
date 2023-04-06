@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SiteLogo from '@/components/header/SiteLogo.vue'
+import SiteLogo from '@/components/site/SiteLogo.vue'
 </script>
 
 <template>

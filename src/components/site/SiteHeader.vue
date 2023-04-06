@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import { useRoute } from 'vue-router'
-import SiteLogo from '@/components/header/SiteLogo.vue'
-import SiteNav from '@/components/header/SiteNav.vue'
-import SiteNavBarHamburger from '@/components/header/SiteNavBarHamburger.vue'
+import SiteLogo from '@/components/site/SiteLogo.vue'
+import SiteNav from '@/components/site/SiteNav.vue'
+import SiteNavToggler from '@/components/site/SiteNavToggler.vue'
 
 const showNav = ref(false)
 const toggleNav = () => {
@@ -43,7 +43,7 @@ onMounted(() => {
   >
     <div class="flex items-center justify-between">
       <SiteLogo />
-      <SiteNavBarHamburger :active="showNav" @click="toggleNav" />
+      <SiteNavToggler :active="showNav" @click="toggleNav" />
     </div>
     <SiteNav :show-nav="showNav" />
   </header>

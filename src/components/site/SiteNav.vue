@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import SiteNavLinks from '@/components/header/SiteNavLinks.vue'
+import SiteNavLinks from '@/components/site/SiteNavLinks.vue'
 
 defineProps<{
   showNav: boolean

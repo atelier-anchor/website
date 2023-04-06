@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { onMounted, provide, ref } from 'vue'
-import SiteAddress from '@/components/footer/SiteAddress.vue'
-import SocialMediaGroup from '@/components/footer/SocialMediaGroup.vue'
-import WeChatQrCode from '@/components/footer/WeChatQrCode.vue'
+import SiteFooterAddress from '@/components/site/SiteFooterAddress.vue'
+import SiteFooterQrCode from '@/components/site/SiteFooterQrCode.vue'
+import SocialMediaGroup from '@/components/site/SocialMediaGroup.vue'
 
 const showQrCode = ref(false)
 provide('toggleQrCode', () => {
@@ -29,9 +29,9 @@ onMounted(() => {
   >
     <div class="transition-opacity" :class="{ 'opacity-0': showQrCode }">
       <h2 class="mb-2 text-3xl">contact</h2>
-      <SiteAddress />
+      <SiteFooterAddress />
     </div>
-    <WeChatQrCode
+    <SiteFooterQrCode
       class="absolute bottom-12 transition-opacity lg:bottom-16"
       :class="{ 'opacity-0': !showQrCode }"
     />

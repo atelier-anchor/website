@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import ColumnContainer from '@/components/shared/ColumnContainer.vue'
-import AboutTeam from '@/components/about/AboutTeam.vue'
+import BaseContainer from '@/components/base/BaseContainer.vue'
+import AboutTeam from '@/components/AboutTeam.vue'
 
 const mission = [
   '锚坞是一家以技术为基石的设计事务所，我们力求在复杂多变的创意行业里，为客户提供绝妙的想法和可靠的执行。在平面、字体、动效等领域的丰富经验促使我们时刻关注最前沿的技术动态，并广泛运用在展览、艺术、研究、出版和商业项目中。我们关注跨学科跨文化的设计实践，倡导建设聚焦新技术新思想的多元创意社区。',
@@ -36,15 +36,15 @@ const services = [
 </script>
 
 <template>
-  <ColumnContainer is="section" class="mb-4 sm:mb-8">
+  <BaseContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl md:sticky md:top-4 lg:top-8">mission</h2>
     </template>
     <template #right>
       <p v-for="p in mission">{{ p }}</p>
     </template>
-  </ColumnContainer>
-  <ColumnContainer is="section" class="mb-4 sm:mb-8">
+  </BaseContainer>
+  <BaseContainer is="section" class="mb-4 sm:mb-8">
     <template #left>
       <h2 class="text-2xl md:sticky md:top-4 lg:top-8">service</h2>
     </template>
@@ -56,13 +56,13 @@ const services = [
         </ul>
       </template>
     </template>
-  </ColumnContainer>
-  <ColumnContainer is="section">
+  </BaseContainer>
+  <BaseContainer is="section">
     <template #left>
       <h2 class="text-2xl md:sticky md:top-4 lg:top-8">team</h2>
     </template>
     <template #right>
       <AboutTeam />
     </template>
-  </ColumnContainer>
+  </BaseContainer>
 </template>

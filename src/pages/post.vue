@@ -3,10 +3,10 @@ import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { getPost, parseMarkdown } from '@/utils'
-import ColumnContainer from '@/components/shared/ColumnContainer.vue'
-import BasePicture from '@/components/shared/BasePicture.vue'
-import BaseVideo from '@/components/shared/BaseVideo.vue'
-import PostMeta from '@/components/post/PostMeta.vue'
+import BaseContainer from '@/components/base/BaseContainer.vue'
+import BasePicture from '@/components/base/BasePicture.vue'
+import BaseVideo from '@/components/base/BaseVideo.vue'
+import PostMeta from '@/components/PostMeta.vue'
 
 const route = useRoute()
 const post = computed(() => getPost(route.params.section as string, route.params.id as string))
@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <template>
-  <ColumnContainer class="flex-col-reverse sm:gap-8">
+  <BaseContainer class="flex-col-reverse sm:gap-8">
     <template #left>
       <article class="h-fit sm:top-4 md:sticky lg:top-8">
         <PostMeta
@@ -47,5 +47,5 @@ useHead({
         height="1080"
       />
     </template>
-  </ColumnContainer>
+  </BaseContainer>
 </template>
