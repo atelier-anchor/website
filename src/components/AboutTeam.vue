@@ -1,17 +1,58 @@
 <script setup lang="ts">
-import team from '@/data/team.json'
+const members = [
+  {
+    name: 'Willie Liu',
+    avatar: 'willie-liu.webp',
+    titles: ['Co-founder', 'Art director'],
+  },
+  {
+    name: 'Xiyao Du',
+    avatar: 'xiyao-du.webp',
+    titles: ['Co-founder', 'Academic director'],
+  },
+  {
+    name: 'oooooohmygosh',
+    avatar: 'oooooohmygosh.webp',
+    titles: ['Graphic designer', 'Distribution director'],
+  },
+  {
+    name: 'Janine Sui',
+    avatar: 'janine-sui.webp',
+    titles: ['Graphic designer'],
+  },
+  {
+    name: 'Heda Shi',
+    avatar: 'heda-shi.webp',
+    titles: ['Type designer'],
+  },
+  {
+    name: 'Chen Li',
+    avatar: 'chen-li.webp',
+    titles: ['Graphic designer', 'Editor'],
+  },
+  {
+    name: 'Xiangdong Zeng',
+    avatar: 'xiangdong-zeng.webp',
+    titles: ['Engineer'],
+  },
+  {
+    name: 'Shachō 🍗',
+    avatar: 'shacho.webp',
+    titles: ['CEO'],
+  },
+]
 </script>
 
 <template>
   <div class="grid gap-4 lg:grid-cols-2">
-    <div v-for="member in team" class="flex items-center gap-4 sm:gap-8">
+    <div v-for="{ name, avatar, titles } in members" class="flex items-center gap-4 sm:gap-8">
       <div class="clip-path-circle w-20">
-        <BasePicture :image="member.avatar" dir="/about" width="1200" height="1200" />
+        <BasePicture :image="avatar" dir="/about" width="80" height="80" />
       </div>
       <div>
-        <h3 class="mb-2">{{ member.name }}</h3>
+        <h3 class="mb-2">{{ name }}</h3>
         <ul>
-          <li v-for="title in member.titles">{{ title }}</li>
+          <li v-for="title in titles">{{ title }}</li>
         </ul>
       </div>
     </div>
