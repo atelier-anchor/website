@@ -1,12 +1,29 @@
 <script setup lang="ts">
-const showQrCode = ref(false)
-provide('toggleQrCode', () => {
-  showQrCode.value = !showQrCode.value
-})
+const socialMediaItems = [
+  {
+    name: 'tw',
+    title: 'Twitter',
+    url: 'https://twitter.com/atelier_anchor',
+  },
+  {
+    name: 'ins',
+    title: 'Instagram',
+    url: 'https://www.instagram.com/atelier_anchor',
+  },
+  {
+    name: 'wb',
+    title: 'Weibo',
+    url: 'https://weibo.com/u/7568137725',
+  },
+]
 
+const showQrCode = ref(false)
+const toggleQrCode = () => {
+  showQrCode.value = !showQrCode.value
+}
 onMounted(() => {
   document.addEventListener('click', (e) => {
-    if (showQrCode.value && !(e.target as HTMLElement).closest('.WeChatQrCode, .QrCodeToggler')) {
+    if (showQrCode.value && !(e.target as HTMLElement).closest('#QrCode, #QrCodeToggler')) {
       showQrCode.value = false
     }
   })
@@ -26,10 +43,16 @@ onMounted(() => {
       <h2 class="mb-2 text-3xl">contact</h2>
       <SiteFooterAddress />
     </div>
-    <SiteFooterQrCode
-      class="absolute bottom-12 transition-opacity lg:bottom-16"
-      :class="{ 'opacity-0': !showQrCode }"
-    />
-    <SocialMediaGroup />
+    <SiteFooterQrCode id="QrCode" :show="showQrCode" />
+    <ul class="flex gap-2">
+      <li v-for="{ name, title, url } in socialMediaItems">
+        <a :href="url" :title="title" target="_blank" rel="noopener noreferrer">
+          {{ name }}
+        </a>
+      </li>
+      <li>
+        <button title="WeChat" class="QrCodeToggler" @click="toggleQrCode">wx</button>
+      </li>
+    </ul>
   </footer>
 </template>

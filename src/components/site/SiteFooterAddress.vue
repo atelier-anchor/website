@@ -1,5 +1,10 @@
 <script setup lang="ts">
-const address = ['15A, Lane 141', 'Xing’an Road', 'Huangpu District', 'Shanghai, China']
+const address = [
+  '101 A, No. 15, Lane 545',
+  'Zhenning Road',
+  'Changning District',
+  'Shanghai, China',
+]
 </script>
 
 <template>

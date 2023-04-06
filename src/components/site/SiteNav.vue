@@ -1,26 +1,31 @@
 <script setup lang="ts">
+const links = ['works', 'typefaces', 'dash', 'about']
+
 defineProps<{
-  showNav: boolean
+  show: boolean
 }>()
 </script>
 
 <template>
   <Transition>
     <nav
-      v-show="showNav"
-      class="absolute max-h-48 w-full overflow-hidden bg-white dark:bg-black sm:relative sm:!block"
+      v-show="show"
+      class="absolute max-h-48 w-full overflow-hidden bg-white transition-[max-height] duration-400 dark:bg-black sm:relative sm:!block"
     >
-      <SiteNavLinks />
+      <ul class="my-2 sm:mb-0 sm:mt-4">
+        <li
+          v-for="link in links"
+          class="text-3xl"
+          :class="{ 'text-primary': $route.path.includes(link) }"
+        >
+          <RouterLink :to="`/${link}`">{{ link }}</RouterLink>
+        </li>
+      </ul>
     </nav>
   </Transition>
 </template>
 
 <style scoped>
-.v-enter-active,
-.v-leave-active {
-  @apply duration-400;
-}
-
 .v-enter-from,
 .v-leave-to {
   @apply max-h-0;
