@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && NODE_ENV=production VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` vite-ssg build",
+    "build": "vite build && vue-tsc --noEmit && NODE_ENV=production VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` vite-ssg build",
     "preview": "vite preview"
   },
   "devDependencies": {

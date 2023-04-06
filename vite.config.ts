@@ -27,7 +27,6 @@ export default defineConfig({
       vueTemplate: true,
     }),
     vueComponents({
-      types: [],
       dts: 'src/components.d.ts',
     }),
   ],
