@@ -1,38 +1,38 @@
 import { RouteLocationNormalized, RouteRecordRaw, RouterScrollBehavior } from 'vue-router'
 import { useHead } from '@vueuse/head'
 import { isValidPost } from '@/utils'
-import NotFound from '@/components/special/NotFound.vue'
+// import NotFound from '@/pages/NotFound.vue'
 
 export const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    name: 'home',
-    component: () => import('@/components/home/HomeView.vue'),
+    name: 'index',
+    component: () => import('@/pages/index.vue'),
   },
   {
     path: '/works',
     name: 'works',
-    component: () => import('@/components/section/SectionView.vue'),
+    component: () => import('@/pages/section.vue'),
   },
   {
     path: '/typefaces',
     name: 'typefaces',
-    component: () => import('@/components/section/SectionView.vue'),
+    component: () => import('@/pages/section.vue'),
   },
   {
     path: '/dash',
     name: 'dash',
-    component: () => import('@/components/dash/DashView.vue'),
+    component: () => import('@/pages/dash.vue'),
   },
   {
     path: '/about',
     name: 'about',
-    component: () => import('@/components/about/AboutView.vue'),
+    component: () => import('@/pages/about.vue'),
   },
   {
     path: '/:section/:id',
     name: 'post',
-    component: () => import('@/components/post/PostView.vue'),
+    component: () => import('@/pages/post.vue'),
     beforeEnter: (to) => {
       if (!isValidPost(to.params.section as string, to.params.id as string)) {
         return { name: '404' }
@@ -48,7 +48,7 @@ export const routes: RouteRecordRaw[] = [
         en: 'thank you~',
       },
     },
-    component: () => import('@/components/special/SubscriptionFeedback.vue'),
+    component: () => import('@/pages/subscription.vue'),
   },
   {
     path: '/subscription/unsubscribed-successfully',
@@ -59,12 +59,12 @@ export const routes: RouteRecordRaw[] = [
         en: 'unsubscribed successfully',
       },
     },
-    component: () => import('@/components/special/SubscriptionFeedback.vue'),
+    component: () => import('@/pages/subscription.vue'),
   },
   {
     path: '/:path(.*)*',
     name: '404',
-    component: NotFound,
+    component: () => import('@/pages/404.vue'),
   },
 ]
 
@@ -79,7 +79,7 @@ export const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) =>
 }
 
 export const updateHead = (to: RouteLocationNormalized) => {
-  if (!['home', 'post', 'thank-you', 'unsubscribed-successfully'].includes(to.name as string)) {
+  if (!['index', 'post', 'thank-you', 'unsubscribed-successfully'].includes(to.name as string)) {
     useHead({
       title: to.name as string,
     })
