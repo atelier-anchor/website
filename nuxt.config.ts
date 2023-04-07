@@ -3,5 +3,8 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
+  typescript: {
+    typeCheck: 'build',
+  },
   modules: ['@nuxtjs/tailwindcss'],
 })
