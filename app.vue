@@ -2,11 +2,11 @@
 const title = 'atelierAnchor'
 const description = 'graphic & typeface design studio in shanghai. we make typeface as A narrative.'
 const url = 'https://atelier-anchor.com'
-const date = new Date(import.meta.env.VITE_BUILD_DATE)
-const specialPages = ['404', 'thank-you', 'unsubscribed-successfully']
+const date = new Date()
 
 useHead({
   titleTemplate: (name) => (name ? `${name} - ${title}` : title),
+  link: [{ rel: 'icon', href: '/favicon.png' }],
   meta: [
     { name: 'description', content: description },
     { name: 'copyright', content: `© ${date.getFullYear()} ${title}` },
@@ -24,20 +24,7 @@ useHead({
 </script>
 
 <template>
-  <div
-    v-if="!specialPages.includes($route.name as string)"
-    class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-[320px] max-w-[1800px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
-  >
-    <SiteHeader />
-    <main class="relative w-full grow sm:py-4 lg:py-8">
-      <RouterView />
-    </main>
-    <SiteFooter />
-  </div>
-  <main
-    v-else
-    class="mx-auto flex min-h-[max(100vh,320px)] min-w-[320px] max-w-[1800px] flex-col items-center justify-around gap-16 p-4 lg:p-8"
-  >
-    <RouterView />
-  </main>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>

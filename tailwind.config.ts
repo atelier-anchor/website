@@ -1,8 +1,7 @@
 import plugin from 'tailwindcss/plugin'
 import type { Config } from 'tailwindcss'
 
-export default {
-  content: ['./index.html', './src/**/*.vue'],
+export default <Partial<Config>>{
   theme: {
     fontFamily: {
       sans: ['"Neue Machina"', 'sans-serif'],
@@ -29,4 +28,4 @@ export default {
       })
     }),
   ],
-} satisfies Config
+}

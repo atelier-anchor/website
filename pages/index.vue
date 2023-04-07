@@ -1,22 +1,26 @@
 <script setup lang="ts">
-const posts = getCarouselPosts()
-const postIndex = ref(0)
-
 const { resolve } = useRouter()
 const path = (id: string) => {
   for (const section of ['works', 'typefaces', 'dash']) {
-    if (getPost(section, id)) {
+    if (useQueryPost(section, id)) {
       return `${resolve(section).path}/${id}`
     }
   }
   return ''
 }
 
-onMounted(() =>
-  setInterval(() => {
+let timer: number
+const posts = useCarouselPosts()
+const postIndex = ref(0)
+onMounted(() => {
+  timer = window.setInterval(() => {
     postIndex.value = (postIndex.value + 1) % posts.length
   }, 6000)
-)
+})
+onUnmounted(() => {
+  console.log(timer)
+  clearInterval(timer)
+})
 </script>
 
 <template>
@@ -29,6 +33,9 @@ onMounted(() =>
         <BaseFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
       </div>
     </Transition>
+    <template #fallback>
+      <p>Loading images…</p>
+    </template>
   </ClientOnly>
 </template>
 

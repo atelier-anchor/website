@@ -1,14 +1,18 @@
 <script setup lang="ts">
-const route = useRoute()
-const post = computed(() => getPost(route.params.section as string, route.params.id as string))
+const post = usePost()
 
-useHead({
-  title: post.value.name,
+// useHead({
+//   title: post.value.name,
+// })
+
+definePageMeta({
+  validate: async (route) =>
+    useQueryPost(route.params.section as string, route.params.id as string),
 })
 </script>
 
 <template>
-  <BaseContainer class="flex-col-reverse sm:gap-8">
+  <BaseContainer v-if="post" is="article" class="flex-col-reverse sm:gap-8">
     <template #left>
       <article class="h-fit sm:top-4 md:sticky lg:top-8">
         <PostMeta
@@ -18,7 +22,8 @@ useHead({
           :class="post.description ? 'mb-4 sm:mb-8' : null"
         />
         <div class="flex flex-col gap-4">
-          <p v-for="p in post.description" v-html="parseMarkdown(p)"></p>
+          <!-- <p v-for="p in post.description" v-html="parseMarkdown(p)"></p> -->
+          <p v-for="p in post.description">{{ p }}</p>
         </div>
       </article>
     </template>
@@ -39,4 +44,5 @@ useHead({
       />
     </template>
   </BaseContainer>
+  <p v-else class="text-red-500">[404]</p>
 </template>

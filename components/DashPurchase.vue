@@ -38,9 +38,9 @@ const storeName = (s: Store) => (s.city ? `${s.name}（${s.city}）` : s.name)
 <template>
   <ul class="grid list-disc lg:grid-cols-2">
     <li v-for="store in stores" class="ml-4">
-      <a v-if="store.url" :href="store.url" target="_blank" class="after:content-['↗']">
+      <NuxtLink v-if="store.url" :to="store.url" target="_blank" class="after:content-['↗']">
         {{ storeName(store) }}
-      </a>
+      </NuxtLink>
       <template v-else>{{ storeName(store) }}</template>
     </li>
   </ul>

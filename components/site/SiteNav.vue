@@ -18,7 +18,7 @@ defineProps<{
           class="text-3xl"
           :class="{ 'text-primary': $route.path.includes(link) }"
         >
-          <RouterLink :to="`/${link}`">{{ link }}</RouterLink>
+          <NuxtLink :to="`/${link}`">{{ link }}</NuxtLink>
         </li>
       </ul>
     </nav>

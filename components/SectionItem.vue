@@ -1,5 +1,9 @@
 <script setup lang="ts">
-defineProps<{
+// See https://github.com/nuxt/nuxt/discussions/18391
+const route = useRoute()
+const to = computed(() => `${route.path.replace(/\/+$/g, '')}/${props.post.id}`)
+
+const props = defineProps<{
   post: Post
 }>()
 </script>
@@ -11,18 +15,12 @@ defineProps<{
         :name="post.name"
         :category="post.category"
         :credits="post.credits"
-        :to="`${$route.path}/${post.id}`"
+        :to="to"
         class="max-md:hidden"
       />
     </template>
     <template #right>
-      <BaseFigure
-        :image="post.images[0]"
-        :to="`${$route.path}/${post.id}`"
-        :title="post.name"
-        width="1920"
-        height="1440"
-      />
+      <BaseFigure :image="post.images[0]" :to="to" :title="post.name" width="1920" height="1440" />
     </template>
   </BaseContainer>
 </template>

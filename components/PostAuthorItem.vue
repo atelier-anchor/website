@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const title_aliases = {
+const titleAliases = {
   client: 'CL',
   lead_agency: 'LA',
   chief_editor: 'CE',
@@ -26,7 +26,7 @@ defineProps<{
   <div class="flex">
     <dt class="w-8 flex-shrink-0 after:content-[':']">
       <abbr :title="toTitle(title)">
-        {{ title_aliases[title] }}
+        {{ titleAliases[title] }}
       </abbr>
     </dt>
     <dd>{{ author }}</dd>

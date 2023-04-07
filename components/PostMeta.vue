@@ -11,7 +11,7 @@ defineProps<{
   <div>
     <div class="mb-4">
       <h2 v-if="to" class="text-2xl">
-        <RouterLink :to="to">{{ name }}</RouterLink>
+        <NuxtLink :to="to">{{ name }}</NuxtLink>
       </h2>
       <h1 v-else class="text-2xl">{{ name }}</h1>
       <div>{{ category }}</div>

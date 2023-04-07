@@ -28,7 +28,7 @@ declare global {
     exclude?: boolean
     carousel_exclude?: boolean
     credits: Credits
-    description: string[]
+    description?: string[]
     images: string[]
     videos?: Video[]
   }

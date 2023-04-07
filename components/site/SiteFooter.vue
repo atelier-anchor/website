@@ -46,12 +46,10 @@ onMounted(() => {
     <SiteFooterQrCode id="QrCode" :show="showQrCode" />
     <ul class="flex gap-2">
       <li v-for="{ name, title, url } in socialMediaItems">
-        <a :href="url" :title="title" target="_blank" rel="noopener noreferrer">
-          {{ name }}
-        </a>
+        <NuxtLink :to="url" :title="title" target="_blank">{{ name }}</NuxtLink>
       </li>
       <li>
-        <button title="WeChat" class="QrCodeToggler" @click="toggleQrCode">wx</button>
+        <NuxtLink id="QrCodeToggler" title="WeChat" @click="toggleQrCode">wx</NuxtLink>
       </li>
     </ul>
   </footer>

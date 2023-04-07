@@ -10,6 +10,6 @@ const address = [
 <template>
   <address class="not-italic">
     <template v-for="line in address">{{ line }}<br /></template>
-    <a href="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</a>
+    <NuxtLink to="mailto:hi@atelier-anchor.com">hi@atelier-anchor.com</NuxtLink>
   </address>
 </template>

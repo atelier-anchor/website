@@ -33,33 +33,35 @@ const services = [
 </script>
 
 <template>
-  <BaseContainer is="section" class="mb-4 sm:mb-8">
-    <template #left>
-      <h2 class="text-2xl md:sticky md:top-4 lg:top-8">mission</h2>
-    </template>
-    <template #right>
-      <p v-for="p in mission">{{ p }}</p>
-    </template>
-  </BaseContainer>
-  <BaseContainer is="section" class="mb-4 sm:mb-8">
-    <template #left>
-      <h2 class="text-2xl md:sticky md:top-4 lg:top-8">service</h2>
-    </template>
-    <template #right>
-      <template v-for="service in services">
-        <p>{{ service.summary }}</p>
-        <ul class="list-disc last:mb-0 sm:mb-2">
-          <li v-for="item in service.items" class="ml-4">{{ item }}</li>
-        </ul>
+  <div>
+    <BaseContainer is="section" class="mb-4 sm:mb-8">
+      <template #left>
+        <h2 class="text-2xl md:sticky md:top-4 lg:top-8">mission</h2>
       </template>
-    </template>
-  </BaseContainer>
-  <BaseContainer is="section">
-    <template #left>
-      <h2 class="text-2xl md:sticky md:top-4 lg:top-8">team</h2>
-    </template>
-    <template #right>
-      <AboutTeam />
-    </template>
-  </BaseContainer>
+      <template #right>
+        <p v-for="p in mission">{{ p }}</p>
+      </template>
+    </BaseContainer>
+    <BaseContainer is="section" class="mb-4 sm:mb-8">
+      <template #left>
+        <h2 class="text-2xl md:sticky md:top-4 lg:top-8">service</h2>
+      </template>
+      <template #right>
+        <template v-for="{ summary, items } in services">
+          <p>{{ summary }}</p>
+          <ul class="list-disc last:mb-0 sm:mb-2">
+            <li v-for="item in items" class="ml-4">{{ item }}</li>
+          </ul>
+        </template>
+      </template>
+    </BaseContainer>
+    <BaseContainer is="section">
+      <template #left>
+        <h2 class="text-2xl md:sticky md:top-4 lg:top-8">team</h2>
+      </template>
+      <template #right>
+        <AboutTeam />
+      </template>
+    </BaseContainer>
+  </div>
 </template>

@@ -1,8 +1,10 @@
 .DS_Store
-.vite-ssg-temp
+*.log*
+.cache
+.env
+.nitro
+.nuxt
+.output
 .vscode
 dist
 node_modules
-pnpm-debug.log*
-auto-imports.d.ts
-components.d.ts
