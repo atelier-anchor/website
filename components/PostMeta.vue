@@ -2,7 +2,7 @@
 defineProps<{
   name: string
   category: string
-  credits: Credits
+  credits: Credit[]
   to?: string
 }>()
 </script>
@@ -17,7 +17,7 @@ defineProps<{
       <div>{{ category }}</div>
     </div>
     <dl>
-      <PostAuthorItem v-for="(author, title) in credits" :title="title" :author="author" />
+      <PostAuthorItem v-for="credit in credits" :credit="credit" />
     </dl>
   </div>
 </template>

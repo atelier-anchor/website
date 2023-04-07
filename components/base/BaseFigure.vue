@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <NuxtLink :to="to + 'x'" class="group overflow-hidden sm:h-full">
+  <NuxtLink :to="to" class="group overflow-hidden sm:h-full">
     <BasePicture :image="image" :dir="to" :width="width" :height="height" />
   </NuxtLink>
 </template>

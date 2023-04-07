@@ -15,20 +15,20 @@ const titleAliases = {
 
 const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1)
 const toTitle = (s: string) => capitalize(s.replace('_', ' '))
+const toName = (s: string | string[]) => (Array.isArray(s) ? s.join(', ') : s)
 
 defineProps<{
-  title: keyof Credits
-  author?: string
+  credit: Credit
 }>()
 </script>
 
 <template>
   <div class="flex">
     <dt class="w-8 flex-shrink-0 after:content-[':']">
-      <abbr :title="toTitle(title)">
-        {{ titleAliases[title] }}
+      <abbr :title="toTitle(credit.title)">
+        {{ titleAliases[credit.title] }}
       </abbr>
     </dt>
-    <dd>{{ author }}</dd>
+    <dd>{{ toName(credit.name) }}</dd>
   </div>
 </template>

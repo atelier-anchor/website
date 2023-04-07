@@ -5,12 +5,12 @@ const data: Record<string, Post[]> = {
       name: 'Arcade Game Typography',
       date: '2021-02-01',
       category: 'Translation',
-      credits: {
-        translator: 'Willie Liu',
-        editor: 'Xiyao Du',
-        designer: 'Telos',
-        publisher: 'Telos',
-      },
+      credits: [
+        { title: 'translator', name: 'Willie Liu' },
+        { title: 'editor', name: 'Xiyao Du' },
+        { title: 'designer', name: 'Telos' },
+        { title: 'publisher', name: 'Telos' },
+      ],
       description: [
         '《街机游戏字体》中文版。本书聚焦于 1970 年代—2000 年代街机游戏中的 8×8 像素字体，是第一本关于游戏字体的专著。书中包含约 250 套具有代表性的字体，并附有深刻的评论。原版由字体设计师大曲都市以英文撰写，我们将其译为中文，并和出版方共同策划并执行了宣发工作。',
         'The Chinese edition of "Arcade Game Typography". Originally written by Toshi Omagari in English, this is a comprehensive book on 8×8 pixels fonts in arcade video games from \'70s to \'00s, showcasing around 250 fonts that represent the best of the industry. It is an interesting cross between typeface design and video game subjects, and the first book of its kind.',
@@ -22,11 +22,11 @@ const data: Record<string, Post[]> = {
       name: 'Ambitful',
       date: '2021-04-01',
       category: 'Visual identity',
-      credits: {
-        client: 'Ambitful',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen',
-      },
+      credits: [
+        { title: 'client', name: 'Ambitful' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: 'Nagisa Chen' },
+      ],
       description: [
         'Ambitful 是一家来自中国的摄影灯品牌。我们从光线出发，将其作为一个核心概念为他们创作了一款全新的字体标识。',
         'Ambitful is a Chinese photoflood lamp brand. We extracted elements from the concept of light and created a new logotype.',
@@ -44,11 +44,11 @@ const data: Record<string, Post[]> = {
       name: 'Dinkie Bitmap Black Box',
       date: '2020-09-01',
       category: 'Product design',
-      credits: {
-        client: '3type',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen, Willie Liu',
-      },
+      credits: [
+        { title: 'client', name: '3type' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Nagisa Chen', 'Willie Liu'] },
+      ],
       description: [
         '字体，本质上是基于信息载体的数字产品，在数字时代以虚拟方式出售并不奇怪。为字体准备物理包装是为了获得一种埋在数字浪潮下的真实感。它代表了一种与字体精神一致的复古情结。「像素」和「8×8」，源自「Dinkie Bitmap」的设计尺度，是我们打破数字世界壁垒所需要的一切。',
         'Fonts, intrinsically digital products based on packages of information, are unsurprisingly sold in a virtual manner in the digital age. To prepare a physical packaging for a font is to fetch a sense of reality buried under the digital tide. It represents a retro complex that is in consistency with the typeface\'s ethos. "Pixels" and "8×8", themes derived from "Dinkie Bitmap", are all we need to break the walls of the digital world.',
@@ -67,11 +67,11 @@ const data: Record<string, Post[]> = {
       date: '2020-10-01',
       category: 'Graphic design',
       exclude: true,
-      credits: {
-        client: 'Guiyang WOW',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen',
-      },
+      credits: [
+        { title: 'client', name: 'Guiyang WOW' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: 'Nagisa Chen' },
+      ],
       images: ['chen-shi-fu-hua-1.webp', 'chen-shi-fu-hua-2.webp'],
     },
     {
@@ -80,11 +80,11 @@ const data: Record<string, Post[]> = {
       date: '2021-10-01',
       category: 'Visual identity, motion graphic',
       carousel_exclude: true,
-      credits: {
-        client: 'Dangxia Channel',
-        art_director: 'Willie Liu',
-        designer: 'Willie Liu, Money Su, Leove Li',
-      },
+      credits: [
+        { title: 'client', name: 'Dangxia Channel' },
+        { title: 'art_director', name: 'Willie Liu' },
+        { title: 'designer', name: ['Willie Liu', 'Money Su', 'Leove Li'] },
+      ],
       description: [
         '《This is Us》是当下频道推出的一档聚焦年轻人新职业的季播栏目，第四季聚焦于「两个同岁年轻人不同的职业状貌」，特色包括「职业科普」、「选择反思」和「隔空对话」。我们为这一季《This is Us》设计了全新的片名字标，以此为基础制定了整季节目的视觉风格、动画表现和排版规范，并参与了片中动画部分的制作。',
         '"This is Us", produced by Dangxia Channel, is a series show focusing on professional choices of the younger generation in China. atelierAnchor designs for the program its new title logo, visual identity, animation storyboard, typographic guidelines, as well as its post-production motion graphics.',
@@ -103,12 +103,12 @@ const data: Record<string, Post[]> = {
       name: 'Double Win',
       date: '2021-07-01',
       category: 'Visual identity',
-      credits: {
-        client: 'Double Win',
-        lead_agency: 'LxU',
-        type_director: 'Willie Liu',
-        designer: 'Willie Liu, Nagisa Chen',
-      },
+      credits: [
+        { title: 'client', name: 'Double Win' },
+        { title: 'lead_agency', name: 'LxU' },
+        { title: 'type_director', name: 'Willie Liu' },
+        { title: 'designer', name: ['Willie Liu', 'Nagisa Chen'] },
+      ],
       description: [
         '品牌与粉丝之间的互动，使品牌的昵称本身的变成了一个重要的记忆点。基于粉丝给品牌的昵称「大波纹」，我们将「大」与原有 logo 的设计中的「星形」提取出来，在 W 与「星形」组合的空间中创造出「大」的负形，将其视为品牌的图形识别元素，它既是 logotype 的构成组件，也是一个独立的图形。同时，我们将「波纹」作为整个品牌视觉系统中最具扩展性的元素推广到 logotype 的设计细节以及其他品牌视觉的字体排印设计中，为其增添了新鲜、活泼的气质。',
         'The interaction between a brand and its customers plays an important role in brand communication. Based on the nickname "大波纹" (Big Ripple) given to the coffee brand Double Win by its ardent customers, we extract visual features from the character "大" (Big) and the star shape in its original logo, creating a negative shape of "大" in combination with the whites in "W" and the star above, the most crucial identity of the brand. Meanwhile we forward the idea of "Ripple" as the extensive element to the entire brand visual system, including wavy features in the new logotype and other typographic perks in graphics, adding a fresh and lively look to the brand.',
@@ -129,11 +129,11 @@ const data: Record<string, Post[]> = {
       name: 'Freds Inside',
       date: '2018-04-01',
       category: 'Motion graphic',
-      credits: {
-        client: 'Candybook',
-        art_director: 'Willie Liu',
-        designer: 'Willie Liu',
-      },
+      credits: [
+        { title: 'client', name: 'Candybook' },
+        { title: 'art_director', name: 'Willie Liu' },
+        { title: 'designer', name: 'Willie Liu' },
+      ],
       description: [
         '为展览制作的 AR 插画。参观者通过特定的手机应用程序观察两件日常用品——加湿器和蓝牙音箱，会发现其中藏着一群被称作 Fred 的白色生物，不停工作，驱动它们的运转。',
         'AR illustrations made for an exhibition. The hardworking creatures inside the humidifier and the bluetooth speaker could be observed only when you see through a specific AR app.',
@@ -150,11 +150,11 @@ const data: Record<string, Post[]> = {
       name: 'Glyphs 3 Event',
       date: '2020-11-01',
       category: 'Motion design, graphic design',
-      credits: {
-        client: 'Glyphs',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen, Leove Li',
-      },
+      credits: [
+        { title: 'client', name: 'Glyphs' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Nagisa Chen', 'Leove Li'] },
+      ],
       description: [
         'Glyphs 是一款广受好评的字体编辑器。我们为它第三个版本更新的发布会提供了设计支持。为此，我们聚集了 Glyphs 在字体设计、平面设计、动态图形设计、UX 设计等领域的用户。',
         'Glyphs is a well-received font editor. We have provided design of prints event for its third version. We have gathered Glyphs users in the fields of type design, graphic design, motion graphic design, UX design, etc.',
@@ -170,11 +170,11 @@ const data: Record<string, Post[]> = {
       name: 'Kuusi Sans Scented Candle',
       date: '2020-12-01',
       category: 'Graphic design',
-      credits: {
-        client: '3type',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen, Denise Dou',
-      },
+      credits: [
+        { title: 'client', name: '3type' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Nagisa Chen', 'Denise Dou'] },
+      ],
       description: [
         '这款字体是由来自芬兰的字体设计师窦颖秋创作的。为了它的发布，我们以「冬日的优雅」为概念制作了一个礼盒。使用香薰蜡烛作为概念的载体，将字体的创作起点和精神以实物的形式传递。',
         'This typeface was created by Denise Dou living in Finland. For its release we made a gift box based on the concept of "Elegance in Winter". Using scented candles as the concept\'s carrier, the creativity and ethos of the typeface are delivered in the form of physical objects.',
@@ -186,11 +186,11 @@ const data: Record<string, Post[]> = {
       name: 'Out of Mountain',
       date: '2021-03-01',
       category: 'Book design',
-      credits: {
-        client: 'Guiyang WOW',
-        art_director: 'Nagisa Chen',
-        designer: 'Nagisa Chen, Zhiqian Li',
-      },
+      credits: [
+        { title: 'client', name: 'Guiyang WOW' },
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Nagisa Chen', 'Zhiqian Li'] },
+      ],
       description: [
         '我们从杂志的立意中提取了贵州人这种取自于「山地」的坚韧，挑选了近代贵阳的城市风貌之一的传统招牌字体——行楷。在全书的视觉概念上，将地图本身作为一个设计的概念进行延展。它既是一本真正意义上的地图，也是一本看起来不太像地图的书。山地之上耸立的建筑，地图之中包裹的文字。它将成为这座城市的昨日、今日、明日，直至未来。',
         "We extracted the tenacity of Guizhou people from the \"mountain\" from the conception of the magazine, and selected Xingkai, one of the traditional signature typeface of Guiyang's urban style in modern times. In the visual concept of the whole book, the map as a design concept. It is not only a map in the true sense, but also a book that doesn't look like a map. Buildings towering above the mountains, text wrapped in the map. It will become the city's yesterday, today, tomorrow, and into the future.",
@@ -208,11 +208,11 @@ const data: Record<string, Post[]> = {
       name: 'PSA Model',
       date: '2019-10-01',
       category: 'Product design',
-      credits: {
-        client: 'PSA',
-        art_director: 'Willie Liu',
-        designer: 'Willie Liu',
-      },
+      credits: [
+        { title: 'client', name: 'PSA' },
+        { title: 'art_director', name: 'Willie Liu' },
+        { title: 'designer', name: 'Willie Liu' },
+      ],
       description: [
         '上海当代艺术博物馆的拼插模型，由激光切割工艺制造，材质为椴木层板和亚克力板，充分还原建筑的造型特征。模型采用零部件彼此穿插咬合的设计，拼装过程简单安全，无需胶水。',
         'A miniature PSA model that could be assembled by the consumers themselves. Made of laser-cut plywood and acrylic plates.',
@@ -224,10 +224,10 @@ const data: Record<string, Post[]> = {
       name: 'Receipt Poster',
       date: '2021-06-01',
       category: 'Graphic design',
-      credits: {
-        art_director: 'Nagisa Chen',
-        designer: 'Willie Liu, Nagisa Chen',
-      },
+      credits: [
+        { title: 'art_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Willie Liu', 'Nagisa Chen'] },
+      ],
       images: [
         'receipt-poster-1.webp',
         'receipt-poster-2.webp',
@@ -240,10 +240,10 @@ const data: Record<string, Post[]> = {
       name: 'Virtual Immunization Project',
       date: '2021-08-01',
       category: 'Graphic design, motion graphic',
-      credits: {
-        client: 'Sicheng Wang',
-        designer: 'Nagisa Chen',
-      },
+      credits: [
+        { title: 'client', name: 'Sicheng Wang' },
+        { title: 'designer', name: 'Nagisa Chen' },
+      ],
       images: ['vip-1.webp', 'vip-2.webp'],
       videos: [{ src: 'vip-3.webm', poster: 'vip-3-poster.webp' }],
     },
@@ -255,10 +255,10 @@ const data: Record<string, Post[]> = {
       date: '2020-09-01',
       category: 'Type design',
       carousel_exclude: true,
-      credits: {
-        type_director: 'Willie Liu',
-        designer: 'Willie Liu',
-      },
+      credits: [
+        { title: 'type_director', name: 'Willie Liu' },
+        { title: 'designer', name: 'Willie Liu' },
+      ],
       description: [
         '丁卯点阵体的设计初衷是探索小尺寸像素汉字的可能性，以此致敬将中文世界带入信息化时代的先驱们。',
         '如果您想要咨询「丁卯点阵体」的商用授权事宜、购买授权或进行询价，请向 [dinkie<wbr>bit<wbr>map@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:licensing@atelier-anchor.com) 发送邮件说明您的需求，我们将尽快回复。',
@@ -280,10 +280,10 @@ const data: Record<string, Post[]> = {
       date: '2019-05-01',
       category: 'Type design',
       carousel_exclude: true,
-      credits: {
-        type_director: 'Willie Liu',
-        designer: 'Willie Liu',
-      },
+      credits: [
+        { title: 'type_director', name: 'Willie Liu' },
+        { title: 'designer', name: 'Willie Liu' },
+      ],
       description: [
         '一款标题字体，灵感来自 1960 年代中国大庆「石油大会战」期间的手绘标语。字体名「Sart」为大庆的别称「萨尔图」，源自蒙古语「月亮之地」。',
         'A display typeface inspired by the hand-paint slogans during the 1960s "Big Battle for Oil" in Daqing, China. The name comes from the Mongolian word "Sart", which means "Land of moon".',
@@ -302,10 +302,13 @@ const data: Record<string, Post[]> = {
       date: '2022-11-15',
       category: 'Type design',
       carousel_exclude: true,
-      credits: {
-        art_director: 'Nagisa Chen',
-        designer: 'oooooohmygosh, Nagisa Chen, Janine Sui, Heda Shi, Jian Li',
-      },
+      credits: [
+        { title: 'art_director', name: 'Nagisa Chen' },
+        {
+          title: 'designer',
+          name: ['oooooohmygosh', 'Nagisa Chen', 'Janine Sui', 'Heda Shi', 'Jian Li'],
+        },
+      ],
       description: [
         '得意黑是一款在人文观感和几何特征中寻找视觉平衡的现代窄斜体。',
         'A condensed and oblique Chinese typeface seeking a visual balance between the humanist and the geometric.',
@@ -324,12 +327,12 @@ const data: Record<string, Post[]> = {
       date: '2020-01-01',
       category: 'Custom typeface',
       carousel_exclude: true,
-      credits: {
-        client: 'tbh',
-        creative_director: 'Zhengzhong Pan @Studio Bibliography',
-        type_director: 'Nagisa Chen',
-        designer: 'Zhengzhong Pan, Nagisa Chen',
-      },
+      credits: [
+        { title: 'client', name: 'tbh' },
+        { title: 'creative_director', name: 'Zhengzhong Pan @Studio Bibliography' },
+        { title: 'type_director', name: 'Nagisa Chen' },
+        { title: 'designer', name: ['Zhengzhong Pan', 'Nagisa Chen'] },
+      ],
       description: [
         'tbh 是一家来自上海的年轻家居品牌，Studio Bibliography 以「童趣」为核心概念创作了这款字体，并委托我们将其开发成了一款具有两轴可变的品牌可变字体，同时将该风格迁移到了中文标识的设计中。',
         'tbh is a young home furnishing brand based in Shanghai. Studio Bibliography create core concept as "childhood". They commissioned us to produce a new brand font, in a variable fonts format with two axes. This style migrated to the Chinese logotype.',
@@ -350,12 +353,15 @@ const data: Record<string, Post[]> = {
       name: 'dash #0',
       date: '2022-03-01',
       category: 'Self-publishing',
-      credits: {
-        chief_editor: 'Xiyao Du',
-        author: 'Heshan Huang, Chen Li, Willie Liu, Money Su, Zihao Tan, Yanjun Zhang',
-        editor: 'Chen Li, Money Su',
-        designer: 'Nagisa Chen, Chen Li, Willie Liu',
-      },
+      credits: [
+        { title: 'chief_editor', name: 'Xiyao Du' },
+        {
+          title: 'author',
+          name: ['Heshan Huang', 'Chen Li', 'Willie Liu', 'Money Su', 'Zihao Tan', 'Yanjun Zhang'],
+        },
+        { title: 'editor', name: ['Chen Li', 'Money Su'] },
+        { title: 'designer', name: ['Nagisa Chen', 'Chen Li', 'Willie Liu'] },
+      ],
       description: [
         '本期试刊号讨论的主题是城市生活中的文字，街道、店铺、招贴、广告等属于公共空间的文字，我们邀请了四位创作者在不同的空间场域中游移，探索城市公共空间内字体辐射出的多样表达，将文字从书写的工具，转换为被书写的主体；而「逐层」是我们的编辑思路——你会在本期 dash 中发现对文字的图层堆叠，对层层累积视觉印象的解剖，还有对时空、记忆、社会肌理的深度层析。除此之外，本期试刊号还有一本「破折号」别册——对于整本刊物来说，别册就是一个破折号，延续、连接、打断、转折、补充。',
         'This trial issue of dash spotlights words in cityscape --- characters, signs and types you see on streets, storefronts, building facades, promo posters, product packages and other overlooked urban environments. Our contributors wander in different typographic spaces, presenting four dashing articles and a carefully-curated photography booklet. "Layers" is our editorial echo in this issue, as you will see it recurrently in both the zine\'s design and contents.',
