@@ -7,9 +7,9 @@
   "homepage": "https://atelier-anchor.com",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
+    "build": "VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck"

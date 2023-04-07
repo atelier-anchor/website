@@ -4,6 +4,7 @@ const posts = usePosts()
 
 <template>
   <div class="flex flex-col gap-4 md:gap-8">
+    <Title>{{ $route.params.section }}</Title>
     <SectionItem v-for="post in posts" :post="post" />
   </div>
 </template>

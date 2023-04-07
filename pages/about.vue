@@ -34,6 +34,7 @@ const services = [
 
 <template>
   <div>
+    <Title>about</Title>
     <BaseContainer is="section" class="mb-4 sm:mb-8">
       <template #left>
         <h2 class="text-2xl md:sticky md:top-4 lg:top-8">mission</h2>

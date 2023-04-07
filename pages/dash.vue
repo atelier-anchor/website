@@ -8,28 +8,31 @@ const posts = usePosts('dash')
 </script>
 
 <template>
-  <BaseContainer is="section" class="mb-4 sm:mb-8">
-    <template #left>
-      <h2 class="text-2xl lg:sticky lg:top-8">about dash</h2>
-    </template>
-    <template #right>
-      <p v-for="p in dashAbout">{{ p }}</p>
-      <!-- <p v-for="p in dashAbout" v-html="parseMarkdown(p)"></p> -->
-    </template>
-  </BaseContainer>
-  <BaseContainer is="section" class="mb-4 sm:mb-8">
-    <template #left>
-      <h2 class="text-2xl lg:sticky lg:top-8">get dash</h2>
-    </template>
-    <template #right>
-      <h3>纸质版购买 / Printed version available in:</h3>
-      <DashPurchase class="sm:mb-2" />
-      <h3>电子版订阅 / Digital version subscription:</h3>
-      <DashSubscription />
-    </template>
-  </BaseContainer>
-  <section>
-    <h2 class="mb-4 text-2xl md:hidden">previous issues</h2>
-    <SectionItem v-for="post in posts" :post="post" />
-  </section>
+  <div>
+    <Title>dash</Title>
+    <BaseContainer is="section" class="mb-4 sm:mb-8">
+      <template #left>
+        <h2 class="text-2xl lg:sticky lg:top-8">about dash</h2>
+      </template>
+      <template #right>
+        <p v-for="p in dashAbout">{{ p }}</p>
+        <!-- <p v-for="p in dashAbout" v-html="parseMarkdown(p)"></p> -->
+      </template>
+    </BaseContainer>
+    <BaseContainer is="section" class="mb-4 sm:mb-8">
+      <template #left>
+        <h2 class="text-2xl lg:sticky lg:top-8">get dash</h2>
+      </template>
+      <template #right>
+        <h3>纸质版购买 / Printed version available in:</h3>
+        <DashPurchase class="sm:mb-2" />
+        <h3>电子版订阅 / Digital version subscription:</h3>
+        <DashSubscription />
+      </template>
+    </BaseContainer>
+    <section>
+      <h2 class="mb-4 text-2xl md:hidden">previous issues</h2>
+      <SectionItem v-for="post in posts" :post="post" />
+    </section>
+  </div>
 </template>
