@@ -10,33 +10,29 @@ const path = (id: string) => {
   return ''
 }
 
-let timer: number
 const posts = useCarouselPosts()
 const postIndex = ref(0)
-onMounted(() => {
-  timer = window.setInterval(() => {
-    postIndex.value = (postIndex.value + 1) % posts.length
-  }, 6000)
-})
-onUnmounted(() => {
-  clearInterval(timer)
-})
+useIntervalFn(() => {
+  postIndex.value = (postIndex.value + 1) % posts.length
+}, 6000)
 </script>
 
 <template>
-  <ClientOnly>
-    <Transition v-for="({ id, name, images }, i) in posts">
-      <div
-        v-show="postIndex === i"
-        class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
-      >
-        <BaseFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
-      </div>
-    </Transition>
-    <template #fallback>
-      <p>Loading images…</p>
-    </template>
-  </ClientOnly>
+  <div>
+    <ClientOnly>
+      <Transition v-for="({ id, name, images }, i) in posts">
+        <div
+          v-show="postIndex === i"
+          class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
+        >
+          <BaseFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
+        </div>
+      </Transition>
+      <template #fallback>
+        <p>Loading images…</p>
+      </template>
+    </ClientOnly>
+  </div>
 </template>
 
 <style scoped>

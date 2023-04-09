@@ -79,7 +79,7 @@ const data: Record<string, Post[]> = {
       name: 'This is Us',
       date: '2021-10-01',
       category: 'Visual identity, motion graphic',
-      carousel_exclude: true,
+      exclude: 'carousel',
       credits: [
         { title: 'client', name: 'Dangxia Channel' },
         { title: 'art_director', name: 'Willie Liu' },
@@ -254,7 +254,7 @@ const data: Record<string, Post[]> = {
       name: 'Dinkie Bitmap',
       date: '2020-09-01',
       category: 'Type design',
-      carousel_exclude: true,
+      exclude: 'carousel',
       credits: [
         { title: 'type_director', name: 'Willie Liu' },
         { title: 'designer', name: 'Willie Liu' },
@@ -279,7 +279,7 @@ const data: Record<string, Post[]> = {
       name: 'Sart Sans',
       date: '2019-05-01',
       category: 'Type design',
-      carousel_exclude: true,
+      exclude: 'carousel',
       credits: [
         { title: 'type_director', name: 'Willie Liu' },
         { title: 'designer', name: 'Willie Liu' },
@@ -301,7 +301,7 @@ const data: Record<string, Post[]> = {
       name: 'Smiley Sans',
       date: '2022-11-15',
       category: 'Type design',
-      carousel_exclude: true,
+      exclude: 'carousel',
       credits: [
         { title: 'art_director', name: 'Nagisa Chen' },
         {
@@ -326,7 +326,7 @@ const data: Record<string, Post[]> = {
       name: 'tbh Typeface',
       date: '2020-01-01',
       category: 'Custom typeface',
-      carousel_exclude: true,
+      exclude: 'carousel',
       credits: [
         { title: 'client', name: 'tbh' },
         { title: 'creative_director', name: 'Zhengzhong Pan @Studio Bibliography' },
@@ -389,7 +389,7 @@ export function usePosts(section?: string) {
     section = params.section as string
   }
   return data[section]
-    ?.filter(({ exclude }) => !exclude)
+    ?.filter(({ exclude }) => exclude !== true)
     .sort((a, b) => (a.date > b.date ? 1 : a.date < b.date ? -1 : 0))
     .reverse()
 }
@@ -411,17 +411,12 @@ export function useQuery(section: string, id?: string) {
 }
 
 export function useCarouselPosts() {
-  return shuffle(
-    flat(Object.values(data)).filter(
-      ({ exclude, carousel_exclude }) => !exclude && !carousel_exclude
-    )
-  )
+  const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
+  const shuffle = <T>(array: T[]) =>
+    array
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value)
+  const posts = flat(Object.values(data))
+  return shuffle(posts.filter(({ exclude }) => !exclude))
 }
-
-const flat = <T>(array: T[][]): T[] => array.reduce((acc, value) => acc.concat(value), [])
-
-const shuffle = <T>(array: T[]) =>
-  array
-    .map((value) => ({ value, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)

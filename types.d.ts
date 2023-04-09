@@ -29,8 +29,7 @@ declare global {
     name: string
     date: string
     category: string
-    exclude?: boolean
-    carousel_exclude?: boolean
+    exclude?: boolean | 'carousel'
     credits: Credit[]
     description?: string[]
     images: string[]
