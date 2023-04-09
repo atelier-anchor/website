@@ -1,3 +1,8 @@
+<script setup lang="ts">
+const notice =
+  '由于邮箱过滤机制可能因用户而异，建议不要使用 163、126、yeah 等邮箱。如果您没有收到邮件，请留意垃圾邮件 (spam) 文件夹或垃圾箱。如果仍然没有收到，可联络 [dash@<wbr>atelier-<wbr>anchor.<wbr>com](mailto:dash@atelier-anchor.com) 解决。'
+</script>
+
 <template>
   <div id="mc_embed_signup">
     <form
@@ -33,13 +38,9 @@
         />
       </div>
     </form>
-    <p class="mt-4 text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50">
-      由于邮箱过滤机制可能因用户而异，建议不要使用 163、126、yeah
-      等邮箱。如果您没有收到邮件，请留意垃圾邮件 (spam) 文件夹或垃圾箱。如果仍然没有收到，可联络
-      <NuxtLink to="mailto:dash@atelier-anchor.com">
-        dash@<wbr />atelier-<wbr />anchor.<wbr />com
-      </NuxtLink>
-      解决。
-    </p>
+    <p
+      class="mt-4 text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
+      v-html="parseMarkdown(notice)"
+    ></p>
   </div>
 </template>

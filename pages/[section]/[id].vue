@@ -20,8 +20,7 @@ definePageMeta({
             :class="post.description ? 'mb-4 sm:mb-8' : null"
           />
           <div class="flex flex-col gap-4">
-            <!-- <p v-for="p in post.description" v-html="parseMarkdown(p)"></p> -->
-            <p v-for="p in post.description">{{ p }}</p>
+            <p v-for="p in post.description" v-html="parseMarkdown(p)"></p>
           </div>
         </article>
       </template>
