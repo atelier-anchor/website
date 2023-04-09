@@ -403,8 +403,11 @@ export function usePost(section?: string, id?: string) {
   return data[section]?.find((post) => post.id === id)
 }
 
-export function useQueryPost(section: string, id: string) {
-  return data[section]?.some((post) => post.id === id)
+export function useQuery(section: string, id?: string) {
+  return {
+    isValidSection: section in data,
+    isValidPost: data[section]?.some((post) => post.id === id),
+  }
 }
 
 export function useCarouselPosts() {

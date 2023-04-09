@@ -2,7 +2,8 @@
 const { resolve } = useRouter()
 const path = (id: string) => {
   for (const section of ['works', 'typefaces', 'dash']) {
-    if (useQueryPost(section, id)) {
+    const { isValidPost } = useQuery(section, id)
+    if (isValidPost) {
       return `${resolve(section).path}/${id}`
     }
   }

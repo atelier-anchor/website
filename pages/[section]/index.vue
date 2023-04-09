@@ -1,5 +1,14 @@
 <script setup lang="ts">
 const posts = usePosts()
+
+definePageMeta({
+  middleware: ({ params }) => {
+    const { isValidSection } = useQuery(params.section as string)
+    if (!isValidSection) {
+      return navigateTo('/404')
+    }
+  },
+})
 </script>
 
 <template>

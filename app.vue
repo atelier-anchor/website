@@ -11,6 +11,9 @@ useHead({
     { name: 'copyright', content: `© ${date.getFullYear()} ${title}` },
     { name: 'build-time', content: date.toISOString() },
   ],
+  htmlAttrs: {
+    lang: 'en',
+  },
 })
 useServerSeoMeta({
   description,

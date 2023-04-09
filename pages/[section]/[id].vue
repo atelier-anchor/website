@@ -2,8 +2,12 @@
 const post = usePost()
 
 definePageMeta({
-  validate: async (route) =>
-    useQueryPost(route.params.section as string, route.params.id as string),
+  middleware: ({ params }) => {
+    const { isValidPost } = useQuery(params.section as string, params.id as string)
+    if (!isValidPost) {
+      return navigateTo('/404')
+    }
+  },
 })
 </script>
 
@@ -41,6 +45,5 @@ definePageMeta({
         />
       </template>
     </BaseContainer>
-    <p v-else class="text-red-500">[404]</p>
   </div>
 </template>

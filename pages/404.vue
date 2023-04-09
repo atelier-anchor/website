@@ -1,9 +1,16 @@
 <script setup lang="ts">
-const back = () => window.history.back()
+const back = () => {
+  window.history.back()
+}
+
+definePageMeta({
+  layout: 'special',
+})
 </script>
 
 <template>
-  <SpecialPageContainer>
+  <div>
+    <Title>404</Title>
     <h1 class="mb-4 text-3xl">404</h1>
     <p class="mb-8 text-xl">
       您到达了一片不锚之地。
@@ -11,7 +18,7 @@ const back = () => window.history.back()
       Oops, you are now in an anchorless zone.
     </p>
     <p class="text-xl">
-      <a href="javascript:;" @click="back">&leftarrow; go back</a>
+      <NuxtLink @click="back">&leftarrow; go back</NuxtLink>
     </p>
-  </SpecialPageContainer>
+  </div>
 </template>
