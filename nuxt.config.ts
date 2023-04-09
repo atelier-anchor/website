@@ -3,10 +3,12 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
-  typescript: {
-    typeCheck: 'build',
-  },
   modules: ['@nuxtjs/tailwindcss'],
+  nitro: {
+    prerender: {
+      routes: ['/subscription/thank-you', '/subscription/unsubscribed-successfully'],
+    },
+  },
   tailwindcss: {
     cssPath: '@/assets/tailwind.css',
   },

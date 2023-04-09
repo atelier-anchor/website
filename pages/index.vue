@@ -19,7 +19,6 @@ onMounted(() => {
   }, 6000)
 })
 onUnmounted(() => {
-  console.log(timer)
   clearInterval(timer)
 })
 </script>

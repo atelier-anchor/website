@@ -9,7 +9,7 @@
   "scripts": {
     "build": "VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt build",
     "dev": "nuxt dev",
-    "generate": "VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt generate",
+    "generate": "nuxt typecheck && VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck"
