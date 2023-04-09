@@ -30,13 +30,11 @@
   }
 
   a:hover,
-  input[type='submit']:hover,
-  button.QrCodeToggler:hover {
+  button:hover,
+  input[type='submit']:hover {
     @apply line-through decoration-primary decoration-[0.1em];
   }
 
-  a,
-  input[type='button'],
   input[type='submit'] {
     @apply cursor-pointer;
   }

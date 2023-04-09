@@ -49,7 +49,9 @@ onMounted(() => {
         <NuxtLink :to="url" :title="title" target="_blank">{{ name }}</NuxtLink>
       </li>
       <li>
-        <NuxtLink id="QrCodeToggler" title="WeChat" @click="toggleQrCode">wx</NuxtLink>
+        <button id="QrCodeToggler" title="WeChat" :aria-expanded="showQrCode" @click="toggleQrCode">
+          wx
+        </button>
       </li>
     </ul>
   </footer>

@@ -18,7 +18,7 @@ definePageMeta({
       Oops, you are now in an anchorless zone.
     </p>
     <p class="text-xl">
-      <NuxtLink @click="back">&leftarrow; go back</NuxtLink>
+      <button aria-label="Go back" @click="back">&leftarrow; go back</button>
     </p>
   </div>
 </template>
