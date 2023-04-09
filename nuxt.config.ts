@@ -7,4 +7,7 @@ export default defineNuxtConfig({
     typeCheck: 'build',
   },
   modules: ['@nuxtjs/tailwindcss'],
+  tailwindcss: {
+    cssPath: '@/assets/tailwind.css',
+  },
 })
