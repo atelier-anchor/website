@@ -26,11 +26,6 @@ const members = [
     titles: ['Type designer'],
   },
   {
-    name: 'Chen Li',
-    avatar: 'chen-li.webp',
-    titles: ['Graphic designer', 'Editor'],
-  },
-  {
     name: 'Xiangdong Zeng',
     avatar: 'xiangdong-zeng.webp',
     titles: ['Engineer'],
