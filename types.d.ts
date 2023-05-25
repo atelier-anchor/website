@@ -1,18 +1,29 @@
 export {}
 
 declare global {
+  type Category =
+    | 'Book design'
+    | 'Custom typeface'
+    | 'Graphic design'
+    | 'Motion graphic'
+    | 'Product design'
+    | 'Self-publishing'
+    | 'Translation'
+    | 'Type design'
+    | 'Visual identity'
+
   type CreditTitle =
-    | 'art_director'
-    | 'author'
-    | 'chief_editor'
-    | 'client'
-    | 'creative_director'
-    | 'designer'
-    | 'editor'
-    | 'lead_agency'
-    | 'publisher'
-    | 'translator'
-    | 'type_director'
+    | 'Art director'
+    | 'Author'
+    | 'Chief editor'
+    | 'Client'
+    | 'Creative director'
+    | 'Designer'
+    | 'Editor'
+    | 'Lead agency'
+    | 'Publisher'
+    | 'Translator'
+    | 'Type director'
 
   interface Credit {
     title: CreditTitle
@@ -28,7 +39,7 @@ declare global {
     id: string
     name: string
     date: string
-    category: string
+    category: Category | Category[]
     exclude?: boolean | 'carousel'
     credits: Credit[]
     description?: string[]

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   name: string
-  category: string
+  category: Category | Category[]
   credits: Credit[]
   to?: string
 }>()
@@ -14,7 +14,7 @@ defineProps<{
         <NuxtLink :to="to">{{ name }}</NuxtLink>
       </h2>
       <h1 v-else class="text-2xl">{{ name }}</h1>
-      <div>{{ category }}</div>
+      <div>{{ formatCategory(category) }}</div>
     </div>
     <dl>
       <PostAuthorItem v-for="credit in credits" :credit="credit" />
