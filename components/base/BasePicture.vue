@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const dark = computed(() => props.image.includes('{light,dark}.'))
-const basename = computed(() => props.image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))
-const ext = computed(() => props.image.split('.').at(-1))
+const dark = computed(() => image.includes('{light,dark}.'))
+const basename = computed(() => image.replace(/(?:\.\{light,dark\})?\.[^.]+$/g, ''))
+const ext = computed(() => image.split('.').at(-1))
 
-const props = defineProps<{
+const { image } = defineProps<{
   image: string
   dir: string
   width?: number | string

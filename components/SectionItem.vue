@@ -1,9 +1,9 @@
 <script setup lang="ts">
 // See https://github.com/nuxt/nuxt/discussions/18391
 const route = useRoute()
-const to = computed(() => `${route.path.replace(/\/+$/g, '')}/${props.post.id}`)
+const to = computed(() => `${route.path.replace(/\/+$/g, '')}/${post.id}`)
 
-const props = defineProps<{
+const { post } = defineProps<{
   post: Post
 }>()
 </script>
