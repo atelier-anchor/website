@@ -1,4 +1,9 @@
 [[redirects]]
+from = "/dinkie-bitmap/*"
+to = "https://dinkie-bitmap-website.vercel.app/:splat"
+status = 200
+
+[[redirects]]
 from = "/luohei-variable/*"
 to = "https://luohei-variable.netlify.app/:splat"
 status = 200
