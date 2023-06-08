@@ -8,5 +8,6 @@
       "source": "/luohei-variable/:path*",
       "destination": "https://luohei-variable.vercel.app/:path*"
     }
-  ]
+  ],
+  "trailingSlash": false
 }
