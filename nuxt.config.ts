@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   experimental: {
     payloadExtraction: false,
   },
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/robots', '@nuxtjs/tailwindcss'],
   nitro: {
     prerender: {
       routes: ['/subscription/thank-you', '/subscription/unsubscribed-successfully'],
