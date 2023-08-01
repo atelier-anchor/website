@@ -18,9 +18,9 @@
   "devDependencies": {
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
-    "nuxt": "^3.6.2",
+    "nuxt": "^3.6.5",
     "prettier": "^3.0.0",
-    "prettier-plugin-tailwindcss": "^0.3.0",
-    "vue-tsc": "^1.8.4"
+    "prettier-plugin-tailwindcss": "^0.4.1",
+    "vue-tsc": "^1.8.8"
   }
 }

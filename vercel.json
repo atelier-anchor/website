@@ -1,4 +1,7 @@
 {
+  "github": {
+    "silent": true
+  },
   "rewrites": [
     {
       "source": "/dinkie-bitmap/:path*",
