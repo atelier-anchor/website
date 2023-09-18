@@ -14,6 +14,13 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
+  script: [
+    {
+      src: 'https://analytics.umami.is/script.js',
+      async: true,
+      'data-website-id': '3c2d02e1-8497-4686-be7a-ccafd1fba1f4',
+    },
+  ],
 })
 useServerSeoMeta({
   description,
