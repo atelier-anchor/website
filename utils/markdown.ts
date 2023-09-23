@@ -8,4 +8,7 @@ export const parseMarkdown = (s: string) =>
     .replace(/(——|……)/g, '<span class="cjk-punct">$1</span>')
     // Links
     .replace(/\[(.+?@.+?)\]\((.+?@.+?)\)/g, '<a href="$2" class="hyphens-none">$1</a>')
-    .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>')
+    .replace(
+      /\[(.+?)\]\((.+?)\)/g,
+      '<a href="$2" target="_blank" rel="noopener noreferrer" data-umami-event="Link" data-umami-event-content="Link: $2">$1</a>',
+    )

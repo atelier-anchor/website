@@ -46,10 +46,25 @@ onMounted(() => {
     <SiteFooterQrCode id="QrCode" :show="showQrCode" />
     <ul class="flex gap-2">
       <li v-for="{ name, title, url } in socialMediaItems">
-        <NuxtLink :to="url" :title="title" target="_blank">{{ name }}</NuxtLink>
+        <NuxtLink
+          :to="url"
+          :title="title"
+          target="_blank"
+          data-umami-event="Social Media"
+          :data-umami-event-content="`Social Media: ${title}`"
+        >
+          {{ name }}
+        </NuxtLink>
       </li>
       <li>
-        <button id="QrCodeToggler" title="WeChat" :aria-expanded="showQrCode" @click="toggleQrCode">
+        <button
+          id="QrCodeToggler"
+          title="WeChat"
+          :aria-expanded="showQrCode"
+          @click="toggleQrCode"
+          data-umami-event="Social Media"
+          data-umami-event-content="Social Media: WeChat"
+        >
           wx
         </button>
       </li>

@@ -16,9 +16,9 @@ useHead({
   },
   script: [
     {
-      src: 'https://analytics.umami.is/script.js',
+      src: 'https://umami.atelier-anchor.com/script.js',
       async: true,
-      'data-website-id': '3c2d02e1-8497-4686-be7a-ccafd1fba1f4',
+      'data-website-id': '523e185f-0f92-44b7-8a78-25c3a6c4e4e6',
     },
   ],
 })
