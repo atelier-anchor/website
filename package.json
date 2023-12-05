@@ -7,14 +7,13 @@
   "homepage": "https://atelier-anchor.com",
   "private": true,
   "scripts": {
-    "build": "VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt build",
+    "build": "nuxt typecheck && nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt typecheck && VITE_BUILD_DATE=`date \"+%Y-%m-%d %H:%M:%S\"` nuxt generate",
+    "generate": "nuxt typecheck && nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "typecheck": "nuxt typecheck"
   },
-  "packageManager": "pnpm@8.6.6",
   "devDependencies": {
     "@nuxtjs/robots": "^3.0.0",
     "@nuxtjs/tailwindcss": "^6.10.1",

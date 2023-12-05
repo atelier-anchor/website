@@ -14,4 +14,9 @@ export default defineNuxtConfig({
   tailwindcss: {
     cssPath: '@/assets/tailwind.css',
   },
+  vite: {
+    define: {
+      'import.meta.env.VITE_BUILD_DATE': JSON.stringify(new Date()),
+    },
+  },
 })
