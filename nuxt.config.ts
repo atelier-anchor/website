@@ -1,9 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   experimental: {
-    inlineSSRStyles: false,
     payloadExtraction: false,
     // typedPages: true,
+  },
+  features: {
+    inlineStyles: false,
   },
   modules: ['@nuxtjs/robots', '@nuxtjs/tailwindcss'],
   nitro: {
