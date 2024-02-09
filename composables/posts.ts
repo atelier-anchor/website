@@ -312,7 +312,7 @@ const data: Record<string, Post[]> = {
       description: [
         '得意黑是一款在人文观感和几何特征中寻找视觉平衡的现代窄斜体。',
         'A condensed and oblique Chinese typeface seeking a visual balance between the humanist and the geometric.',
-        '➡ [下载 / Download](https://oooooohmygosh.oss-cn-beijing.aliyuncs.com/smiley-sans-v2.0.1.zip)',
+        '➡ [下载 / Download](/downloads/smiley-sans-v2.0.1.zip)',
         '➡ [GitHub](https://github.com/atelier-anchor/smiley-sans)',
       ],
       images: [
