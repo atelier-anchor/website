@@ -10,7 +10,7 @@ defineProps<{
   <Transition>
     <nav
       v-show="show"
-      class="absolute max-h-48 w-full overflow-hidden bg-white transition-[max-height] duration-400 dark:bg-black sm:relative sm:!block"
+      class="absolute max-h-48 w-full overflow-hidden bg-white transition-[max-height] duration-400 sm:relative sm:!block dark:bg-black"
     >
       <ul class="my-2 sm:mb-0 sm:mt-4">
         <li
@@ -28,6 +28,6 @@ defineProps<{
 <style scoped>
 .v-enter-from,
 .v-leave-to {
-  @apply max-h-0;
+  @apply max-h-0 sm:max-h-48;
 }
 </style>

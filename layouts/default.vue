@@ -12,7 +12,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-[320px] max-w-[1800px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
+    class="relative mx-auto flex min-h-[max(100vh,480px)] min-w-80 max-w-[1800px] flex-col px-4 sm:flex-row sm:gap-16 lg:px-8"
   >
     <SiteHeader
       class="sm:mb-[--footer-height] [@media(min-height:480px)]:mb-0"
