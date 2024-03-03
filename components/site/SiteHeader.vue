@@ -21,7 +21,7 @@ watch(() => route.fullPath, closeNav)
 </script>
 
 <template>
-  <header class="sticky top-0 z-20 h-fit bg-white py-4 sm:z-10 lg:py-8 dark:bg-black">
+  <header class="sticky top-0 z-20 h-fit bg-black py-4 sm:z-10 lg:py-8">
     <div class="flex items-center justify-between">
       <SiteLogo />
       <SiteNavToggler :active="showNav" @click="toggleNav" />

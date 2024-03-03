@@ -12,7 +12,7 @@ defineProps<{
         alt="atelierAnchor"
         width="128"
         height="128"
-        class="h-32 w-32 -translate-x-2 translate-y-2 dark:translate-x-0 dark:translate-y-0"
+        class="h-32 w-32"
       />
     </div>
   </Transition>

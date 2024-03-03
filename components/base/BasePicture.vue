@@ -13,15 +13,11 @@ const { image } = defineProps<{
 
 <template>
   <picture>
-    <template v-if="dark">
-      <source :srcset="`${dir}/${basename}.dark.${ext}`" media="(prefers-color-scheme: dark)" />
-      <img
-        :src="`${dir}/${basename}.light.${ext}`"
-        :alt="basename"
-        :width="width"
-        :height="height"
-      />
-    </template>
-    <img v-else :src="`${dir}/${image}`" :alt="basename" :width="width" :height="height" />
+    <img
+      :src="dark ? `${dir}/${basename}.dark.${ext}` : `${dir}/${image}`"
+      :alt="basename"
+      :width="width"
+      :height="height"
+    />
   </picture>
 </template>

@@ -38,9 +38,6 @@ const notice =
         />
       </div>
     </form>
-    <p
-      class="mt-4 text-xs text-neutral-900/50 before:content-['*_'] dark:text-neutral-100/50"
-      v-html="parseMarkdown(notice)"
-    ></p>
+    <p class="mt-4 text-xs text-white/50 before:content-['*_']" v-html="parseMarkdown(notice)"></p>
   </div>
 </template>

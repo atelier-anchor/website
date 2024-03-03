@@ -10,7 +10,7 @@ defineProps<{
   <Transition>
     <nav
       v-show="show"
-      class="absolute max-h-48 w-full overflow-hidden bg-white transition-[max-height] duration-400 sm:relative sm:!block dark:bg-black"
+      class="absolute max-h-48 w-full overflow-hidden bg-black transition-[max-height] duration-400 sm:relative sm:!block"
     >
       <ul class="my-2 sm:mb-0 sm:mt-4">
         <li
