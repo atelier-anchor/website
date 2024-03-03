@@ -42,7 +42,7 @@ const members = [
   <div class="grid gap-4 lg:grid-cols-2">
     <div v-for="{ name, avatar, titles } in members" class="flex items-center gap-4 sm:gap-8">
       <div class="clip-path-circle w-20">
-        <BasePicture :image="avatar" dir="/about" width="80" height="80" />
+        <BaseImage :image="avatar" dir="/about" width="80" height="80" />
       </div>
       <div>
         <h3 class="mb-2">{{ name }}</h3>

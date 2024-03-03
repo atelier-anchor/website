@@ -267,11 +267,11 @@ const data: Record<string, Post[]> = {
         '➡ [试用版下载 / Trial version download](/downloads/DinkieBitmap_Demo_v1_100.zip)',
       ],
       images: [
-        'dinkie-bitmap-1.{light,dark}.svg',
-        'dinkie-bitmap-2.{light,dark}.svg',
-        'dinkie-bitmap-3.{light,dark}.svg',
-        'dinkie-bitmap-4.{light,dark}.svg',
-        'dinkie-bitmap-5.{light,dark}.svg',
+        'dinkie-bitmap-1.svg',
+        'dinkie-bitmap-2.svg',
+        'dinkie-bitmap-3.svg',
+        'dinkie-bitmap-4.svg',
+        'dinkie-bitmap-5.svg',
       ],
     },
     {
@@ -289,11 +289,11 @@ const data: Record<string, Post[]> = {
         'A display typeface inspired by the hand-paint slogans during the 1960s "Big Battle for Oil" in Daqing, China. The name comes from the Mongolian word "Sart", which means "Land of moon".',
       ],
       images: [
-        'sart-sans-1.{light,dark}.svg',
-        'sart-sans-2.{light,dark}.svg',
-        'sart-sans-3.{light,dark}.svg',
-        'sart-sans-4.{light,dark}.svg',
-        'sart-sans-5.{light,dark}.svg',
+        'sart-sans-1.svg',
+        'sart-sans-2.svg',
+        'sart-sans-3.svg',
+        'sart-sans-4.svg',
+        'sart-sans-5.svg',
       ],
     },
     {
@@ -315,12 +315,7 @@ const data: Record<string, Post[]> = {
         '➡ [下载 / Download](/downloads/smiley-sans-v2.0.1.zip)',
         '➡ [GitHub](https://github.com/atelier-anchor/smiley-sans)',
       ],
-      images: [
-        'smiley-sans-1.{light,dark}.svg',
-        'smiley-sans-2.{light,dark}.svg',
-        'smiley-sans-3.{light,dark}.svg',
-        'smiley-sans-4.{light,dark}.svg',
-      ],
+      images: ['smiley-sans-1.svg', 'smiley-sans-2.svg', 'smiley-sans-3.svg', 'smiley-sans-4.svg'],
     },
     {
       id: 'tbh',
@@ -338,14 +333,7 @@ const data: Record<string, Post[]> = {
         'tbh 是一家来自上海的年轻家居品牌，Studio Bibliography 以「童趣」为核心概念创作了这款字体，并委托我们将其开发成了一款具有两轴可变的品牌可变字体，同时将该风格迁移到了中文标识的设计中。',
         'tbh is a young home furnishing brand based in Shanghai. Studio Bibliography create core concept as "childhood". They commissioned us to produce a new brand font, in a variable fonts format with two axes. This style migrated to the Chinese logotype.',
       ],
-      images: [
-        'tbh-1.{light,dark}.svg',
-        'tbh-2.{light,dark}.svg',
-        'tbh-3.{light,dark}.svg',
-        'tbh-4.{light,dark}.svg',
-        'tbh-5.webp',
-        'tbh-6.webp',
-      ],
+      images: ['tbh-1.svg', 'tbh-2.svg', 'tbh-3.svg', 'tbh-4.svg', 'tbh-5.webp', 'tbh-6.webp'],
     },
   ],
   dash: [

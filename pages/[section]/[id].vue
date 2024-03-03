@@ -29,7 +29,7 @@ definePageMeta({
         </article>
       </template>
       <template #right>
-        <BasePicture
+        <BaseImage
           v-for="image in post.images"
           :image="image"
           :dir="$route.path"

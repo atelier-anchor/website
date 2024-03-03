@@ -9,7 +9,7 @@ defineProps<{
 
 <template>
   <NuxtLink :to="to" class="group overflow-hidden sm:h-full">
-    <BasePicture :image="image" :dir="to" :width="width" :height="height" />
+    <BaseImage :image="image" :dir="to" :width="width" :height="height" />
   </NuxtLink>
 </template>
 
