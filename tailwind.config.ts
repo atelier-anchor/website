@@ -15,6 +15,7 @@ export default <Partial<Config>>{
     extend: {
       colors: {
         primary: '#fd0',
+        fg: '#fbfbfb',
       },
       transitionDuration: {
         400: '400ms',

@@ -473,6 +473,58 @@
       ]
     },
     {
+      "id": "luohei-variable",
+      "name": "LuoHei Variable",
+      "date": "2022-03-01",
+      "category": "Type design",
+      "exclude": "carousel",
+      "credits": [
+        {
+          "title": "Type director",
+          "name": "Willie Liu"
+        },
+        {
+          "title": "Designer",
+          "name": "Willie Liu"
+        }
+      ],
+      "description": [],
+      "images": [
+        "luohei-variable-1.svg",
+        "luohei-variable-2.svg",
+        "luohei-variable-3.svg",
+        "luohei-variable-4.svg",
+        "luohei-variable-5.svg",
+        "luohei-variable-6.svg",
+        "luohei-variable-7.svg"
+      ]
+    },
+    {
+      "id": "sart-gothic",
+      "name": "Sart Gothic",
+      "date": "2021-07-01",
+      "category": "Type design",
+      "exclude": "carousel",
+      "credits": [
+        {
+          "title": "Type director",
+          "name": "Willie Liu"
+        },
+        {
+          "title": "Designer",
+          "name": "Willie Liu"
+        }
+      ],
+      "description": [],
+      "images": [
+        "sart-gothic-1.svg",
+        "sart-gothic-2.svg",
+        "sart-gothic-3.svg",
+        "sart-gothic-4.svg",
+        "sart-gothic-5.svg"
+      ]
+    },
+    {
       "id": "sart-sans",
       "name": "Sart Sans",
       "date": "2019-05-01",

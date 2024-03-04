@@ -17,7 +17,7 @@ defineProps<{
       :id="id"
       :name="name"
       :placeholder="placeholder"
-      class="peer w-full border-b-2 border-primary bg-transparent placeholder-white/50"
+      class="peer w-full border-b-2 border-primary bg-transparent placeholder-fg/50"
     />
     <p
       v-if="feedback"

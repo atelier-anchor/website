@@ -21,7 +21,7 @@
   }
 
   body {
-    @apply min-h-screen hyphens-auto bg-black font-bold leading-tight text-white;
+    @apply min-h-screen hyphens-auto bg-black font-bold leading-tight text-fg;
     cursor:
       url('cursor.png') 12 12,
       auto;
