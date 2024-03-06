@@ -20,12 +20,18 @@ useIntervalFn(() => {
 <template>
   <div>
     <ClientOnly>
-      <Transition v-for="({ id, name, images }, i) in posts">
+      <Transition v-for="({ id, name, cover, images }, i) in posts">
         <div
           v-show="postIndex === i"
           class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
         >
-          <BaseFigure :image="images[0]" :to="path(id)" :title="name" width="1920" height="1440" />
+          <BaseFigure
+            :image="cover ?? images[0]"
+            :to="path(id)"
+            :title="name"
+            width="1920"
+            height="1440"
+          />
         </div>
       </Transition>
       <template #fallback>
