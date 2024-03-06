@@ -20,7 +20,13 @@ const { post } = defineProps<{
       />
     </template>
     <template #right>
-      <BaseFigure :image="post.images[0]" :to="to" :title="post.name" width="1920" height="1440" />
+      <BaseFigure
+        :image="post.cover ?? post.images[0]"
+        :to="to"
+        :title="post.name"
+        width="1920"
+        height="1440"
+      />
     </template>
   </BaseContainer>
 </template>

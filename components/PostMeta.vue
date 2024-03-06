@@ -8,15 +8,15 @@ defineProps<{
 </script>
 
 <template>
-  <div>
-    <div class="mb-4">
-      <h2 v-if="to" class="text-2xl">
+  <div class="flex flex-col gap-4">
+    <hgroup class="flex flex-col gap-1">
+      <h2 v-if="to" class="text-2xl/none">
         <NuxtLink :to="to">{{ name }}</NuxtLink>
       </h2>
-      <h1 v-else class="text-2xl">{{ name }}</h1>
-      <div>{{ formatCategory(category) }}</div>
-    </div>
-    <dl>
+      <h1 v-else class="text-2xl/none">{{ name }}</h1>
+      <p>{{ formatCategory(category) }}</p>
+    </hgroup>
+    <dl v-if="credits">
       <PostAuthorItem v-for="credit in credits" :credit="credit" />
     </dl>
   </div>

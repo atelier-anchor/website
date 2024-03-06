@@ -9,7 +9,7 @@ defineProps<{
     <div class="md:w-1/3 md:min-w-64 md:shrink-0">
       <slot name="left"></slot>
     </div>
-    <div class="flex grow flex-col gap-4">
+    <div class="grow">
       <slot name="right"></slot>
     </div>
   </component>

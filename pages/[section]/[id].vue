@@ -16,14 +16,9 @@ definePageMeta({
     <Title>{{ post?.name }}</Title>
     <BaseContainer v-if="post" is="article" class="flex-col-reverse sm:gap-8">
       <template #left>
-        <article class="h-fit sm:top-4 md:sticky lg:top-8">
-          <PostMeta
-            :name="post.name"
-            :category="post.category"
-            :credits="post.credits"
-            :class="post.description ? 'mb-4 sm:mb-8' : null"
-          />
-          <div class="flex flex-col gap-4">
+        <article class="flex h-fit flex-col gap-4 sm:top-4 sm:gap-8 md:sticky lg:top-8">
+          <PostMeta :name="post.name" :category="post.category" :credits="post.credits" />
+          <div v-if="post.description" class="flex flex-col gap-4">
             <p v-for="p in post.description" v-html="parseMarkdown(p)"></p>
           </div>
         </article>

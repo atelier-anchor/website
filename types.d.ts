@@ -43,6 +43,7 @@ declare global {
     exclude?: boolean | 'carousel'
     credits: Credit[]
     description?: string[]
+    cover?: string
     images: string[]
     videos?: Video[]
   }
