@@ -2,6 +2,7 @@ export const parseMarkdown = (s: string) =>
   s
     // Latin punctuations
     .replace(/---/g, '—')
+    .replace(/--/g, '–')
     .replace(/"(.+?)"/g, '“$1”')
     .replace(/'/g, '’')
     // CJK punctuations

@@ -349,14 +349,26 @@
     },
     {
       "id": "jinhua-crowdfunding",
-      "name": "Jinhua Mincho Crowdfunding",
+      "name": "Jinhua Mincho Crowdfunding Rewards",
       "date": "2022-11-01",
       "category": "Product design",
       "credits": [
         {
           "title": "Client",
           "name": "Mallikātype"
+        },
+        {
+          "title": "Art director",
+          "name": "Janine Sui"
+        },
+        {
+          "title": "Designer",
+          "name": "Janine Sui"
         }
+      ],
+      "description": [
+        "我们策划了锦华明朝体的众筹项目，并为的实物回报物料特别设计制作了一款毛毡礼盒和礼盒内的各种回报物件，包括签字笔、明信片、字体样张、海报等。在大家取下众筹回报的各类物件后，可以将毛毡礼盒继续作为收纳挂袋使用，既具有收藏纪念意义，又减少了包装耗材的浪费。挂袋适合收纳各类文具和小物件，右上方为纸巾收纳区，解开按钮并根据提示重新扣上即可使用。",
+        "We planned and executed the Jinhua Mincho Crowdfunding event, the first font crowdfunding try-out in China and for its physical rewards we designed a felt reward \"box\" with various reward returns, including pen, postcards, font specimen booklet, poster, etc. After everything is taken from the \"box\" or wrap actually, the flatwrap can continue to be used as a hanging piece for storage, reducing packaging waste. It is suitable for storing all kinds of stationery and small items. The upper right side is a tissue box area."
       ],
       "cover": "jinhua-crowdfunding-2.webp",
       "images": [
@@ -507,14 +519,20 @@
       "category": "Visual identity",
       "credits": [
         {
+          "title": "Client",
+          "name": "tigercoming"
+        },
+        {
           "title": "Art director",
-          "name": "Nagisa Chen"
+          "name": "Janine Sui"
         },
         {
           "title": "Designer",
           "name": [
+            "Janine Sui",
+            "Nagisa Chen",
             "Willie Liu",
-            "Nagisa Chen"
+            "Heda Shi"
           ]
         }
       ],
@@ -576,13 +594,34 @@
     },
     {
       "id": "wdcc-2022",
-      "name": "International Design 100 Summit Forum",
+      "name": "International Design 100 Summit Forum 2022",
       "date": "2022-09-01",
       "category": [
         "Graphic design",
         "Motion graphic"
       ],
-      "credits": [],
+      "credits": [
+        {
+          "title": "Client",
+          "name": "World Design Cities Conference"
+        },
+        {
+          "title": "Art director",
+          "name": "Du Qin @Tongi University"
+        },
+        {
+          "title": "Designer",
+          "name": [
+            "Nagisa Chen",
+            "Leove Li"
+          ]
+        }
+      ],
+      "description": [
+        "国际设计百人尖峰论坛是世界设计之都大会标志性品牌活动之一，由上海市经济和信息化委员会、同济大学共同主办。上海国际设计百人智库是尖峰论坛的发起方，也是世界设计之都大会的重要成果之一。",
+        "我们与 WDCC 品牌视觉团队合作，在 WDCC 2022 的品牌视觉框架下以数字「100」的造型作为核心视觉点，让组合叠加的颜色穿梭于数字内部，数字外侧与外部空间发生互动而扩张、延展。由此构成形式简约且又变化精巧的视觉效果，并将这种自数字设计而生的效果推广至静态的平面物料中运用。",
+        "The International Design 100 Summit Forum is one of the iconic events of the World Design Cities Conference, co-sponsored by the Shanghai Municipal Commission of Economy and Information Technology and Tongji University. We collaborated with WDCC's visual design team to build the shape of \"100\" as its core visual. The superimposed colors shuffle through the interior of the number while the rim of the shape expands and extends. It creates a visual effect that is simple in form but exquisitely variegated in style, and this digital effect is then transferred to physical graphics as well."
+      ],
       "cover": "wdcc-2022-3.webp",
       "images": [
         "wdcc-2022-1.webp",
@@ -641,6 +680,11 @@
           "name": "Willie Liu"
         }
       ],
+      "description": [
+        "「络黑」是一套面向动态图形的中文可变字体，由两个变量作用于笔画粗细，产生不同的对比样式。您可以访问，感受的奇妙视觉效果。在字体的展示网页中实践了几种交互形式，以此探索未来可变字体能够带来的体验革新。",
+        "LuoHei Variable is a variable font exploring Hanzi motion graphics. The stroke width is controlled by two axes, leading to a diverse range of contrasts and styles. The technological innovation has great potential for Hanzi motion graphics. Several interactive forms were implemented in this mini-site for viewers to experience what that variable fonts can bring in the future.",
+        "➡ [探索展示网页 / Visit mini-site](https://atelier-anchor.com/luohei-variable)"
+      ],
       "images": [
         "luohei-variable-1.svg",
         "luohei-variable-2.svg",
@@ -666,6 +710,10 @@
           "title": "Designer",
           "name": "Willie Liu"
         }
+      ],
+      "description": [
+        "会战黑是对 1950--1980 年代新中国的手绘标语风格的实验性尝试，彼时新字形规范尚未彻底推行，繁、简、二简、异体字形同时存在，富有趣味。粗体部分的设计灵感来源于一幅 1971 年的美术字作品，细体则是原创设计，作为数十年后的一种回应。字体中使用 Opentype 特性来实现不同的字形。",
+        "Inspired by a 1971 piece of hand lettering, the style of the font Sart Gothic is an experimental throwback to Hanzi lettering of the 1950s--1980s PRC, where traditional and simplified Chinese characters (1st and 2nd round) randomly and interestingly coexisted. The light master is an original design, a \"timely\" answer of the designer in 2020s. The font looks heavy but not overweight, bold but not intimidating, fashionable but not cliché; it can be well used in display environments, especially in events, posters, showrooms, etc. Opentype alternative glyphs are deployed to accommodate different letterforms within a single variable font."
       ],
       "images": [
         "sart-gothic-1.svg",
