@@ -9,15 +9,9 @@ const { post } = defineProps<{
 </script>
 
 <template>
-  <BaseContainer is="article" class="items-center gap-0">
+  <BaseContainer is="article" class="items-center first:*:max-md:hidden">
     <template #left>
-      <PostMeta
-        :name="post.name"
-        :category="post.category"
-        :credits="post.credits"
-        :to="to"
-        class="max-md:hidden"
-      />
+      <PostMeta :name="post.name" :category="post.category" :credits="post.credits" :to="to" />
     </template>
     <template #right>
       <BaseFigure
