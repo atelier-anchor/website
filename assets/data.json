@@ -100,6 +100,7 @@
       "images": [
         "arcade-project-1.webp",
         "arcade-project-2.webp",
+        "arcade-project-3.webp",
         "arcade-project-4.webp",
         "arcade-project-5.webp",
         "arcade-project-6.webp",
@@ -546,11 +547,13 @@
       ],
       "images": [
         "tigercoming-1.webp",
+        "tigercoming-2.webp",
         "tigercoming-3.webp",
         "tigercoming-4.webp",
         "tigercoming-5.webp",
         "tigercoming-6.webp",
         "tigercoming-7.webp",
+        "tigercoming-8.webp",
         "tigercoming-9.webp",
         "tigercoming-10.webp",
         "tigercoming-11.webp",
@@ -571,6 +574,7 @@
         "Graphic design",
         "Motion graphic"
       ],
+      "exclude": true,
       "credits": [
         {
           "title": "Client",
@@ -720,7 +724,8 @@
         "sart-gothic-2.svg",
         "sart-gothic-3.svg",
         "sart-gothic-4.svg",
-        "sart-gothic-5.svg"
+        "sart-gothic-5.svg",
+        "sart-gothic-6.webp"
       ]
     },
     {
