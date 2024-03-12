@@ -8,7 +8,12 @@ defineProps<{
 </script>
 
 <template>
-  <video controls :poster="`${dir}/${video.poster}`" :width="width" :height="height">
+  <video
+    controls
+    :poster="video.poster ? `${dir}/${video.poster}` : undefined"
+    :width="width"
+    :height="height"
+  >
     <source :src="`${dir}/${video.src}`" type="video/webm" />
   </video>
 </template>

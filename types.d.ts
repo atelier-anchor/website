@@ -32,7 +32,7 @@ declare global {
 
   interface Video {
     src: string
-    poster: string
+    poster?: string
   }
 
   interface Post {

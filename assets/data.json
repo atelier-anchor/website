@@ -96,7 +96,7 @@
         "拱廊计划是一家来自南京的独立书店，主理人深受先锋派艺术的影响，希望拱廊的实体空间能够超越单一业态的限制，成为这个时代的严肃思想、有效知识、以及真实经验得以展示的剧场；构筑一个不止于书本，更是激发真诚与激情的场所。 以前苏联先锋派艺术家利西茨基的名作「红色楔子攻打白军」作为艺术风格，在字体上选取了由 atelierAnchor 锚坞开发的字库产品「会战宋」作为整个品牌识别的核心，在物料设计中大量运用与「楔子」相同的构成形式，立体的楔子被投射至物件之中、文字之间、平面之上，红色则作为主题色贯穿始终。将红色楔子「突破、构筑、指意性」的意向延伸至空间、平面以及线条之中。",
         "\"Arcade Project\", an independent bookstore in Nanjing, commissions our studio to build its branding strategy from scratch. Influenced by Soviet avant-garde art, the bookstore owner hopes the physical space of the bookstore can transcend the limitations of an otherwise singular business. The brand strategy is to turn the bookstore into a theater where serious thoughts, valid knowledge, and authentic experiences of our era can be presented. We take inspirations from the famous art piece \"Red Wedge attacking White Army\" by El Lissitzky and use it as an artistic reference for brand building. Typographically, our studio typeface \"Sart Sans\" is chosen as the core of the entire brand identity. Shapes and compositions similar to the \"wedge\" are extensively in various graphics and interiors; a three-dimensional wedge is projected onto surfaces of objects and paragraphs. Red is taken as the main theme color. The intention of the \"red wedge\" to \"break through, build, and signify\" is extended to the bookstore's physical and graphic space."
       ],
-      "cover": "arcade-project-2.webp",
+      "cover": "arcade-project-cover.webp",
       "images": [
         "arcade-project-1.webp",
         "arcade-project-2.webp",
@@ -371,7 +371,7 @@
         "我们策划了锦华明朝体的众筹项目，并为的实物回报物料特别设计制作了一款毛毡礼盒和礼盒内的各种回报物件，包括签字笔、明信片、字体样张、海报等。在大家取下众筹回报的各类物件后，可以将毛毡礼盒继续作为收纳挂袋使用，既具有收藏纪念意义，又减少了包装耗材的浪费。挂袋适合收纳各类文具和小物件，右上方为纸巾收纳区，解开按钮并根据提示重新扣上即可使用。",
         "We planned and executed the Jinhua Mincho Crowdfunding event, the first font crowdfunding try-out in China and for its physical rewards we designed a felt reward \"box\" with various reward returns, including pen, postcards, font specimen booklet, poster, etc. After everything is taken from the \"box\" or wrap actually, the flatwrap can continue to be used as a hanging piece for storage, reducing packaging waste. It is suitable for storing all kinds of stationery and small items. The upper right side is a tissue box area."
       ],
-      "cover": "jinhua-crowdfunding-2.webp",
+      "cover": "jinhua-crowdfunding-cover.webp",
       "images": [
         "jinhua-crowdfunding-1.webp",
         "jinhua-crowdfunding-2.webp",
@@ -545,6 +545,7 @@
         "In response to the word \"tiger\" in the brand name, we started with the image of \"slot machine\" (tiger machine in Chinese) and built a flexible visual system to interpret the brand's spirit of \"taking risks\". We translated the brand's Chinese name directly into graphics, supplemented by the adjustable Latin typeface Gravity, to create a bold and unconventional brand image. The negative space of graphics, fonts, and text layout are compressed to achieve a \"full\" and \"tense\" visual effect.",
         "\"Flush\" is the core concept of the brand's color application, with a rich and powerful combination of flush red and black. Flush is both \"flush red\" and \"royal flush\" - when you turn to \"tigercoming,\" you can hit the jackpot."
       ],
+      "cover": "tigercoming-cover.webp",
       "images": [
         "tigercoming-1.webp",
         "tigercoming-2.webp",
@@ -626,13 +627,21 @@
         "我们与 WDCC 品牌视觉团队合作，在 WDCC 2022 的品牌视觉框架下以数字「100」的造型作为核心视觉点，让组合叠加的颜色穿梭于数字内部，数字外侧与外部空间发生互动而扩张、延展。由此构成形式简约且又变化精巧的视觉效果，并将这种自数字设计而生的效果推广至静态的平面物料中运用。",
         "The International Design 100 Summit Forum is one of the iconic events of the World Design Cities Conference, co-sponsored by the Shanghai Municipal Commission of Economy and Information Technology and Tongji University. We collaborated with WDCC's visual design team to build the shape of \"100\" as its core visual. The superimposed colors shuffle through the interior of the number while the rim of the shape expands and extends. It creates a visual effect that is simple in form but exquisitely variegated in style, and this digital effect is then transferred to physical graphics as well."
       ],
-      "cover": "wdcc-2022-3.webp",
+      "cover": "wdcc-2022-cover.webp",
       "images": [
         "wdcc-2022-1.webp",
         "wdcc-2022-2.webp",
         "wdcc-2022-3.webp",
         "wdcc-2022-4.webp",
         "wdcc-2022-5.webp"
+      ],
+      "videos": [
+        {
+          "src": "wdcc-2022-6.webm"
+        },
+        {
+          "src": "wdcc-2022-7.webm"
+        }
       ]
     }
   ],
