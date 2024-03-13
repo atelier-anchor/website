@@ -5,6 +5,7 @@
       "name": "Arcade Game Typography",
       "date": "2021-02-01",
       "category": "Translation",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Translator",
@@ -39,6 +40,7 @@
       "name": "Ambitful",
       "date": "2021-04-01",
       "category": "Visual identity",
+      "exclude": true,
       "credits": [
         {
           "title": "Client",
@@ -132,6 +134,7 @@
       "name": "Dinkie Bitmap Black Box",
       "date": "2020-09-01",
       "category": "Product design",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -231,6 +234,7 @@
       "name": "Double Win",
       "date": "2021-07-01",
       "category": "Visual identity",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -277,6 +281,7 @@
       "name": "Freds Inside",
       "date": "2018-04-01",
       "category": "Motion graphic",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -310,6 +315,7 @@
         "Motion graphic",
         "Graphic design"
       ],
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -394,6 +400,7 @@
       "name": "Kuusi Sans Scented Candle",
       "date": "2020-12-01",
       "category": "Graphic design",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -428,6 +435,7 @@
       "name": "Out of Mountain",
       "date": "2021-03-01",
       "category": "Book design",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -462,6 +470,7 @@
       "name": "PSA Model",
       "date": "2019-10-01",
       "category": "Product design",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Client",
@@ -493,6 +502,7 @@
       "name": "Receipt Poster",
       "date": "2021-06-01",
       "category": "Graphic design",
+      "exclude": "carousel",
       "credits": [
         {
           "title": "Art director",
