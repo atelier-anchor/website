@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <div class="flex">
-    <dt class="w-8 flex-shrink-0 after:content-[':']">
+    <dt class="w-10 flex-shrink-0 after:content-[':']">
       <abbr :title="credit.title">
         {{ alias(credit.title) }}
       </abbr>

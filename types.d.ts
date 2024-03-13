@@ -21,9 +21,11 @@ declare global {
     | 'Designer'
     | 'Editor'
     | 'Lead agency'
+    | 'Product design'
     | 'Publisher'
     | 'Translator'
     | 'Type director'
+    | 'Web developer'
 
   interface Credit {
     title: CreditTitle

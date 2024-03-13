@@ -90,7 +90,7 @@
           "name": "Nagisa Chen, Chen Li, Janine Sui"
         },
         {
-          "title": "Publisher",
+          "title": "Product design",
           "name": "Pangolin Press"
         }
       ],
@@ -369,8 +369,19 @@
           "name": "Janine Sui"
         },
         {
+          "title": "Editor",
+          "name": [
+            "Xiyao Du",
+            "Willie Liu"
+          ]
+        },
+        {
           "title": "Designer",
-          "name": "Janine Sui"
+          "name": [
+            "Janine Sui",
+            "Nagisa Chen",
+            "Chen Li"
+          ]
         }
       ],
       "description": [
@@ -535,7 +546,10 @@
         },
         {
           "title": "Art director",
-          "name": "Janine Sui"
+          "name": [
+            "Janine Sui",
+            "Nagisa Chen"
+          ]
         },
         {
           "title": "Designer",
@@ -642,15 +656,14 @@
         "wdcc-2022-1.webp",
         "wdcc-2022-2.webp",
         "wdcc-2022-3.webp",
-        "wdcc-2022-4.webp",
-        "wdcc-2022-5.webp"
+        "wdcc-2022-4.webp"
       ],
       "videos": [
         {
-          "src": "wdcc-2022-6.webm"
+          "src": "wdcc-2022-5.webm"
         },
         {
-          "src": "wdcc-2022-7.webm"
+          "src": "wdcc-2022-6.webm"
         }
       ]
     }
@@ -701,6 +714,10 @@
         {
           "title": "Designer",
           "name": "Willie Liu"
+        },
+        {
+          "title": "Web developer",
+          "name": "Xiangdong Zeng"
         }
       ],
       "description": [
@@ -893,6 +910,7 @@
         "本期试刊号讨论的主题是城市生活中的文字，街道、店铺、招贴、广告等属于公共空间的文字，我们邀请了四位创作者在不同的空间场域中游移，探索城市公共空间内字体辐射出的多样表达，将文字从书写的工具，转换为被书写的主体；而「逐层」是我们的编辑思路——你会在本期 dash 中发现对文字的图层堆叠，对层层累积视觉印象的解剖，还有对时空、记忆、社会肌理的深度层析。除此之外，本期试刊号还有一本「破折号」别册——对于整本刊物来说，别册就是一个破折号，延续、连接、打断、转折、补充。",
         "This trial issue of dash spotlights words in cityscape --- characters, signs and types you see on streets, storefronts, building facades, promo posters, product packages and other overlooked urban environments. Our contributors wander in different typographic spaces, presenting four dashing articles and a carefully-curated photography booklet. \"Layers\" is our editorial echo in this issue, as you will see it recurrently in both the zine's design and contents."
       ],
+      "cover": "dash-0-cover.webp",
       "images": [
         "dash-0-1.webp",
         "dash-0-2.webp",
