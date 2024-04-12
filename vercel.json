@@ -4,10 +4,6 @@
   },
   "rewrites": [
     {
-      "source": "/dinkie-bitmap/:path*",
-      "destination": "https://dinkie-bitmap.vercel.app/:path*"
-    },
-    {
       "source": "/luohei-variable/:path*",
       "destination": "https://luohei-variable.vercel.app/:path*"
     }

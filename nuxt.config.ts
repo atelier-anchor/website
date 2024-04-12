@@ -12,6 +12,9 @@ export default defineNuxtConfig({
     prerender: {
       routes: ['/subscription/thank-you', '/subscription/unsubscribed-successfully'],
     },
+    routeRules: {
+      '/dinkie-bitmap': { redirect: { to: 'https://dinkiebitmap.com', statusCode: 301 } },
+    },
   },
   tailwindcss: {
     cssPath: '@/assets/tailwind.css',
