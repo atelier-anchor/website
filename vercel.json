@@ -6,6 +6,10 @@
     {
       "source": "/luohei-variable/:path*",
       "destination": "https://luohei-variable.vercel.app/:path*"
+    },
+    {
+      "source": "/mingkwai/:path*",
+      "destination": "https://mingkwai.vercel.app/:path*"
     }
   ],
   "trailingSlash": false
