@@ -6,6 +6,7 @@
   "repository": "https://github.com/atelier-anchor/website",
   "homepage": "https://atelier-anchor.com",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt typecheck && nuxt build",
     "dev": "nuxt dev",

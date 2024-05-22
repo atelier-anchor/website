@@ -1,19 +1,19 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  experimental: {
-    payloadExtraction: false,
-    // typedPages: true,
-  },
-  features: {
-    inlineStyles: false,
-  },
   modules: ['@nuxtjs/robots', '@nuxtjs/tailwindcss'],
   nitro: {
     prerender: {
       routes: ['/subscription/thank-you', '/subscription/unsubscribed-successfully'],
     },
     routeRules: {
-      '/dinkie-bitmap': { redirect: { to: 'https://dinkiebitmap.com', statusCode: 301 } },
+      '/dinkie-bitmap': {
+        redirect: { to: 'https://dinkiebitmap.com', statusCode: 301 },
+      },
+      '/luohei-variable': {
+        redirect: { to: 'https://luohei.atelier-anchor.com', statusCode: 301 },
+      },
+      '/mingkwai': {
+        redirect: { to: 'https://mingkwai.atelier-anchor.com', statusCode: 301 },
+      },
     },
   },
   tailwindcss: {
