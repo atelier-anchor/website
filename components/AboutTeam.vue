@@ -16,19 +16,9 @@ const members = [
     titles: ['Graphic designer', 'Distribution director'],
   },
   {
-    name: 'Janine Sui',
-    avatar: 'janine-sui.webp',
-    titles: ['Graphic designer'],
-  },
-  {
-    name: 'Heda Shi',
-    avatar: 'heda-shi.webp',
-    titles: ['Type designer'],
-  },
-  {
     name: 'Xiangdong Zeng',
     avatar: 'xiangdong-zeng.webp',
-    titles: ['Engineer'],
+    titles: ['Technical advisor'],
   },
   {
     name: 'Shachō 🍗',
