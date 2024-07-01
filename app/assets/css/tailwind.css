@@ -8,7 +8,7 @@
     font-weight: 700;
     font-style: normal;
     font-feature-settings: 'liga' 0;
-    src: url('NeueMachina-Bold.woff2') format('woff2');
+    src: url('assets/fonts/NeueMachina-Bold.woff2') format('woff2');
     font-display: swap;
   }
 
@@ -16,17 +16,17 @@
     font-family: 'Anicons Subset';
     font-weight: normal;
     font-style: normal;
-    src: url('AniconsGX.subset.woff2') format('woff2');
+    src: url('assets/fonts/AniconsGX.subset.woff2') format('woff2');
     font-display: block;
   }
 
   body {
     @apply min-h-screen hyphens-auto bg-black font-bold leading-tight text-fg;
     cursor:
-      url('cursor.png') 12 12,
+      url('assets/cursor.png') 12 12,
       auto;
     cursor:
-      image-set(url('cursor.png') 1x, url('cursor@2x.png') 2x) 12 12,
+      image-set(url('assets/cursor.png') 1x, url('assets/cursor@2x.png') 2x) 12 12,
       auto;
   }
 

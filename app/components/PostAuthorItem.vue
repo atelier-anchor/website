@@ -2,7 +2,7 @@
 const alias = (title: string) =>
   title
     .split(' ')
-    .map((s) => s[0].toUpperCase())
+    .map((s) => s[0]?.toUpperCase())
     .join('')
 
 defineProps<{

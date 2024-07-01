@@ -15,7 +15,7 @@ const { post } = defineProps<{
     </template>
     <template #right>
       <BaseFigure
-        :image="post.cover ?? post.images[0]"
+        :image="post.cover ?? post.images[0] ?? ''"
         :to="to"
         :title="post.name"
         width="1920"

@@ -14,15 +14,6 @@ useHead({
   htmlAttrs: {
     lang: 'en',
   },
-  script: [
-    import.meta.env.PROD
-      ? {
-          src: 'https://umami.dinkiebitmap.com/script.js',
-          async: true,
-          'data-website-id': '442f071b-5e0a-4987-bdbe-e045c3519a41',
-        }
-      : '',
-  ],
 })
 useServerSeoMeta({
   description,

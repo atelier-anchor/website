@@ -1,4 +1,4 @@
-const capitalize = (s: string) => s[0].toUpperCase() + s.slice(1).toLowerCase()
+const capitalize = (s: string) => s[0]?.toUpperCase() + s.slice(1).toLowerCase()
 
 export const formatName = (s: string | string[]) => (Array.isArray(s) ? s.join(', ') : s)
 

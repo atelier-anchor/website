@@ -26,7 +26,7 @@ useIntervalFn(() => {
           class="absolute top-0 flex h-full items-center overflow-hidden py-4 lg:py-8"
         >
           <BaseFigure
-            :image="cover ?? images[0]"
+            :image="cover ?? images[0] ?? ''"
             :to="path(id)"
             :title="name"
             width="1920"

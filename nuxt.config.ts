@@ -1,4 +1,8 @@
 export default defineNuxtConfig({
+  future: {
+    compatibilityVersion: 4,
+  },
+  extends: ['nuxt-umami'],
   modules: ['@nuxtjs/robots', '@nuxtjs/tailwindcss'],
   nitro: {
     prerender: {
@@ -16,12 +20,17 @@ export default defineNuxtConfig({
       },
     },
   },
-  tailwindcss: {
-    cssPath: '@/assets/tailwind.css',
-  },
   vite: {
     define: {
       'import.meta.env.VITE_BUILD_DATE': JSON.stringify(new Date()),
+    },
+  },
+  appConfig: {
+    umami: {
+      host: 'https://umami.dinkiebitmap.com',
+      id: '442f071b-5e0a-4987-bdbe-e045c3519a41',
+      version: 2,
+      ignoreLocalhost: true,
     },
   },
 })
