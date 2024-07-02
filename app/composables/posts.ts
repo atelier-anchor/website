@@ -35,6 +35,6 @@ export function useCarouselPosts() {
       .map((value) => ({ value, sort: Math.random() }))
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value)
-  const posts = flat([data.works, data.typefaces])
+  const posts = flat([data.works, data.typefaces] as Post[][])
   return shuffle(posts.filter(({ exclude }) => !exclude))
 }
