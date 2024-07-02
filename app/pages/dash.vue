@@ -18,6 +18,7 @@ const posts = usePosts('dash')
         <p v-for="p in about" v-html="parseMarkdown(p)"></p>
       </template>
     </BaseContainer>
+    <!--
     <BaseContainer is="section" class="mb-4 sm:mb-8">
       <template #left>
         <h2 class="text-2xl lg:sticky lg:top-8">get dash</h2>
@@ -29,6 +30,7 @@ const posts = usePosts('dash')
         <DashSubscription />
       </template>
     </BaseContainer>
+    -->
     <section>
       <h2 class="mb-4 text-2xl md:hidden">previous issues</h2>
       <SectionItem v-for="post in posts" :post="post" />
