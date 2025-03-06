@@ -4,7 +4,7 @@ import type { Config } from 'tailwindcss'
 export default <Partial<Config>>{
   theme: {
     fontFamily: {
-      sans: ['"Neue Machina"', 'sans-serif'],
+      sans: ['"Neue Machina"', '"IBM Plex Sans SC Subset"', '"IBM Plex Sans SC"', 'sans-serif'],
       anicons: ['"Anicons Subset"', 'sans-serif'],
     },
     screens: {

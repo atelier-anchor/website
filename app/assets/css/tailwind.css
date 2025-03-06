@@ -5,10 +5,18 @@
 @layer base {
   @font-face {
     font-family: 'Neue Machina';
-    font-weight: 700;
+    font-weight: 600;
     font-style: normal;
     font-feature-settings: 'liga' 0;
     src: url('assets/fonts/NeueMachina-Bold.woff2') format('woff2');
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'IBM Plex Sans SC Subset';
+    font-weight: 600;
+    font-style: normal;
+    src: url('assets/fonts/IBMPlexSansSC-Medium.subset.woff2') format('woff2');
     font-display: swap;
   }
 
@@ -21,7 +29,7 @@
   }
 
   body {
-    @apply min-h-screen hyphens-auto bg-black font-bold leading-tight text-fg;
+    @apply min-h-screen hyphens-auto bg-black font-semibold leading-snug text-fg;
     cursor:
       url('assets/cursor.png') 12 12,
       auto;
@@ -55,8 +63,9 @@
   }
 
   .cjk-punct {
-    font-family: 'PingFang SC', 'Microsoft YaHei', 'Source Han Sans SC', 'Noto Sans CJK SC',
-      sans-serif;
+    font-family:
+      'IBM Plex Sans SC Subset', 'IBM Plex Sans SC', 'PingFang SC', 'Microsoft YaHei',
+      'Source Han Sans SC', 'Noto Sans CJK SC', sans-serif;
     font-feature-settings: 'fwid';
   }
 }
