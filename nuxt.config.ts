@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2025-03-01',
+  compatibilityDate: '2025-04-01',
   future: {
     compatibilityVersion: 4,
   },
@@ -20,12 +20,25 @@ export default defineNuxtConfig({
       },
     },
   },
+  router: {
+    options: {
+      scrollBehaviorType: 'smooth',
+    },
+  },
   umami: {
     host: 'https://umami.dinkiebitmap.com',
     id: '442f071b-5e0a-4987-bdbe-e045c3519a41',
     ignoreLocalhost: true,
   },
   vite: {
+    // See https://github.com/nuxt/nuxt/issues/31326
+    build: {
+      rollupOptions: {
+        output: {
+          sanitizeFileName: true,
+        },
+      },
+    },
     define: {
       'import.meta.env.VITE_BUILD_DATE': JSON.stringify(new Date()),
     },
