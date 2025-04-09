@@ -15,7 +15,7 @@ useHead({
     lang: 'en',
   },
 })
-useServerSeoMeta({
+useSeoMeta({
   description,
   twitterCard: 'summary',
   twitterSite: '@atelier_anchor',
